@@ -3,21 +3,22 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { VIDEOS } from '@/constants/video';
 
-const VIDEOS = [
+const VIDEOS_LIST = [
     {
         id: 1,
-        src: "https://www.youtube.com/watch?v=PD61lIYrG-M",
+        src: VIDEOS.video1,
         title: "Code Crafting"
     },
     {
         id: 2,
-        src: "https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-man-playing-on-a-computer-43527-large.mp4",
+        src: VIDEOS.video2,
         title: "Digital Excellence"
     },
     {
         id: 3,
-        src: "https://assets.mixkit.co/videos/preview/mixkit-computer-screen-with-code-on-it-34533-large.mp4",
+        src: VIDEOS.video3,
         title: "Technical Precision"
     }
 ];
@@ -71,8 +72,8 @@ export default function AboutSection() {
         setDirection(newDirection);
         setCurrentIndex((prevIndex) => {
             let nextIndex = prevIndex + newDirection;
-            if (nextIndex >= VIDEOS.length) nextIndex = 0;
-            if (nextIndex < 0) nextIndex = VIDEOS.length - 1;
+            if (nextIndex >= VIDEOS_LIST.length) nextIndex = 0;
+            if (nextIndex < 0) nextIndex = VIDEOS_LIST.length - 1;
             return nextIndex;
         });
     };
@@ -276,9 +277,9 @@ export default function AboutSection() {
                                                 muted
                                                 loop
                                                 playsInline
-                                                key={VIDEOS[currentIndex].src}
+                                                key={VIDEOS_LIST[currentIndex].src}
                                             >
-                                                <source src={VIDEOS[currentIndex].src} type="video/mp4" />
+                                                <source src={VIDEOS_LIST[currentIndex].src} type="video/mp4" />
                                             </video>
                                         </motion.div>
                                     </AnimatePresence>
@@ -301,7 +302,7 @@ export default function AboutSection() {
                                     
                                     {/* Pagination Dots */}
                                     <div className="absolute top-6 right-6 flex gap-2 z-20">
-                                        {VIDEOS.map((_, idx) => (
+                                        {VIDEOS_LIST.map((_, idx) => (
                                             <button
                                                 key={idx}
                                                 onClick={(e) => {
