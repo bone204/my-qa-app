@@ -5,13 +5,14 @@ import React, { useEffect, useRef, useState } from 'react';
 export default function CursorEffect() {
     const ripplesContainerRef = useRef<HTMLDivElement>(null);
     const [isHoveringInteractive, setIsHoveringInteractive] = useState(false);
+    const [mounted, setMounted] = useState(false);
 
     // Track mouse position
     const mouse = useRef({ x: -100, y: -100 });
 
     useEffect(() => {
-        // Ensure running on client
-        if (typeof window === 'undefined') return;
+        setMounted(true);
+        // ... (existing logic continues)
 
         // Reusable ripple creation function
         const createRipple = (x: number, y: number, isClick = false) => {
@@ -85,6 +86,8 @@ export default function CursorEffect() {
             clearInterval(rippleInterval);
         };
     }, [isHoveringInteractive]);
+
+    if (!mounted) return null;
 
     return (
         <div
