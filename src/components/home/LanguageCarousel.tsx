@@ -38,7 +38,7 @@ export default function LanguageCarousel() {
 
     // Reduced duplication to 2 sets as requested (max 2 occurrences of each icon)
     const itemsRef = useRef(
-        [...LANGUAGES, ...LANGUAGES, ...LANGUAGES].map((lang, idx) => ({
+        [...LANGUAGES, ...LANGUAGES].map((lang, idx) => ({
             ...lang,
             id: idx,
             x: 0,
