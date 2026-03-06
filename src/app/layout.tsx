@@ -1,6 +1,7 @@
 import "./globals.css";
 import AppBar from "@/components/AppBar";
 import Footer from "@/components/Footer";
+import CursorEffect from "@/components/CursorEffect";
 
 export default function RootLayout({
   children,
@@ -9,12 +10,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <AppBar />
-        <main className="min-h-screen">
-          {children}
-        </main>
-        <Footer />
+      <body className="relative bg-[#EFEFEF]">
+        <CursorEffect />
+
+        <div className="relative z-10 flex min-h-screen flex-col">
+          <AppBar />
+          <main className="flex-1">
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
