@@ -1,12 +1,19 @@
+import AboutSection from "@/components/home/AboutSection";
+import LanguageCarousel from "@/components/home/LanguageCarousel";
+import MilestonesSection from "@/components/home/MilestonesSection";
+import TeamSection from "@/components/home/TeamSection";
+import TechSection from "@/components/home/TechSection";
+import VisionSection from "@/components/home/VisionSection";
+
 export default function HomePage() {
   return (
-    <div className="flex w-full flex-1 flex-col items-center justify-center p-24 overflow-y-auto">
-      <h1 className="text-6xl font-extrabold tracking-tight text-white-900">
-        project
-      </h1>
-      <div className="w-300 h-300 bg-white">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
-      </div>
+    <div className="flex w-full flex-col">
+      <AboutSection />
+      <LanguageCarousel />
+      <MilestonesSection />
+      <VisionSection />
+      <TechSection />
+      <TeamSection />
     </div>
   );
 }
