@@ -1,5 +1,6 @@
 import "./globals.css";
 import AppBar from "@/components/AppBar";
+import Footer from "@/components/Footer";
 
 export default function RootLayout({
   children,
@@ -10,9 +11,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <AppBar />
-        <main>
+        <main className="min-h-screen">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );
