@@ -1,0 +1,35 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// Khai báo bảng Người dùng
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String   
+  role      String   @default("user")
+  createdAt DateTime @default(now())
+}
+
+// Khai báo bảng Thể loại
+model Category {
+  id        Int        @id @default(autoincrement())
+  name      String
+  questions Question[] 
+}
+
+// Khai báo bảng Câu hỏi
+model Question {
+  id            String   @id @default(uuid())
+  content       String   
+  options       String   
+  correctAnswer String   
+  categoryId    Int
+  category      Category @relation(fields: [categoryId], references: [id])
+}
