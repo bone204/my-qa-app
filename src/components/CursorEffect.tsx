@@ -22,7 +22,7 @@ export default function CursorEffect() {
 
             // If it's a click, maybe make it slightly distinct (sharper/faster)
             // but keep the same HD style
-            ripple.className = 'absolute rounded-full border border-[#d7265a] bg-[#d7265a]/5 pointer-events-none will-change-[transform,opacity]';
+            ripple.className = 'absolute rounded-full border border-primary bg-primary/5 pointer-events-none will-change-[transform,opacity]';
 
             const size = isClick ? 50 : 40; // Click ripples start slightly larger
             ripple.style.left = `${x - size / 2}px`;
@@ -91,7 +91,7 @@ export default function CursorEffect() {
 
     return (
         <div
-            className="pointer-events-none fixed top-0 left-0 z-[100] h-screen w-screen overflow-hidden"
+            className="pointer-events-none fixed top-0 left-0 z-100 h-screen w-screen overflow-hidden"
             aria-hidden="true"
         >
             <div ref={ripplesContainerRef} className="absolute inset-0 pointer-events-none" />

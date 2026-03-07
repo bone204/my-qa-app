@@ -144,19 +144,19 @@ export default function LanguageCarousel() {
     return (
         <section
             ref={containerRef}
-            className="relative h-[350px] w-full overflow-hidden bg-gradient-to-r from-[#d7265a] via-[#f43f5e] to-[#d7265a] isolate"
+            className="relative h-[350px] w-full overflow-hidden bg-linear-to-r from-[#d7265a] via-[#f43f5e] to-[#d7265a] isolate"
             onMouseMove={handleMouseMove}
             onMouseUp={() => setHeldId(null)}
             onMouseLeave={() => setHeldId(null)}
         >
-            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_white_1px,_transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
+            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,white_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
 
             <div className="relative h-full w-full pointer-events-none">
                 {itemsRef.current.map((item) => (
                     <div
                         id={`lang-item-${item.id}`}
                         key={item.id}
-                        className={`absolute left-0 top-0 select-none will-change-transform pointer-events-auto cursor-grab active:cursor-grabbing ${heldId === item.id ? 'z-[100]' : 'z-10'
+                        className={`absolute left-0 top-0 select-none will-change-transform pointer-events-auto cursor-grab active:cursor-grabbing ${heldId === item.id ? 'z-100' : 'z-10'
                             }`}
                         onMouseDown={(e) => {
                             e.preventDefault();
@@ -188,8 +188,8 @@ export default function LanguageCarousel() {
                 ))}
             </div>
 
-            <div className="absolute left-0 top-0 h-full w-40 bg-gradient-to-r from-[#d7265a] via-[#d7265a]/40 to-transparent z-40 pointer-events-none" />
-            <div className="absolute right-0 top-0 h-full w-40 bg-gradient-to-l from-[#d7265a] via-[#d7265a]/40 to-transparent z-40 pointer-events-none" />
+            <div className="absolute left-0 top-0 h-full w-40 bg-linear-to-r from-[#d7265a] via-[#d7265a]/40 to-transparent z-40 pointer-events-none" />
+            <div className="absolute right-0 top-0 h-full w-40 bg-linear-to-l from-[#d7265a] via-[#d7265a]/40 to-transparent z-40 pointer-events-none" />
         </section>
     );
 }

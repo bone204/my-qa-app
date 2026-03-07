@@ -19,7 +19,7 @@ export default function Button({ variant = "primary", className = "", children, 
 
     return (
         <button
-            className={`group relative overflow-hidden rounded-full bg-[#d7265a] px-5 py-2 text-base font-bold text-white shadow-sm transition-all duration-300 hover:scale-105 hover:bg-[#b01c48] hover:shadow-md hover:ring-2 hover:ring-[#d7265a]/50 hover:ring-offset-2 active:scale-95 ${className}`}
+            className={`group relative overflow-hidden rounded-full bg-primary px-5 py-2 text-base font-bold text-white shadow-sm transition-all duration-300 hover:scale-105 hover:bg-primary/80 hover:shadow-md hover:ring-2 hover:ring-primary/50 hover:ring-offset-2 active:scale-95 ${className}`}
             {...props}
         >
             <span className="relative z-10">{children}</span>

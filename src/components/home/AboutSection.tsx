@@ -99,9 +99,9 @@ export default function AboutSection() {
 
 
     return (
-        <section className="relative flex min-h-screen w-full items-center justify-center bg-background py-24 md:py-24 overflow-hidden">
+        <section className="relative flex min-h-screen w-full items-center justify-center bg-background md:mt-8 py-20 md:py-24 overflow-hidden">
             {/* Background elements for depth */}
-            <div className="absolute top-0 right-0 h-full w-1/2 bg-(--primary)/5 pointer-events-none" />
+            <div className="absolute top-0 right-0 h-full w-1/2 bg-primary/5 pointer-events-none" />
 
             <div className="mx-auto w-full max-w-7xl px-4 md:px-8 relative z-10">
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
@@ -109,20 +109,20 @@ export default function AboutSection() {
                     {/* Left Column: Content */}
                     <div className="w-full lg:w-1/2 flex flex-col space-y-6 md:space-y-8 animate-in fade-in slide-in-from-left duration-700 z-20 select-none">
                         <div className="flex flex-col space-y-2">
-                            <span className="text-sm font-bold text-[#d7265a] uppercase tracking-widest">Our Mission</span>
-                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-[1.1]">
-                                We Build <span className="text-[#d7265a]">Digital</span> Masterpieces.
+                            <span className="section-subtitle">Our Mission</span>
+                            <h2 className="section-title">
+                                We Build <span className="text-primary">Digital</span> Masterpieces.
                             </h2>
                         </div>
 
-                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-xl">
+                        <p className="section-desc">
                             Specializing in high-performance software and luxury logistics platforms.
                             We combine aesthetic excellence with technical precision to deliver
                             extraordinary results for our global partners.
                         </p>
 
                         <div className="flex gap-4 pt-2">
-                            <button className="w-full sm:w-auto rounded-2xl md:rounded-2xl bg-[#d7265a] px-8 md:px-10 py-4 md:py-5 font-bold text-white shadow-[0_20px_40px_rgba(215,38,90,0.2)] hover:scale-105 transition-all outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#d7265a]">
+                            <button className="w-full sm:w-auto rounded-2xl md:rounded-2xl bg-primary px-8 md:px-10 py-4 md:py-5 font-bold text-white shadow-primary/20 shadow-[0_20px_40px_var(--tw-shadow-color)] hover:scale-105 transition-all outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary">
                                 Discover More
                             </button>
                         </div>
@@ -135,7 +135,7 @@ export default function AboutSection() {
                         <motion.div 
                             animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
                             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                            className="absolute -top-8 -right-8 md:-top-12 md:-right-12 w-32 h-32 md:w-48 md:h-48 rounded-4xl md:rounded-[3rem] bg-linear-to-br from-[#d7265a]/15 to-transparent border border-[#d7265a]/20 backdrop-blur-lg -z-10"
+                            className="absolute -top-8 -right-8 md:-top-12 md:-right-12 w-32 h-32 md:w-48 md:h-48 rounded-4xl md:rounded-[3rem] bg-linear-to-br from-primary/15 to-transparent border border-primary/20 backdrop-blur-lg -z-10"
                         />
                         {/* Moved square to top-left */}
                         <motion.div 
@@ -147,7 +147,7 @@ export default function AboutSection() {
                             initial={{ rotate: 15 }}
                             animate={{ y: [0, -10, 0], rotate: [15, 30, 15], scale: [1, 1.05, 1] }}
                             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-                            className="absolute top-1/2 -right-6 md:-right-10 w-20 h-20 md:w-28 md:h-28 rounded-2xl md:rounded-3xl bg-[#d7265a]/10 border border-[#d7265a]/20 backdrop-blur-md -z-10 shadow-lg"
+                            className="absolute top-1/2 -right-6 md:-right-10 w-20 h-20 md:w-28 md:h-28 rounded-2xl md:rounded-3xl bg-primary/10 border border-primary/20 backdrop-blur-md -z-10 shadow-lg"
                         />
                         
                         {/* Floating Interactive Code Element */}
@@ -156,7 +156,7 @@ export default function AboutSection() {
                             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
                             className="hidden md:block absolute -bottom-10 -left-6 md:-bottom-12 md:-left-16 z-20 group perspective-[1000px]"
                         >
-                            <div className="relative p-4 md:p-5 rounded-2xl bg-[#0d1117] border border-gray-800 shadow-2xl transition-all duration-300 transform group-hover:-translate-y-4 group-hover:scale-[1.02] group-hover:shadow-[0_20px_40px_rgba(215,38,90,0.25)] min-w-[220px] md:min-w-[280px]">
+                            <div className="relative p-4 md:p-5 rounded-2xl bg-[#0d1117] border border-gray-800 shadow-2xl transition-all duration-300 transform group-hover:-translate-y-4 group-hover:scale-[1.02] shadow-primary/25 hover:shadow-[0_20px_40px_var(--tw-shadow-color)] min-w-[220px] md:min-w-[280px]">
                                 {/* macOS Window Controls */}
                                 <div className="flex gap-2 mb-4">
                                     <div className="w-3 h-3 rounded-full bg-[#ff5f56] shadow-sm"></div>
@@ -168,7 +168,7 @@ export default function AboutSection() {
                                     
                                     {/* Default state: Blinking cursor */}
                                     <div className="block group-hover:hidden transition-opacity duration-300">
-                                        <p className="flex items-center text-[#d7265a]">
+                                        <p className="flex items-center text-primary">
                                             <span className="mr-2 text-gray-500 font-bold">{">"}</span>
                                             <motion.span
                                                 animate={{ opacity: [0, 1, 0] }}
@@ -206,7 +206,7 @@ export default function AboutSection() {
                                             initial={{ opacity: 0, width: 0 }}
                                             whileInView={{ opacity: 1, width: "100%" }}
                                             transition={{ duration: 0.5, delay: 1.1, ease: "linear" }}
-                                            className="whitespace-nowrap overflow-hidden pl-4 mt-1 bg-[#d7265a]/20 inline-block px-1 rounded-sm"
+                                            className="whitespace-nowrap overflow-hidden pl-4 mt-1 bg-primary/20 inline-block px-1 rounded-sm"
                                         >
                                             <span className="text-[#ff7b72]">return</span> <span className="text-[#79c0ff]">vision</span>.<span className="text-[#d2a8ff]">deploy</span>();
                                         </motion.div>
@@ -248,7 +248,7 @@ export default function AboutSection() {
                             onMouseLeave={() => setIsHovered(false)}
                         >
                             {/* Decorative element behind video */}
-                            <div className="absolute -inset-4 rounded-[3.5rem] bg-linear-to-tr from-[#d7265a]/20 to-transparent blur-2xl pointer-events-none scale-105 transition-all duration-700 group-hover:blur-3xl" />
+                            <div className="absolute -inset-4 rounded-[3.5rem] bg-linear-to-tr from-primary/20 to-transparent blur-2xl pointer-events-none scale-105 transition-all duration-700 group-hover:blur-3xl" />
 
                             {/* Main Video Wrapper */}
                             <div className="relative aspect-4/3 w-full rounded-[3rem] overflow-hidden bg-white/50 backdrop-blur-sm p-2 md:p-3 shadow-[0_20px_50px_rgba(0,0,0,0.1)] ring-1 ring-white/50">
