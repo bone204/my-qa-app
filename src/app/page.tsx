@@ -1,6 +1,6 @@
 import AboutSection from "@/components/home/AboutSection";
 import LanguageCarousel from "@/components/home/LanguageCarousel";
-import MilestonesSection from "@/components/home/MilestonesSection";
+import MilestonesSection from "@/components/home/ServiceSection";
 import TeamSection from "@/components/home/TeamSection";
 import TechSection from "@/components/home/TechSection";
 import VisionSection from "@/components/home/VisionSection";
