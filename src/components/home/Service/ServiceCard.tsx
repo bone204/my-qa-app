@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { LinkAction } from "../LinkAction";
+import { LinkAction } from "../../LinkAction";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import type { ServiceData } from "./ServiceData";
@@ -53,19 +53,19 @@ export function ServiceCard({ service, isSelected, onClick, variants }: ServiceC
         <service.icon className="h-6 w-6" />
       </div>
       
-      <h3 className="card-title mb-2">
+      <h3 className="card-title mb-2 select-none">
         {service.title}
       </h3>
       
-      <p className="card-subtitle mb-4">
+      <p className="card-subtitle mb-4 select-none">
         {service.subtitle}
       </p>
       
-      <p className="card-desc line-clamp-3">
+      <p className="card-desc line-clamp-3 select-none">
         {service.description}
       </p>
       
-      <LinkAction className="group-hover:mt-6" />
+      <LinkAction className="group-hover:mt-6 select-none" />
     </motion.div>
   );
 }

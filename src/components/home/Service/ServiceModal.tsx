@@ -61,15 +61,15 @@ export function ServiceModal({ service, onClose }: ServiceModalProps) {
                   </div>
                 </div>
                 
-                <h3 className="modal-title mb-3">
+                <h3 className="modal-title mb-3 select-none">
                   {service.title}
                 </h3>
                 
-                <p className="modal-subtitle mb-5">
+                <p className="modal-subtitle mb-5 select-none">
                   {service.subtitle}
                 </p>
                 
-                <p className="modal-desc mb-8">
+                <p className="modal-desc mb-8 select-none">
                   {service.description}
                 </p>
                 
@@ -79,10 +79,10 @@ export function ServiceModal({ service, onClose }: ServiceModalProps) {
                   transition={{ delay: 0.2, duration: 0.3 }}
                 >
                   <div className="rounded-3xl bg-gray-300 p-6 sm:p-8 ring-1 ring-slate-200/40 dark:ring-slate-800/40">
-                    <span className="modal-section-label">Core Capabilities</span>
+                    <span className="modal-section-label select-none">Core Capabilities</span>
                     <ul className="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-8">
                       {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center modal-feature-text">
+                        <li key={idx} className="flex items-center modal-feature-text select-none">
                           <CheckCircle2 className="mr-4 h-5 w-5 shrink-0 text-primary" />
                           {feature}
                         </li>
