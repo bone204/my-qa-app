@@ -35,12 +35,14 @@ export default function ServiceSection() {
     };
   }, []);
 
-  // Lock body scroll when modal is open
+  // Lock body scroll and notify AppBar when modal is open
   useEffect(() => {
     if (selectedId) {
       document.body.style.overflow = "hidden";
+      window.dispatchEvent(new CustomEvent("modal-toggle", { detail: { isOpen: true } }));
     } else {
       document.body.style.overflow = "";
+      window.dispatchEvent(new CustomEvent("modal-toggle", { detail: { isOpen: false } }));
     }
   }, [selectedId]);
 
@@ -56,11 +58,15 @@ export default function ServiceSection() {
   };
 
   const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 50, scale: 0.95 },
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.4, ease: "easeOut" }
+      scale: 1,
+      transition: { 
+        duration: 0.6, 
+        ease: [0.16, 1, 0.3, 1] // Custom ease-out expo 
+      }
     }
   };
 
@@ -70,7 +76,7 @@ export default function ServiceSection() {
         <motion.div 
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.2 }}
           variants={{
             hidden: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
@@ -89,8 +95,8 @@ export default function ServiceSection() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          className="mx-auto grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2 lg:max-w-none lg:grid-cols-3"
+          viewport={{ once: false, amount: 0.1 }}
+          className="mx-auto grid max-w-2xl grid-cols-1 gap-12 sm:grid-cols-2 lg:max-w-none lg:grid-cols-3 items-start"
         >
           {services.map((service) => (
             <ServiceCard 
@@ -112,22 +118,25 @@ export default function ServiceSection() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedId(null)}
-              className="fixed inset-0 z-40 bg-zinc-950/40 backdrop-blur-md"
+              className="fixed inset-0 z-40 bg-rose-950/20 backdrop-blur-md"
               style={{ pointerEvents: 'auto' }}
             />
             
             <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-12 pointer-events-none">
               <motion.div
                 layoutId={`card-${selectedService.id}`}
-                className="pointer-events-auto relative w-full max-w-2xl max-h-[90vh] overflow-hidden bg-white dark:bg-zinc-900 shadow-2xl ring-1 ring-zinc-200 dark:ring-zinc-800 flex flex-col"
-                transition={{ duration: 0.45, ease: [0.4, 0, 0.2, 1] }}
-                style={{ borderRadius: 32 }}
+                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                className="pointer-events-auto relative w-full hide-scrollbar max-w-2xl max-h-[85vh] overflow-hidden bg-white shadow-2xl ring-1 ring-zinc-200 flex flex-col"
+                transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                style={{ borderRadius: 40 }}
               >
                 <div className="p-8 sm:p-12 overflow-y-auto w-full h-full custom-scrollbar">
                   <div className="flex items-start justify-between mb-8">
                     <div 
                       className={cn(
-                        "inline-flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-3xl text-white shadow-xl shrink-0",
+                        "inline-flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-3xl text-white shadow-xl shrink-0 bg-linear-to-br",
                         selectedService.gradient
                       )}
                     >
@@ -152,7 +161,7 @@ export default function ServiceSection() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2, duration: 0.3 }}
                   >
-                    <div className="rounded-[1.5rem] bg-zinc-50/50 dark:bg-zinc-800/30 p-6 sm:p-8 ring-1 ring-inset ring-zinc-100/50 dark:ring-zinc-800/50">
+                    <div className="rounded-3xl bg-rose-50/50 dark:bg-rose-900/10 p-6 sm:p-8 ring-1 ring-inset ring-rose-100/50 dark:ring-rose-800/20">
                       <h4 className="mb-4 font-semibold tracking-wide text-foreground uppercase text-xs opacity-50">Core Capabilities</h4>
                       <ul className="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6">
                         {selectedService.features.map((feature, idx) => (
