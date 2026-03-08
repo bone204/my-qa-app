@@ -83,10 +83,10 @@ export default function ServiceSection() {
           }}
           className="mx-auto max-w-2xl text-center mb-16 sm:mb-20"
         >
-          <h2 className="section-title">
+          <h2 className="section-title select-none">
             Capabilities that scale
           </h2>
-          <p className="mt-6 section-desc mx-auto">
+          <p className="mt-6 section-desc mx-auto select-none">
             We offer a comprehensive suite of digital services designed to help your business thrive in the modern technological landscape.
           </p>
         </motion.div>
