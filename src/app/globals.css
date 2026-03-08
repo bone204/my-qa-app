@@ -63,3 +63,39 @@ body {
 @utility modal-feature-text {
   @apply text-sm font-medium text-gray-900;
 }
+
+@keyframes tech-glow {
+  0%, 100% { opacity: 0.5; filter: blur(20px); transform: scale(1); }
+  50% { opacity: 0.8; filter: blur(40px); transform: scale(1.1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  33% { transform: translateY(-10px) rotate(2deg); }
+  66% { transform: translateY(5px) rotate(-2deg); }
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+
+.animate-tech-glow {
+  animation: tech-glow 4s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-breathe {
+  animation: breathe 3s ease-in-out infinite;
+}
+
+.glass-morphism {
+  @apply backdrop-blur-md bg-white/10 border border-white/20 shadow-xl;
+}
+
+.tech-ball-shadow {
+  box-shadow: 0 0 50px -10px var(--glow-color);
+}

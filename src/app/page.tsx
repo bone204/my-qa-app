@@ -3,7 +3,7 @@ import LanguageCarousel from "@/components/home/LanguageCarousel";
 import MilestonesSection from "@/components/home/Service/ServiceSection";
 import TeamSection from "@/components/home/TeamSection";
 import TechSection from "@/components/home/TechSection";
-import VisionSection from "@/components/home/VisionSection";
+import VisionSection from "@/components/home/Expertise/ExpertiseSection";
 
 export default function HomePage() {
   return (
