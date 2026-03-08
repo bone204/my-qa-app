@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import { ServiceModal } from "./ServiceModal";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
@@ -17,25 +17,50 @@ export default function ServiceSection() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [isMobile, setIsMobile] = useState(false);
   
+  // Directional scroll logic
+  const containerRef = useRef<HTMLOptionElement>(null);
+  const isInView = useInView(containerRef, { amount: 0.1 });
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const isScrollingDown = currentScrollY > lastScrollY.current;
+      
+      // If entering view while scrolling down, trigger animation
+      if (isInView && isScrollingDown && !hasAnimated) {
+        setHasAnimated(true);
+      }
+      
+      // Reset when scrolling far above the section
+      if (currentScrollY < (containerRef.current?.offsetTop || 0) - 800) {
+        setHasAnimated(false);
+      }
+      
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isInView, hasAnimated]);
+
   // Handle escape key to close modal
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") setSelectedId(null);
     };
     window.addEventListener("keydown", handleKeyDown);
-    
-    // Check mobile
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
     window.addEventListener("resize", checkMobile);
-    
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
       window.removeEventListener("resize", checkMobile);
     };
   }, []);
 
-  // Lock body scroll and notify AppBar when modal is open
+  // Lock body scroll
   useEffect(() => {
     if (selectedId) {
       document.body.style.overflow = "hidden";
@@ -48,7 +73,6 @@ export default function ServiceSection() {
 
   const selectedService = services.find((s) => s.id === selectedId);
 
-  // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { 
@@ -63,20 +87,16 @@ export default function ServiceSection() {
       opacity: 1, 
       y: 0,
       scale: 1,
-      transition: { 
-        duration: 0.6, 
-        ease: [0.16, 1, 0.3, 1] // Custom ease-out expo 
-      }
+      transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] }
     }
   };
 
   return (
-    <section className="relative w-full py-24 sm:py-32 bg-background overflow-hidden">
+    <section ref={containerRef} className="relative w-full py-24 sm:py-32 bg-background overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <motion.div 
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
+          animate={hasAnimated ? "visible" : "hidden"}
           variants={{
             hidden: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
@@ -94,8 +114,7 @@ export default function ServiceSection() {
         <motion.div 
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.1 }}
+          animate={hasAnimated ? "visible" : "hidden"}
           className="mx-auto grid max-w-2xl grid-cols-1 gap-12 sm:grid-cols-2 lg:max-w-none lg:grid-cols-3 items-start"
         >
           {services.map((service) => (
