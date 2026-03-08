@@ -64,6 +64,17 @@ export default function AppBar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY, isMobileMenuOpen]);
 
+  // Hide AppBar when a modal is opened in ServiceSection
+  useEffect(() => {
+    const handleModalToggle = (e: any) => {
+      const isOpen = e.detail?.isOpen;
+      setIsVisible(!isOpen);
+    };
+
+    window.addEventListener("modal-toggle", handleModalToggle);
+    return () => window.removeEventListener("modal-toggle", handleModalToggle);
+  }, []);
+
   return (
     <>
       <header

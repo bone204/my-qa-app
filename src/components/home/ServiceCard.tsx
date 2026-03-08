@@ -20,19 +20,33 @@ export function ServiceCard({ service, isSelected, onClick, variants }: ServiceC
     <motion.div
       variants={variants}
       onClick={onClick}
-      whileHover={{ y: -5, scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
+      animate={{
+        y: [0, -15, 0],
+      }}
+      transition={{
+        y: {
+          duration: 3,
+          repeat: Infinity,
+          ease: "easeInOut",
+        },
+      }}
+      whileHover={{ 
+        y: -25, 
+        scale: 1.05,
+        transition: { type: "spring", stiffness: 400, damping: 20 }
+      }}
+      whileTap={{ scale: 0.95 }}
       className={cn(
-        "group relative cursor-pointer overflow-hidden rounded-[2rem] bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-8 shadow-sm transition-all duration-300",
+        "group relative cursor-pointer overflow-hidden rounded-4xl bg-white border border-zinc-200 p-8 shadow-sm hover:shadow-xl hover:border-primary/20 transition-colors duration-200",
         isSelected ? "opacity-0 pointer-events-none" : "opacity-100"
       )}
       style={{ borderRadius: 32 }}
     >
-      <div className="absolute inset-0 bg-gradient-to-br opacity-0 transition-opacity duration-300 group-hover:opacity-5 mix-blend-overlay" />
+      <div className="absolute inset-0 bg-linear-to-br opacity-0 transition-opacity duration-300 group-hover:opacity-5 mix-blend-overlay" />
       
       <div 
         className={cn(
-          "mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl text-white shadow-lg",
+          "mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl text-white shadow-lg bg-linear-to-br",
           service.gradient
         )}
       >
@@ -51,7 +65,7 @@ export function ServiceCard({ service, isSelected, onClick, variants }: ServiceC
         {service.description}
       </p>
       
-      <div className="mt-8 flex items-center text-sm font-semibold text-primary dark:text-primary/80 opacity-0 transition-all group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0">
+      <div className="flex items-center text-sm font-semibold text-primary dark:text-primary/80 overflow-hidden transition-all duration-300 max-h-0 opacity-0 group-hover:mt-6 group-hover:max-h-20 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0">
         Explore service <ArrowRight className="ml-2 h-4 w-4" />
       </div>
     </motion.div>
