@@ -101,7 +101,7 @@ export default function AboutSection() {
     return (
         <section className="relative flex min-h-screen w-full items-center justify-center bg-background md:mt-8 py-20 md:py-24 overflow-hidden">
             {/* Background elements for depth */}
-            <div className="absolute top-0 right-0 h-full w-1/2 bg-primary/5 pointer-events-none" />
+
 
             <div className="mx-auto w-full max-w-7xl px-4 md:px-8 relative z-10">
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
@@ -137,7 +137,6 @@ export default function AboutSection() {
                             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                             className="absolute -top-8 -right-8 md:-top-12 md:-right-12 w-32 h-32 md:w-48 md:h-48 rounded-4xl md:rounded-[3rem] bg-linear-to-br from-primary/15 to-transparent border border-primary/20 backdrop-blur-lg -z-10"
                         />
-                        {/* Moved square to top-left */}
                         <motion.div 
                             animate={{ y: [0, 15, 0], rotate: [0, -5, 0] }}
                             transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { LinkAction } from "../LinkAction";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import type { ServiceData } from "./ServiceData";
@@ -53,21 +53,19 @@ export function ServiceCard({ service, isSelected, onClick, variants }: ServiceC
         <service.icon className="h-6 w-6" />
       </div>
       
-      <h3 className="mb-2 text-xl font-bold text-foreground">
+      <h3 className="card-title mb-2">
         {service.title}
       </h3>
       
-      <p className="mb-4 text-sm font-semibold text-zinc-500 dark:text-zinc-400">
+      <p className="card-subtitle mb-4">
         {service.subtitle}
       </p>
       
-      <p className="text-sm text-zinc-600 dark:text-zinc-400 line-clamp-2">
+      <p className="card-desc line-clamp-3">
         {service.description}
       </p>
       
-      <div className="flex items-center text-sm font-semibold text-primary dark:text-primary/80 overflow-hidden transition-all duration-300 max-h-0 opacity-0 group-hover:mt-6 group-hover:max-h-20 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0">
-        Explore service <ArrowRight className="ml-2 h-4 w-4" />
-      </div>
+      <LinkAction className="group-hover:mt-6" />
     </motion.div>
   );
 }

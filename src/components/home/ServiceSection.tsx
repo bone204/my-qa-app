@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { CheckCircle2 } from "lucide-react";
+import { ServiceModal } from "./ServiceModal";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -110,75 +110,10 @@ export default function ServiceSection() {
         </motion.div>
       </div>
 
-      <AnimatePresence>
-        {selectedId && selectedService && (
-          <>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setSelectedId(null)}
-              className="fixed inset-0 z-40 bg-rose-950/20 backdrop-blur-md"
-              style={{ pointerEvents: 'auto' }}
-            />
-            
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-12 pointer-events-none">
-              <motion.div
-                layoutId={`card-${selectedService.id}`}
-                initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                className="pointer-events-auto relative w-full hide-scrollbar max-w-2xl max-h-[85vh] overflow-hidden bg-white shadow-2xl ring-1 ring-zinc-200 flex flex-col"
-                transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                style={{ borderRadius: 40 }}
-              >
-                <div className="p-8 sm:p-12 overflow-y-auto w-full h-full custom-scrollbar">
-                  <div className="flex items-start justify-between mb-8">
-                    <div 
-                      className={cn(
-                        "inline-flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-3xl text-white shadow-xl shrink-0 bg-linear-to-br",
-                        selectedService.gradient
-                      )}
-                    >
-                      <selectedService.icon className="h-8 w-8 sm:h-10 sm:w-10" />
-                    </div>
-                  </div>
-                  
-                  <h3 className="mb-2 text-2xl sm:text-4xl font-bold tracking-tight text-foreground">
-                    {selectedService.title}
-                  </h3>
-                  
-                  <p className="mb-6 text-base sm:text-lg font-medium text-zinc-500 dark:text-zinc-400">
-                    {selectedService.subtitle}
-                  </p>
-                  
-                  <p className="mb-8 leading-relaxed text-zinc-600 dark:text-zinc-300 text-sm sm:text-base">
-                    {selectedService.description}
-                  </p>
-                  
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2, duration: 0.3 }}
-                  >
-                    <div className="rounded-3xl bg-rose-50/50 dark:bg-rose-900/10 p-6 sm:p-8 ring-1 ring-inset ring-rose-100/50 dark:ring-rose-800/20">
-                      <h4 className="mb-4 font-semibold tracking-wide text-foreground uppercase text-xs opacity-50">Core Capabilities</h4>
-                      <ul className="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6">
-                        {selectedService.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-center text-sm sm:text-base font-medium text-zinc-700 dark:text-zinc-300">
-                            <CheckCircle2 className="mr-3 h-5 w-5 shrink-0 text-primary" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </motion.div>
-                </div>
-              </motion.div>
-            </div>
-          </>
-        )}
-      </AnimatePresence>
+      <ServiceModal 
+        service={selectedService || null} 
+        onClose={() => setSelectedId(null)} 
+      />
     </section>
   );
 }
