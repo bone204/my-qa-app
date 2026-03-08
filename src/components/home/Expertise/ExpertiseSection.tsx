@@ -98,11 +98,11 @@ export default function ExpertiseSection() {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="text-center"
         >
-          <span className="section-subtitle">What we do best</span>
-          <h2 className="section-title mt-4">
-            Our Specialist <span className="text-primary">Expertise</span>
+          <span className="section-subtitle select-none">What we do best</span>
+          <h2 className="section-title mt-4 select-none">
+            Our Specialist <span className="text-primary select-none">Expertise</span>
           </h2>
-          <p className="section-desc mx-auto mt-6">
+          <p className="section-desc mx-auto mt-6 select-none">
             We master deep-tech domains to provide you with high-performance, future-proof solutions.
           </p>
         </motion.div>
@@ -131,7 +131,7 @@ export default function ExpertiseSection() {
                 {selectedId !== item.id && (
                   <motion.span
                     layoutId={`title-label-${item.id}`}
-                    className="text-sm font-bold text-gray-900 uppercase tracking-[0.2em] group-hover/ball-unit:text-primary transition-colors duration-300"
+                    className="text-sm font-bold text-gray-900 uppercase tracking-[0.2em] group-hover/ball-unit:text-primary transition-colors duration-300 select-none"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 * expertiseData.indexOf(item) }}
