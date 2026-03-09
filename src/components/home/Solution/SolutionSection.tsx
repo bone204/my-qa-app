@@ -194,7 +194,7 @@ export default function SolutionSection() {
     <motion.section 
       ref={containerRef}
       style={{ width: sectionWidth, borderRadius: sectionRadius }}
-      className="relative py-16 md:py-20 overflow-hidden bg-primary border border-zinc-200"
+      className="relative py-16 md:py-20 overflow-hidden bg-primary"
     >
       {/* Background Parallax Title — left-to-right sweep */}
       <motion.div 

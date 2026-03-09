@@ -84,7 +84,7 @@ export default function ExpertiseSection() {
   return (
     <section 
       ref={sectionRef}
-      className="relative w-full pb-24 md:pb-32 bg-background overflow-hidden min-h-screen flex flex-col items-center justify-start"
+      className="relative w-full pb-24 md:pb-48 bg-background overflow-hidden flex flex-col items-center justify-start"
       onMouseLeave={handleMouseLeave}
     >
       {/* Background Decorative Elements */}
