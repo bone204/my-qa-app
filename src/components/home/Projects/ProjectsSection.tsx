@@ -170,7 +170,7 @@ const Counter = ({ value, suffix }: { value: number; suffix: string }) => {
     }, [isInView, value]);
 
     return (
-        <span ref={ref} className="text-3xl font-black text-gray-900 tabular-nums">
+        <span ref={ref} className="text-3xl font-black text-white tabular-nums">
             {count}
             {suffix}
         </span>
@@ -248,15 +248,15 @@ export default function ProjectsSection() {
                                     <span className="text-primary font-black uppercase tracking-[0.3em] text-[10px] md:text-xs">
                                         {projects[activeIndex].category}
                                     </span>
-                                    <h3 className="text-4xl md:text-6xl font-black text-gray-900 leading-tight tracking-tighter">
+                                    <h3 className="text-4xl md:text-6xl font-black text-white leading-tight tracking-tighter">
                                         {projects[activeIndex].title}
                                     </h3>
-                                    <p className="text-gray-500 text-lg md:text-xl leading-relaxed max-w-lg">
+                                    <p className="text-zinc-400 text-lg md:text-xl leading-relaxed max-w-lg">
                                         {projects[activeIndex].description}
                                     </p>
 
                                     <div className="mt-8">
-                                        <button className="px-10 py-5 bg-gray-900 text-white font-bold rounded-full hover:bg-primary transition-all duration-300 shadow-xl hover:shadow-primary/20 flex items-center gap-3 group w-fit">
+                                        <button className="px-10 py-5 bg-white text-gray-900 font-bold rounded-full hover:bg-primary hover:text-white transition-all duration-300 shadow-xl hover:shadow-primary/20 flex items-center gap-3 group w-fit">
                                             Explore Case Study
                                             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
                                         </button>
@@ -272,7 +272,7 @@ export default function ProjectsSection() {
                                             setActiveIndex(index);
                                             setProgress(0);
                                         }}
-                                        className="relative h-1.5 transition-all duration-500 rounded-full bg-gray-100 overflow-hidden"
+                                        className="relative h-1.5 transition-all duration-500 rounded-full bg-white/10 overflow-hidden"
                                         style={{ width: activeIndex === index ? "80px" : "16px" }}
                                     >
                                         {activeIndex === index && (
@@ -320,12 +320,12 @@ export default function ProjectsSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="mt-32 max-w-4xl mx-auto py-12 px-8 bg-white/40 backdrop-blur-md rounded-[3rem] border border-white/50 flex flex-wrap items-center justify-around shadow-lg gap-8"
+                    className="mt-32 max-w-4xl mx-auto py-12 px-8 bg-white/5 backdrop-blur-md rounded-[3rem] border border-white/10 flex flex-wrap items-center justify-around shadow-lg gap-8"
                 >
                     {stats.map((stat, index) => (
                         <div key={index} className="flex flex-col items-center gap-3">
                             <div className="flex items-center gap-4">
-                                <div className="p-3 rounded-2xl bg-white shadow-sm border border-gray-100">
+                                <div className="p-3 rounded-2xl bg-white/5 shadow-sm border border-white/10">
                                     {stat.icon}
                                 </div>
                                 <Counter value={stat.value} suffix={stat.suffix} />
@@ -337,7 +337,7 @@ export default function ProjectsSection() {
                     <div className="h-12 w-px bg-gray-200 hidden md:block" />
 
                     <div className="flex flex-col items-center gap-3">
-                        <span className="text-3xl font-black text-gray-900 tabular-nums">24/7</span>
+                        <span className="text-3xl font-black text-white tabular-nums">24/7</span>
                         <span className="text-gray-400 font-bold uppercase tracking-widest text-[10px]">Support Available</span>
                     </div>
                 </motion.div>

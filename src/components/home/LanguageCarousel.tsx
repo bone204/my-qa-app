@@ -141,15 +141,45 @@ export default function LanguageCarousel() {
         }
     };
 
+    const [bubbles] = useState(() => 
+        Array.from({ length: 15 }).map((_, i) => ({
+            id: i,
+            left: `${Math.random() * 100}%`,
+            duration: `${4 + Math.random() * 6}s`,
+            delay: `${Math.random() * 5}s`,
+            size: `${4 + Math.random() * 8}px`,
+            drift: `${(Math.random() - 0.5) * 100}px`
+        }))
+    );
+
     return (
         <section
             ref={containerRef}
-            className="relative h-[350px] w-full overflow-hidden bg-linear-to-r from-[#d7265a] via-[#f43f5e] to-[#d7265a] isolate"
+            className="relative h-[350px] w-full overflow-hidden ocean-current-bg isolate"
             onMouseMove={handleMouseMove}
             onMouseUp={() => setHeldId(null)}
             onMouseLeave={() => setHeldId(null)}
         >
-            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,white_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
+            {/* Caustics Layer */}
+            <div className="caustics" />
+            
+            {/* Bubbles Layer */}
+            {bubbles.map(b => (
+                <div 
+                    key={b.id}
+                    className="bubble"
+                    style={{
+                        '--left': b.left,
+                        '--duration': b.duration,
+                        '--drift': b.drift,
+                        width: b.size,
+                        height: b.size,
+                        animationDelay: b.delay
+                    } as React.CSSProperties}
+                />
+            ))}
+
+            <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,#00aaff_1.5px,transparent_1.5px)] bg-size-[40px_40px] pointer-events-none animate-tech-glow" />
 
             <div className="relative h-full w-full pointer-events-none">
                 {itemsRef.current.map((item) => (
@@ -164,32 +194,33 @@ export default function LanguageCarousel() {
                         }}
                     >
                         {heldId === item.id && (
-                            <div className="absolute -top-10 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-lg bg-white px-3 py-1 text-sm font-bold text-[#d7265a] shadow-xl animate-in fade-in zoom-in duration-200">
+                            <div className="absolute -top-12 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-lg bg-white/90 backdrop-blur-md px-3 py-1 text-xs font-bold text-[#062a52] shadow-xl animate-in fade-in zoom-in duration-200">
                                 {item.name}
-                                <div className="absolute -bottom-1 left-1/2 h-2 w-2 -translate-x-1/2 rotate-45 bg-white" />
+                                <div className="absolute -bottom-1 left-1/2 h-2 w-2 -translate-x-1/2 rotate-45 bg-white/90" />
                             </div>
                         )}
 
                         <div
-                            className={`flex aspect-square h-20 w-20 items-center justify-center rounded-2xl bg-white shadow-2xl transition-all duration-300 ${heldId === item.id
-                                ? 'shadow-[0_0_40px_rgba(255,255,255,0.9)] scale-100 ring-4 ring-white/30'
-                                : 'hover:scale-105'
+                            className={`flex aspect-square h-20 w-20 items-center justify-center rounded-3xl ocean-current-icon ${heldId === item.id
+                                ? 'shadow-[0_0_50px_rgba(0,180,255,0.6)] ring-2 ring-white/20'
+                                : ''
                                 }`}
                         >
                             <img
                                 src={item.icon}
                                 alt={item.name}
-                                width={54}
-                                height={54}
-                                className="h-14 w-14 object-contain pointer-events-none"
+                                width={50}
+                                height={50}
+                                className="h-12 w-12 object-contain pointer-events-none brightness-110"
                             />
                         </div>
                     </div>
                 ))}
             </div>
 
-            <div className="absolute left-0 top-0 h-full w-40 bg-linear-to-r from-[#d7265a] via-[#d7265a]/40 to-transparent z-40 pointer-events-none" />
-            <div className="absolute right-0 top-0 h-full w-40 bg-linear-to-l from-[#d7265a] via-[#d7265a]/40 to-transparent z-40 pointer-events-none" />
+            {/* Ocean Current Depth Overlays */}
+            <div className="absolute left-0 top-0 h-full w-48 bg-linear-to-r from-[#021027] via-[#021027]/80 to-transparent z-40 pointer-events-none" />
+            <div className="absolute right-0 top-0 h-full w-48 bg-linear-to-l from-[#021027] via-[#021027]/80 to-transparent z-40 pointer-events-none" />
         </section>
     );
 }

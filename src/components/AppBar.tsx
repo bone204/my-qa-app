@@ -7,6 +7,12 @@ import { useState, useEffect } from "react";
 import Button from "./Button";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
 
 export default function AppBar() {
   const [isVisible, setIsVisible] = useState(true);
@@ -78,69 +84,79 @@ export default function AppBar() {
   return (
     <>
       <header
-        className={`fixed top-0 z-50 w-full select-none transition-all duration-300 ease-in-out ${
-          isVisible ? "translate-y-0" : "-translate-y-full"
-        } ${
-          isScrolled || isMobileMenuOpen
-            ? "bg-white/90 backdrop-blur-xl border-b border-gray-200/50 shadow-sm"
-            : "bg-transparent border-b border-transparent"
+        className={`fixed inset-x-0 top-0 z-50 flex justify-center pointer-events-none transition-all duration-500 ease-in-out ${
+          isVisible ? "top-0 opacity-100" : "-top-24 opacity-0"
         }`}
       >
-        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-3 md:px-8 md:py-4 transition-all">
-          {/* Logo Left */}
-          <div className="flex z-50 items-center">
-            <Link 
-              href="/" 
-              className="flex items-center space-x-2 outline-none rounded-lg focus-visible:ring-2 focus-visible:ring-[#d7265a]"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              <Image 
-                src={IMAGES.logo} 
-                alt="Logo" 
-                width={120} 
-                height={120} 
-                className="w-20 md:w-28 h-auto object-contain transition-transform hover:scale-105 duration-300"
-                priority
-              />
-            </Link>
-          </div>
-
-          {/* Center Nav */}
-          <nav className="hidden md:flex items-center gap-8 lg:gap-12">
-            {["Home", "About", "Services"].map((item) => (
-              <Link
-                key={item}
-                href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                className="group relative text-[15px] font-semibold text-gray-700 transition-colors hover:text-[#d7265a] outline-none rounded-sm focus-visible:ring-2 focus-visible:ring-[#d7265a] focus-visible:ring-offset-4 focus-visible:ring-offset-white"
+        <div 
+          className={cn(
+            "mt-6 mx-4 w-full max-w-7xl pointer-events-auto transition-all duration-300",
+            "rounded-full border border-white/10 bg-white/5 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.3)]",
+            isScrolled ? "py-2 px-4 md:px-6 shadow-primary/5" : "py-3 px-6 md:px-10"
+          )}
+        >
+          <div className="flex items-center justify-between">
+            {/* Logo Left */}
+            <div className="flex items-center">
+              <Link 
+                href="/" 
+                className="flex items-center space-x-2 outline-none rounded-lg focus-visible:ring-2 focus-visible:ring-primary"
+                onClick={() => setIsMobileMenuOpen(false)}
               >
-                {item}
-                <span className="absolute -bottom-1.5 left-0 h-[2px] w-0 bg-[#d7265a] transition-all duration-300 group-hover:w-full"></span>
+                <Image 
+                  src={IMAGES.logo} 
+                  alt="Logo" 
+                  width={100} 
+                  height={100} 
+                  className="w-16 md:w-24 h-auto object-contain transition-transform hover:scale-105 duration-300 brightness-110"
+                  priority
+                />
               </Link>
-            ))}
-          </nav>
+            </div>
 
-          {/* Auth Buttons Right */}
-          <div className="hidden md:flex items-center justify-end gap-3 lg:gap-4">
-            <Button variant="secondary" className="px-5 py-2.5 text-sm font-semibold rounded-full border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-colors">Sign In</Button>
-            <Button variant="primary" className="px-5 py-2.5 text-sm font-semibold shadow-md hover:shadow-xl shadow-[#d7265a]/20 hover:shadow-[#d7265a]/30 transition-all rounded-full bg-[#d7265a] hover:bg-[#b01c48]">Sign Up</Button>
-          </div>
+            {/* Center Nav */}
+            <nav className="hidden md:flex items-center gap-8 lg:gap-10">
+              {["Home", "About", "Services"].map((item) => (
+                <Link
+                  key={item}
+                  href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                  className="group relative text-[14px] font-bold text-zinc-400 transition-colors hover:text-white outline-none rounded-sm focus-visible:ring-2 focus-visible:ring-primary"
+                >
+                  {item}
+                  <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+              ))}
+            </nav>
 
-          {/* Mobile Menu Toggle Button */}
-          <div className="flex items-center md:hidden z-50">
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="relative p-2 text-gray-700 bg-white/60 hover:bg-white/90 backdrop-blur-md rounded-full border border-gray-200 shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#d7265a] active:scale-95"
-              aria-label="Toggle Menu"
-              aria-expanded={isMobileMenuOpen}
-            >
-              <motion.div
-                initial={false}
-                animate={{ rotate: isMobileMenuOpen ? 90 : 0 }}
-                transition={{ duration: 0.2 }}
+            {/* Auth Buttons Right */}
+            <div className="hidden md:flex items-center justify-end gap-3">
+              <Link href="/signin" className="text-sm font-bold text-zinc-400 hover:text-white transition-colors px-4 py-2">
+                Sign In
+              </Link>
+              <Button 
+                variant="primary" 
+                className="px-6 py-2 text-sm font-bold shadow-lg shadow-primary/20 transition-all rounded-full bg-primary hover:bg-primary/80"
               >
-                {isMobileMenuOpen ? <X size={20} className="text-gray-900" /> : <Menu size={20} className="text-gray-900" />}
-              </motion.div>
-            </button>
+                Sign Up
+              </Button>
+            </div>
+
+            {/* Mobile Menu Toggle Button */}
+            <div className="flex items-center md:hidden">
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="relative p-2 text-zinc-400 hover:text-white transition-all focus:outline-none"
+                aria-label="Toggle Menu"
+              >
+                <motion.div
+                  initial={false}
+                  animate={{ rotate: isMobileMenuOpen ? 90 : 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                </motion.div>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -152,10 +168,10 @@ export default function AppBar() {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="md:hidden absolute top-full left-0 w-full overflow-hidden bg-white/95 backdrop-blur-xl shadow-2xl border-t border-gray-100 flex flex-col rounded-b-4xl"
+              className="md:hidden absolute top-full left-4 right-4 mt-2 overflow-hidden bg-[#0d1117]/95 backdrop-blur-2xl shadow-2xl border border-white/10 flex flex-col rounded-3xl pointer-events-auto"
             >
-              <div className="flex flex-col px-6 py-6 max-h-[calc(100vh-80px)] overflow-y-auto">
-                <nav className="flex flex-col space-y-2 mb-6">
+              <div className="flex flex-col px-6 py-8">
+                <nav className="flex flex-col space-y-4 mb-8">
                   {["Home", "About", "Services"].map((item, i) => (
                     <motion.div
                       key={item}
@@ -166,7 +182,7 @@ export default function AppBar() {
                       <Link
                         href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
                         onClick={() => setIsMobileMenuOpen(false)}
-                        className="block px-4 py-3 text-2xl font-bold tracking-tight text-gray-900 hover:text-[#d7265a] hover:bg-[#d7265a]/5 rounded-2xl transition-all"
+                        className="block py-2 text-2xl font-black tracking-tight text-white hover:text-primary transition-all"
                       >
                         {item}
                       </Link>
@@ -175,22 +191,15 @@ export default function AppBar() {
                 </nav>
 
                 <motion.div 
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.3 }}
-                  className="h-px w-full bg-gray-100 mb-6" 
-                />
-
-                <motion.div 
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3, duration: 0.3 }}
-                  className="flex flex-col gap-3 pb-4"
+                  className="flex flex-col gap-4"
                 >
-                  <Button variant="secondary" className="w-[calc(100%-1rem)] mx-auto flex justify-center py-4 text-base font-semibold border-2 rounded-2xl shadow-sm">
+                  <Button variant="secondary" className="w-full py-4 text-base font-bold border-white/10 text-white rounded-2xl">
                     Sign In
                   </Button>
-                  <Button variant="primary" className="w-[calc(100%-1rem)] mx-auto flex justify-center py-4 text-base font-semibold shadow-lg shadow-[#d7265a]/30 rounded-2xl hover:shadow-[#d7265a]/40">
+                  <Button variant="primary" className="w-full py-4 text-base font-bold rounded-2xl shadow-primary/30">
                     Sign Up
                   </Button>
                 </motion.div>

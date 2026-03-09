@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #EFEFEF;
-  --foreground: #171717;
+  --background: transparent;
+  --foreground: #ffffff;
   --primary: #d7265a;
 }
 
@@ -15,7 +15,7 @@
 }
 
 body {
-  background: var(--background);
+  background: #060606;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -25,11 +25,11 @@ body {
 }
 
 @utility section-title {
-  @apply text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-[1.1];
+  @apply text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1];
 }
 
 @utility section-desc {
-  @apply text-lg md:text-xl text-gray-600 leading-relaxed max-w-xl;
+  @apply text-lg md:text-xl text-zinc-400 leading-relaxed max-w-xl;
 }
 
 @utility card-title {
@@ -37,11 +37,11 @@ body {
 }
 
 @utility card-subtitle {
-  @apply text-sm font-semibold text-zinc-500 dark:text-zinc-400 tracking-wider;
+  @apply text-sm font-semibold text-zinc-400 tracking-wider;
 }
 
 @utility card-desc {
-  @apply text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed;
+  @apply text-sm text-zinc-400 leading-relaxed;
 }
 
 @utility modal-title {
@@ -49,19 +49,19 @@ body {
 }
 
 @utility modal-subtitle {
-  @apply text-sm sm:text-base font-semibold text-zinc-500 dark:text-zinc-400 tracking-normal;
+  @apply text-sm sm:text-base font-semibold text-zinc-400 tracking-normal;
 }
 
 @utility modal-desc {
-  @apply text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed font-normal;
+  @apply text-sm sm:text-base text-zinc-400 leading-relaxed font-normal;
 }
 
 @utility modal-section-label {
-  @apply text-[10px] font-bold uppercase tracking-widest text-gray-900 mb-6 block;
+  @apply text-[10px] font-bold uppercase tracking-widest text-zinc-400 mb-6 block;
 }
 
 @utility modal-feature-text {
-  @apply text-sm font-medium text-gray-900;
+  @apply text-sm font-medium text-zinc-100;
 }
 
 @keyframes tech-glow {
@@ -78,6 +78,37 @@ body {
 @keyframes breathe {
   0%, 100% { transform: scale(1); opacity: 0.8; }
   50% { transform: scale(1.05); opacity: 1; }
+}
+
+@keyframes ocean-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes wave-pulse {
+  0%, 100% { opacity: 0.3; transform: translateY(0); }
+  50% { opacity: 0.6; transform: translateY(-5px); }
+}
+
+@keyframes bubble-rise {
+  0% { transform: translateY(100%) translateX(0); opacity: 0; }
+  20% { opacity: 0.5; }
+  80% { opacity: 0.5; }
+  100% { transform: translateY(-100px) translateX(var(--drift)); opacity: 0; }
+}
+
+@keyframes caustic-shimmer {
+  0% { transform: scale(1) rotate(0deg); opacity: 0.1; }
+  50% { transform: scale(1.5) rotate(5deg); opacity: 0.2; }
+  100% { transform: scale(1) rotate(0deg); opacity: 0.1; }
+}
+
+@keyframes fluid-sway {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(5px, -5px) rotate(1deg); }
+  50% { transform: translate(0, -10px) rotate(0deg); }
+  75% { transform: translate(-5px, -5px) rotate(-1deg); }
 }
 
 .animate-tech-glow {
@@ -98,4 +129,40 @@ body {
 
 .tech-ball-shadow {
   box-shadow: 0 0 50px -10px var(--glow-color);
+}
+
+.light-rays-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  pointer-events: none;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.ocean-current-bg {
+  background: linear-gradient(270deg, #021027, #062a52, #021027);
+  background-size: 200% 200%;
+  animation: ocean-flow 15s ease infinite;
+}
+
+.ocean-current-icon {
+  @apply bg-white/5 backdrop-blur-lg border border-white/10 shadow-[0_0_20px_rgba(0,150,255,0.1)];
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.ocean-current-icon:hover {
+  @apply bg-white/20 border-white/30 shadow-[0_0_30px_rgba(0,180,255,0.3)];
+}
+
+.bubble {
+  @apply absolute rounded-full bg-white/20 pointer-events-none;
+  animation: bubble-rise var(--duration) linear infinite;
+  left: var(--left);
+}
+
+.caustics {
+  @apply absolute inset-0 pointer-events-none opacity-20 mix-blend-overlay;
+  background: radial-gradient(circle at 50% 50%, #ffffff 0%, transparent 60%);
+  animation: caustic-shimmer 8s ease-in-out infinite;
 }
