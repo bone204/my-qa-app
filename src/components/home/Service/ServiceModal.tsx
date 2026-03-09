@@ -35,7 +35,7 @@ export function ServiceModal({ service, onClose }: ServiceModalProps) {
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="pointer-events-auto relative w-full hide-scrollbar max-w-2xl max-h-[85vh] overflow-hidden bg-white shadow-2xl ring-1 ring-zinc-200 flex flex-col"
+              className="pointer-events-auto relative w-full hide-scrollbar max-w-2xl max-h-[85vh] overflow-hidden bg-[#0d1117] shadow-[0_0_60px_rgba(0,0,0,0.5)] ring-1 ring-white/10 flex flex-col"
               transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
               style={{ borderRadius: 40 }}
             >
@@ -43,7 +43,7 @@ export function ServiceModal({ service, onClose }: ServiceModalProps) {
                 onClick={onClose}
                 whileHover={{ scale: 1.1, rotate: 90 }}
                 whileTap={{ scale: 0.9 }}
-                className="absolute right-6 top-6 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white text-gray-900 shadow-sm ring-1 ring-zinc-200 transition-colors hover:bg-primary hover:text-white "
+                className="absolute right-6 top-6 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white shadow-sm ring-1 ring-white/20 backdrop-blur-md transition-colors hover:bg-primary"
                 aria-label="Close modal"
               >
                 <X className="h-5 w-5" />
@@ -78,7 +78,7 @@ export function ServiceModal({ service, onClose }: ServiceModalProps) {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2, duration: 0.3 }}
                 >
-                  <div className="rounded-3xl bg-gray-300 p-6 sm:p-8 ring-1 ring-slate-200/40 dark:ring-slate-800/40">
+                  <div className="rounded-3xl bg-white/5 p-6 sm:p-8 ring-1 ring-white/10">
                     <span className="modal-section-label select-none">Core Capabilities</span>
                     <ul className="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-8">
                       {service.features.map((feature, idx) => (

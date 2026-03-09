@@ -37,7 +37,7 @@ export function ServiceCard({ service, isSelected, onClick, variants }: ServiceC
       }}
       whileTap={{ scale: 0.95 }}
       className={cn(
-        "group relative cursor-pointer overflow-hidden rounded-4xl bg-white border border-zinc-200 p-8 shadow-sm hover:shadow-xl hover:border-primary/20 transition-colors duration-200",
+        "group relative cursor-pointer overflow-hidden rounded-4xl bg-white/5 backdrop-blur-md border border-white/10 p-8 shadow-xl hover:shadow-primary/5 hover:border-primary/30 transition-all duration-300",
         isSelected ? "opacity-0 pointer-events-none" : "opacity-100"
       )}
       style={{ borderRadius: 32 }}

@@ -250,7 +250,7 @@ export default function AboutSection() {
                             <div className="absolute -inset-4 rounded-[3.5rem] bg-linear-to-tr from-primary/20 to-transparent blur-2xl pointer-events-none scale-105 transition-all duration-700 group-hover:blur-3xl" />
 
                             {/* Main Video Wrapper */}
-                            <div className="relative aspect-4/3 w-full rounded-[3rem] overflow-hidden bg-white/50 backdrop-blur-sm p-2 md:p-3 shadow-[0_20px_50px_rgba(0,0,0,0.1)] ring-1 ring-white/50">
+                            <div className="relative aspect-4/3 w-full rounded-[3rem] overflow-hidden bg-white/10 backdrop-blur-sm p-2 md:p-3 shadow-[0_20px_50px_rgba(0,0,0,0.3)] ring-1 ring-white/20">
                                 <div className="relative h-full w-full rounded-[2.2rem] overflow-hidden bg-gray-900 shadow-inner">
                                     <AnimatePresence initial={false} custom={direction} mode="popLayout">
                                         <motion.div
