@@ -44,6 +44,38 @@ body {
   @apply text-sm text-zinc-400 leading-relaxed;
 }
 
+@utility review-label {
+  @apply text-[10px] font-bold uppercase tracking-[0.4em] text-primary;
+}
+
+@utility review-title {
+  @apply text-5xl md:text-7xl font-black text-white tracking-tighter leading-[0.9];
+}
+
+@utility review-subtitle {
+  @apply text-zinc-600;
+}
+
+@utility review-desc {
+  @apply text-lg text-zinc-500 leading-relaxed;
+}
+
+@utility review-content {
+  @apply text-base text-zinc-400 leading-relaxed italic;
+}
+
+@utility review-name {
+  @apply text-sm font-semibold text-white tracking-tight;
+}
+
+@utility review-role {
+  @apply text-xs text-zinc-500;
+}
+
+@utility review-company {
+  @apply text-xs text-zinc-400;
+}
+
 @utility modal-title {
   @apply text-2xl sm:text-4xl font-extrabold text-foreground tracking-tight leading-tight;
 }

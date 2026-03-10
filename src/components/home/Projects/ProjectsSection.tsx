@@ -1,205 +1,13 @@
 "use client";
 
-import { motion, AnimatePresence, useScroll, useTransform, useInView, useMotionValue, useMotionValueEvent } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useMotionValueEvent, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
-import Image from "next/image";
-import { ArrowRight, CheckCircle, Users, Briefcase, Globe, Award } from "lucide-react";
+import { ArrowRight, Globe, Award } from "lucide-react";
 import Button from "@/components/Button";
 import { VideoText } from "@/components/VideoText";
 import { VIDEOS } from "@/constants/video";
-import { clsx, type ClassValue } from "clsx";
-import { twMerge } from "tailwind-merge";
-
-function cn(...inputs: ClassValue[]) {
-    return twMerge(clsx(inputs));
-}
-
-interface Project {
-    id: number;
-    title: string;
-    category: string;
-    description: string;
-    image: string;
-    color: string;
-}
-
-const projects: Project[] = [
-    {
-        id: 1,
-        title: "Smart Home IoT Dashboard",
-        category: "Web Application",
-        description: "A comprehensive control center for modern living, blending deep-tech automation with an intuitive, minimalist interface.",
-        image: "/projects/project1.png",
-        color: "from-blue-500 to-cyan-400",
-    },
-    {
-        id: 2,
-        title: "FinTech Mobile Portfolio",
-        category: "Mobile App",
-        description: "Redefining personal finance through peak performance and elegant security, designed for the next generation of investors.",
-        image: "/projects/project2.png",
-        color: "from-emerald-500 to-teal-400",
-    },
-    {
-        id: 3,
-        title: "AI Creative Agency Portal",
-        category: "Landing Page",
-        description: "Where artificial intelligence meets human creativity, featuring dynamic visuals and seamless user journeys for global brands.",
-        image: "/projects/project3.png",
-        color: "from-purple-500 to-pink-400",
-    },
-];
-
-const stats = [
-    {
-        label: "Projects Completed",
-        value: 150,
-        icon: <CheckCircle className="w-5 h-5 text-emerald-400" />,
-        suffix: "+",
-    },
-    {
-        label: "Happy Clients",
-        value: 98,
-        icon: <Users className="w-5 h-5 text-blue-400" />,
-        suffix: "%",
-    },
-    {
-        label: "Years Experience",
-        value: 8,
-        icon: <Briefcase className="w-5 h-5 text-purple-400" />,
-        suffix: "+",
-    }
-];
-const ProjectStackCard = ({ project, index, position, isActive, onClick }: {
-    project: Project;
-    index: number;
-    position: number;
-    isActive: boolean;
-    onClick: () => void;
-}) => {
-    const cardRef = useRef<HTMLDivElement>(null);
-    const mouseX = useMotionValue(0);
-    const mouseY = useMotionValue(0);
-
-    const rotateX = useTransform(mouseY, [-300, 300], [15, -15]);
-    const rotateY = useTransform(mouseX, [-300, 300], [-15, 15]);
-
-    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-        if (!isActive || !cardRef.current) return;
-        const rect = cardRef.current.getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width / 2;
-        const y = e.clientY - rect.top - rect.height / 2;
-        mouseX.set(x);
-        mouseY.set(y);
-    };
-
-    const handleMouseLeave = () => {
-        mouseX.set(0);
-        mouseY.set(0);
-    };
-
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-        const checkMobile = () => {
-            setIsMobile(window.innerWidth < 768); // Changed to standard mobile threshold
-        };
-        checkMobile();
-        window.addEventListener('resize', checkMobile);
-        return () => window.removeEventListener('resize', checkMobile);
-    }, []);
-
-    return (
-        <motion.div
-            ref={cardRef}
-            onClick={onClick}
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-            animate={{
-                x: position * (isMobile ? 45 : 140), // Increased from 35 to 45 for better visibility
-                y: position * (isMobile ? -25 : -45),
-                z: -position * (isMobile ? 150 : 350),
-                width: isMobile ? "86%" : "100%", // Reduced width on mobile to show background
-                scale: 1 - position * (isMobile ? 0.05 : 0.12), // Less scale reduction on mobile
-                rotateY: position * (isMobile ? -12 : -18),
-                opacity: isActive ? 1 : 0.85 / (position + 0.2),
-                filter: isActive ? "blur(0px)" : `blur(${position * (isMobile ? 1.5 : 4)}px)`,
-            }}
-            whileHover={!isActive ? {
-                x: position * (isMobile ? 55 : 155),
-                scale: 1 - position * (isMobile ? 0.03 : 0.1)
-            } : {}}
-            style={{
-                rotateX: isActive ? rotateX : 0,
-                rotateY: isActive ? rotateY : (position * -15),
-                zIndex: 10 - position,
-                perspective: 1500,
-                left: isMobile ? "7%" : "0", // Center the narrower cards on mobile
-            }}
-            transition={{
-                type: "spring",
-                stiffness: 120,
-                damping: 20,
-            }}
-            className="absolute inset-0 cursor-pointer origin-center transform-gpu"
-        >
-            <div className={cn(
-                "relative w-full h-full rounded-[3.5rem] overflow-hidden shadow-2xl transition-all duration-500",
-                isActive ? "ring-2 ring-primary/40 shadow-primary/20" : "border border-white/40 shadow-black/5"
-            )}>
-                <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover"
-                    priority={isActive}
-                />
-
-                {!isActive && (
-                    <div className="absolute inset-0 bg-gray-900/10 backdrop-blur-[1.5px] group-hover:bg-transparent transition-all duration-500" />
-                )}
-
-                {isActive && (
-                    <div className="absolute inset-0 bg-linear-to-tr from-white/10 to-transparent pointer-events-none" />
-                )}
-            </div>
-        </motion.div>
-    );
-};
-
-const Counter = ({ value, suffix }: { value: number; suffix: string }) => {
-    const [count, setCount] = useState(0);
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true });
-
-    useEffect(() => {
-        if (isInView) {
-            let start = 0;
-            const end = value;
-            const duration = 2000;
-            const increment = end / (duration / 16);
-
-            const timer = setInterval(() => {
-                start += increment;
-                if (start >= end) {
-                    setCount(end);
-                    clearInterval(timer);
-                } else {
-                    setCount(Math.floor(start));
-                }
-            }, 16);
-
-            return () => clearInterval(timer);
-        }
-    }, [isInView, value]);
-
-    return (
-        <span ref={ref} className="text-3xl font-black text-white tabular-nums">
-            {count}
-            {suffix}
-        </span>
-    );
-};
+import { projects, stats } from "./projectsData";
+import { ProjectStackCard, Counter } from "./ProjectStackCard";
 
 const titleVariants = {
     hidden: { opacity: 0, y: 60, scale: 0.8, filter: "blur(20px)" },
@@ -215,6 +23,7 @@ const titleVariants = {
         }
     })
 };
+
 
 export default function ProjectsSection() {
     const [activeIndex, setActiveIndex] = useState(0);
