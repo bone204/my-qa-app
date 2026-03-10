@@ -32,16 +32,16 @@ export default function ExpertiseSection() {
       // 2. Directional scroll logic for title animation
       const currentScrollY = window.scrollY;
       const isScrollingDown = currentScrollY > lastScrollY.current;
-      
+
       if (isInView && isScrollingDown && !hasAnimated) {
         setHasAnimated(true);
       }
-      
+
       // Reset when scrolling far above the section
       if (currentScrollY < (sectionRef.current?.offsetTop || 0) - 800) {
         setHasAnimated(false);
       }
-      
+
       lastScrollY.current = currentScrollY;
     };
 
@@ -56,7 +56,7 @@ export default function ExpertiseSection() {
 
   const handleMouseEnter = (id: string | null) => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    
+
     // Ignore hover if the user is actively scrolling to prevent accidental popups
     if (isScrollingRef.current && id !== null) return;
 
@@ -74,7 +74,7 @@ export default function ExpertiseSection() {
 
   const handleMouseLeave = () => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    
+
     // Add a small grace period before closing to allow moving to the modal
     timeoutRef.current = setTimeout(() => {
       setSelectedId(null);
@@ -82,7 +82,7 @@ export default function ExpertiseSection() {
   };
 
   return (
-    <section 
+    <section
       ref={sectionRef}
       className="relative w-full pb-24 md:pb-48 bg-background overflow-hidden flex flex-col items-center justify-start"
       onMouseLeave={handleMouseLeave}
@@ -108,7 +108,7 @@ export default function ExpertiseSection() {
         </motion.div>
       </div>
 
-      <motion.div 
+      <motion.div
         animate={hasAnimated ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
         transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
         className="container mx-auto px-4 z-10"
@@ -131,7 +131,7 @@ export default function ExpertiseSection() {
                 {selectedId !== item.id && (
                   <motion.span
                     layoutId={`title-label-${item.id}`}
-                    className="text-sm font-bold text-gray-900 uppercase tracking-[0.2em] group-hover/ball-unit:text-primary transition-colors duration-300 select-none"
+                    className="expertise-ball-label"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 * expertiseData.indexOf(item) }}
@@ -202,18 +202,18 @@ export default function ExpertiseSection() {
                 </div>
 
                 {/* Right Side: Content */}
-                <motion.div 
+                <motion.div
                   layout
                   className="w-full md:w-7/12 pt-10 pb-12 px-8 sm:p-14 relative select-none flex flex-col justify-start md:justify-center overflow-y-auto custom-scrollbar flex-1"
                 >
-                  <motion.h3 
+                  <motion.h3
                     layoutId={`title-${selectedItem.id}`}
                     className="modal-title mb-3"
                   >
                     {selectedItem.title}
                   </motion.h3>
-                  
-                  <motion.p 
+
+                  <motion.p
                     layout
                     className="modal-desc mb-8"
                   >
@@ -228,7 +228,7 @@ export default function ExpertiseSection() {
                         </span>
                         <div className="flex flex-wrap gap-3">
                           {group.skills.map((skill, sIdx) => (
-                            <motion.span 
+                            <motion.span
                               layout
                               key={sIdx}
                               initial={{ opacity: 0, y: 10 }}

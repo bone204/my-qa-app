@@ -19,6 +19,7 @@ export default function AppBar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
   // Close mobile menu when resizing to desktop
   useEffect(() => {
@@ -84,11 +85,10 @@ export default function AppBar() {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 flex justify-center pointer-events-none transition-all duration-500 ease-in-out ${
-          isVisible ? "top-0 opacity-100" : "-top-24 opacity-0"
-        }`}
+        className={`fixed inset-x-0 top-0 z-50 flex justify-center pointer-events-none transition-all duration-500 ease-in-out ${isVisible ? "top-0 opacity-100" : "-top-24 opacity-0"
+          }`}
       >
-        <div 
+        <div
           className={cn(
             "mt-6 mx-4 w-full max-w-7xl pointer-events-auto transition-all duration-300",
             "rounded-full border border-white/10 bg-white/5 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.3)]",
@@ -98,43 +98,82 @@ export default function AppBar() {
           <div className="flex items-center justify-between">
             {/* Logo Left */}
             <div className="flex items-center">
-              <Link 
-                href="/" 
+              <Link
+                href="/"
                 className="flex items-center space-x-2 outline-none rounded-lg focus-visible:ring-2 focus-visible:ring-primary"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                <Image 
-                  src={IMAGES.logo} 
-                  alt="Logo" 
-                  width={100} 
-                  height={100} 
-                  className="w-16 md:w-24 h-auto object-contain transition-transform hover:scale-105 duration-300 brightness-110"
+                <Image
+                  src={IMAGES.logo}
+                  alt="Logo"
+                  width={100}
+                  height={100}
+                  className="w-16 md:w-28 h-auto object-contain transition-transform hover:scale-105 duration-300 brightness-110"
                   priority
                 />
               </Link>
             </div>
 
             {/* Center Nav */}
-            <nav className="hidden md:flex items-center gap-8 lg:gap-10">
+            <nav
+              className="hidden md:flex items-center gap-1 lg:gap-2"
+              onMouseLeave={() => setHoveredItem(null)}
+            >
               {["Home", "About", "Services"].map((item) => (
                 <Link
                   key={item}
                   href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                  className="group relative text-[14px] font-bold text-zinc-400 transition-colors hover:text-white outline-none rounded-sm focus-visible:ring-2 focus-visible:ring-primary"
+                  onMouseEnter={() => setHoveredItem(item)}
+                  className={cn(
+                    "group relative px-5 py-2 text-[14px] font-bold transition-all duration-300 outline-none rounded-full",
+                    hoveredItem === item ? "text-white" : "text-zinc-400 focus-visible:ring-2 focus-visible:ring-primary"
+                  )}
                 >
-                  {item}
-                  <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                  <span className="relative z-10">{item}</span>
+
+                  {hoveredItem === item && (
+                    <motion.div
+                      layoutId="nav-hover-bg"
+                      className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-full border border-white/10"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
+                    />
+                  )}
+
+                  <span className="absolute bottom-1 left-1/2 -translate-x-1/2 h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-4 z-20"></span>
                 </Link>
               ))}
             </nav>
 
             {/* Auth Buttons Right */}
-            <div className="hidden md:flex items-center justify-end gap-3">
-              <Link href="/signin" className="text-sm font-bold text-zinc-400 hover:text-white transition-colors px-4 py-2">
-                Sign In
+            <div
+              className="hidden md:flex items-center justify-end gap-3"
+              onMouseLeave={() => setHoveredItem(null)}
+            >
+              <Link
+                href="/signin"
+                onMouseEnter={() => setHoveredItem('signin')}
+                className={cn(
+                  "relative px-5 py-2 text-sm font-bold transition-all duration-300 outline-none rounded-full",
+                  hoveredItem === 'signin' ? "text-white" : "text-zinc-400"
+                )}
+              >
+                <span className="relative z-10">Sign In</span>
+                {hoveredItem === 'signin' && (
+                  <motion.div
+                    layoutId="nav-hover-bg"
+                    className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-full border border-white/10"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
+                  />
+                )}
               </Link>
-              <Button 
-                variant="primary" 
+              <Button
+                variant="primary"
                 className="px-6 py-2 text-sm font-bold shadow-lg shadow-primary/20 transition-all rounded-full bg-primary hover:bg-primary/80"
               >
                 Sign Up
@@ -190,7 +229,7 @@ export default function AppBar() {
                   ))}
                 </nav>
 
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3, duration: 0.3 }}

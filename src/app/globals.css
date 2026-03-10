@@ -64,6 +64,10 @@ body {
   @apply text-sm font-medium text-zinc-100;
 }
 
+@utility expertise-ball-label {
+  @apply text-sm font-bold text-zinc-400 uppercase tracking-[0.2em] transition-colors duration-300 select-none group-hover/ball-unit:text-primary;
+}
+
 @keyframes tech-glow {
   0%, 100% { opacity: 0.5; filter: blur(20px); transform: scale(1); }
   50% { opacity: 0.8; filter: blur(40px); transform: scale(1.1); }
