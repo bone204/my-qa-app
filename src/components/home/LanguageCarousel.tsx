@@ -141,7 +141,7 @@ export default function LanguageCarousel() {
         }
     };
 
-    const [bubbles] = useState(() => 
+    const [bubbles] = useState(() =>
         Array.from({ length: 15 }).map((_, i) => ({
             id: i,
             left: `${Math.random() * 100}%`,
@@ -162,10 +162,10 @@ export default function LanguageCarousel() {
         >
             {/* Caustics Layer */}
             <div className="caustics" />
-            
+
             {/* Bubbles Layer */}
             {bubbles.map(b => (
-                <div 
+                <div
                     key={b.id}
                     className="bubble"
                     style={{
