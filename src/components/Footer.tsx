@@ -6,7 +6,7 @@ export default function Footer() {
     return (
         <footer className="relative bg-[#0A0A0A] text-gray-400 overflow-hidden text-sm">
             {/* Decorative Top Line */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[1px] bg-gradient-to-r from-transparent via-gray-700 to-transparent opacity-60"></div>
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-px bg-linear-to-r from-transparent via-gray-700 to-transparent opacity-60"></div>
 
             <div className="mx-auto max-w-7xl px-4 py-10 md:px-8 lg:py-12">
                 <div className="grid grid-cols-1 gap-y-10 lg:grid-cols-12 lg:gap-8">
@@ -82,20 +82,20 @@ export default function Footer() {
                             </h3>
                             <ul className="space-y-3">
                                 <li className="flex items-start">
-                                    <svg className="mr-3 mt-0.5 h-4 w-4 flex-shrink-0 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <svg className="mr-3 mt-0.5 h-4 w-4 shrink-0 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                     </svg>
                                     <span className="leading-tight">123 Business Avenue<br />New York, NY 10001</span>
                                 </li>
                                 <li className="flex items-center">
-                                    <svg className="mr-3 h-4 w-4 flex-shrink-0 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <svg className="mr-3 h-4 w-4 shrink-0 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                     </svg>
                                     <span>contact@company.com</span>
                                 </li>
                                 <li className="flex items-center">
-                                    <svg className="mr-3 h-4 w-4 flex-shrink-0 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <svg className="mr-3 h-4 w-4 shrink-0 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                     </svg>
                                     <span>+1 (555) 123-4567</span>

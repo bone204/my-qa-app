@@ -28,22 +28,22 @@ export default function Button({ variant = "primary", className = "", children, 
         return (
             <button
                 className={cn(
-                    "group relative w-auto cursor-pointer overflow-hidden rounded-full text-center font-bold transition-all duration-300 py-4 px-10 md:py-5 md:px-12",
-                    "border border-pink-500/50 shadow-[0_0_30px_rgba(236,72,153,0.3)]", // Mobile & Tablet default
-                    "lg:border-pink-500/20 lg:bg-background lg:shadow-none lg:hover:border-pink-500/50 lg:hover:shadow-[0_0_30px_rgba(236,72,153,0.3)]", // Desktop overrides
+                    "group relative w-auto cursor-pointer overflow-hidden rounded-full font-bold transition-all duration-300 py-4 px-10 md:py-5 md:px-12",
+                    "border border-pink-500/20 bg-background shadow-none hover:border-pink-500/50 hover:shadow-[0_0_30px_rgba(236,72,153,0.3)]",
                     className
                 )}
                 {...props}
             >
-                <div className="flex items-center justify-center gap-2">
-                    <div className="bg-pink-500 h-2 w-2 rounded-full transition-all duration-500 scale-[160.8] lg:scale-1 lg:group-hover:scale-[160.8]"></div>
-                    <span className="inline-block transition-all duration-500 opacity-0 translate-x-12 lg:opacity-100 lg:translate-x-0 lg:group-hover:translate-x-12 lg:group-hover:opacity-0 text-pink-500 text-base md:text-lg whitespace-nowrap">
+                <div className="relative z-10 flex items-center justify-center gap-3">
+                    <div className="bg-pink-500 h-2.5 w-2.5 rounded-full transition-all duration-500 lg:group-hover:scale-[160] group-active:scale-[160]"></div>
+                    <span className="text-pink-500 transition-all duration-500 lg:group-hover:opacity-0 lg:group-hover:translate-x-8">
                         {children}
                     </span>
                 </div>
-                <div className="absolute top-0 left-0 z-10 flex h-full w-full items-center justify-center gap-3 transition-all duration-500 opacity-100 translate-x-0 lg:opacity-0 lg:translate-x-12 lg:group-hover:translate-x-0 lg:group-hover:opacity-100">
+
+                <div className="absolute inset-0 z-20 flex h-full w-full items-center justify-center gap-3 transition-all duration-500 opacity-0 translate-x-8 lg:group-hover:opacity-100 lg:group-hover:translate-x-0 group-active:opacity-100 group-active:translate-x-0">
                     <span className="text-base md:text-lg font-bold text-white whitespace-nowrap">{children}</span>
-                    <ArrowRight className="h-4 w-4 text-white" strokeWidth={2.5} />
+                    <ArrowRight className="h-5 w-5 text-white" strokeWidth={2.5} />
                 </div>
             </button>
         );

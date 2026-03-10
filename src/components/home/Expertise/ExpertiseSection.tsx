@@ -155,7 +155,7 @@ export default function ExpertiseSection() {
               exit={{ opacity: 0 }}
               onClick={() => setSelectedId(null)}
               className={cn(
-                "fixed inset-0 z-60 bg-gray-900/40 backdrop-blur-lg",
+                "fixed inset-0 z-60 bg-gray-900/40",
                 !selectedId && "pointer-events-none"
               )}
               transition={{ duration: 0.2 }}
@@ -169,7 +169,7 @@ export default function ExpertiseSection() {
                   if (timeoutRef.current) clearTimeout(timeoutRef.current);
                 }}
                 onMouseLeave={handleMouseLeave}
-                className="pointer-events-auto relative w-full max-w-4xl max-h-[85vh] md:max-h-none bg-white rounded-4xl sm:rounded-[3rem] shadow-2xl overflow-hidden flex flex-col md:flex-row transition-shadow duration-300"
+                className="pointer-events-auto relative w-full max-w-4xl max-h-[85vh] md:max-h-none bg-[#0a0a0a] border border-white/10 rounded-4xl sm:rounded-[3rem] shadow-2xl overflow-hidden flex flex-col md:flex-row transition-shadow duration-300"
                 transition={{ type: "spring", damping: 25, stiffness: 300 }}
               >
                 {/* Unified Close Button (Same as ServiceModal) */}
@@ -177,7 +177,7 @@ export default function ExpertiseSection() {
                   onClick={() => setSelectedId(null)}
                   whileHover={{ scale: 1.1, rotate: 90 }}
                   whileTap={{ scale: 0.9 }}
-                  className="absolute right-6 top-6 z-50 flex h-10 w-10 items-center justify-center rounded-full bg-white text-gray-900 shadow-sm ring-1 ring-zinc-200 transition-colors hover:bg-primary hover:text-white pointer-events-auto"
+                  className="absolute right-6 top-6 z-50 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-md text-white border border-white/20 transition-colors hover:bg-primary hover:text-white pointer-events-auto"
                   aria-label="Close modal"
                 >
                   <X className="h-5 w-5" />
@@ -185,37 +185,51 @@ export default function ExpertiseSection() {
 
                 {/* Left Side: Visual Ball */}
                 <div className={cn(
-                  "relative w-full md:w-5/12 flex items-center justify-center py-6 px-12 sm:p-12 bg-linear-to-br shrink-0",
-                  selectedItem.gradient
+                  "relative w-full md:w-5/12 flex items-center justify-center py-6 px-12 sm:p-12 shrink-0 overflow-hidden",
+                  selectedItem.gradient.replace('from-', 'from-').replace('to-', 'to-') // Ensure high contrast
                 )}>
+                  {/* Decorative mesh background for the left side */}
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,0,0,0)_0%,rgba(0,0,0,0.5)_100%)]" />
+
                   <motion.div
                     layoutId={`ball-sphere-${selectedItem.id}`}
-                    className="w-32 h-32 sm:w-64 sm:h-64 rounded-full glass-morphism flex items-center justify-center shadow-2xl relative"
+                    className="w-32 h-32 sm:w-64 sm:h-64 rounded-full border border-white/30 flex items-center justify-center shadow-2xl relative tech-ball-shadow"
+                    style={{ '--glow-color': selectedItem.color } as any}
                   >
-                    <motion.div layoutId={`ball-icon-${selectedItem.id}`}>
-                      <selectedItem.icon className="w-16 h-16 sm:w-32 sm:h-32 text-white" />
+                    {/* Matching gradient background from ExpertiseBall.tsx */}
+                    <div className={cn(
+                      "absolute inset-0 opacity-90 bg-linear-to-br rounded-full",
+                      selectedItem.gradient
+                    )} />
+
+                    <motion.div layoutId={`ball-icon-${selectedItem.id}`} className="relative z-10">
+                      <selectedItem.icon className="w-16 h-16 sm:w-32 sm:h-32 text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.4)]" />
                     </motion.div>
+
+                    {/* Glassy reflections */}
+                    <div className="absolute inset-0 bg-linear-to-tr from-white/10 to-transparent pointer-events-none rounded-full" />
+
                     {/* Floating mini elements */}
-                    <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-8 h-8 sm:w-12 sm:h-12 bg-white/20 rounded-full backdrop-blur-md border border-white/30" />
-                    <div className="absolute -bottom-1 -left-1 sm:-bottom-2 sm:-left-2 w-6 h-6 sm:w-8 sm:h-8 bg-white/10 rounded-full backdrop-blur-md border border-white/20" />
+                    <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-8 h-8 sm:w-12 sm:h-12 bg-white/20 rounded-full border border-white/30 z-20" />
+                    <div className="absolute -bottom-1 -left-1 sm:-bottom-2 sm:-left-2 w-6 h-6 sm:w-8 sm:h-8 bg-white/10 rounded-full border border-white/20 z-20" />
                   </motion.div>
                 </div>
 
                 {/* Right Side: Content */}
                 <motion.div
                   layout
-                  className="w-full md:w-7/12 pt-10 pb-12 px-8 sm:p-14 relative select-none flex flex-col justify-start md:justify-center overflow-y-auto custom-scrollbar flex-1"
+                  className="w-full md:w-7/12 pt-10 pb-12 px-8 sm:p-14 relative select-none flex flex-col justify-start md:justify-center overflow-y-auto custom-scrollbar flex-1 bg-linear-to-b from-[#0d1117] to-[#0a0a0a]"
                 >
                   <motion.h3
                     layoutId={`title-${selectedItem.id}`}
-                    className="modal-title mb-3"
+                    className="modal-title mb-3 text-white"
                   >
                     {selectedItem.title}
                   </motion.h3>
 
                   <motion.p
                     layout
-                    className="modal-desc mb-8"
+                    className="modal-desc mb-8 text-zinc-400"
                   >
                     {selectedItem.description}
                   </motion.p>
@@ -223,7 +237,7 @@ export default function ExpertiseSection() {
                   <motion.div layout className="space-y-10">
                     {selectedItem.details.map((group, idx) => (
                       <motion.div layout key={idx} className="space-y-5">
-                        <span className="modal-section-label mb-4!">
+                        <span className="modal-section-label mb-4! text-zinc-500 font-bold border-l-2 border-primary pl-4">
                           {group.label}
                         </span>
                         <div className="flex flex-wrap gap-3">
@@ -234,7 +248,7 @@ export default function ExpertiseSection() {
                               initial={{ opacity: 0, y: 10 }}
                               animate={{ opacity: 1, y: 0 }}
                               transition={{ delay: 0.1 + sIdx * 0.05 }}
-                              className="px-5 py-2.5 rounded-2xl bg-gray-50 border border-gray-100 text-gray-900 text-sm font-semibold hover:border-primary/30 hover:bg-primary/5 transition-colors"
+                              className="px-5 py-2.5 rounded-2xl bg-white/5 border border-white/10 text-zinc-300 text-sm font-semibold hover:border-primary/40 hover:bg-primary/10 transition-all cursor-default"
                             >
                               {skill}
                             </motion.span>

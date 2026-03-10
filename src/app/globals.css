@@ -69,50 +69,134 @@ body {
 }
 
 @keyframes tech-glow {
-  0%, 100% { opacity: 0.5; filter: blur(20px); transform: scale(1); }
-  50% { opacity: 0.8; filter: blur(40px); transform: scale(1.1); }
+
+  0%,
+  100% {
+    opacity: 0.5;
+    filter: blur(20px);
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.8;
+    filter: blur(40px);
+    transform: scale(1.1);
+  }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0) rotate(0); }
-  33% { transform: translateY(-10px) rotate(2deg); }
-  66% { transform: translateY(5px) rotate(-2deg); }
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+
+  33% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+
+  66% {
+    transform: translateY(5px) rotate(-2deg);
+  }
 }
 
 @keyframes breathe {
-  0%, 100% { transform: scale(1); opacity: 0.8; }
-  50% { transform: scale(1.05); opacity: 1; }
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
 }
 
 @keyframes ocean-flow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes wave-pulse {
-  0%, 100% { opacity: 0.3; transform: translateY(0); }
-  50% { opacity: 0.6; transform: translateY(-5px); }
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: translateY(-5px);
+  }
 }
 
 @keyframes bubble-rise {
-  0% { transform: translateY(100%) translateX(0); opacity: 0; }
-  20% { opacity: 0.5; }
-  80% { opacity: 0.5; }
-  100% { transform: translateY(-100px) translateX(var(--drift)); opacity: 0; }
+  0% {
+    transform: translateY(100%) translateX(0);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.5;
+  }
+
+  80% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(-100px) translateX(var(--drift));
+    opacity: 0;
+  }
 }
 
 @keyframes caustic-shimmer {
-  0% { transform: scale(1) rotate(0deg); opacity: 0.1; }
-  50% { transform: scale(1.5) rotate(5deg); opacity: 0.2; }
-  100% { transform: scale(1) rotate(0deg); opacity: 0.1; }
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.1;
+  }
+
+  50% {
+    transform: scale(1.5) rotate(5deg);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.1;
+  }
 }
 
 @keyframes fluid-sway {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  25% { transform: translate(5px, -5px) rotate(1deg); }
-  50% { transform: translate(0, -10px) rotate(0deg); }
-  75% { transform: translate(-5px, -5px) rotate(-1deg); }
+
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(5px, -5px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(0, -10px) rotate(0deg);
+  }
+
+  75% {
+    transform: translate(-5px, -5px) rotate(-1deg);
+  }
 }
 
 .animate-tech-glow {
@@ -132,7 +216,7 @@ body {
 }
 
 .tech-ball-shadow {
-  box-shadow: 0 0 50px -10px var(--glow-color);
+  box-shadow: 0 0 60px -5px var(--glow-color), inset 0 0 20px -5px var(--glow-color);
 }
 
 .light-rays-container {
@@ -151,12 +235,32 @@ body {
 }
 
 .ocean-current-icon {
-  @apply bg-white/5 backdrop-blur-lg border border-white/10 shadow-[0_0_20px_rgba(0,150,255,0.1)];
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(0, 150, 255, 0.1);
   transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
 .ocean-current-icon:hover {
-  @apply bg-white/20 border-white/30 shadow-[0_0_30px_rgba(0,180,255,0.3)];
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 30px rgba(0, 180, 255, 0.3);
+}
+
+@keyframes electric-beam {
+  from {
+    stroke-dashoffset: 100%;
+  }
+
+  to {
+    stroke-dashoffset: -100%;
+  }
+}
+
+.animate-electric-beam {
+  animation: electric-beam 3s linear infinite;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 12px var(--glow-color, #ec4899)) drop-shadow(0 0 4px #fff);
 }
 
 .bubble {

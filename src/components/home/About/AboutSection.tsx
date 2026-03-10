@@ -100,7 +100,7 @@ export default function AboutSection() {
 
 
     return (
-        <section className="relative flex min-h-screen w-full items-center justify-center bg-background md:mt-8 py-20 md:py-24 overflow-hidden">
+        <section className="relative flex min-h-screen w-full items-center justify-center bg-background pt-32 pb-20 md:pt-40 md:pb-24 overflow-hidden">
             {/* Background elements for depth */}
 
 
@@ -311,8 +311,8 @@ export default function AboutSection() {
                                                     setCurrentIndex(idx);
                                                 }}
                                                 className={`h-2 rounded-full transition-all duration-300 pointer-events-auto ${idx === currentIndex
-                                                        ? "w-8 bg-white"
-                                                        : "w-2 bg-white/40 hover:bg-white/70"
+                                                    ? "w-8 bg-white"
+                                                    : "w-2 bg-white/40 hover:bg-white/70"
                                                     }`}
                                             />
                                         ))}
