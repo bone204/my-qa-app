@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { VIDEOS } from '@/constants/video';
-import Button from '@/components/Button';
+import Button from '@/components/ui/Button';
 
 const VIDEOS_LIST = [
     {

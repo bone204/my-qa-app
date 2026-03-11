@@ -3,8 +3,8 @@
 import { motion, AnimatePresence, useScroll, useMotionValueEvent, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import { ArrowRight, Globe, Award } from "lucide-react";
-import Button from "@/components/Button";
-import { VideoText } from "@/components/VideoText";
+import Button from "@/components/ui/Button";
+import { VideoText } from "@/components/ui/VideoText";
 import { VIDEOS } from "@/constants/video";
 import { projects, stats } from "./projectsData";
 import { ProjectStackCard, Counter } from "./ProjectStackCard";

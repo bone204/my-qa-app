@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { IMAGES } from "@/constants/images";
 import { useState, useEffect } from "react";
-import Button from "./Button";
+import Button from "./ui/Button";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { clsx, type ClassValue } from "clsx";

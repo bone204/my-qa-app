@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { LinkAction } from "../../LinkAction";
+import { LinkAction } from "../../ui/LinkAction";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import type { ServiceData } from "./ServiceData";
