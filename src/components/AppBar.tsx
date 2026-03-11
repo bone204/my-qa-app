@@ -6,7 +6,7 @@ import { IMAGES } from "@/constants/images";
 import { useState, useEffect } from "react";
 import Button from "./ui/Button";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown, Briefcase, ArrowRight } from "lucide-react";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -119,40 +119,114 @@ export default function AppBar() {
               className="hidden md:flex items-center gap-1 lg:gap-2"
               onMouseLeave={() => setHoveredItem(null)}
             >
-              {["Home", "About", "Services"].map((item) => (
-                <Link
+              {["Dịch Vụ", "Câu Chuyện Thành Công", "Danh Mục", "Về Chúng Tôi", "Tin Tức"].map((item) => (
+                <div
                   key={item}
-                  href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                  className="relative group/nav-item"
                   onMouseEnter={() => setHoveredItem(item)}
-                  className={cn(
-                    "group relative px-5 py-2 text-[14px] font-bold transition-all duration-300 outline-none rounded-full",
-                    hoveredItem === item ? "text-white" : "text-zinc-400 focus-visible:ring-2 focus-visible:ring-primary"
-                  )}
                 >
-                  <span className="relative z-10">{item}</span>
+                  <Link
+                    href={item === "Home" ? "/" : item === "Về Chúng Tôi" ? "#" : `/${item.toLowerCase().replace(/ /g, '-')}`}
+                    onClick={(e) => {
+                      if (item === "Về Chúng Tôi") {
+                        e.preventDefault();
+                      }
+                    }}
+                    className={cn(
+                      "group flex items-center gap-1.5 relative px-5 py-2 text-[14px] font-bold transition-all duration-300 outline-none rounded-full",
+                      hoveredItem === item ? "text-white" : "text-zinc-400 focus-visible:ring-2 focus-visible:ring-primary"
+                    )}
+                  >
+                    <span className="relative z-10">{item}</span>
+                    {item === "Về Chúng Tôi" && (
+                      <ChevronDown className="relative z-10 w-4 h-4 transition-transform duration-300 group-hover/nav-item:rotate-180" />
+                    )}
 
-                  {hoveredItem === item && (
-                    <motion.div
-                      layoutId="nav-hover-bg"
-                      className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-full border border-white/10"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
-                    />
+                    {hoveredItem === item && (
+                      <motion.div
+                        layoutId="nav-hover-bg"
+                        className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-full border border-white/10"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
+                      />
+                    )}
+
+                    <span className="absolute bottom-1 left-1/2 -translate-x-1/2 h-[2px] w-0 bg-primary transition-all duration-300 group-hover/nav-item:w-4 z-20"></span>
+                  </Link>
+
+                  {/* Dropdown Menu cho Về Chúng Tôi */}
+                  {item === "Về Chúng Tôi" && (
+                    <AnimatePresence>
+                      {hoveredItem === item && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 15, scale: 0.95 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                          transition={{ duration: 0.2, ease: "easeOut" }}
+                          className="absolute left-1/2 -translate-x-1/2 top-full pt-4 w-56"
+                        >
+                          <div className="rounded-2xl border border-white/10 bg-[#1a1c23]/95 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] overflow-hidden flex flex-col min-w-[500px] w-max">
+                            {/* Top Section */}
+                            <div className="flex p-6">
+                              {/* Left Column */}
+                              <div className="flex-1 pr-6 border-r border-white/10 group/col-left">
+                                <h4 className="text-xs font-bold text-zinc-500 group-hover/col-left:text-white transition-colors duration-300 mb-5">Về chúng tôi</h4>
+                                <div className="flex flex-col space-y-4">
+                                  {[
+                                    { name: "Tổng quan về chúng tôi", href: "/tong-quan" },
+                                    { name: "Phản hồi từ khách hàng", href: "/phan-hoi" },
+                                    { name: "Liên hệ", href: "/lien-he" },
+                                  ].map((subItem) => (
+                                    <Link key={subItem.name} href={subItem.href} className="group/link flex items-center gap-3">
+                                      <div className="w-3.5 h-3.5 rounded-full border-[1.5px] border-primary group-hover/link:bg-primary/20 transition-colors shrink-0" />
+                                      <span className="text-sm font-semibold text-white group-hover/link:text-primary transition-colors">{subItem.name}</span>
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+
+                              {/* Right Column */}
+                              <div className="flex-1 pl-6 group/col-right">
+                                <h4 className="text-xs font-bold text-zinc-500 group-hover/col-right:text-white transition-colors duration-300 mb-5">Khác</h4>
+                                <div className="flex flex-col space-y-4">
+                                  {[
+                                    { name: "Cuộc sống @ QKIT Software", href: "/cuoc-song" },
+                                    { name: "FAQ", href: "/faq" },
+                                  ].map((subItem) => (
+                                    <Link key={subItem.name} href={subItem.href} className="group/link flex items-center gap-3">
+                                      <div className="w-3.5 h-3.5 rounded-full border-[1.5px] border-primary group-hover/link:bg-primary/20 transition-colors shrink-0" />
+                                      <span className="text-sm font-semibold text-white group-hover/link:text-primary transition-colors">{subItem.name}</span>
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            </div>
+
+                            {/* Bottom Section */}
+                            <Link href="/su-nghiep" className="group/career relative px-6 py-5 overflow-hidden flex items-center justify-between">
+                              <div className="absolute inset-0 bg-linear-to-r from-indigo-900 via-purple-700 to-pink-600 opacity-90 transition-opacity group-hover/career:opacity-100" />
+                              <div className="relative z-10 flex items-center gap-4">
+                                <Briefcase className="w-7 h-7 text-white stroke-[1.5]" />
+                                <div className="flex flex-col">
+                                  <h4 className="text-[15px] font-bold text-white mb-0.5">Sự nghiệp</h4>
+                                  <p className="text-xs font-medium text-white/70">Chúng tôi luôn có chỗ trống cho những nhân sự chất lượng!</p>
+                                </div>
+                              </div>
+                              <ArrowRight className="relative z-10 w-4 h-4 text-white/50 group-hover/career:text-white group-hover/career:translate-x-1 transition-all" />
+                            </Link>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   )}
-
-                  <span className="absolute bottom-1 left-1/2 -translate-x-1/2 h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-4 z-20"></span>
-                </Link>
+                </div>
               ))}
             </nav>
 
-            <div className="w-40">
-
-            </div>
-
             {/* Auth Buttons Right */}
-            {/* <div
+            <div
               className="hidden md:flex items-center justify-end gap-3"
               onMouseLeave={() => setHoveredItem(null)}
             >
@@ -164,7 +238,7 @@ export default function AppBar() {
                   hoveredItem === 'signin' ? "text-white" : "text-zinc-400"
                 )}
               >
-                <span className="relative z-10">Sign In</span>
+                <span className="relative z-10">Thuê Nhân Sự</span>
                 {hoveredItem === 'signin' && (
                   <motion.div
                     layoutId="nav-hover-bg"
@@ -180,9 +254,9 @@ export default function AppBar() {
                 variant="primary"
                 className="px-6 py-2 text-sm font-bold shadow-lg shadow-primary/20 transition-all rounded-full bg-primary hover:bg-primary/80"
               >
-                Sign Up
+                Liên Hệ
               </Button>
-            </div> */}
+            </div>
 
             {/* Mobile Menu Toggle Button */}
             <div className="flex items-center md:hidden">
@@ -233,19 +307,19 @@ export default function AppBar() {
                   ))}
                 </nav>
 
-                {/* <motion.div
+                <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3, duration: 0.3 }}
                   className="flex flex-col gap-4"
                 >
                   <Button variant="secondary" className="w-full py-4 text-base font-bold border-white/10 text-white rounded-2xl">
-                    Sign In
+                    Thuê Nhân Sự
                   </Button>
                   <Button variant="primary" className="w-full py-4 text-base font-bold rounded-2xl shadow-primary/30">
-                    Sign Up
+                    Liên Hệ
                   </Button>
-                </motion.div> */}
+                </motion.div>
               </div>
             </motion.div>
           )}
