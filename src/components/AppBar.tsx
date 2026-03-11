@@ -237,13 +237,59 @@ export default function AppBar() {
               className="hidden md:flex items-center justify-end gap-3"
               onMouseLeave={() => setHoveredItem(null)}
             >
-              <button
-                onClick={() => setLocale(locale === 'vi' ? 'en' : 'vi')}
-                className="flex items-center gap-2 px-3 py-2 text-sm font-bold text-zinc-400 hover:text-white transition-colors rounded-full border border-white/5 bg-white/5 hover:bg-white/10"
+              <div 
+                className="relative group/lang font-sans" 
+                onMouseEnter={() => setHoveredItem('lang')} 
+                onMouseLeave={() => setHoveredItem(null)}
               >
-                <Globe className="w-4 h-4" />
-                <span>{locale === 'vi' ? 'EN' : 'VI'}</span>
-              </button>
+                <button
+                  className={cn(
+                    "flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 shadow-sm",
+                    hoveredItem === 'lang' ? "bg-white/10 border border-white/20 text-white shadow-[0_0_20px_rgba(255,255,255,0.1)]" : "bg-white/5 border border-white/10 text-zinc-300"
+                  )}
+                >
+                  <Globe className={cn("w-4 h-4 transition-transform duration-500", hoveredItem === 'lang' && "rotate-180")} />
+                  <span className="text-sm font-bold min-w-[20px] text-center">
+                    {locale.toUpperCase()}
+                  </span>
+                </button>
+
+                <AnimatePresence>
+                  {hoveredItem === 'lang' && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 5, scale: 0.95 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute right-0 top-full pt-3 w-40"
+                    >
+                      <div className="rounded-2xl border border-white/10 bg-[#1a1c23]/95 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] overflow-hidden flex flex-col p-2 space-y-1">
+                        {[
+                          { code: 'vi', label: 'Tiếng Việt' },
+                          { code: 'en', label: 'English' }
+                        ].map((lang) => (
+                          <button
+                            key={lang.code}
+                            onClick={() => {
+                              setLocale(lang.code);
+                              setHoveredItem(null);
+                            }}
+                            className={cn(
+                              "flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300",
+                              locale === lang.code 
+                                ? "bg-primary/20 text-primary" 
+                                : "text-zinc-300 hover:bg-white/10 hover:text-white"
+                            )}
+                          >
+                            {lang.label}
+                            {locale === lang.code && <div className="w-1.5 h-1.5 rounded-full bg-primary" />}
+                          </button>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
 
               <Link
                 href="/signin"
@@ -334,13 +380,34 @@ export default function AppBar() {
                   <Button variant="primary" className="w-full py-4 text-base font-bold rounded-2xl shadow-primary/30">
                     {t('buttons.contact')}
                   </Button>
-                  <button
-                    onClick={() => setLocale(locale === 'vi' ? 'en' : 'vi')}
-                    className="w-full py-4 mt-2 text-base font-bold border border-white/10 text-zinc-300 hover:text-white hover:bg-white/5 rounded-2xl flex items-center justify-center gap-2 transition-colors"
-                  >
-                    <Globe className="w-5 h-5" />
-                    {locale === 'vi' ? 'Switch to English' : 'Chuyển sang Tiếng Việt'}
-                  </button>
+                  <div className="flex flex-col gap-3 mt-2 pt-5 border-t border-white/10">
+                    <div className="flex items-center gap-2 pl-2">
+                      <Globe className="w-4 h-4 text-zinc-500" />
+                      <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest">Select Language</p>
+                    </div>
+                    <div className="grid grid-cols-2 gap-3">
+                      {[
+                        { code: 'vi', label: 'Tiếng Việt' },
+                        { code: 'en', label: 'English' }
+                      ].map((lang) => (
+                        <button
+                          key={lang.code}
+                          onClick={() => {
+                            setLocale(lang.code);
+                            setIsMobileMenuOpen(false);
+                          }}
+                          className={cn(
+                            "flex items-center justify-center gap-2 py-3.5 rounded-2xl text-sm font-bold border transition-all duration-300 active:scale-95",
+                            locale === lang.code
+                              ? "bg-primary/20 border-primary/50 text-white shadow-[0_0_15px_rgba(236,72,153,0.15)]"
+                              : "bg-white/5 border-white/10 text-zinc-400 hover:text-white hover:bg-white/10"
+                          )}
+                        >
+                          {lang.label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
                 </motion.div>
               </div>
             </motion.div>
