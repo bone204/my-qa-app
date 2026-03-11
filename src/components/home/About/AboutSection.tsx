@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { VIDEOS } from '@/constants/video';
+import Button from '@/components/Button';
 
 const VIDEOS_LIST = [
     {
@@ -99,7 +100,7 @@ export default function AboutSection() {
 
 
     return (
-        <section className="relative flex min-h-screen w-full items-center justify-center bg-background md:mt-8 py-20 md:py-24 overflow-hidden">
+        <section className="relative flex min-h-screen w-full items-center justify-center bg-background pt-32 pb-20 md:pt-40 md:pb-24 overflow-hidden">
             {/* Background elements for depth */}
 
 
@@ -122,33 +123,33 @@ export default function AboutSection() {
                         </p>
 
                         <div className="flex gap-4 pt-2">
-                            <button className="w-full sm:w-auto rounded-2xl md:rounded-2xl bg-primary px-8 md:px-10 py-4 md:py-5 font-bold text-white shadow-primary/20 shadow-[0_20px_40px_var(--tw-shadow-color)] hover:scale-105 transition-all outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary">
+                            <Button variant="body" className="w-full sm:w-auto">
                                 Discover More
-                            </button>
+                            </Button>
                         </div>
                     </div>
 
                     {/* Right Column: Video Carousel */}
                     <div className="w-full lg:w-1/2 animate-in fade-in slide-in-from-right duration-700 delay-200 relative">
-                        
+
                         {/* Decorative floating squares behind video */}
-                        <motion.div 
+                        <motion.div
                             animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
                             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                             className="absolute -top-8 -right-8 md:-top-12 md:-right-12 w-32 h-32 md:w-48 md:h-48 rounded-4xl md:rounded-[3rem] bg-linear-to-br from-primary/15 to-transparent border border-primary/20 backdrop-blur-lg -z-10"
                         />
-                        <motion.div 
+                        <motion.div
                             animate={{ y: [0, 15, 0], rotate: [0, -5, 0] }}
                             transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                             className="absolute -top-12 -left-8 md:-top-16 md:-left-12 w-40 h-40 md:w-56 md:h-56 rounded-4xl md:rounded-[3.5rem] bg-linear-to-tl from-gray-200/80 to-gray-50 border border-gray-300 shadow-xl -z-10"
                         />
-                        <motion.div 
+                        <motion.div
                             initial={{ rotate: 15 }}
                             animate={{ y: [0, -10, 0], rotate: [15, 30, 15], scale: [1, 1.05, 1] }}
                             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
                             className="absolute top-1/2 -right-6 md:-right-10 w-20 h-20 md:w-28 md:h-28 rounded-2xl md:rounded-3xl bg-primary/10 border border-primary/20 backdrop-blur-md -z-10 shadow-lg"
                         />
-                        
+
                         {/* Floating Interactive Code Element */}
                         <motion.div
                             animate={{ y: [0, 10, 0] }}
@@ -162,9 +163,9 @@ export default function AboutSection() {
                                     <div className="w-3 h-3 rounded-full bg-[#ffbd2e] shadow-sm"></div>
                                     <div className="w-3 h-3 rounded-full bg-[#27c93f] shadow-sm"></div>
                                 </div>
-                                
+
                                 <div className="font-mono text-[13px] md:text-sm text-gray-300 overflow-hidden leading-relaxed">
-                                    
+
                                     {/* Default state: Blinking cursor */}
                                     <div className="block group-hover:hidden transition-opacity duration-300">
                                         <p className="flex items-center text-primary">
@@ -179,9 +180,9 @@ export default function AboutSection() {
 
                                     {/* Hover State: Typing Code Animation */}
                                     <div className="hidden group-hover:block transition-all duration-300">
-                                        
+
                                         {/* Line 1 */}
-                                        <motion.div 
+                                        <motion.div
                                             initial={{ opacity: 0, width: 0 }}
                                             whileInView={{ opacity: 1, width: "100%" }}
                                             transition={{ duration: 0.5, ease: "linear" }}
@@ -189,9 +190,9 @@ export default function AboutSection() {
                                         >
                                             <span className="text-[#ff7b72]">async function</span> <span className="text-[#d2a8ff]">buildFuture</span>() {"{"}
                                         </motion.div>
-                                        
+
                                         {/* Line 2 */}
-                                        <motion.div 
+                                        <motion.div
                                             initial={{ opacity: 0, width: 0 }}
                                             whileInView={{ opacity: 1, width: "100%" }}
                                             transition={{ duration: 0.6, delay: 0.5, ease: "linear" }}
@@ -201,7 +202,7 @@ export default function AboutSection() {
                                         </motion.div>
 
                                         {/* Line 3 */}
-                                        <motion.div 
+                                        <motion.div
                                             initial={{ opacity: 0, width: 0 }}
                                             whileInView={{ opacity: 1, width: "100%" }}
                                             transition={{ duration: 0.5, delay: 1.1, ease: "linear" }}
@@ -211,7 +212,7 @@ export default function AboutSection() {
                                         </motion.div>
 
                                         {/* Line 4 */}
-                                        <motion.div 
+                                        <motion.div
                                             initial={{ opacity: 0 }}
                                             whileInView={{ opacity: 1 }}
                                             transition={{ duration: 0.2, delay: 1.6 }}
@@ -221,7 +222,7 @@ export default function AboutSection() {
                                         </motion.div>
 
                                         {/* Blinking Cursor at the end */}
-                                        <motion.div 
+                                        <motion.div
                                             initial={{ opacity: 0 }}
                                             whileInView={{ opacity: 1 }}
                                             transition={{ delay: 1.8 }}
@@ -236,12 +237,12 @@ export default function AboutSection() {
                                             </p>
                                         </motion.div>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </motion.div>
 
-                        <div 
+                        <div
                             className="relative group perspective-[1000px] w-full z-10"
                             onMouseEnter={() => setIsHovered(true)}
                             onMouseLeave={() => setIsHovered(false)}
@@ -285,20 +286,20 @@ export default function AboutSection() {
 
                                     {/* Navigation Controls (Visible on Hover) */}
                                     <div className="absolute inset-0 flex items-center justify-between p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
-                                        <button 
+                                        <button
                                             onClick={(e) => { e.stopPropagation(); paginate(-1); }}
                                             className="pointer-events-auto h-12 w-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-white/40 hover:scale-110 transition-all border border-white/30 shadow-lg"
                                         >
                                             <ChevronLeft size={24} />
                                         </button>
-                                        <button 
+                                        <button
                                             onClick={(e) => { e.stopPropagation(); paginate(1); }}
                                             className="pointer-events-auto h-12 w-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-white/40 hover:scale-110 transition-all border border-white/30 shadow-lg"
                                         >
                                             <ChevronRight size={24} />
                                         </button>
                                     </div>
-                                    
+
                                     {/* Pagination Dots */}
                                     <div className="absolute top-6 right-6 flex gap-2 z-20">
                                         {VIDEOS_LIST.map((_, idx) => (
@@ -309,11 +310,10 @@ export default function AboutSection() {
                                                     setDirection(idx > currentIndex ? 1 : -1);
                                                     setCurrentIndex(idx);
                                                 }}
-                                                className={`h-2 rounded-full transition-all duration-300 pointer-events-auto ${
-                                                    idx === currentIndex 
-                                                        ? "w-8 bg-white" 
-                                                        : "w-2 bg-white/40 hover:bg-white/70"
-                                                }`}
+                                                className={`h-2 rounded-full transition-all duration-300 pointer-events-auto ${idx === currentIndex
+                                                    ? "w-8 bg-white"
+                                                    : "w-2 bg-white/40 hover:bg-white/70"
+                                                    }`}
                                             />
                                         ))}
                                     </div>

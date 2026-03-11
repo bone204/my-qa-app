@@ -35,17 +35,17 @@ export function ExpertiseBall({ item, onClick, isExpanded, className, sizeMultip
         )}
         style={{ animationDelay: `${expertiseData.indexOf(item) * 1.5}s` }}
         initial={false}
-        animate={{ 
+        animate={{
           scale: isExpanded ? 1.5 : 1,
         }}
         transition={{ type: "spring", stiffness: 250, damping: 30 }}
       >
         {/* Background Glow */}
-        <div 
-          className="absolute inset-0 animate-tech-glow opacity-30 pointer-events-none"
-          style={{ 
-            background: `radial-gradient(circle, ${item.color}33 0%, transparent 70%)`,
-            '--glow-color': item.color 
+        <div
+          className="absolute inset-0 animate-tech-glow opacity-40 pointer-events-none"
+          style={{
+            background: `radial-gradient(circle, ${item.color}44 0%, transparent 70%)`,
+            '--glow-color': item.color
           } as any}
         />
 
@@ -53,31 +53,32 @@ export function ExpertiseBall({ item, onClick, isExpanded, className, sizeMultip
         <motion.div
           className={cn(
             "relative flex flex-col items-center justify-center rounded-full group",
-            "tech-ball-shadow overflow-hidden transition-all duration-500 border-2",
+            "tech-ball-shadow transition-all duration-500 border-2",
+            "shadow-[inset_0_0_20px_rgba(255,255,255,0.1)]" // Inner shadow for volume
           )}
-          style={{ 
+          style={{
             '--glow-color': `${item.color}`,
-            borderColor: `${item.color}`,
+            borderColor: `${item.color}88`, // Softer border color
             width: `calc(${sizeMultiplier} * 10rem)`,
             height: `calc(${sizeMultiplier} * 10rem)`,
-            backgroundColor: `${item.color}22` // Keep a subtle tint
+            backgroundColor: `${item.color}11` // Very subtle tint
           } as any}
         >
-          {/* Animated Background Gradients - Solid Opacity */}
+          {/* Animated Background Gradients - Sharp and Clear */}
           <div className={cn(
-            "absolute inset-0 opacity-100 transition-opacity duration-500 bg-linear-to-br shadow-inner",
+            "absolute inset-0 opacity-90 transition-opacity duration-500 bg-linear-to-br rounded-full",
             item.gradient
           )} />
-          
-          {/* Animated Rings - Sharper */}
-          <div className="absolute inset-0 border border-white/20 rounded-full animate-[spin_10s_linear_infinite]" />
-          <div className="absolute inset-2 border border-white/10 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
 
-          <motion.div 
+          {/* Animated Rings - Sharper */}
+          <div className="absolute inset-0 border border-white/20 rounded-full animate-[spin_10s_linear_infinite] opacity-50" />
+          <div className="absolute inset-2 border border-white/10 rounded-full animate-[spin_15s_linear_infinite_reverse] opacity-30" />
+
+          <motion.div
             layoutId={`ball-icon-${item.id}`}
-            className="relative z-10"
+            className="relative z-10 drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]"
           >
-            <item.icon className="w-10 h-10 sm:w-14 sm:h-14 text-white group-hover:scale-110 transition-transform" />
+            <item.icon className="w-10 h-10 sm:w-14 sm:h-14 text-white group-hover:scale-110 transition-transform duration-500" />
           </motion.div>
         </motion.div>
       </motion.div>
