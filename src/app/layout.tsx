@@ -1,12 +1,27 @@
 import "./globals.css";
 import AppBar from "@/components/AppBar";
 import Footer from "@/components/Footer";
-import CursorEffect from "@/components/CursorEffect";
-import { Geist } from "next/font/google";
+import CursorEffect from "@/components/ui/CursorEffect";
+import { Be_Vietnam_Pro } from "next/font/google";
 import { cn } from "@/lib/utils";
-import LightRays from "@/components/LightRays";
+import LightRays from "@/components/ui/LightRays";
+import { Metadata } from "next";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const beVietnamPro = Be_Vietnam_Pro({ 
+  subsets: ['vietnamese', 'latin'], 
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-sans' 
+});
+
+export const metadata: Metadata = {
+  title: "Chuyên Gia Phát Triển Ứng Dụng & Chuyển Đổi Số",
+  description: "QKIT",
+  icons: {
+    icon: "/icon_web.png",
+    shortcut: "/icon_web.png",
+    apple: "/icon_web.png",
+  },
+};
 
 
 export default function RootLayout({
@@ -15,10 +30,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("font-sans", geist.variable)}>
+    <html lang="vi" className={cn("font-sans", beVietnamPro.variable)}>
       <body className="relative">
         <div className="fixed inset-0 -z-10">
-          <LightRays 
+          <LightRays
             raysOrigin="top-center"
             raysColor="#ffffff"
             raysSpeed={1}

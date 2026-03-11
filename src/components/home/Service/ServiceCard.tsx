@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { LinkAction } from "../../LinkAction";
+import { LinkAction } from "../../ui/LinkAction";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import type { ServiceData } from "./ServiceData";
@@ -20,27 +20,21 @@ export function ServiceCard({ service, isSelected, onClick, variants }: ServiceC
     <motion.div
       variants={variants}
       onClick={onClick}
-      animate={{
-        y: [0, -15, 0],
-      }}
-      transition={{
-        y: {
-          duration: 3,
-          repeat: Infinity,
-          ease: "easeInOut",
-        },
-      }}
       whileHover={{ 
-        y: -25, 
         scale: 1.05,
         transition: { type: "spring", stiffness: 400, damping: 20 }
       }}
       whileTap={{ scale: 0.95 }}
       className={cn(
-        "group relative cursor-pointer overflow-hidden rounded-4xl bg-white/5 backdrop-blur-md border border-white/10 p-8 shadow-xl hover:shadow-primary/5 hover:border-primary/30 transition-all duration-300",
+        "group relative cursor-pointer overflow-hidden rounded-4xl bg-white/5 backdrop-blur-md border border-white/10 p-8 shadow-xl hover:shadow-primary/10 hover:border-primary/30",
         isSelected ? "opacity-0 pointer-events-none" : "opacity-100"
       )}
-      style={{ borderRadius: 32 }}
+      style={{ 
+        borderRadius: 32,
+        transitionProperty: 'border-color, box-shadow, background-color',
+        transitionDuration: '300ms',
+        transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)'
+      }}
     >
       <div className="absolute inset-0 bg-linear-to-br opacity-0 transition-opacity duration-300 group-hover:opacity-5 mix-blend-overlay" />
       
@@ -65,7 +59,7 @@ export function ServiceCard({ service, isSelected, onClick, variants }: ServiceC
         {service.description}
       </p>
       
-      <LinkAction className="group-hover:mt-6 select-none" />
+      <LinkAction className="mt-6 select-none" />
     </motion.div>
   );
 }

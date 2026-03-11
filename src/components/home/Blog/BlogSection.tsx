@@ -77,7 +77,7 @@ export default function BlogSection() {
                             className="text-5xl md:text-6xl font-black tracking-tighter leading-none"
                         >
                             <span className="text-white">Fresh </span>
-                            <span className="text-zinc-700">ideas.</span>
+                            <span className="text-primary">ideas.</span>
                         </motion.h2>
                     </div>
 

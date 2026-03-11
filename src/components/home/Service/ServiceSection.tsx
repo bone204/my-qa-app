@@ -60,13 +60,29 @@ export default function ServiceSection() {
     };
   }, []);
 
-  // Lock body scroll
+  // Handle open state and close on scroll
   useEffect(() => {
     if (selectedId) {
-      document.body.style.overflow = "hidden";
       window.dispatchEvent(new CustomEvent("modal-toggle", { detail: { isOpen: true } }));
+      
+      const handleScroll = () => {
+        setSelectedId(null);
+      };
+
+      // Delay attaching the event listener so the opening action doesn't trigger an immediate close
+      const timer = setTimeout(() => {
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        window.addEventListener("wheel", handleScroll, { passive: true });
+        window.addEventListener("touchmove", handleScroll, { passive: true });
+      }, 100);
+
+      return () => {
+        clearTimeout(timer);
+        window.removeEventListener("scroll", handleScroll);
+        window.removeEventListener("wheel", handleScroll);
+        window.removeEventListener("touchmove", handleScroll);
+      };
     } else {
-      document.body.style.overflow = "";
       window.dispatchEvent(new CustomEvent("modal-toggle", { detail: { isOpen: false } }));
     }
   }, [selectedId]);

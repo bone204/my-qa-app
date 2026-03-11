@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { IMAGES } from "@/constants/images";
 import { useState, useEffect } from "react";
-import Button from "./Button";
+import Button from "./ui/Button";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { clsx, type ClassValue } from "clsx";
@@ -147,8 +147,12 @@ export default function AppBar() {
               ))}
             </nav>
 
+            <div className="w-40">
+
+            </div>
+
             {/* Auth Buttons Right */}
-            <div
+            {/* <div
               className="hidden md:flex items-center justify-end gap-3"
               onMouseLeave={() => setHoveredItem(null)}
             >
@@ -178,7 +182,7 @@ export default function AppBar() {
               >
                 Sign Up
               </Button>
-            </div>
+            </div> */}
 
             {/* Mobile Menu Toggle Button */}
             <div className="flex items-center md:hidden">
@@ -229,7 +233,7 @@ export default function AppBar() {
                   ))}
                 </nav>
 
-                <motion.div
+                {/* <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3, duration: 0.3 }}
@@ -241,7 +245,7 @@ export default function AppBar() {
                   <Button variant="primary" className="w-full py-4 text-base font-bold rounded-2xl shadow-primary/30">
                     Sign Up
                   </Button>
-                </motion.div>
+                </motion.div> */}
               </div>
             </motion.div>
           )}
