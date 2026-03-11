@@ -42,9 +42,9 @@ export function ExpertiseBall({ item, onClick, isExpanded, className, sizeMultip
       >
         {/* Background Glow */}
         <div
-          className="absolute inset-0 animate-tech-glow opacity-40 pointer-events-none"
+          className="absolute inset-[-25%] animate-tech-glow opacity-60 pointer-events-none mix-blend-screen"
           style={{
-            background: `radial-gradient(circle, ${item.color}44 0%, transparent 70%)`,
+            background: `radial-gradient(circle, ${item.color}33 0%, transparent 70%)`,
             '--glow-color': item.color
           } as any}
         />
@@ -53,15 +53,14 @@ export function ExpertiseBall({ item, onClick, isExpanded, className, sizeMultip
         <motion.div
           className={cn(
             "relative flex flex-col items-center justify-center rounded-full group",
-            "tech-ball-shadow transition-all duration-500 border-2",
-            "shadow-[inset_0_0_20px_rgba(255,255,255,0.1)]" // Inner shadow for volume
+            "tech-ball-shadow transition-all duration-500 border border-white/20 backdrop-blur-md",
+            "shadow-[inset_0_0_30px_rgba(255,255,255,0.2)]" // Inner shadow for volume
           )}
           style={{
             '--glow-color': `${item.color}`,
-            borderColor: `${item.color}88`, // Softer border color
             width: `calc(${sizeMultiplier} * 10rem)`,
             height: `calc(${sizeMultiplier} * 10rem)`,
-            backgroundColor: `${item.color}11` // Very subtle tint
+            backgroundColor: `${item.color}1A` // Slightly more opaque but uses backdrop-blur
           } as any}
         >
           {/* Animated Background Gradients - Sharp and Clear */}

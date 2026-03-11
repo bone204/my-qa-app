@@ -54,6 +54,27 @@ export default function ExpertiseSection() {
 
   const selectedItem = expertiseData.find((item) => item.id === selectedId);
 
+  // Automatically close modal if the user scrolls the background page while it is open.
+  useEffect(() => {
+    if (!selectedId) return;
+
+    const handleScrollClose = () => {
+      setSelectedId(null);
+    };
+
+    // Use a small delay before attaching the listener to prevent the initial click 
+    // from triggering a scroll event (e.g. if the click causes a layout shift)
+    const timeout = setTimeout(() => {
+      // Only listen to window scroll, which doesn't trigger when scrolling inside the modal's internal div.
+      window.addEventListener('scroll', handleScrollClose, { passive: true });
+    }, 100);
+
+    return () => {
+      clearTimeout(timeout);
+      window.removeEventListener('scroll', handleScrollClose);
+    };
+  }, [selectedId]);
+
   const handleMouseEnter = (id: string | null) => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
 
