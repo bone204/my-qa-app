@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { Send, Phone, Mail, Globe, MapPin, Building2, Briefcase, MessageSquare, User, Smartphone, Layout, MessageCircle } from 'lucide-react';
 import axios from 'axios';
 import { Particles } from '@/components/ui/Particles';
+import { useTranslations } from 'next-intl';
 
 const SkypeIcon = ({ size = 20, className = "" }: { size?: number, className?: string }) => (
     <svg
@@ -31,6 +32,7 @@ const INDUSTRIES = [
 ];
 
 export default function ContactSection() {
+    const t = useTranslations('ContactSection');
     const [countries, setCountries] = useState<string[]>([]);
     const [isLoadingCountries, setIsLoadingCountries] = useState(true);
 
@@ -98,7 +100,7 @@ export default function ContactSection() {
                         viewport={{ once: true }}
                         className="section-subtitle"
                     >
-                        Hãy kết nối với chúng tôi
+                        {t('subtitle')}
                     </motion.span>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
@@ -107,7 +109,9 @@ export default function ContactSection() {
                         transition={{ delay: 0.1 }}
                         className="section-title"
                     >
-                        Bắt đầu <span className="text-primary">Dự án</span> của bạn
+                        {t.rich('title', {
+                            highlight: (chunks) => <span className="text-primary">{chunks}</span>
+                        })}
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -116,7 +120,7 @@ export default function ContactSection() {
                         transition={{ delay: 0.2 }}
                         className="section-desc mx-auto"
                     >
-                        Điền vào biểu mẫu bên dưới và đội ngũ chuyên gia của chúng tôi sẽ liên hệ với bạn trong vòng 24 giờ.
+                        {t('description')}
                     </motion.p>
                 </div>
 
@@ -137,18 +141,18 @@ export default function ContactSection() {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
                                         <label className="text-xs font-bold uppercase tracking-wider text-zinc-400 flex items-center gap-2">
-                                            <User size={14} className="text-primary" /> Họ
+                                            <User size={14} className="text-primary" /> {t('form.lastName')}
                                         </label>
                                         <input
-                                            type="text" name="firstName" placeholder="Nhập họ..."
+                                            type="text" name="firstName" placeholder={t('form.lastNamePlaceholder')}
                                             className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-hidden focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all placeholder:text-zinc-600"
                                             onChange={handleChange}
                                         />
                                     </div>
                                     <div className="space-y-2">
-                                        <label className="text-xs font-bold uppercase tracking-wider text-zinc-400">Tên</label>
+                                        <label className="text-xs font-bold uppercase tracking-wider text-zinc-400">{t('form.firstName')}</label>
                                         <input
-                                            type="text" name="lastName" placeholder="Nhập tên..."
+                                            type="text" name="lastName" placeholder={t('form.firstNamePlaceholder')}
                                             className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-hidden focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all placeholder:text-zinc-600"
                                             onChange={handleChange}
                                         />
@@ -159,20 +163,20 @@ export default function ContactSection() {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
                                         <label className="text-xs font-bold uppercase tracking-wider text-zinc-400 flex items-center gap-2">
-                                            <Mail size={14} className="text-primary" /> Email
+                                            <Mail size={14} className="text-primary" /> {t('form.email')}
                                         </label>
                                         <input
-                                            type="email" name="email" placeholder="example@qkit.vn"
+                                            type="email" name="email" placeholder={t('form.emailPlaceholder')}
                                             className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-hidden focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all placeholder:text-zinc-600"
                                             onChange={handleChange}
                                         />
                                     </div>
                                     <div className="space-y-2">
                                         <label className="text-xs font-bold uppercase tracking-wider text-zinc-400 flex items-center gap-2">
-                                            <Smartphone size={14} className="text-primary" /> Số điện thoại
+                                            <Smartphone size={14} className="text-primary" /> {t('form.phone')}
                                         </label>
                                         <input
-                                            type="tel" name="phone" placeholder="+84 ..."
+                                            type="tel" name="phone" placeholder={t('form.phonePlaceholder')}
                                             className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-hidden focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all placeholder:text-zinc-600"
                                             onChange={handleChange}
                                         />
@@ -183,7 +187,7 @@ export default function ContactSection() {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
                                         <label className="text-xs font-bold uppercase tracking-wider text-zinc-400 flex items-center gap-2">
-                                            <Briefcase size={14} className="text-primary" /> Vị trí
+                                            <Briefcase size={14} className="text-primary" /> {t('form.position')}
                                         </label>
                                         <select
                                             name="position"
@@ -191,12 +195,12 @@ export default function ContactSection() {
                                             className="w-full bg-zinc-900 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-hidden focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all appearance-none cursor-pointer"
                                             onChange={handleChange}
                                         >
-                                            {POSITIONS.map(p => <option key={p} value={p}>{p}</option>)}
+                                            {POSITIONS.map((p, idx) => <option key={p} value={p}>{t(`positions.${idx}`)}</option>)}
                                         </select>
                                     </div>
                                     <div className="space-y-2">
                                         <label className="text-xs font-bold uppercase tracking-wider text-zinc-400 flex items-center gap-2">
-                                            <Layout size={14} className="text-primary" /> Lĩnh vực hoạt động
+                                            <Layout size={14} className="text-primary" /> {t('form.industry')}
                                         </label>
                                         <select
                                             name="industry"
@@ -204,7 +208,7 @@ export default function ContactSection() {
                                             className="w-full bg-zinc-900 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-hidden focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all appearance-none cursor-pointer"
                                             onChange={handleChange}
                                         >
-                                            {INDUSTRIES.map(i => <option key={i} value={i}>{i}</option>)}
+                                            {INDUSTRIES.map((i, idx) => <option key={i} value={i}>{t(`industries.${idx}`)}</option>)}
                                         </select>
                                     </div>
                                 </div>
@@ -213,7 +217,7 @@ export default function ContactSection() {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
                                         <label className="text-xs font-bold uppercase tracking-wider text-zinc-400 flex items-center gap-2">
-                                            <MessageSquare size={14} className="text-primary" /> Nền tảng liên hệ
+                                            <MessageSquare size={14} className="text-primary" /> {t('form.platform')}
                                         </label>
                                         <select
                                             name="platform"
@@ -221,12 +225,12 @@ export default function ContactSection() {
                                             className="w-full bg-zinc-900 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-hidden focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all appearance-none cursor-pointer"
                                             onChange={handleChange}
                                         >
-                                            {CONTACT_PLATFORMS.map(p => <option key={p} value={p}>{p}</option>)}
+                                            {CONTACT_PLATFORMS.map((p, idx) => <option key={p} value={p}>{t(`platforms.${idx}`)}</option>)}
                                         </select>
                                     </div>
                                     <div className="space-y-2">
                                         <label className="text-xs font-bold uppercase tracking-wider text-zinc-400 flex items-center gap-2">
-                                            <Globe size={14} className="text-primary" /> Quốc gia
+                                            <Globe size={14} className="text-primary" /> {t('form.country')}
                                         </label>
                                         <select
                                             name="country"
@@ -236,7 +240,7 @@ export default function ContactSection() {
                                             onChange={handleChange}
                                         >
                                             {isLoadingCountries ? (
-                                                <option>Đang tải danh sách quốc gia...</option>
+                                                <option>{t('form.loadingCountries')}</option>
                                             ) : (
                                                 countries.map(c => <option key={c} value={c}>{c}</option>)
                                             )}
@@ -247,10 +251,10 @@ export default function ContactSection() {
                                 {/* Row 6: Message */}
                                 <div className="space-y-2">
                                     <label className="text-xs font-bold uppercase tracking-wider text-zinc-400 flex items-center gap-2">
-                                        <MessageSquare size={14} className="text-primary" /> Nội dung tin nhắn
+                                        <MessageSquare size={14} className="text-primary" /> {t('form.message')}
                                     </label>
                                     <textarea
-                                        name="message" rows={4} placeholder="Hãy cho chúng tôi biết về nhu cầu của bạn..."
+                                        name="message" rows={4} placeholder={t('form.messagePlaceholder')}
                                         className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-hidden focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all placeholder:text-zinc-600 resize-none"
                                         onChange={handleChange}
                                     />
@@ -261,7 +265,7 @@ export default function ContactSection() {
                                     whileTap={{ scale: 0.98 }}
                                     className="w-full bg-primary text-white font-bold py-5 rounded-2xl flex items-center justify-center gap-3 shadow-[0_10px_30px_rgba(215,38,90,0.3)] hover:shadow-[0_15px_40px_rgba(215,38,90,0.5)] transition-all group"
                                 >
-                                    Gửi thông tin yêu cầu <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                    {t('form.submit')} <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                                 </motion.button>
                             </form>
                         </div>
@@ -280,7 +284,7 @@ export default function ContactSection() {
                             <SkypeIcon size={20} className="text-zinc-400 group-hover:text-primary transition-colors" />
                         </div>
                         <div>
-                            <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-500">Skype</p>
+                            <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-500">{t('channels.Skype')}</p>
                             <p className="text-sm font-semibold text-white">live:.cid.qkit_tech</p>
                         </div>
                     </div>
@@ -290,7 +294,7 @@ export default function ContactSection() {
                             <Mail size={20} className="text-zinc-400 group-hover:text-primary transition-colors" />
                         </div>
                         <div>
-                            <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-500">Email</p>
+                            <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-500">{t('channels.Email')}</p>
                             <p className="text-sm font-semibold text-white">contact@qkit.vn</p>
                         </div>
                     </div>
@@ -300,7 +304,7 @@ export default function ContactSection() {
                             <Phone size={20} className="text-zinc-400 group-hover:text-primary transition-colors" />
                         </div>
                         <div>
-                            <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-500">Hotline</p>
+                            <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-500">{t('channels.Hotline')}</p>
                             <p className="text-sm font-semibold text-white">+84 (0) 123 456 789</p>
                         </div>
                     </div>

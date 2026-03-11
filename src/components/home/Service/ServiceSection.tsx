@@ -8,12 +8,14 @@ import { twMerge } from "tailwind-merge";
 
 import { services } from "./ServiceData";
 import { ServiceCard } from "./ServiceCard";
+import { useTranslations } from 'next-intl';
 
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
 export default function ServiceSection() {
+  const t = useTranslations('ServiceSection');
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [isMobile, setIsMobile] = useState(false);
   
@@ -120,10 +122,10 @@ export default function ServiceSection() {
           className="mx-auto max-w-2xl text-center mb-16 sm:mb-20"
         >
           <h2 className="section-title select-none">
-            Capabilities that scale
+            {t('title')}
           </h2>
           <p className="mt-6 section-desc mx-auto select-none">
-            We offer a comprehensive suite of digital services designed to help your business thrive in the modern technological landscape.
+            {t('description')}
           </p>
         </motion.div>
 

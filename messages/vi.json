@@ -1,0 +1,376 @@
+{
+  "AppBar": {
+    "nav": {
+      "services": "Dịch Vụ",
+      "successStories": "Câu Chuyện Thành Công",
+      "portfolio": "Danh Mục",
+      "aboutUs": "Về Chúng Tôi",
+      "news": "Tin Tức",
+      "home": "Trang Chủ"
+    },
+    "aboutDropdown": {
+      "aboutUs": "Về chúng tôi",
+      "overview": "Tổng quan về chúng tôi",
+      "feedback": "Phản hồi từ khách hàng",
+      "contact": "Liên hệ",
+      "others": "Khác",
+      "life": "Cuộc sống @ QKIT Software",
+      "faq": "FAQ"
+    },
+    "career": {
+      "title": "Sự nghiệp",
+      "desc": "Chúng tôi luôn có chỗ trống cho những nhân sự chất lượng!"
+    },
+    "buttons": {
+      "hire": "Thuê Nhân Sự",
+      "contact": "Liên Hệ"
+    }
+  },
+  "Metadata": {
+    "title": "Chuyên Gia Phát Triển Ứng Dụng & Chuyển Đổi Số",
+    "description": "QKIT"
+  },
+  "AboutSection": {
+    "subtitle": "Sứ mệnh của chúng tôi",
+    "title": "Kiến tạo kiệt tác <highlight>Số Hóa</highlight>.",
+    "description": "Chuyên cung cấp phần mềm hiệu suất cao và các nền tảng công nghệ cao cấp. Chúng tôi kết hợp sự xuất sắc về thẩm mỹ với độ chính xác về kỹ thuật để mang lại kết quả ấn tượng cho khách hàng toàn cầu.",
+    "button": "Khám Phá Thêm"
+  },
+  "ServiceSection": {
+    "title": "Năng lực mở rộng quy mô",
+    "description": "Chúng tôi cung cấp bộ dịch vụ kỹ thuật số toàn diện được thiết kế để giúp doanh nghiệp của bạn phát triển mạnh mẽ trên nền tảng công nghệ hiện đại.",
+    "coreCapabilities": "Năng Lực Cốt Lõi",
+    "services": {
+      "web-dev": {
+        "title": "Phát Triển Web",
+        "subtitle": "Ứng dụng hiện đại, nhạy bén",
+        "description": "Chúng tôi xây dựng các ứng dụng web mở rộng bằng những công nghệ mới nhất. Trọng tâm của chúng tôi là cung cấp các giải pháp hiệu suất cao, dễ truy cập và thân thiện SEO nhằm thúc đẩy tăng trưởng và tương tác hiệu quả.",
+        "features": {
+          "0": "Ứng dụng React/Next.js",
+          "1": "Nền tảng TM Điện Tử",
+          "2": "Progressive Web Apps",
+          "3": "Phát Triển API"
+        }
+      },
+      "mobile-apps": {
+        "title": "Ứng Dụng Di Động",
+        "subtitle": "Trải nghiệm native mượt mà",
+        "description": "Sử dụng các framework tiên tiến để xây dựng những trải nghiệm thiết bị di động với hiệu năng cực đỉnh và thiết kế hiện đại, tinh xảo.",
+        "features": {
+          "0": "Phát Triển iOS & Android",
+          "1": "Giải Pháp Đa Nền Tảng",
+          "2": "Thiết Kế UI/UX Di Động",
+          "3": "Tối Ưu Hóa ASO"
+        }
+      },
+      "ui-ux": {
+        "title": "Thiết Kế UI/UX",
+        "subtitle": "Thiết kế trực quan tuyệt đẹp",
+        "description": "Biến ý tưởng thành siêu phẩm hình ảnh, mang lại cho người dùng khả năng làm chủ các công cụ qua tính thẩm mỹ tuyệt dối và trải nghiệm đẳng cấp.",
+        "features": {
+          "0": "Nghiên Cứu Người Dùng",
+          "1": "Wireframing & Prototyping",
+          "2": "Hệ Thống Thiết Kế",
+          "3": "Kiểm Tra Khả Năng Sử Dụng"
+        }
+      },
+      "cloud": {
+        "title": "Giải Pháp Đám Mây",
+        "subtitle": "Hạ tầng an toàn và quy mô",
+        "description": "Tận dụng đám mây để tối ưu hoạt động. Cung cấp thiết kế dịch vụ đám mây mạnh mẽ, tối đa hóa bảo mật cho các hệ thống phần mềm.",
+        "features": {
+          "0": "Di Trú Lên Đám Mây",
+          "1": "Kiến Trúc Serverless",
+          "2": "DevOps & CI/CD",
+          "3": "Infrastructure as Code"
+        }
+      },
+      "ai": {
+        "title": "Tích Hợp AI",
+        "subtitle": "Giải pháp thông minh tương lai",
+        "description": "Cơ hội đưa AI vào để tăng cường sức sống tự động và năng lực thích ứng dự báo cho sản phẩm của bạn trên một môi trường luôn thay đổi.",
+        "features": {
+          "0": "Tích Hợp LLM",
+          "1": "Phân Tích Dự Đoán",
+          "2": "Tự Động Hóa Quy Trình",
+          "3": "Thị Giác Máy Tính"
+        }
+      },
+      "analytics": {
+        "title": "Phân Tích Dữ Liệu",
+        "subtitle": "Chiến lược từ sự thấu hiểu",
+        "description": "Thiết kế biểu đồ, báo cáo hoặc đường ống nhằm giúp xử lý dữ liệu và trình diễn dữ liệu theo thời gian thực để đưa ra các định hướng đầu ngành.",
+        "features": {
+          "0": "Trực Quan Hóa Dữ Liệu",
+          "1": "Trí Tuệ Doanh Nghiệp (BI)",
+          "2": "Bảng Điều Khiển Tùy Chỉnh",
+          "3": "Kỹ Thuật Dữ Liệu"
+        }
+      }
+    }
+  },
+  "ExpertiseSection": {
+    "subtitle": "Những gì chúng tôi làm tốt nhất",
+    "title": "<highlight>Chuyên môn</highlight> của chúng tôi",
+    "description": "Chúng tôi làm chủ công nghệ chuyên sâu để mang đến các giải pháp với hiệu suất cao nhất.",
+    "items": {
+      "frontend": {
+        "title": "Frontend (Giao Diện)",
+        "description": "Tạo ra các trải nghiệm người dùng tuyệt hảo, đa chiều với UI/UX hiện đại.",
+        "details": {
+          "0": { "label": "Công nghệ lõi" },
+          "1": { "label": "Kiểu Dáng (Styling)" },
+          "2": { "label": "Hiệu suất" }
+        }
+      },
+      "backend": {
+        "title": "Backend (Hệ Thống)",
+        "description": "Thiết kế kiến trúc hệ thống máy chủ mạnh mẽ, hiệu suất cao và dễ mở rộng.",
+        "details": {
+          "0": { "label": "Môi Trường" },
+          "1": { "label": "Cơ sở dữ liệu" },
+          "2": { "label": "Bảo mật" }
+        }
+      },
+      "mobile": {
+        "title": "Ứng dụng Di Động",
+        "description": "Xây dựng các giải pháp di động đa nền tảng mượt mà cho iOS và Android.",
+        "details": {
+          "0": { "label": "Framework" },
+          "1": { "label": "Triển khai" },
+          "2": { "label": "Tính năng" }
+        }
+      },
+      "ai": {
+        "title": "Phát Triển AI",
+        "description": "Tích hợp các mô hình học máy thông minh vào sản phẩm số hóa.",
+        "details": {
+          "0": { "label": "Mô hình" },
+          "1": { "label": "Nền tảng" },
+          "2": { "label": "Ứng dụng" }
+        }
+      }
+    }
+  },
+  "SolutionSection": {
+    "backgroundText": "GIẢI PHÁP",
+    "subtitle": "Hệ Tinh Thái Công Nghệ",
+    "title": "Mạng Lưới <highlight>Thần Kinh</highlight> Số Hóa.",
+    "description": "Vượt xa những dòng code tiêu chuẩn, chúng tôi xây dựng hệ sinh thái thông minh kết nối hoàn hảo tầm nhìn với công nghệ.",
+    "nodes": {
+      "security": {
+        "title": "Bảo Mật Đa Lớp",
+        "subItems": {
+          "0": { "label": "Giáo Dục" },
+          "1": { "label": "Y Tế" },
+          "2": { "label": "Tài Chính" },
+          "3": { "label": "Chính Phủ" }
+        }
+      },
+      "architecture": {
+        "title": "Kiến Trúc Linh Hoạt",
+        "subItems": {
+          "0": { "label": "Khởi Nghiệp" },
+          "1": { "label": "Doanh Nghiệp" },
+          "2": { "label": "Bán Lẻ" },
+          "3": { "label": "Truyền Thông" }
+        }
+      },
+      "growth": {
+        "title": "Tăng Trưởng Đột Phá",
+        "subItems": {
+          "0": { "label": "Phân Tích" },
+          "1": { "label": "Marketing" },
+          "2": { "label": "Chuỗi Cung Ứng" },
+          "3": { "label": "Thương Mại ĐT" }
+        }
+      }
+    }
+  },
+  "ProjectsSection": {
+    "backgroundText": "DỰ ÁN",
+    "exploreBtn": "Khám Phá Dự ÁN",
+    "projects": {
+      "1": {
+        "title": "Bảng Điều Khiển IoT Smart Home",
+        "category": "Ứng Dụng Web",
+        "description": "Một trung tâm điều khiển toàn diện cho cuộc sống hiện đại, kết hợp tự động hóa sâu và giao diện trực quan, tối giản."
+      },
+      "2": {
+        "title": "Danh Mục Đầu Tư Di Động FinTech",
+        "category": "Ứng Dụng Di Động",
+        "description": "Định nghĩa lại tài chính cá nhân thông qua hiệu suất đỉnh cao và bảo mật thanh lịch, được thiết kế cho các nhà đầu tư thế giới mới."
+      },
+      "3": {
+        "title": "Cổng Thông Tin Công Ty Sáng Tạo AI",
+        "category": "Trang Đích",
+        "description": "Nơi trí tuệ nhân tạo gặp gỡ sức sáng tạo con người, sở hữu đồ họa động và hành trình người dùng liền mạch cho các thương hiệu toàn cầu."
+      }
+    },
+    "stats": {
+      "0": { "label": "Dự Án Hoàn Thành" },
+      "1": { "label": "Khách Hàng Hài Lòng" },
+      "2": { "label": "Năm Kinh Nghiệm" }
+    },
+    "activeSupport": "Hỗ Trợ Trực Tuyến"
+  },
+  "ReviewsSection": {
+    "label": "Đánh Giá Khách Hàng",
+    "title": "Được <highlight>khách hàng</highlight> <br></br> tin tưởng.",
+    "description": "Đừng chỉ nghe chúng tôi nói. Hãy xem những đối tác nói gì về việc hợp tác với chúng tôi.",
+    "reviews": {
+      "1": {
+        "role": "Giám Đốc (CEO)",
+        "content": "Phuc Thinh đã chuyển đổi hoàn toàn sự hiện diện kỹ thuật số của chúng tôi. Sự tỉ mỉ và giải pháp trải nghiệm người dùng sáng tạo của họ thật sự khác biệt. Một đẳng cấp hoàn toàn mới."
+      },
+      "2": {
+        "role": "Quản Lý Sản Phẩm",
+        "content": "Làm việc với đội ngũ thật sự rất thoải mái. Họ đã bàn giao một trang quản trị phức tạp đúng hạn với độ hoàn thiện mà chúng tôi còn không nghĩ là có thể."
+      },
+      "3": {
+        "role": "Nhà Sáng Lập",
+        "content": "Không còn nghi ngờ gì nữa, đội ngũ công nghệ sáng tạo đỉnh nhất trong khu vực. Khả năng kết hợp chức năng sâu với hình ảnh thẩm mỹ khiến họ thực sự khác biệt so với phần còn lại."
+      },
+      "4": {
+        "role": "Giám Đốc Marketing",
+        "content": "Hình ảnh tuyệt đẹp và trải nghiệm mượt mà. Tỷ lệ chuyển đổi của chúng tôi đã tăng 40% sau khi thiết kế lại. Lợi tức đầu tư (ROI) là quá tuyệt vời."
+      },
+      "5": {
+        "role": "Trưởng Nhóm Thiết Kế UX",
+        "content": "Là một nhà thiết kế kinh nghiệm, tôi vô cùng kỹ tính khi chọn đối tác. Nhưng họ đã vượt qua mọi kỳ vọng với sự thực thi chính xác đến từng pixel và thiết kế chuyển động tuyệt đẹp."
+      },
+      "6": {
+        "role": "Trưởng Nhóm Kỹ Thuật",
+        "content": "Đáng tin cậy, cực kỳ dễ mở rộng và giao diện xuất sắc. Kiến trúc mã nguồn của họ sạch và mạnh mẽ như thiết kế của họ vậy. Cực kỳ, cực kỳ đáng để giới thiệu."
+      }
+    }
+  },
+  "BlogSection": {
+    "label": "Bài Viết Mới Nhất",
+    "title": "Ý tưởng <highlight>mới mẻ.</highlight>",
+    "categories": {
+      "All": "Tất cả",
+      "Design": "Thiết Kế",
+      "Development": "Phát Triển",
+      "Technology": "Công Nghệ",
+      "Business": "Kinh Doanh"
+    },
+    "posts": {
+      "1": {
+        "title": "Tương Lại của Thiết Kế UI: Glassmorphism & Hơn Thế Nữa",
+        "excerpt": "Khám phá cách nhưng thẩm mỹ hiện đại như glassmorphism đang định hình lại cách chúng ta cảm nhận giao diện số và những điều sắp tới.",
+        "readTime": "Đọc 5 phút",
+        "tag": "Xu hướng"
+      },
+      "2": {
+        "title": "Xây Dựng Ứng Dụng Next.js Hiệu Suất Cao",
+        "excerpt": "Đi sâu vào server components, streaming, và edge rendering để đẩy ứng dụng Next.js của bạn đạt mức tối đa hiệu năng tuyệt đối.",
+        "readTime": "Đọc 8 phút",
+        "tag": "Phổ biến"
+      },
+      "3": {
+        "title": "Cá Nhân Hóa Qua AI Trong Các Sản Phẩm SaaS Hiện Đại",
+        "excerpt": "Cách các công ty SaaS hàng đầu đang khai thác học máy để tạo ra những trải nghiệm cá nhân hóa ở quy mô khổng lồ.",
+        "readTime": "Đọc 6 phút",
+        "tag": "Mới"
+      },
+      "4": {
+        "title": "Tại Sao Thiết Kế Chuyển Động Là Lợi Thế Cạnh Tranh Mới",
+        "excerpt": "Những hiệu ứng nhỏ và chuyển tiếp kỹ lưỡng không chỉ là thẩm mỹ — chúng trực tiếp ảnh hưởng đến tỷ lệ chuyển đổi và giữ chân người dùng.",
+        "readTime": "Đọc 4 phút",
+        "tag": "Mới"
+      },
+      "5": {
+        "title": "Nhân Rộng Creative Agency Từ 0 Lên $1M Doanh Thu",
+        "excerpt": "Câu chuyện thực tế về việc phát triển một studio sáng tạo boutique, những sai lầm và 3 lần chuyển hướng đã thay đổi tất cả.",
+        "readTime": "Đọc 10 phút",
+        "tag": "Đáng chú ý"
+      },
+      "6": {
+        "title": "Vấn Đề UX Web3 Mà Chưa Ai Nhắc Tới",
+        "excerpt": "Công nghệ chuỗi khối đang phát triển nhanh, nhưng trải nghiệm người dùng không theo kịp. Đây là lí do và những gì chúng ta có thể làm.",
+        "readTime": "Đọc 7 phút",
+        "tag": "Phổ biến"
+      }
+    }
+  },
+  "ContactSection": {
+    "subtitle": "Hãy kết nối với chúng tôi",
+    "title": "Bắt đầu <highlight>Dự án</highlight> của bạn",
+    "description": "Điền vào biểu mẫu bên dưới và đội ngũ chuyên gia của chúng tôi sẽ liên hệ với bạn trong vòng 24 giờ.",
+    "form": {
+      "lastName": "Họ",
+      "lastNamePlaceholder": "Nhập họ...",
+      "firstName": "Tên",
+      "firstNamePlaceholder": "Nhập tên...",
+      "email": "Email",
+      "emailPlaceholder": "example@qkit.vn",
+      "phone": "Số điện thoại",
+      "phonePlaceholder": "+84 ...",
+      "position": "Vị trí",
+      "industry": "Lĩnh vực hoạt động",
+      "platform": "Nền tảng liên hệ",
+      "country": "Quốc gia",
+      "loadingCountries": "Đang tải danh sách quốc gia...",
+      "message": "Nội dung tin nhắn",
+      "messagePlaceholder": "Hãy cho chúng tôi biết về nhu cầu của bạn...",
+      "submit": "Gửi thông tin yêu cầu"
+    },
+    "positions": {
+      "0": "CEO / Founder",
+      "1": "Chủ tịch / Giám đốc",
+      "2": "Quản lý / Trưởng phòng",
+      "3": "Nhân viên / Chuyên viên",
+      "4": "Sinh viên / Thực tập sinh",
+      "5": "Khác"
+    },
+    "industries": {
+      "0": "Công nghệ thông tin / Phần mềm",
+      "1": "Thương mại điện tử",
+      "2": "Logistics / Vận tải",
+      "3": "Tài chính / Ngân hàng",
+      "4": "Y tế / Chăm sóc sức khỏe",
+      "5": "Giáo dục",
+      "6": "Sản xuất",
+      "7": "Khác"
+    },
+    "platforms": {
+      "0": "Skype",
+      "1": "Telegram",
+      "2": "WhatsApp",
+      "3": "Zalo",
+      "4": "Cuộc gọi",
+      "5": "Email",
+      "6": "Khác"
+    },
+    "channels": {
+      "Skype": "Skype",
+      "Email": "Email",
+      "Hotline": "Hotline"
+    }
+  },
+  "Footer": {
+    "description": "Chúng tôi cung cấp các giải pháp phần mềm cao cấp, giúp doanh nghiệp của bạn phát triển bền vững. Kiến tạo tương lai số với chất lượng và sự đổi mới làm giá trị cốt lõi.",
+    "navigationTitle": "Điều hướng",
+    "navigationLinks": {
+      "0": "Trang chủ",
+      "1": "Về chúng tôi",
+      "2": "Dịch vụ",
+      "3": "Bảng giá",
+      "4": "Dự án Nổi bật"
+    },
+    "legalTitle": "Pháp lý",
+    "legalLinks": {
+      "0": "Chính sách bảo mật",
+      "1": "Điều khoản dịch vụ",
+      "2": "Chính sách Cookie",
+      "3": "Quy định chung"
+    },
+    "contactTitle": "Liên hệ",
+    "office": "Văn phòng",
+    "officeAddress": "TP. Hồ Chí Minh<br/>Việt Nam",
+    "supportEmail": "Email hỗ trợ",
+    "allRightsReserved": "Tất cả quyền được bảo lưu.",
+    "designedBy": "Thiết kế bởi"
+  }
+}

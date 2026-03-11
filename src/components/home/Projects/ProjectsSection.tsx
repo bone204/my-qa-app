@@ -8,6 +8,7 @@ import { VideoText } from "@/components/ui/VideoText";
 import { VIDEOS } from "@/constants/video";
 import { projects, stats } from "./projectsData";
 import { ProjectStackCard, Counter } from "./ProjectStackCard";
+import { useTranslations } from 'next-intl';
 
 const titleVariants = {
     hidden: { opacity: 0, y: 60, scale: 0.8, filter: "blur(20px)" },
@@ -26,6 +27,7 @@ const titleVariants = {
 
 
 export default function ProjectsSection() {
+    const t = useTranslations('ProjectsSection');
     const [activeIndex, setActiveIndex] = useState(0);
     const [isHovered, setIsHovered] = useState(false);
     const [progress, setProgress] = useState(0);
@@ -77,7 +79,7 @@ export default function ProjectsSection() {
             ref={containerRef as any}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            className="relative w-full py-24 md:py-48 bg-background overflow-hidden flex flex-col items-center select-none"
+            className="relative w-full py-16 md:py-32 bg-background overflow-hidden flex flex-col items-center select-none"
         >
             {/* Background Decorative Elements */}
             <div className="absolute top-1/4 left-10 w-64 h-64 bg-primary/2 rounded-full blur-3xl animate-pulse pointer-events-none" />
@@ -96,10 +98,10 @@ export default function ProjectsSection() {
                         src={VIDEOS.bgText}
                         fontSize={15}
                         fontWeight={900}
-                        className="h-[20vh] md:h-[25vh] w-full"
+                        className="h-[18vw] w-full"
                         fontFamily="Inter, sans-serif"
                     >
-                        PROJECTS
+                        {t('backgroundText')}
                     </VideoText>
                 </motion.div>
             </div>
@@ -120,13 +122,13 @@ export default function ProjectsSection() {
                                     className="flex flex-col gap-6"
                                 >
                                     <span className="text-primary font-black uppercase tracking-[0.3em] text-[10px] md:text-xs">
-                                        {projects[activeIndex].category}
+                                        {t(`projects.${projects[activeIndex].id}.category`)}
                                     </span>
                                     <h3 className="text-4xl md:text-6xl font-black text-white leading-tight tracking-tighter">
-                                        {projects[activeIndex].title}
+                                        {t(`projects.${projects[activeIndex].id}.title`)}
                                     </h3>
                                     <p className="text-zinc-400 text-lg md:text-xl leading-relaxed max-w-lg">
-                                        {projects[activeIndex].description}
+                                        {t(`projects.${projects[activeIndex].id}.description`)}
                                     </p>
 
                                     <div className="mt-8">
@@ -134,7 +136,7 @@ export default function ProjectsSection() {
                                             variant="body"
                                             className="w-fit"
                                         >
-                                            Explore Case Study
+                                            {t('exploreBtn')}
                                         </Button>
                                     </div>
                                 </motion.div>
@@ -210,7 +212,7 @@ export default function ProjectsSection() {
                             </motion.div>
                             <Counter value={stat.value} suffix={stat.suffix} />
                         </div>
-                        <span className="text-zinc-500 font-bold uppercase tracking-[0.3em] text-[10px] group-hover:text-zinc-300 transition-colors duration-500">{stat.label}</span>
+                        <span className="text-zinc-500 font-bold uppercase tracking-[0.3em] text-[10px] group-hover:text-zinc-300 transition-colors duration-500">{t(`stats.${index}.label`)}</span>
                     </div>
                 ))}
 
@@ -223,7 +225,7 @@ export default function ProjectsSection() {
                         </div>
                         <span className="text-3xl font-black text-white tabular-nums tracking-tighter">24/7</span>
                     </div>
-                    <span className="text-zinc-500 font-bold uppercase tracking-[0.3em] text-[10px]">Active Support</span>
+                    <span className="text-zinc-500 font-bold uppercase tracking-[0.3em] text-[10px]">{t('activeSupport')}</span>
                 </div>
             </motion.div>
         </section >

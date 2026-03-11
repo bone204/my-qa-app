@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { type SolutionNode, type SubItem } from "./SolutionData";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
+import { useTranslations } from "next-intl";
 
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -22,7 +23,8 @@ const BLOB_SHAPES = [
 const BLOB_TIMES = [0, 0.25, 0.5, 0.75, 1];
 
 // Individual icon tooltip on hover
-const SubIcon = ({ item }: { item: SubItem }) => {
+const SubIcon = ({ item, nodeId, sIdx }: { item: SubItem, nodeId: string, sIdx: number }) => {
+  const t = useTranslations('SolutionSection.nodes');
   const [active, setActive] = useState(false);
   return (
     <div
@@ -54,11 +56,11 @@ const SubIcon = ({ item }: { item: SubItem }) => {
             transition={{ type: "spring", stiffness: 400, damping: 25 }}
             className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 pointer-events-none z-50 flex flex-col items-center"
           >
-             <div
+            <div
               className="px-3 py-1.5 rounded-lg bg-zinc-900/90 backdrop-blur-xl border border-white/10 shadow-2xl"
             >
               <span className="text-[10px] font-bold text-white uppercase tracking-[0.2em] whitespace-nowrap">
-                {item.label}
+                {t(`${nodeId}.subItems.${sIdx}.label`)}
               </span>
             </div>
             {/* Tooltip Arrow */}
@@ -74,6 +76,7 @@ const SubIcon = ({ item }: { item: SubItem }) => {
 
 // Cloud blob node
 const CloudNode = ({ node }: { node: SolutionNode }) => {
+  const t = useTranslations('SolutionSection.nodes');
   return (
     <div
       className="absolute z-20 -translate-x-1/2 -translate-y-1/2 group"
@@ -154,7 +157,7 @@ const CloudNode = ({ node }: { node: SolutionNode }) => {
 
             <div className="space-y-1 text-center">
                 <h4 className="text-white font-black text-lg uppercase tracking-[0.15em] leading-tight">
-                {node.title}
+                {t(`${node.id}.title`)}
                 </h4>
                 <div className="h-0.5 w-12 bg-white/20 mx-auto rounded-full group-hover:w-20 transition-all duration-500"
                      style={{ backgroundColor: `${node.color}aa` }} />
@@ -163,8 +166,8 @@ const CloudNode = ({ node }: { node: SolutionNode }) => {
 
           {/* Sub icons */}
           <div className="flex items-center gap-3 flex-wrap justify-center relative z-20">
-            {node.subItems.map((sub) => (
-              <SubIcon key={sub.label} item={sub} />
+            {node.subItems.map((sub, sIdx) => (
+              <SubIcon key={sub.label} item={sub} nodeId={node.id} sIdx={sIdx} />
             ))}
           </div>
         </motion.div>

@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Rss } from "lucide-react";
 import PostCard from "./PostCard";
 import { posts, categories, BlogCategory } from "./postsData";
+import { useTranslations } from "next-intl";
 
 const titleVariants = {
     hidden: { opacity: 0, y: 60, scale: 0.85, filter: "blur(20px)" },
@@ -22,6 +23,7 @@ const titleVariants = {
 };
 
 export default function BlogSection() {
+    const t = useTranslations('BlogSection');
     const [activeCategory, setActiveCategory] = useState<BlogCategory>("All");
 
     const { scrollY } = useScroll();
@@ -64,7 +66,7 @@ export default function BlogSection() {
                                 <Rss className="w-2 h-2 text-primary" />
                             </div>
                             <span className="text-primary font-bold uppercase tracking-[0.4em] text-[10px]">
-                                Latest Articles
+                                {t('label')}
                             </span>
                         </motion.div>
 
@@ -76,8 +78,9 @@ export default function BlogSection() {
                             viewport={{ once: false, amount: 0.3 }}
                             className="text-5xl md:text-6xl font-black tracking-tighter leading-none"
                         >
-                            <span className="text-white">Fresh </span>
-                            <span className="text-primary">ideas.</span>
+                            {t.rich('title', {
+                                highlight: (chunks) => <span className="text-primary">{chunks}</span>
+                            })}
                         </motion.h2>
                     </div>
 
@@ -108,7 +111,7 @@ export default function BlogSection() {
                                     transition={{ type: "spring", stiffness: 350, damping: 30 }}
                                 />
                             )}
-                            <span className="relative">{cat}</span>
+                            <span className="relative">{t(`categories.${cat}`)}</span>
                         </button>
                     ))}
                 </motion.div>

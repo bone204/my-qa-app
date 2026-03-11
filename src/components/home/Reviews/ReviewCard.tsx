@@ -4,10 +4,12 @@ import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import { Star, Quote } from "lucide-react";
 import { useRef } from "react";
 import { Review, reviews } from "./reviewsData";
+import { useTranslations } from "next-intl";
 
 export { reviews };
 
 export default function ReviewCard({ review, index }: { review: Review; index: number }) {
+    const t = useTranslations('ReviewsSection.reviews');
     const cardRef = useRef<HTMLDivElement>(null);
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
@@ -60,7 +62,7 @@ export default function ReviewCard({ review, index }: { review: Review; index: n
 
             {/* Review text */}
             <p className="review-content group-hover:text-zinc-300 transition-colors duration-500 relative flex-1">
-                "{review.content}"
+                "{t(`${review.id}.content`)}"
             </p>
 
             {/* Divider */}
@@ -74,7 +76,7 @@ export default function ReviewCard({ review, index }: { review: Review; index: n
                 <div className="flex flex-col min-w-0">
                     <span className="review-name truncate">{review.name}</span>
                     <span className="review-role">
-                        {review.role} · <span className="review-company">{review.company}</span>
+                        {t(`${review.id}.role`)} · <span className="review-company">{review.company}</span>
                     </span>
                 </div>
             </div>
