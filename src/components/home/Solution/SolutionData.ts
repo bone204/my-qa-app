@@ -28,12 +28,12 @@ export const solutionNodes: SolutionNode[] = [
     id: "security",
     title: "Multi-Layer Security",
     icon: ShieldCheck,
-    color: "#3b82f6", // Blue 500
+    color: "#00ffff", // Neon Cyan for glow
     subItems: [
-      { icon: GraduationCap, label: "Education", color: "#60a5fa" }, // Blue 400
-      { icon: HeartPulse, label: "Healthcare", color: "#f43f5e" }, // Rose 500
-      { icon: Banknote, label: "Finance", color: "#f59e0b" }, // Amber 500
-      { icon: Building2, label: "Government", color: "#64748b" }, // Slate 500
+      { icon: GraduationCap, label: "Education", color: "#00ffff" },
+      { icon: HeartPulse, label: "Healthcare", color: "#ff2d55" },
+      { icon: Banknote, label: "Finance", color: "#ffcc00" },
+      { icon: Building2, label: "Government", color: "#007aff" },
     ],
     x: 28,
     y: 16,
@@ -43,12 +43,12 @@ export const solutionNodes: SolutionNode[] = [
     id: "architecture",
     title: "Agile Architecture",
     icon: Layers,
-    color: "#8b5cf6", // Violet 500
+    color: "#ff00ff", // Neon Magenta for glow
     subItems: [
-      { icon: Rocket, label: "Startup", color: "#a78bfa" }, // Violet 400
-      { icon: Building, label: "Enterprise", color: "#334155" }, // Slate 700
-      { icon: ShoppingBag, label: "Retail", color: "#ec4899" }, // Pink 500
-      { icon: Tv, label: "Media", color: "#f97316" }, // Orange 500
+      { icon: Rocket, label: "Startup", color: "#a855f7" },
+      { icon: Building, label: "Enterprise", color: "#ffffff" },
+      { icon: ShoppingBag, label: "Retail", color: "#ff2d55" },
+      { icon: Tv, label: "Media", color: "#ff9500" },
     ],
     x: 80,
     y: 48,
@@ -58,12 +58,12 @@ export const solutionNodes: SolutionNode[] = [
     id: "growth",
     title: "Breakthrough Growth",
     icon: TrendingUp,
-    color: "#10b981", // Emerald 500
+    color: "#ffff00", // Neon Yellow for glow
     subItems: [
-      { icon: BarChart3, label: "Analytics", color: "#34d399" }, // Emerald 400
-      { icon: Megaphone, label: "Marketing", color: "#fca5a5" }, // Red 300
-      { icon: Link, label: "Supply Chain", color: "#94a3b8" }, // Slate 400
-      { icon: Store, label: "E-commerce", color: "#fbbf24" }, // Amber 400
+      { icon: BarChart3, label: "Analytics", color: "#34c759" },
+      { icon: Megaphone, label: "Marketing", color: "#ff3b30" },
+      { icon: Link, label: "Supply Chain", color: "#ffffff" },
+      { icon: Store, label: "E-commerce", color: "#ffcc00" },
     ],
     x: 28,
     y: 80,

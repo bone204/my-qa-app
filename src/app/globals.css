@@ -17,7 +17,6 @@
 body {
   background: #060606;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 @utility section-subtitle {
@@ -98,6 +97,26 @@ body {
 
 @utility expertise-ball-label {
   @apply text-sm font-bold text-zinc-400 uppercase tracking-[0.2em] transition-colors duration-300 select-none group-hover/ball-unit:text-primary;
+}
+
+@utility footer-title {
+  @apply text-xs font-black uppercase tracking-[0.2em] text-white;
+}
+
+@utility footer-link {
+  @apply text-zinc-500 transition-all duration-300 hover:text-white hover:translate-x-1 inline-block;
+}
+
+@utility footer-desc {
+  @apply max-w-sm text-base leading-relaxed text-zinc-400;
+}
+
+@utility footer-contact-text {
+  @apply text-zinc-500 group-hover:text-zinc-300 transition-colors;
+}
+
+@utility footer-bottom-text {
+  @apply text-xs text-zinc-600 font-medium tracking-wide;
 }
 
 @keyframes tech-glow {
@@ -305,4 +324,26 @@ body {
   @apply absolute inset-0 pointer-events-none opacity-20 mix-blend-overlay;
   background: radial-gradient(circle at 50% 50%, #ffffff 0%, transparent 60%);
   animation: caustic-shimmer 8s ease-in-out infinite;
+}
+
+/* Fix for Webkit autofill background color overriding dark theme */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-text-fill-color: white !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Particles Container */
+.particles-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }

@@ -6,6 +6,7 @@ import TechSection from "@/components/home/Solution/SolutionSection";
 import VisionSection from "@/components/home/Expertise/ExpertiseSection";
 import ReviewsSection from "@/components/home/Reviews/ReviewsSection";
 import BlogSection from "@/components/home/Blog/BlogSection";
+import ContactSection from "@/components/home/Contact/ContactSection";
 
 export default function HomePage() {
   return (
@@ -18,6 +19,7 @@ export default function HomePage() {
       <ProjectSection />
       <ReviewsSection />
       <BlogSection />
+      <ContactSection />
     </div>
   );
 }

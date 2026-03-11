@@ -77,7 +77,7 @@ export default function ReviewsSection() {
                         className="review-title max-w-3xl"
                     >
                         Loved by our <br />
-                        <span className="review-subtitle">clients.</span>
+                        <span className="text-primary">clients.</span>
                     </motion.h2>
 
                     <motion.p
