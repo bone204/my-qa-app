@@ -516,12 +516,15 @@
         }
       },
       "devops": {
-        "title": "DevOps & Infrastructure Solutions",
+        "badge": "Agile Infrastructure",
+        "title": "DevOps Solutions",
         "items": {
           "consulting": "DevOps Consulting",
           "cicd": "CI/CD Pipeline Setup",
           "iac": "IaC Services",
-          "container": "Application Containerization"
+          "container": "Application Containerization",
+          "monitoring": "Monitoring & Logging",
+          "security": "Cloud Security & Compliance"
         },
         "button": "See More DevOps Solutions"
       }

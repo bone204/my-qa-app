@@ -33,14 +33,14 @@ export default function Button({ variant = "primary", className = "", children, 
             <button
                 className={cn(
                     "group relative w-auto cursor-pointer overflow-hidden rounded-full font-bold transition-all duration-300 py-4 px-10 md:py-5 md:px-12",
-                    "border border-pink-500/20 bg-background shadow-none hover:border-pink-500/50 hover:shadow-[0_0_30px_rgba(236,72,153,0.3)]",
+                    "border border-primary/20 bg-background shadow-none hover:border-primary/50 hover:shadow-[0_0_30px_rgba(236,72,153,0.3)]",
                     className
                 )}
                 {...props}
             >
                 <div className="relative z-10 flex items-center justify-center gap-3">
-                    <div className="bg-pink-500 h-2.5 w-2.5 rounded-full transition-all duration-500 lg:group-hover:scale-[160] group-active:scale-[160]"></div>
-                    <span className="text-pink-500 transition-all duration-500 lg:group-hover:opacity-0 lg:group-hover:translate-x-8">
+                    <div className="bg-primary h-2.5 w-2.5 rounded-full transition-all duration-500 lg:group-hover:scale-[160] group-active:scale-[160]"></div>
+                    <span className="text-primary transition-all duration-500 lg:group-hover:opacity-0 lg:group-hover:translate-x-8">
                         {children}
                     </span>
                 </div>

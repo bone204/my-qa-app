@@ -54,12 +54,12 @@ export default function ExtendedServicesSection() {
                         className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6"
                     >
                         <Sparkles className="w-4 h-4 text-primary" />
-                        <span className="section-subtitle">{t('sectionSubtitle')}</span>
+                        <span className="review-label">{t('sectionSubtitle')}</span>
                     </motion.div>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        className="section-title text-center"
+                        className="review-title text-center"
                     >
                         {t('sectionTitle')}
                     </motion.h2>
