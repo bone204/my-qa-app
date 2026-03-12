@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import { Monitor, Smartphone, Layout, Code2, CheckCircle2, Cpu, Briefcase } from 'lucide-react';
+import { Monitor, Smartphone, Layout, Code2, CheckCircle2, Cpu, Briefcase, Sparkles } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import Link from 'next/link';
 
@@ -43,21 +43,22 @@ export default function HiringSection() {
         <section className="relative py-24 w-full overflow-hidden select-none">
             <div className="mx-auto max-w-7xl px-4 md:px-8 relative z-10">
                 {/* Header */}
-                <div className="text-center mb-32 space-y-4">
-                    <motion.span
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="section-subtitle"
+                <div className="flex flex-col items-center text-center mb-32">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: false }}
+                        className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6"
                     >
-                        {t('subtitle')}
-                    </motion.span>
+                        <Sparkles className="w-4 h-4 text-primary" />
+                        <span className="text-xs font-bold text-zinc-400 uppercase tracking-widest">{t('subtitle')}</span>
+                    </motion.div>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
                         transition={{ delay: 0.1 }}
-                        className="section-title"
+                        className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] tracking-tight"
                     >
                         {t('title')}
                     </motion.h2>

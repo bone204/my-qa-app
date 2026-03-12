@@ -475,6 +475,11 @@
           "3": "Custom Metaverse Solutions"
         }
       }
+    },
+    "contactCTA": {
+      "title": "Let's talk about your project",
+      "description": "Tell us about your project idea and get a free consultation to turn it into a great digital product.",
+      "button": "Expert consultation"
     }
   }
 }

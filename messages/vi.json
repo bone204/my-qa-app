@@ -475,6 +475,11 @@
           "3": "Giải pháp Metaverse tùy chỉnh"
         }
       }
+    },
+    "contactCTA": {
+      "title": "Hãy nói về dự án của bạn",
+      "description": "Hãy cho chúng tôi biết ý tưởng dự án của bạn và nhận tư vấn miễn phí để biến nó thành một sản phẩm kỹ thuật số tuyệt vời.",
+      "button": "Tư vấn từ chuyên gia"
     }
   }
 }
