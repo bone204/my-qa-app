@@ -429,6 +429,52 @@
           }
         }
       }
+    },
+    "extended": {
+      "sectionTitle": "Comprehensive Tech Solutions",
+      "sectionSubtitle": "Pushing boundaries with QKit's specialized service ecosystem",
+      "seeMore": "See More",
+      "cloud": {
+        "title": "Cloud Computing",
+        "items": {
+          "0": "Cloud App Development",
+          "1": "Cloud Configuration",
+          "2": "Cloud Integration",
+          "3": "Cloud Security",
+          "4": "Cloud Server Solutions",
+          "5": "Cloud Migration"
+        }
+      },
+      "marketing": {
+        "title": "Digital Marketing",
+        "items": {
+          "0": "Search Engine Optimization (SEO)",
+          "1": "Pay Per Click (PPC) Advertising",
+          "2": "Social Media Marketing",
+          "3": "Social Media Advertising",
+          "4": "Content Writing & Marketing",
+          "5": "App Store Optimization"
+        }
+      },
+      "blockchain": {
+        "title": "Blockchain Development",
+        "items": {
+          "0": "Smart Contracts",
+          "1": "DApp Development",
+          "2": "Exchange Platform Development",
+          "3": "Crypto Wallet Development",
+          "4": "NFT Marketplace Development"
+        }
+      },
+      "web3": {
+        "title": "Web 3.0 & Metaverse",
+        "items": {
+          "0": "Custom Blockchain Solutions",
+          "1": "DeFi Ecosystem Development",
+          "2": "Cryptocurrency Solutions",
+          "3": "Custom Metaverse Solutions"
+        }
+      }
     }
   }
 }

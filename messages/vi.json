@@ -429,6 +429,52 @@
           }
         }
       }
+    },
+    "extended": {
+      "sectionTitle": "Giải pháp Công nghệ Toàn diện",
+      "sectionSubtitle": "Mở rộng giới hạn cùng các dịch vụ chuyên sâu của QKit",
+      "seeMore": "Xem thêm",
+      "cloud": {
+        "title": "Điện toán đám mây",
+        "items": {
+          "0": "Phát triển ứng dụng đám mây",
+          "1": "Cấu hình đám mây",
+          "2": "Tích hợp đám mây",
+          "3": "Bảo mật đám mây",
+          "4": "Giải pháp máy chủ đám mây",
+          "5": "Di dời lên đám mây"
+        }
+      },
+      "marketing": {
+        "title": "Tiếp thị số",
+        "items": {
+          "0": "Tối ưu hóa công cụ tìm kiếm (SEO)",
+          "1": "Quảng cáo PPC (Pay Per Click)",
+          "2": "Tiếp thị truyền thông xã hội",
+          "3": "Quảng cáo trên mạng xã hội",
+          "4": "Viết nội dung và tiếp thị",
+          "5": "Tối ưu hóa cửa hàng ứng dụng"
+        }
+      },
+      "blockchain": {
+        "title": "Phát triển blockchain",
+        "items": {
+          "0": "Hợp đồng thông minh",
+          "1": "Phát triển DApp",
+          "2": "Nền tảng sàn giao dịch",
+          "3": "Ví tiền điện tử",
+          "4": "Thị trường NFT"
+        }
+      },
+      "web3": {
+        "title": "Web 3.0 & Metaverse",
+        "items": {
+          "0": "Blockchain tùy chỉnh",
+          "1": "Hệ sinh thái DeFi",
+          "2": "Giải pháp tiền điện tử",
+          "3": "Giải pháp Metaverse tùy chỉnh"
+        }
+      }
     }
   }
 }

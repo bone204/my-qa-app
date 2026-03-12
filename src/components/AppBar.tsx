@@ -145,110 +145,111 @@ export default function AppBar() {
               {['services', 'successStories', 'portfolio', 'aboutUs', 'news'].map((key) => {
                 const item = t(`nav.${key}`);
                 return (
-                <div
-                  key={key}
-                  className="relative group/nav-item"
-                  onMouseEnter={() => setHoveredItem(key)}
-                >
-                  <Link
-                    href={key === 'aboutUs' ? '#' : `/${key.toLowerCase()}`}
-                    onClick={(e) => {
-                      if (key === 'aboutUs') {
-                        e.preventDefault();
-                      }
-                    }}
-                    className={cn(
-                      "group flex items-center gap-1.5 relative px-5 py-2 text-[14px] font-bold transition-all duration-300 outline-none rounded-full",
-                      hoveredItem === key ? "text-white" : "text-zinc-400 focus-visible:ring-2 focus-visible:ring-primary"
-                    )}
+                  <div
+                    key={key}
+                    className="relative group/nav-item"
+                    onMouseEnter={() => setHoveredItem(key)}
                   >
-                    <span className="relative z-10">{item}</span>
-                    {key === 'aboutUs' && (
-                      <ChevronDown className="relative z-10 w-4 h-4 transition-transform duration-300 group-hover/nav-item:rotate-180" />
-                    )}
+                    <Link
+                      href={key === 'aboutUs' ? '#' : `/${key.toLowerCase()}`}
+                      onClick={(e) => {
+                        if (key === 'aboutUs') {
+                          e.preventDefault();
+                        }
+                      }}
+                      className={cn(
+                        "group flex items-center gap-1.5 relative px-5 py-2 text-[14px] font-bold transition-all duration-300 outline-none rounded-full",
+                        hoveredItem === key ? "text-white" : "text-zinc-400 focus-visible:ring-2 focus-visible:ring-primary"
+                      )}
+                    >
+                      <span className="relative z-10">{item}</span>
+                      {key === 'aboutUs' && (
+                        <ChevronDown className="relative z-10 w-4 h-4 transition-transform duration-300 group-hover/nav-item:rotate-180" />
+                      )}
 
-                    {hoveredItem === key && (
-                      <motion.div
-                        layoutId="nav-hover-bg"
-                        className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-full border border-white/10"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
-                      />
-                    )}
-
-                    <span className="absolute bottom-1 left-1/2 -translate-x-1/2 h-[2px] w-0 bg-primary transition-all duration-300 group-hover/nav-item:w-4 z-20"></span>
-                  </Link>
-
-                  {/* Dropdown Menu cho Về Chúng Tôi */}
-                  {key === 'aboutUs' && (
-                    <AnimatePresence>
                       {hoveredItem === key && (
                         <motion.div
-                          initial={{ opacity: 0, y: 15, scale: 0.95 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                          transition={{ duration: 0.2, ease: "easeOut" }}
-                          className="absolute left-1/2 -translate-x-1/2 top-full pt-4 w-56"
-                        >
-                          <div className="rounded-2xl border border-white/10 bg-[#1a1c23]/95 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] overflow-hidden flex flex-col min-w-[500px] w-max">
-                            {/* Top Section */}
-                            <div className="flex p-6">
-                              {/* Left Column */}
-                              <div className="flex-1 pr-6 border-r border-white/10 group/col-left">
-                                <h4 className="text-xs font-bold text-zinc-500 group-hover/col-left:text-white transition-colors duration-300 mb-5">{t('aboutDropdown.aboutUs')}</h4>
-                                <div className="flex flex-col space-y-4">
-                                  {[
-                                    { name: t('aboutDropdown.overview'), href: "/tong-quan" },
-                                    { name: t('aboutDropdown.feedback'), href: "/phan-hoi" },
-                                    { name: t('aboutDropdown.contact'), href: "/lien-he" },
-                                  ].map((subItem) => (
-                                    <Link key={subItem.name} href={subItem.href} className="group/link flex items-center gap-3">
-                                      <div className="w-3.5 h-3.5 rounded-full border-[1.5px] border-primary group-hover/link:bg-primary/20 transition-colors shrink-0" />
-                                      <span className="text-sm font-semibold text-white group-hover/link:text-primary transition-colors">{subItem.name}</span>
-                                    </Link>
-                                  ))}
-                                </div>
-                              </div>
-
-                              {/* Right Column */}
-                              <div className="flex-1 pl-6 group/col-right">
-                                <h4 className="text-xs font-bold text-zinc-500 group-hover/col-right:text-white transition-colors duration-300 mb-5">{t('aboutDropdown.others')}</h4>
-                                <div className="flex flex-col space-y-4">
-                                  {[
-                                    { name: t('aboutDropdown.life'), href: "/cuoc-song" },
-                                    { name: t('aboutDropdown.faq'), href: "/faq" },
-                                  ].map((subItem) => (
-                                    <Link key={subItem.name} href={subItem.href} className="group/link flex items-center gap-3">
-                                      <div className="w-3.5 h-3.5 rounded-full border-[1.5px] border-primary group-hover/link:bg-primary/20 transition-colors shrink-0" />
-                                      <span className="text-sm font-semibold text-white group-hover/link:text-primary transition-colors">{subItem.name}</span>
-                                    </Link>
-                                  ))}
-                                </div>
-                              </div>
-                            </div>
-
-                            {/* Bottom Section */}
-                            <Link href="/su-nghiep" className="group/career relative px-6 py-5 overflow-hidden flex items-center justify-between">
-                              <div className="absolute inset-0 bg-linear-to-r from-indigo-900 via-purple-700 to-pink-600 opacity-90 transition-opacity group-hover/career:opacity-100" />
-                              <div className="relative z-10 flex items-center gap-4">
-                                <Briefcase className="w-7 h-7 text-white stroke-[1.5]" />
-                                <div className="flex flex-col">
-                                  <h4 className="text-[15px] font-bold text-white mb-0.5">{t('career.title')}</h4>
-                                  <p className="text-xs font-medium text-white/70">{t('career.desc')}</p>
-                                </div>
-                              </div>
-                              <ArrowRight className="relative z-10 w-4 h-4 text-white/50 group-hover/career:text-white group-hover/career:translate-x-1 transition-all" />
-                            </Link>
-
-                          </div>
-                        </motion.div>
+                          layoutId="nav-hover-bg"
+                          className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-full border border-white/10"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                          transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
+                        />
                       )}
-                    </AnimatePresence>
-                  )}
-                </div>
-              )})}
+
+                      <span className="absolute bottom-1 left-1/2 -translate-x-1/2 h-[2px] w-0 bg-primary transition-all duration-300 group-hover/nav-item:w-4 z-20"></span>
+                    </Link>
+
+                    {/* Dropdown Menu cho Về Chúng Tôi */}
+                    {key === 'aboutUs' && (
+                      <AnimatePresence>
+                        {hoveredItem === key && (
+                          <motion.div
+                            initial={{ opacity: 0, y: 15, scale: 0.95 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                            transition={{ duration: 0.2, ease: "easeOut" }}
+                            className="absolute left-1/2 -translate-x-1/2 top-full pt-4 w-56"
+                          >
+                            <div className="rounded-2xl border border-white/10 bg-[#1a1c23]/95 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] overflow-hidden flex flex-col min-w-[500px] w-max">
+                              {/* Top Section */}
+                              <div className="flex p-6">
+                                {/* Left Column */}
+                                <div className="flex-1 pr-6 border-r border-white/10 group/col-left">
+                                  <h4 className="text-xs font-bold text-zinc-500 group-hover/col-left:text-white transition-colors duration-300 mb-5">{t('aboutDropdown.aboutUs')}</h4>
+                                  <div className="flex flex-col space-y-4">
+                                    {[
+                                      { name: t('aboutDropdown.overview'), href: "/tong-quan" },
+                                      { name: t('aboutDropdown.feedback'), href: "/phan-hoi" },
+                                      { name: t('aboutDropdown.contact'), href: "/lien-he" },
+                                    ].map((subItem) => (
+                                      <Link key={subItem.name} href={subItem.href} className="group/link flex items-center gap-3">
+                                        <div className="w-3.5 h-3.5 rounded-full border-[1.5px] border-primary group-hover/link:bg-primary/20 transition-colors shrink-0" />
+                                        <span className="text-sm font-semibold text-white group-hover/link:text-primary transition-colors">{subItem.name}</span>
+                                      </Link>
+                                    ))}
+                                  </div>
+                                </div>
+
+                                {/* Right Column */}
+                                <div className="flex-1 pl-6 group/col-right">
+                                  <h4 className="text-xs font-bold text-zinc-500 group-hover/col-right:text-white transition-colors duration-300 mb-5">{t('aboutDropdown.others')}</h4>
+                                  <div className="flex flex-col space-y-4">
+                                    {[
+                                      { name: t('aboutDropdown.life'), href: "/cuoc-song" },
+                                      { name: t('aboutDropdown.faq'), href: "/faq" },
+                                    ].map((subItem) => (
+                                      <Link key={subItem.name} href={subItem.href} className="group/link flex items-center gap-3">
+                                        <div className="w-3.5 h-3.5 rounded-full border-[1.5px] border-primary group-hover/link:bg-primary/20 transition-colors shrink-0" />
+                                        <span className="text-sm font-semibold text-white group-hover/link:text-primary transition-colors">{subItem.name}</span>
+                                      </Link>
+                                    ))}
+                                  </div>
+                                </div>
+                              </div>
+
+                              {/* Bottom Section */}
+                              <Link href="/su-nghiep" className="group/career relative px-6 py-5 overflow-hidden flex items-center justify-between">
+                                <div className="absolute inset-0 bg-linear-to-r from-indigo-900 via-purple-700 to-pink-600 opacity-90 transition-opacity group-hover/career:opacity-100" />
+                                <div className="relative z-10 flex items-center gap-4">
+                                  <Briefcase className="w-7 h-7 text-white stroke-[1.5]" />
+                                  <div className="flex flex-col">
+                                    <h4 className="text-[15px] font-bold text-white mb-0.5">{t('career.title')}</h4>
+                                    <p className="text-xs font-medium text-white/70">{t('career.desc')}</p>
+                                  </div>
+                                </div>
+                                <ArrowRight className="relative z-10 w-4 h-4 text-white/50 group-hover/career:text-white group-hover/career:translate-x-1 transition-all" />
+                              </Link>
+
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    )}
+                  </div>
+                )
+              })}
             </nav>
 
             {/* Auth Buttons Right */}
@@ -256,9 +257,9 @@ export default function AppBar() {
               className="hidden lg:flex items-center justify-end gap-3"
               onMouseLeave={() => setHoveredItem(null)}
             >
-              <div 
-                className="relative group/lang font-sans" 
-                onMouseEnter={() => setHoveredItem('lang')} 
+              <div
+                className="relative group/lang font-sans"
+                onMouseEnter={() => setHoveredItem('lang')}
                 onMouseLeave={() => setHoveredItem(null)}
               >
                 <button
@@ -295,8 +296,8 @@ export default function AppBar() {
                             }}
                             className={cn(
                               "flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300",
-                              locale === lang.code 
-                                ? "bg-primary/20 text-primary" 
+                              locale === lang.code
+                                ? "bg-primary/20 text-primary"
                                 : "text-zinc-300 hover:bg-white/10 hover:text-white"
                             )}
                           >
