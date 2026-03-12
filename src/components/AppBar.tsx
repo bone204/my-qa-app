@@ -28,7 +28,7 @@ export default function AppBar() {
   // Close mobile menu when resizing to desktop
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768) {
+      if (window.innerWidth >= 1024) {
         setIsMobileMenuOpen(false);
       }
     };
@@ -89,7 +89,7 @@ export default function AppBar() {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 flex justify-center pointer-events-none transition-all duration-500 ease-in-out ${isVisible ? "top-0 opacity-100" : "-top-24 opacity-0"
+        className={`fixed inset-x-0 top-0 z-50 flex justify-center pointer-events-none transition-all duration-500 ease-in-out ${isVisible ? "top-0 opacity-100" : "-top-24 opacity-0 select-none"
           }`}
       >
         <div
@@ -120,7 +120,7 @@ export default function AppBar() {
 
             {/* Center Nav */}
             <nav
-              className="hidden md:flex items-center gap-1 lg:gap-2"
+              className="hidden lg:flex items-center gap-1 lg:gap-2"
               onMouseLeave={() => setHoveredItem(null)}
             >
               {['services', 'successStories', 'portfolio', 'aboutUs', 'news'].map((key) => {
@@ -234,7 +234,7 @@ export default function AppBar() {
 
             {/* Auth Buttons Right */}
             <div
-              className="hidden md:flex items-center justify-end gap-3"
+              className="hidden lg:flex items-center justify-end gap-3"
               onMouseLeave={() => setHoveredItem(null)}
             >
               <div 
@@ -320,7 +320,7 @@ export default function AppBar() {
             </div>
 
             {/* Mobile Menu Toggle Button */}
-            <div className="flex items-center md:hidden">
+            <div className="flex items-center lg:hidden">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="relative p-2 text-zinc-400 hover:text-white transition-all focus:outline-none"
@@ -346,11 +346,11 @@ export default function AppBar() {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="md:hidden absolute top-full left-4 right-4 mt-2 overflow-hidden bg-[#0d1117]/95 backdrop-blur-2xl shadow-2xl border border-white/10 flex flex-col rounded-3xl pointer-events-auto"
+              className="lg:hidden absolute top-full left-4 right-4 mt-2 overflow-hidden bg-[#0d1117]/95 backdrop-blur-2xl shadow-2xl border border-white/10 flex flex-col rounded-3xl pointer-events-auto"
             >
               <div className="flex flex-col px-6 py-8">
                 <nav className="flex flex-col space-y-4 mb-8">
-                  {['home', 'aboutUs', 'services'].map((key, i) => (
+                  {['home', 'services', 'successStories', 'portfolio', 'aboutUs', 'news'].map((key, i) => (
                     <motion.div
                       key={key}
                       initial={{ opacity: 0, x: -20 }}
@@ -358,7 +358,7 @@ export default function AppBar() {
                       transition={{ delay: 0.1 + i * 0.1, duration: 0.3 }}
                     >
                       <Link
-                        href={key === "home" ? "/" : `/${key.toLowerCase()}`}
+                        href={key === "home" ? "/" : (key === 'aboutUs' ? '/tong-quan' : `/${key.toLowerCase()}`)}
                         onClick={() => setIsMobileMenuOpen(false)}
                         className="block py-2 text-2xl font-black tracking-tight text-white hover:text-primary transition-all"
                       >
@@ -423,7 +423,7 @@ export default function AppBar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-black/40 backdrop-blur-[2px] z-40 md:hidden"
+            className="fixed inset-0 bg-black/40 backdrop-blur-[2px] z-40 lg:hidden"
             onClick={() => setIsMobileMenuOpen(false)}
           />
         )}

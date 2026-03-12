@@ -80,7 +80,7 @@ export default function SolutionSection() {
                 className="section-title text-white select-none"
               >
                 {t.rich('title', {
-                    highlight: (chunks) => <span className="text-gray-900">{chunks}</span>
+                  highlight: (chunks) => <span className="text-gray-900">{chunks}</span>
                 })}
               </motion.h2>
               <motion.p
@@ -160,29 +160,29 @@ export default function SolutionSection() {
                   initial={{ opacity: 0, y: 16 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-40px" }}
-                  className="relative w-full max-w-md bg-white p-6 rounded-4xl shadow-[0_20px_40px_rgba(0,0,0,0.15)] border border-white/20"
+                  className="relative w-full max-w-md bg-zinc-950/40 backdrop-blur-xl p-8 rounded-4xl shadow-2xl border border-white/10"
                 >
-                  <div className="flex items-start gap-4">
+                  <div className="flex flex-col items-center gap-6">
                     <div
-                      className="w-12 h-12 shrink-0 rounded-2xl border flex items-center justify-center transition-colors"
+                      className="w-16 h-16 shrink-0 rounded-2xl border flex items-center justify-center transition-colors shadow-lg"
                       style={{
-                        backgroundColor: `${node.color}15`,
-                        borderColor: `${node.color}33`,
-                        color: node.color
+                        backgroundColor: `${node.color}22`,
+                        borderColor: `${node.color}44`,
+                        color: "#ffffff"
                       }}
                     >
-                      <node.icon className="w-6 h-6" />
+                      <node.icon className="w-8 h-8" />
                     </div>
-                    <div className="flex-1 space-y-3">
-                      <h3 className="text-lg font-black text-zinc-900 select-none uppercase tracking-tight">{t(`nodes.${node.id}.title`)}</h3>
-                      <div className="flex flex-wrap gap-2">
+                    <div className="flex-1 w-full space-y-6 text-center">
+                      <h3 className="text-xl font-black text-white select-none uppercase tracking-widest">{t(`nodes.${node.id}.title`)}</h3>
+                      <div className="flex flex-wrap justify-center gap-3">
                         {node.subItems.map((sub, sIdx) => (
                           <div
                             key={sub.label}
-                            className="flex items-center gap-1.5 border rounded-2xl px-3 py-1.5 transition-colors bg-zinc-50 border-zinc-100"
+                            className="flex items-center gap-2 border rounded-xl px-4 py-2 transition-all hover:bg-white/5 border-white/10"
                           >
-                            <sub.icon className="w-3.5 h-3.5" style={{ color: sub.color }} />
-                            <span className="text-[10px] font-bold text-zinc-600 uppercase tracking-widest">{t(`nodes.${node.id}.subItems.${sIdx}.label`)}</span>
+                            <sub.icon className="w-4 h-4" style={{ color: sub.color }} />
+                            <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">{t(`nodes.${node.id}.subItems.${sIdx}.label`)}</span>
                           </div>
                         ))}
                       </div>

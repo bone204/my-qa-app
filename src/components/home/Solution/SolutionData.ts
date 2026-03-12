@@ -1,4 +1,4 @@
-import { 
+import {
   ShieldCheck, Layers, TrendingUp,
   GraduationCap, HeartPulse, Banknote, Building2,
   Rocket, Building, ShoppingBag, Tv,
@@ -35,8 +35,8 @@ export const solutionNodes: SolutionNode[] = [
       { icon: Banknote, label: "Finance", color: "#ffcc00" },
       { icon: Building2, label: "Government", color: "#007aff" },
     ],
-    x: 28,
-    y: 16,
+    x: 25,
+    y: 22,
     delay: 0.1,
   },
   {
@@ -50,8 +50,8 @@ export const solutionNodes: SolutionNode[] = [
       { icon: ShoppingBag, label: "Retail", color: "#ff2d55" },
       { icon: Tv, label: "Media", color: "#ff9500" },
     ],
-    x: 80,
-    y: 48,
+    x: 75,
+    y: 50,
     delay: 0.35,
   },
   {
@@ -65,8 +65,8 @@ export const solutionNodes: SolutionNode[] = [
       { icon: Link, label: "Supply Chain", color: "#ffffff" },
       { icon: Store, label: "E-commerce", color: "#ffcc00" },
     ],
-    x: 28,
-    y: 80,
+    x: 25,
+    y: 78,
     delay: 0.6,
   },
 ];

@@ -58,8 +58,8 @@ export function ExpertiseBall({ item, onClick, isExpanded, className, sizeMultip
           )}
           style={{
             '--glow-color': `${item.color}`,
-            width: `calc(${sizeMultiplier} * 10rem)`,
-            height: `calc(${sizeMultiplier} * 10rem)`,
+            width: `calc(${sizeMultiplier} * (clamp(6rem, 15vw, 10rem)))`,
+            height: `calc(${sizeMultiplier} * (clamp(6rem, 15vw, 10rem)))`,
             backgroundColor: `${item.color}1A` // Slightly more opaque but uses backdrop-blur
           } as any}
         >
@@ -77,7 +77,7 @@ export function ExpertiseBall({ item, onClick, isExpanded, className, sizeMultip
             layoutId={`ball-icon-${item.id}`}
             className="relative z-10 drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]"
           >
-            <item.icon className="w-10 h-10 sm:w-14 sm:h-14 text-white group-hover:scale-110 transition-transform duration-500" />
+            <item.icon className="w-8 sm:w-10 lg:w-14 h-auto text-white group-hover:scale-110 transition-transform duration-500" />
           </motion.div>
         </motion.div>
       </motion.div>
