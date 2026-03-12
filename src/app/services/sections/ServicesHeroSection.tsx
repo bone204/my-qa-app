@@ -71,14 +71,10 @@ export default function ServicesHeroSection() {
                                 </p>
 
                                 <div className="space-y-4">
-                                    {[
-                                        "Tiếp nhận yêu cầu 24/7",
-                                        "Tư vấn giải pháp miễn phí",
-                                        "Đội ngũ kỹ thuật chuyên nghiệp"
-                                    ].map((item, idx) => (
-                                        <div key={idx} className="flex items-center gap-3 text-sm text-zinc-300">
+                                    {['0', '1', '2'].map((key) => (
+                                        <div key={key} className="flex items-center gap-3 text-sm text-zinc-300">
                                             <CheckCircle2 className="w-4 h-4 text-primary" />
-                                            <span>{item}</span>
+                                            <span>{t(`card.features.${key}`)}</span>
                                         </div>
                                     ))}
                                 </div>

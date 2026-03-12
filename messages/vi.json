@@ -24,6 +24,11 @@
     "buttons": {
       "hire": "Thuê Nhân Sự",
       "contact": "Liên Hệ"
+    },
+    "selectLanguage": "Chọn ngôn ngữ",
+    "languages": {
+      "vi": "Tiếng Việt",
+      "en": "Tiếng Anh"
     }
   },
   "Metadata": {
@@ -381,6 +386,11 @@
       "card": {
         "title": "Thuê dự án chuyên nghiệp",
         "description": "Đội ngũ chuyên gia sẵn sàng biến ý tưởng của bạn thành thực tế với quy trình làm việc chuẩn quốc tế.",
+        "features": {
+          "0": "Tiếp nhận yêu cầu 24/7",
+          "1": "Tư vấn giải pháp miễn phí",
+          "2": "Đội ngũ kỹ thuật chuyên nghiệp"
+        },
         "button": "Liên hệ ngay"
       }
     },

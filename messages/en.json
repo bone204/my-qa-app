@@ -24,6 +24,11 @@
     "buttons": {
       "hire": "Hire Us",
       "contact": "Contact Us"
+    },
+    "selectLanguage": "Select Language",
+    "languages": {
+      "vi": "Vietnamese",
+      "en": "English"
     }
   },
   "Metadata": {
@@ -381,6 +386,11 @@
       "card": {
         "title": "Professional Project Hiring",
         "description": "Our expert team is ready to turn your ideas into reality with international standard workflows.",
+        "features": {
+          "0": "24/7 Request Handling",
+          "1": "Free Solution Consultation",
+          "2": "Professional Technical Team"
+        },
         "button": "Contact Now"
       }
     },

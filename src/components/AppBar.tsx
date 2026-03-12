@@ -284,8 +284,8 @@ export default function AppBar() {
                     >
                       <div className="rounded-2xl border border-white/10 bg-[#1a1c23]/95 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] overflow-hidden flex flex-col p-2 space-y-1">
                         {[
-                          { code: 'vi', label: 'Tiếng Việt' },
-                          { code: 'en', label: 'English' }
+                          { code: 'vi', label: t('languages.vi') },
+                          { code: 'en', label: t('languages.en') }
                         ].map((lang) => (
                           <button
                             key={lang.code}
@@ -312,23 +312,11 @@ export default function AppBar() {
 
               <Link
                 href="/signin"
-                onMouseEnter={() => setHoveredItem('signin')}
-                className={cn(
-                  "relative px-5 py-2 text-sm font-bold transition-all duration-300 outline-none rounded-full",
-                  hoveredItem === 'signin' ? "text-white" : "text-zinc-400"
-                )}
+                className="outline-none rounded-full"
               >
-                <span className="relative z-10">{t('buttons.hire')}</span>
-                {hoveredItem === 'signin' && (
-                  <motion.div
-                    layoutId="nav-hover-bg"
-                    className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-full border border-white/10"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
-                  />
-                )}
+                <Button variant="secondary" className="px-5 py-2 text-sm">
+                  {t('buttons.hire')}
+                </Button>
               </Link>
               <Button
                 variant="primary"
@@ -393,21 +381,21 @@ export default function AppBar() {
                   transition={{ delay: 0.3, duration: 0.3 }}
                   className="flex flex-col gap-4"
                 >
-                  <Button variant="secondary" className="w-full py-4 text-base font-bold border-white/10 text-white rounded-2xl">
+                  <Button variant="secondary" className="w-full py-4 text-base">
                     {t('buttons.hire')}
                   </Button>
-                  <Button variant="primary" className="w-full py-4 text-base font-bold rounded-2xl shadow-primary/30">
+                  <Button variant="primary" className="w-full py-4 text-base shadow-primary/30">
                     {t('buttons.contact')}
                   </Button>
                   <div className="flex flex-col gap-3 mt-2 pt-5 border-t border-white/10">
                     <div className="flex items-center gap-2 pl-2">
                       <Globe className="w-4 h-4 text-zinc-500" />
-                      <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest">Select Language</p>
+                      <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest">{t('selectLanguage')}</p>
                     </div>
                     <div className="grid grid-cols-2 gap-3">
                       {[
-                        { code: 'vi', label: 'Tiếng Việt' },
-                        { code: 'en', label: 'English' }
+                        { code: 'vi', label: t('languages.vi') },
+                        { code: 'en', label: t('languages.en') }
                       ].map((lang) => (
                         <button
                           key={lang.code}
