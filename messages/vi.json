@@ -372,5 +372,17 @@
     "supportEmail": "Email hỗ trợ",
     "allRightsReserved": "Tất cả quyền được bảo lưu.",
     "designedBy": "Thiết kế bởi"
+  },
+  "ServicesPage": {
+    "hero": {
+      "subtitle": "Giải pháp toàn diện",
+      "title": "Nâng tầm <highlight>Trải nghiệm</highlight> Số.",
+      "description": "Chúng tôi cung cấp các giải pháp công nghệ đột phá, giúp bạn dẫn đầu trong kỷ nguyên số.",
+      "card": {
+        "title": "Thuê dự án chuyên nghiệp",
+        "description": "Đội ngũ chuyên gia sẵn sàng biến ý tưởng của bạn thành hiện thực với quy trình làm việc chuẩn quốc tế.",
+        "button": "Liên hệ ngay"
+      }
+    }
   }
 }

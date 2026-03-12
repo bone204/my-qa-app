@@ -8,7 +8,7 @@ import LightRays from "@/components/ui/LightRays";
 import { Metadata } from "next";
 import {NextIntlClientProvider} from 'next-intl';
 import {getLocale, getMessages, getTranslations} from 'next-intl/server';
-import ContactSection from "@/components/home/Contact/ContactSection";
+import ContactSection from "@/components/ContactSection";
 const beVietnamPro = Be_Vietnam_Pro({ 
   subsets: ['vietnamese', 'latin'], 
   weight: ['400', '500', '600', '700', '800', '900'],

@@ -150,7 +150,9 @@ export default function ContactSection() {
                                         />
                                     </div>
                                     <div className="space-y-2">
-                                        <label className="text-xs font-bold uppercase tracking-wider text-zinc-400">{t('form.firstName')}</label>
+                                        <label className="text-xs font-bold uppercase tracking-wider text-zinc-400 flex items-center gap-2">
+                                            <User size={14} className="text-primary" /> {t('form.firstName')}
+                                        </label>
                                         <input
                                             type="text" name="lastName" placeholder={t('form.firstNamePlaceholder')}
                                             className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-hidden focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all placeholder:text-zinc-600"

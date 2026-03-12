@@ -372,5 +372,17 @@
     "supportEmail": "Support Email",
     "allRightsReserved": "All rights reserved.",
     "designedBy": "Designed by"
+  },
+  "ServicesPage": {
+    "hero": {
+      "subtitle": "Comprehensive Solutions",
+      "title": "Elevate Your <highlight>Digital</highlight> Experience.",
+      "description": "We provide breakthrough technology solutions, from mobile app development to complex enterprise systems, helping you lead in the digital era.",
+      "card": {
+        "title": "Professional Project Hiring",
+        "description": "Our expert team is ready to turn your ideas into reality with international standard workflows.",
+        "button": "Contact Now"
+      }
+    }
   }
 }
