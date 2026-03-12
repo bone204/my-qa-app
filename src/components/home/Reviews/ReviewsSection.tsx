@@ -4,6 +4,7 @@ import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import { useState } from "react";
 import ReviewCard, { reviews } from "./ReviewCard";
+import { useTranslations } from 'next-intl';
 
 const titleVariants = {
     hidden: { opacity: 0, y: 60, scale: 0.85, filter: "blur(20px)" },
@@ -34,6 +35,7 @@ const descVariants = {
 };
 
 export default function ReviewsSection() {
+    const t = useTranslations('ReviewsSection');
     const { scrollY } = useScroll();
     const [scrollDirection, setScrollDirection] = useState<"up" | "down">("down");
 
@@ -64,7 +66,7 @@ export default function ReviewsSection() {
                     >
                         <Sparkles className="w-3.5 h-3.5 text-primary" />
                         <span className="review-label">
-                            Client Reviews
+                            {t('label')}
                         </span>
                     </motion.div>
 
@@ -76,8 +78,10 @@ export default function ReviewsSection() {
                         viewport={{ once: false, amount: 0.3 }}
                         className="review-title max-w-3xl"
                     >
-                        Loved by our <br />
-                        <span className="text-primary">clients.</span>
+                        {t.rich('title', {
+                            highlight: (chunks) => <span className="text-primary">{chunks}</span>,
+                            br: () => <br />
+                        })}
                     </motion.h2>
 
                     <motion.p
@@ -88,7 +92,7 @@ export default function ReviewsSection() {
                         viewport={{ once: false, amount: 0.3 }}
                         className="review-desc max-w-xl"
                     >
-                        Don't take our word for it. Here's what our partners have to say about working with us.
+                        {t('description')}
                     </motion.p>
                 </div>
 

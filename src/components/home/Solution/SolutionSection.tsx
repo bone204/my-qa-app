@@ -13,12 +13,14 @@ import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { ArrowUp } from "lucide-react";
 import CloudNode from "./CloudNode";
+import { useTranslations } from 'next-intl';
 
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
 export default function SolutionSection() {
+  const t = useTranslations('SolutionSection');
   const containerRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
 
@@ -53,7 +55,7 @@ export default function SolutionSection() {
             transition={{ duration: 3, repeat: Infinity, ease: "linear", times: [0, 0.45, 1] }}
             className="text-[15vw] font-black uppercase tracking-tighter text-white/20 whitespace-nowrap select-none"
           >
-            SOLUTIONS
+            {t('backgroundText')}
           </motion.span>
         </motion.div>
 
@@ -68,7 +70,7 @@ export default function SolutionSection() {
                 transition={{ duration: 0.5, ease: "easeOut" }}
                 className="section-subtitle text-white select-none"
               >
-                Technical Ecosystem
+                {t('subtitle')}
               </motion.span>
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
@@ -77,7 +79,9 @@ export default function SolutionSection() {
                 transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
                 className="section-title text-white select-none"
               >
-                The Digital <span className="text-gray-900">Neural</span> Network.
+                {t.rich('title', {
+                    highlight: (chunks) => <span className="text-gray-900">{chunks}</span>
+                })}
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -86,7 +90,7 @@ export default function SolutionSection() {
                 transition={{ duration: 0.6, delay: 0.22, ease: "easeOut" }}
                 className="section-desc text-white/70! text-center mx-auto select-none"
               >
-                Beyond standard code, we build intelligent ecosystems that connect vision and technology perfectly.
+                {t('description')}
               </motion.p>
             </div>
           </div>
@@ -170,15 +174,15 @@ export default function SolutionSection() {
                       <node.icon className="w-6 h-6" />
                     </div>
                     <div className="flex-1 space-y-3">
-                      <h3 className="text-lg font-black text-zinc-900 select-none uppercase tracking-tight">{node.title}</h3>
+                      <h3 className="text-lg font-black text-zinc-900 select-none uppercase tracking-tight">{t(`nodes.${node.id}.title`)}</h3>
                       <div className="flex flex-wrap gap-2">
-                        {node.subItems.map((sub) => (
+                        {node.subItems.map((sub, sIdx) => (
                           <div
                             key={sub.label}
                             className="flex items-center gap-1.5 border rounded-2xl px-3 py-1.5 transition-colors bg-zinc-50 border-zinc-100"
                           >
                             <sub.icon className="w-3.5 h-3.5" style={{ color: sub.color }} />
-                            <span className="text-[10px] font-bold text-zinc-600 uppercase tracking-widest">{sub.label}</span>
+                            <span className="text-[10px] font-bold text-zinc-600 uppercase tracking-widest">{t(`nodes.${node.id}.subItems.${sIdx}.label`)}</span>
                           </div>
                         ))}
                       </div>

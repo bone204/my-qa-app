@@ -5,6 +5,7 @@ import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { VIDEOS } from '@/constants/video';
 import Button from '@/components/ui/Button';
+import { useTranslations } from 'next-intl';
 
 const VIDEOS_LIST = [
     {
@@ -25,6 +26,7 @@ const VIDEOS_LIST = [
 ];
 
 export default function AboutSection() {
+    const t = useTranslations('AboutSection');
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isHovered, setIsHovered] = useState(false);
     const [direction, setDirection] = useState(0);
@@ -110,21 +112,21 @@ export default function AboutSection() {
                     {/* Left Column: Content */}
                     <div className="w-full lg:w-1/2 flex flex-col space-y-6 md:space-y-8 animate-in fade-in slide-in-from-left duration-700 z-20 select-none">
                         <div className="flex flex-col space-y-2">
-                            <span className="section-subtitle">Our Mission</span>
+                            <span className="section-subtitle">{t('subtitle')}</span>
                             <h2 className="section-title">
-                                We Build <span className="text-primary">Digital</span> Masterpieces.
+                                {t.rich('title', {
+                                    highlight: (chunks) => <span className="text-primary">{chunks}</span>
+                                })}
                             </h2>
                         </div>
 
                         <p className="section-desc">
-                            Specializing in high-performance software and luxury logistics platforms.
-                            We combine aesthetic excellence with technical precision to deliver
-                            extraordinary results for our global partners.
+                            {t('description')}
                         </p>
 
                         <div className="flex gap-4 pt-2">
                             <Button variant="body" className="w-full sm:w-auto">
-                                Discover More
+                                {t('button')}
                             </Button>
                         </div>
                     </div>

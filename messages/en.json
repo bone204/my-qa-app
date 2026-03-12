@@ -1,0 +1,376 @@
+{
+  "AppBar": {
+    "nav": {
+      "services": "Services",
+      "successStories": "Success Stories",
+      "portfolio": "Portfolio",
+      "aboutUs": "About Us",
+      "news": "News",
+      "home": "Home"
+    },
+    "aboutDropdown": {
+      "aboutUs": "About Us",
+      "overview": "Company Overview",
+      "feedback": "Client Feedback",
+      "contact": "Contact",
+      "others": "Others",
+      "life": "Life @ QKIT Software",
+      "faq": "FAQ"
+    },
+    "career": {
+      "title": "Careers",
+      "desc": "We always have room for quality personnel!"
+    },
+    "buttons": {
+      "hire": "Hire Us",
+      "contact": "Contact Us"
+    }
+  },
+  "Metadata": {
+    "title": "App Development & Digital Transformation Experts",
+    "description": "QKIT"
+  },
+  "AboutSection": {
+    "subtitle": "Our Mission",
+    "title": "We Build <highlight>Digital</highlight> Masterpieces.",
+    "description": "Specializing in high-performance software and luxury logistics platforms. We combine aesthetic excellence with technical precision to deliver extraordinary results for our global partners.",
+    "button": "Discover More"
+  },
+  "ServiceSection": {
+    "title": "Capabilities that scale",
+    "description": "We offer a comprehensive suite of digital services designed to help your business thrive in the modern technological landscape.",
+    "coreCapabilities": "Core Capabilities",
+    "services": {
+      "web-dev": {
+        "title": "Web Development",
+        "subtitle": "Modern, responsive applications",
+        "description": "We build scalable web applications using the latest technologies. Our focus is on delivering high-performance, accessible, and SEO-friendly solutions that drive growth and engage users effectively.",
+        "features": {
+          "0": "Custom React/Next.js Apps",
+          "1": "E-commerce Platforms",
+          "2": "Progressive Web Apps",
+          "3": "API Development"
+        }
+      },
+      "mobile-apps": {
+        "title": "Mobile Apps",
+        "subtitle": "Native and cross-platform native feel",
+        "description": "Create engaging mobile experiences for iOS and Android. We utilize modern frameworks to ship high-quality apps quickly, ensuring a native-like feel and robust performance across all devices.",
+        "features": {
+          "0": "iOS & Android Development",
+          "1": "Cross-platform Solutions",
+          "2": "Mobile UI/UX Design",
+          "3": "App Store Optimization"
+        }
+      },
+      "ui-ux": {
+        "title": "UI/UX Design",
+        "subtitle": "Intuitive and beautiful design",
+        "description": "Transform your ideas into stunning visual interfaces. Our design process prioritizes user experience, ensuring that every interaction is intuitive, accessible, and visually captivating.",
+        "features": {
+          "0": "User Research",
+          "1": "Wireframing & Prototyping",
+          "2": "Design Systems",
+          "3": "Usability Testing"
+        }
+      },
+      "cloud": {
+        "title": "Cloud Solutions",
+        "subtitle": "Secure and scalable infrastructure",
+        "description": "Leverage the power of the cloud to streamline your operations. We offer cloud migration, architecture design, and DevOps services on AWS, Google Cloud, and Azure to optimize your infrastructure.",
+        "features": {
+          "0": "Cloud Migration",
+          "1": "Serverless Architecture",
+          "2": "DevOps & CI/CD",
+          "3": "Infrastructure as Code"
+        }
+      },
+      "ai": {
+        "title": "AI Integration",
+        "subtitle": "Intelligent solutions for tomorrow",
+        "description": "Integrate artificial intelligence into your business processes. From predictive analytics to custom LLM integrations, we help you harness the power of AI to gain a competitive edge.",
+        "features": {
+          "0": "Custom LLM Integration",
+          "1": "Predictive Analytics",
+          "2": "Process Automation",
+          "3": "Computer Vision"
+        }
+      },
+      "analytics": {
+        "title": "Data Analytics",
+        "subtitle": "Actionable insights from data",
+        "description": "Turn raw data into strategic assets. Our data analytics services help you visualize trends, track KPIs, and make informed decisions that drive your business forward and keep you informed.",
+        "features": {
+          "0": "Data Visualization",
+          "1": "Business Intelligence",
+          "2": "Custom Dashboards",
+          "3": "Data Pipeline Engineering"
+        }
+      }
+    }
+  },
+  "ExpertiseSection": {
+    "subtitle": "What we do best",
+    "title": "Our Specialist <highlight>Expertise</highlight>",
+    "description": "We master deep-tech domains to provide you with high-performance, future-proof solutions.",
+    "items": {
+      "frontend": {
+        "title": "Frontend",
+        "description": "Crafting immersive digital experiences with cutting-edge UI/UX.",
+        "details": {
+          "0": { "label": "Core Tech" },
+          "1": { "label": "Styling" },
+          "2": { "label": "Performance" }
+        }
+      },
+      "backend": {
+        "title": "Backend",
+        "description": "Architecting robust, scalable, and high-performance server logic.",
+        "details": {
+          "0": { "label": "Runtime" },
+          "1": { "label": "Database" },
+          "2": { "label": "Security" }
+        }
+      },
+      "mobile": {
+        "title": "Mobile App",
+        "description": "Building seamless cross-platform mobile solutions for Android and iOS.",
+        "details": {
+          "0": { "label": "Framework" },
+          "1": { "label": "Delivery" },
+          "2": { "label": "Features" }
+        }
+      },
+      "ai": {
+        "title": "AI Development",
+        "description": "Integrating intelligent machine learning models into modern products.",
+        "details": {
+          "0": { "label": "Models" },
+          "1": { "label": "Platforms" },
+          "2": { "label": "Applications" }
+        }
+      }
+    }
+  },
+  "SolutionSection": {
+    "backgroundText": "SOLUTIONS",
+    "subtitle": "Technical Ecosystem",
+    "title": "The Digital <highlight>Neural</highlight> Network.",
+    "description": "Beyond standard code, we build intelligent ecosystems that connect vision and technology perfectly.",
+    "nodes": {
+      "security": {
+        "title": "Multi-Layer Security",
+        "subItems": {
+          "0": { "label": "Education" },
+          "1": { "label": "Healthcare" },
+          "2": { "label": "Finance" },
+          "3": { "label": "Government" }
+        }
+      },
+      "architecture": {
+        "title": "Agile Architecture",
+        "subItems": {
+          "0": { "label": "Startup" },
+          "1": { "label": "Enterprise" },
+          "2": { "label": "Retail" },
+          "3": { "label": "Media" }
+        }
+      },
+      "growth": {
+        "title": "Breakthrough Growth",
+        "subItems": {
+          "0": { "label": "Analytics" },
+          "1": { "label": "Marketing" },
+          "2": { "label": "Supply Chain" },
+          "3": { "label": "E-commerce" }
+        }
+      }
+    }
+  },
+  "ProjectsSection": {
+    "backgroundText": "PROJECTS",
+    "exploreBtn": "Explore Case Study",
+    "projects": {
+      "1": {
+        "title": "Smart Home IoT Dashboard",
+        "category": "Web Application",
+        "description": "A comprehensive control center for modern living, blending deep-tech automation with an intuitive, minimalist interface."
+      },
+      "2": {
+        "title": "FinTech Mobile Portfolio",
+        "category": "Mobile App",
+        "description": "Redefining personal finance through peak performance and elegant security, designed for the next generation of investors."
+      },
+      "3": {
+        "title": "AI Creative Agency Portal",
+        "category": "Landing Page",
+        "description": "Where artificial intelligence meets human creativity, featuring dynamic visuals and seamless user journeys for global brands."
+      }
+    },
+    "stats": {
+      "0": { "label": "Projects Completed" },
+      "1": { "label": "Happy Clients" },
+      "2": { "label": "Years Experience" }
+    },
+    "activeSupport": "Active Support"
+  },
+  "ReviewsSection": {
+    "label": "Client Reviews",
+    "title": "Loved by our <br></br> <highlight>clients.</highlight>",
+    "description": "Don't take our word for it. Here's what our partners have to say about working with us.",
+    "reviews": {
+      "1": {
+        "role": "CEO",
+        "content": "Phuc Thinh transformed our digital presence completely. Their attention to detail and innovative approach to user experience is unlike anything I've seen before. Absolutely elite work."
+      },
+      "2": {
+        "role": "Product Manager",
+        "content": "Working with the team was a total breeze. They delivered a incredibly complex dashboard on time and with a level of polish that we didn't even think was possible."
+      },
+      "3": {
+        "role": "Founder",
+        "content": "The best creative & tech team in the region, no contest. Their ability to blend deep-tech functionality with peak aesthetics is what truly sets them apart from everyone else."
+      },
+      "4": {
+        "role": "Marketing Director",
+        "content": "Stunning visuals and seamless user journeys. Our conversion rates increased by 40% after the redesign of our landing pages. The ROI has been exceptional."
+      },
+      "5": {
+        "role": "Lead UX Designer",
+        "content": "As an experienced designer myself, I'm incredibly picky about who I work with. But Phuc Thinh exceeded every one of my expectations with pixel-perfect execution and beautiful motion design."
+      },
+      "6": {
+        "role": "Technical Lead",
+        "content": "Reliable, beautifully scalable, and visually elite. Their code architecture is as clean and robust as their design is breathtakingly beautiful. Highly, highly recommended."
+      }
+    }
+  },
+  "BlogSection": {
+    "label": "Latest Articles",
+    "title": "Fresh <highlight>ideas.</highlight>",
+    "categories": {
+      "All": "All",
+      "Design": "Design",
+      "Development": "Development",
+      "Technology": "Technology",
+      "Business": "Business"
+    },
+    "posts": {
+      "1": {
+        "title": "The Future of UI Design: Glassmorphism & Beyond",
+        "excerpt": "Exploring how modern aesthetics like glassmorphism are reshaping the way we perceive digital interfaces and what comes next.",
+        "readTime": "5 min read",
+        "tag": "Trending"
+      },
+      "2": {
+        "title": "Building High-Performance Next.js Applications",
+        "excerpt": "Deep dive into server components, streaming, and edge rendering to push your Next.js app to its absolute performance limits.",
+        "readTime": "8 min read",
+        "tag": "Popular"
+      },
+      "3": {
+        "title": "AI-Driven Personalization in Modern SaaS Products",
+        "excerpt": "How leading SaaS companies are leveraging machine learning to create hyper-personalized user experiences at scale.",
+        "readTime": "6 min read",
+        "tag": "New"
+      },
+      "4": {
+        "title": "Why Motion Design is the New Competitive Advantage",
+        "excerpt": "Micro-animations and thoughtful transitions aren't just aesthetic — they directly impact conversion rates and user retention.",
+        "readTime": "4 min read",
+        "tag": "New"
+      },
+      "5": {
+        "title": "Scaling a Creative Agency from 0 to $1M ARR",
+        "excerpt": "The real story behind growing a boutique creative agency, the mistakes we made, and the three pivots that changed everything.",
+        "readTime": "10 min read",
+        "tag": "Featured"
+      },
+      "6": {
+        "title": "The Web3 UX Problem Nobody Is Talking About",
+        "excerpt": "Blockchain technology is evolving fast, but user experience hasn't kept up. Here's why and what designers can do about it.",
+        "readTime": "7 min read",
+        "tag": "Popular"
+      }
+    }
+  },
+  "ContactSection": {
+    "subtitle": "Get in Touch",
+    "title": "Start your <highlight>Project</highlight>",
+    "description": "Fill out the form below and our expert team will contact you within 24 hours.",
+    "form": {
+      "lastName": "Last Name",
+      "lastNamePlaceholder": "Enter last name...",
+      "firstName": "First Name",
+      "firstNamePlaceholder": "Enter first name...",
+      "email": "Email",
+      "emailPlaceholder": "example@qkit.vn",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+84 ...",
+      "position": "Position",
+      "industry": "Industry",
+      "platform": "Contact Platform",
+      "country": "Country",
+      "loadingCountries": "Loading countries...",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your needs...",
+      "submit": "Submit Request"
+    },
+    "positions": {
+      "0": "CEO / Founder",
+      "1": "President / Director",
+      "2": "Manager / Head of Department",
+      "3": "Employee / Specialist",
+      "4": "Student / Intern",
+      "5": "Other"
+    },
+    "industries": {
+      "0": "IT / Software",
+      "1": "E-commerce",
+      "2": "Logistics / Transportation",
+      "3": "Finance / Banking",
+      "4": "Healthcare",
+      "5": "Education",
+      "6": "Manufacturing",
+      "7": "Other"
+    },
+    "platforms": {
+      "0": "Skype",
+      "1": "Telegram",
+      "2": "WhatsApp",
+      "3": "Zalo",
+      "4": "Phone Call",
+      "5": "Email",
+      "6": "Other"
+    },
+    "channels": {
+      "Skype": "Skype",
+      "Email": "Email",
+      "Hotline": "Hotline"
+    }
+  },
+  "Footer": {
+    "description": "We provide premium software solutions to help your business grow sustainably. Building the digital future with quality and innovation as our core values.",
+    "navigationTitle": "Navigation",
+    "navigationLinks": {
+      "0": "Home",
+      "1": "About Us",
+      "2": "Services",
+      "3": "Pricing",
+      "4": "Featured Projects"
+    },
+    "legalTitle": "Legal",
+    "legalLinks": {
+      "0": "Privacy Policy",
+      "1": "Terms of Service",
+      "2": "Cookie Policy",
+      "3": "General Terms"
+    },
+    "contactTitle": "Contact",
+    "office": "Office",
+    "officeAddress": "Ho Chi Minh City<br/>Vietnam",
+    "supportEmail": "Support Email",
+    "allRightsReserved": "All rights reserved.",
+    "designedBy": "Designed by"
+  }
+}

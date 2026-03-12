@@ -7,8 +7,10 @@ import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { expertiseData, type ExpertiseItem } from "./ExpertiseData";
 import { ExpertiseBall } from "./ExpertiseBall";
+import { useTranslations } from 'next-intl';
 
 export default function ExpertiseSection() {
+  const t = useTranslations('ExpertiseSection');
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const isScrollingRef = useRef(false);
@@ -119,12 +121,14 @@ export default function ExpertiseSection() {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="text-center"
         >
-          <span className="section-subtitle select-none">What we do best</span>
+          <span className="section-subtitle select-none">{t('subtitle')}</span>
           <h2 className="section-title mt-4 select-none">
-            Our Specialist <span className="text-primary select-none">Expertise</span>
+            {t.rich('title', {
+                highlight: (chunks) => <span className="text-primary select-none">{chunks}</span>
+            })}
           </h2>
           <p className="section-desc mx-auto mt-6 select-none">
-            We master deep-tech domains to provide you with high-performance, future-proof solutions.
+            {t('description')}
           </p>
         </motion.div>
       </div>
@@ -157,7 +161,7 @@ export default function ExpertiseSection() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 * expertiseData.indexOf(item) }}
                   >
-                    {item.title}
+                    {t(`items.${item.id}.title`)}
                   </motion.span>
                 )}
               </div>
@@ -245,21 +249,21 @@ export default function ExpertiseSection() {
                     layoutId={`title-${selectedItem.id}`}
                     className="modal-title mb-3 text-white"
                   >
-                    {selectedItem.title}
+                    {t(`items.${selectedItem.id}.title`)}
                   </motion.h3>
 
                   <motion.p
                     layout
                     className="modal-desc mb-8 text-zinc-400"
                   >
-                    {selectedItem.description}
+                    {t(`items.${selectedItem.id}.description`)}
                   </motion.p>
 
                   <motion.div layout className="space-y-10">
                     {selectedItem.details.map((group, idx) => (
                       <motion.div layout key={idx} className="space-y-5">
                         <span className="modal-section-label mb-4! text-zinc-500 font-bold border-l-2 border-primary pl-4">
-                          {group.label}
+                          {t(`items.${selectedItem.id}.details.${idx}.label`)}
                         </span>
                         <div className="flex flex-wrap gap-3">
                           {group.skills.map((skill, sIdx) => (

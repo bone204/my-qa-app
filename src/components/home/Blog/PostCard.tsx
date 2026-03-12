@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Clock, Calendar } from "lucide-react";
 import { Post } from "./postsData";
+import { useTranslations } from "next-intl";
 
 const tagColors: Record<string, string> = {
     Trending: "text-amber-400 bg-amber-400/10 border-amber-400/20",
@@ -19,6 +20,7 @@ const categoryAccents: Record<string, string> = {
 };
 
 export default function PostCard({ post, index }: { post: Post; index: number }) {
+    const t = useTranslations('BlogSection');
     return (
         <motion.article
             initial={{ opacity: 0, y: 30 }}
@@ -35,7 +37,7 @@ export default function PostCard({ post, index }: { post: Post; index: number })
 
                 {/* Category badge */}
                 <span className="relative text-[10px] font-bold uppercase tracking-[0.3em] text-white/50 group-hover:text-white/80 transition-colors duration-500">
-                    {post.category}
+                    {t(`categories.${post.category}`)}
                 </span>
 
                 {/* Arrow icon */}
@@ -51,15 +53,15 @@ export default function PostCard({ post, index }: { post: Post; index: number })
             <div className="flex flex-col gap-3 p-5 flex-1">
                 {/* Tag */}
                 <span className={`w-fit text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full border ${tagColors[post.tag] ?? "text-zinc-400 bg-white/5 border-white/10"}`}>
-                    {post.tag}
+                    {t(`posts.${post.id}.tag`)}
                 </span>
 
                 <h3 className="text-white font-bold text-lg leading-snug tracking-tight group-hover:text-white transition-colors duration-300">
-                    {post.title}
+                    {t(`posts.${post.id}.title`)}
                 </h3>
 
                 <p className="text-zinc-500 text-sm leading-relaxed line-clamp-2 group-hover:text-zinc-400 transition-colors duration-300 flex-1">
-                    {post.excerpt}
+                    {t(`posts.${post.id}.excerpt`)}
                 </p>
 
                 {/* Footer */}
@@ -72,7 +74,7 @@ export default function PostCard({ post, index }: { post: Post; index: number })
                         <span className="w-1 h-1 rounded-full bg-zinc-700" />
                         <span className="flex items-center gap-1">
                             <Clock className="w-3 h-3" />
-                            {post.readTime}
+                            {t(`posts.${post.id}.readTime`)}
                         </span>
                     </div>
                     <ArrowUpRight className="w-4 h-4 text-zinc-600 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />

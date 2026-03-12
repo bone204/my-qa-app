@@ -5,6 +5,7 @@ import { CheckCircle2, X } from "lucide-react";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import type { ServiceData } from "./ServiceData";
+import { useTranslations } from 'next-intl';
 
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -16,6 +17,8 @@ interface ServiceModalProps {
 }
 
 export function ServiceModal({ service, onClose }: ServiceModalProps) {
+  const t = useTranslations('ServiceSection');
+  
   return (
     <AnimatePresence>
       {service && (
@@ -62,15 +65,15 @@ export function ServiceModal({ service, onClose }: ServiceModalProps) {
                 </div>
                 
                 <h3 className="modal-title mb-3 select-none">
-                  {service.title}
+                  {t(`services.${service.id}.title`)}
                 </h3>
                 
                 <p className="modal-subtitle mb-5 select-none">
-                  {service.subtitle}
+                  {t(`services.${service.id}.subtitle`)}
                 </p>
                 
                 <p className="modal-desc mb-8 select-none">
-                  {service.description}
+                  {t(`services.${service.id}.description`)}
                 </p>
                 
                 <motion.div
@@ -79,12 +82,12 @@ export function ServiceModal({ service, onClose }: ServiceModalProps) {
                   transition={{ delay: 0.2, duration: 0.3 }}
                 >
                   <div className="rounded-3xl bg-white/5 p-6 sm:p-8 ring-1 ring-white/10">
-                    <span className="modal-section-label select-none">Core Capabilities</span>
+                    <span className="modal-section-label select-none">{t('coreCapabilities')}</span>
                     <ul className="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-8">
-                      {service.features.map((feature, idx) => (
+                      {service.features.map((_, idx) => (
                         <li key={idx} className="flex items-center modal-feature-text select-none">
                           <CheckCircle2 className="mr-4 h-5 w-5 shrink-0 text-primary" />
-                          {feature}
+                          {t(`services.${service.id}.features.${idx}`)}
                         </li>
                       ))}
                     </ul>

@@ -1,8 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { IMAGES } from "@/constants/images";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+    const t = useTranslations('Footer');
     return (
         <footer className="relative bg-[#060606] text-gray-400 overflow-hidden text-sm select-none border-t border-white/5 mt-auto">
             {/* Ambient Background Glows */}
@@ -32,7 +34,7 @@ export default function Footer() {
                             </div>
                         </Link>
                         <p className="footer-desc text-zinc-400 leading-relaxed font-medium">
-                             Chúng tôi cung cấp các giải pháp phần mềm cao cấp, giúp doanh nghiệp của bạn phát triển bền vững. Kiến tạo tương lai số với chất lượng và sự đổi mới làm giá trị cốt lõi.
+                             {t('description')}
                         </p>
                         <div className="flex space-x-4 pt-4">
                             {[
@@ -53,12 +55,12 @@ export default function Footer() {
                     {/* Link Sections */}
                     <div className="lg:w-2/3 xl:w-3/5 grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-16">
                         <div className="space-y-8">
-                            <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-white">Điều hướng</h3>
+                            <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-white">{t('navigationTitle')}</h3>
                             <ul className="space-y-5">
-                                {["Trang chủ", "Về chúng tôi", "Dịch vụ", "Bảng giá", "Dự án Nổi bật"].map((item) => (
-                                    <li key={item}>
+                                {[0, 1, 2, 3, 4].map((idx) => (
+                                    <li key={idx}>
                                         <Link href="#" className="text-zinc-400 hover:text-white transition-all duration-300 hover:translate-x-2 inline-block font-medium">
-                                            {item}
+                                            {t(`navigationLinks.${idx}`)}
                                         </Link>
                                     </li>
                                 ))}
@@ -66,12 +68,12 @@ export default function Footer() {
                         </div>
 
                         <div className="space-y-8">
-                            <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-white">Pháp lý</h3>
+                            <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-white">{t('legalTitle')}</h3>
                             <ul className="space-y-5">
-                                {["Chính sách bảo mật", "Điều khoản dịch vụ", "Chính sách Cookie", "Quy định chung"].map((item) => (
-                                    <li key={item}>
+                                {[0, 1, 2, 3].map((idx) => (
+                                    <li key={idx}>
                                         <Link href="#" className="text-zinc-400 hover:text-white transition-all duration-300 hover:translate-x-2 inline-block font-medium">
-                                            {item}
+                                            {t(`legalLinks.${idx}`)}
                                         </Link>
                                     </li>
                                 ))}
@@ -79,7 +81,7 @@ export default function Footer() {
                         </div>
 
                         <div className="col-span-2 md:col-span-1 space-y-8">
-                            <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-white">Liên hệ</h3>
+                            <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-white">{t('contactTitle')}</h3>
                             <ul className="space-y-6">
                                 <li className="group flex items-start gap-4">
                                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-zinc-900 border border-white/5 group-hover:bg-primary/20 group-hover:border-primary/30 transition-all duration-300">
@@ -89,8 +91,12 @@ export default function Footer() {
                                         </svg>
                                     </div>
                                     <div className="flex flex-col pt-1">
-                                        <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-600 mb-1">Văn phòng</span>
-                                        <span className="text-zinc-300 text-sm font-medium leading-relaxed group-hover:text-white transition-colors">TP. Hồ Chí Minh<br/>Việt Nam</span>
+                                        <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-600 mb-1">{t('office')}</span>
+                                        <span className="text-zinc-300 text-sm font-medium leading-relaxed group-hover:text-white transition-colors">
+                                            {t.rich('officeAddress', {
+                                                br: () => <br />
+                                            })}
+                                        </span>
                                     </div>
                                 </li>
                                 <li className="group flex items-center gap-4">
@@ -100,7 +106,7 @@ export default function Footer() {
                                         </svg>
                                     </div>
                                     <div className="flex flex-col">
-                                        <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-600 mb-1">Email hỗ trợ</span>
+                                        <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-600 mb-1">{t('supportEmail')}</span>
                                         <span className="text-zinc-300 text-sm font-medium group-hover:text-white transition-colors">contact@qkit.vn</span>
                                     </div>
                                 </li>
@@ -112,10 +118,10 @@ export default function Footer() {
                 {/* Bottom Bar */}
                 <div className="mt-24 flex flex-col items-center justify-between border-t border-white/10 pt-8 pb-4 md:flex-row">
                     <p className="text-xs text-zinc-500 font-medium tracking-wide">
-                        &copy; {new Date().getFullYear()} QKIT Technology. Tất cả quyền được bảo lưu.
+                        &copy; {new Date().getFullYear()} QKIT Technology. {t('allRightsReserved')}
                     </p>
                     <div className="mt-4 flex gap-8 md:mt-0 items-center">
-                        <span className="text-xs text-zinc-500 font-medium tracking-wide">Thiết kế bởi <span className="text-primary font-bold">QKIT</span></span>
+                        <span className="text-xs text-zinc-500 font-medium tracking-wide">{t('designedBy')} <span className="text-primary font-bold">QKIT</span></span>
                     </div>
                 </div>
             </div>

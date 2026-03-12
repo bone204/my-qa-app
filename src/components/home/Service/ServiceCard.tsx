@@ -3,6 +3,7 @@ import { LinkAction } from "../../ui/LinkAction";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import type { ServiceData } from "./ServiceData";
+import { useTranslations } from 'next-intl';
 
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -16,6 +17,7 @@ interface ServiceCardProps {
 }
 
 export function ServiceCard({ service, isSelected, onClick, variants }: ServiceCardProps) {
+  const t = useTranslations('ServiceSection.services');
   return (
     <motion.div
       variants={variants}
@@ -48,15 +50,15 @@ export function ServiceCard({ service, isSelected, onClick, variants }: ServiceC
       </div>
       
       <h3 className="card-title mb-2 select-none">
-        {service.title}
+        {t(`${service.id}.title`)}
       </h3>
       
       <p className="card-subtitle mb-4 select-none">
-        {service.subtitle}
+        {t(`${service.id}.subtitle`)}
       </p>
       
       <p className="card-desc line-clamp-3 select-none">
-        {service.description}
+        {t(`${service.id}.description`)}
       </p>
       
       <LinkAction className="mt-6 select-none" />
