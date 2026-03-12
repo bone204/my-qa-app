@@ -194,7 +194,7 @@
   },
   "ProjectsSection": {
     "backgroundText": "DỰ ÁN",
-    "exploreBtn": "Khám Phá Dự ÁN",
+    "exploreBtn": "Khám Phá Dự Án",
     "projects": {
       "1": {
         "title": "Bảng Điều Khiển IoT Smart Home",
@@ -472,7 +472,8 @@
           "0": "Blockchain tùy chỉnh",
           "1": "Hệ sinh thái DeFi",
           "2": "Giải pháp tiền điện tử",
-          "3": "Giải pháp Metaverse tùy chỉnh"
+          "3": "Giải pháp Metaverse tùy chỉnh",
+          "4": "Quản trị DAO & Giải pháp"
         }
       }
     },

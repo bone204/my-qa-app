@@ -1,8 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Renderer, Program, Mesh, Triangle, Transform, Vec3, Camera } from 'ogl';
 
-import './MetaBalls.css';
-
 function parseHexColor(hex: string) {
   const c = hex.replace('#', '');
   const r = parseInt(c.substring(0, 2), 16) / 255;

@@ -109,7 +109,7 @@ export default function ExtendedServicesSection() {
 
                                         {/* Sub-services Grid within the card */}
                                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 mb-10">
-                                            {['0', '1', '2', '3', '4', '5'].map((itemKey) => {
+                                            {['0', '1', '2', '3', '4'].map((itemKey) => {
                                                 const itemText = t(`${section.id}.items.${itemKey}`);
                                                 if (itemText.includes(`${section.id}.items`)) return null;
                                                 
