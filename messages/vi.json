@@ -123,36 +123,60 @@
         "title": "Frontend (Giao Diện)",
         "description": "Tạo ra các trải nghiệm người dùng tuyệt hảo, đa chiều với UI/UX hiện đại.",
         "details": {
-          "0": { "label": "Công nghệ lõi" },
-          "1": { "label": "Kiểu Dáng (Styling)" },
-          "2": { "label": "Hiệu suất" }
+          "0": {
+            "label": "Công nghệ lõi"
+          },
+          "1": {
+            "label": "Kiểu Dáng (Styling)"
+          },
+          "2": {
+            "label": "Hiệu suất"
+          }
         }
       },
       "backend": {
         "title": "Backend (Hệ Thống)",
         "description": "Thiết kế kiến trúc hệ thống máy chủ mạnh mẽ, hiệu suất cao and dễ mở rộng.",
         "details": {
-          "0": { "label": "Môi Trường" },
-          "1": { "label": "Cơ sở dữ liệu" },
-          "2": { "label": "Bảo mật" }
+          "0": {
+            "label": "Môi Trường"
+          },
+          "1": {
+            "label": "Cơ sở dữ liệu"
+          },
+          "2": {
+            "label": "Bảo mật"
+          }
         }
       },
       "mobile": {
         "title": "Ứng dụng Di Động",
         "description": "Xây dựng các giải pháp di động đa nền tảng mượt mà cho iOS và Android.",
         "details": {
-          "0": { "label": "Framework" },
-          "1": { "label": "Triển khai" },
-          "2": { "label": "Tính năng" }
+          "0": {
+            "label": "Framework"
+          },
+          "1": {
+            "label": "Triển khai"
+          },
+          "2": {
+            "label": "Tính năng"
+          }
         }
       },
       "ai": {
         "title": "Phát Triển AI",
         "description": "Tích hợp các mô hình học máy thông minh vào sản phẩm số hóa.",
         "details": {
-          "0": { "label": "Mô hình" },
-          "1": { "label": "Nền tảng" },
-          "2": { "label": "Ứng dụng" }
+          "0": {
+            "label": "Mô hình"
+          },
+          "1": {
+            "label": "Nền tảng"
+          },
+          "2": {
+            "label": "Ứng dụng"
+          }
         }
       }
     }
@@ -166,28 +190,52 @@
       "security": {
         "title": "Bảo Mật Đa Lớp",
         "subItems": {
-          "0": { "label": "Giáo Dục" },
-          "1": { "label": "Y Tế" },
-          "2": { "label": "Tài Chính" },
-          "3": { "label": "Chính Phủ" }
+          "0": {
+            "label": "Giáo Dục"
+          },
+          "1": {
+            "label": "Y Tế"
+          },
+          "2": {
+            "label": "Tài Chính"
+          },
+          "3": {
+            "label": "Chính Phủ"
+          }
         }
       },
       "architecture": {
         "title": "Kiến Trúc Linh Hoạt",
         "subItems": {
-          "0": { "label": "Khởi Nghiệp" },
-          "1": { "label": "Doanh Nghiệp" },
-          "2": { "label": "Bán Lẻ" },
-          "3": { "label": "Truyền Thông" }
+          "0": {
+            "label": "Khởi Nghiệp"
+          },
+          "1": {
+            "label": "Doanh Nghiệp"
+          },
+          "2": {
+            "label": "Bán Lẻ"
+          },
+          "3": {
+            "label": "Truyền Thông"
+          }
         }
       },
       "growth": {
         "title": "Tăng Trưởng Đột Phá",
         "subItems": {
-          "0": { "label": "Phân Tích" },
-          "1": { "label": "Marketing" },
-          "2": { "label": "Chuỗi Cung Ứng" },
-          "3": { "label": "Thương Mại ĐT" }
+          "0": {
+            "label": "Phân Tích"
+          },
+          "1": {
+            "label": "Marketing"
+          },
+          "2": {
+            "label": "Chuỗi Cung Ứng"
+          },
+          "3": {
+            "label": "Thương Mại ĐT"
+          }
         }
       }
     }
@@ -213,9 +261,15 @@
       }
     },
     "stats": {
-      "0": { "label": "Dự Án Hoàn Thành" },
-      "1": { "label": "Khách Hàng Hài Lòng" },
-      "2": { "label": "Năm Kinh Nghiệm" }
+      "0": {
+        "label": "Dự Án Hoàn Thành"
+      },
+      "1": {
+        "label": "Khách Hàng Hài Lòng"
+      },
+      "2": {
+        "label": "Năm Kinh Nghiệm"
+      }
     },
     "activeSupport": "Hỗ Trợ Trực Tuyến"
   },
@@ -238,7 +292,7 @@
       },
       "4": {
         "role": "Giám Đốc Marketing",
-        "content": "Hình ảnh tuyệt đẹp và trải nghiệm mượt mà. Tỷ lệ chuyển đổi của chúng tôi đã tăng 40% sau khi thiết kế lại. Lợi tức đầu tư (ROI) là quá tuyệt vời."
+        "content": "Hình ảnh tuyệt đẹp và trải nghiệm mượt mà. Tỷ lệ chuyển đổi của chúng tôi đã tăng 40% after khi thiết kế lại. Lợi tức đầu tư (ROI) là quá tuyệt vời."
       },
       "5": {
         "role": "Trưởng Nhóm Thiết Kế UX",
@@ -399,7 +453,7 @@
       "title": "Giải pháp Nhân sự Công nghệ cao",
       "designer": {
         "title": "Thiết kế UI/UX",
-        "desc": "Kết hợp giữa thẩm mỹ hiện đại và tư duy trải nghiệm tối ưu. Đội ngũ thiết kế của chúng tôi không chỉ vẽ đẹp, mà còn tạo ra giải pháp chuyển đổi.",
+        "desc": "Kết hợp giữa thẩm mỹ hiện đại and tư duy trải nghiệm tối ưu. Đội ngũ thiết kế của chúng tôi không chỉ vẽ đẹp, mà còn tạo ra giải pháp chuyển đổi.",
         "hireButton": "Thuê Chuyên Gia Thiết Kế",
         "tasks": {
           "0": "Nghiên cứu hành vi người dùng",
@@ -414,17 +468,17 @@
         "roles": {
           "mobile": {
             "title": "Nhà phát triển Di động",
-            "desc": "Xây dựng các ứng dụng iOS và Android hiệu năng cao với trải nghiệm native tuyệt vời.",
+            "desc": "Xây dựng các ứng dụng iOS and Android hiệu năng cao with trải nghiệm native tuyệt vời.",
             "tech": "Swift (iOS), Kotlin (Android), Flutter, React Native"
           },
           "web": {
             "title": "Nhà phát triển Web",
-            "desc": "Phát triển các hệ thống web hiện đại, dễ mở rộng và tối ưu hóa hiệu suất.",
+            "desc": "Phát triển các hệ thống web hiện đại, dễ mở rộng and tối ưu hóa hiệu suất.",
             "tech": "React, Next.js, Vue.js, Angular, Tailwind CSS"
           },
           "fullstack": {
             "title": "Full-stack Developer",
-            "desc": "Chuyên gia làm chủ cả frontend và backend, mang đến giải pháp toàn diện cho dự án của bạn.",
+            "desc": "Chuyên gia làm chủ cả frontend and backend, mang đến giải pháp toàn diện cho dự án của bạn.",
             "tech": "Node.js, Python, PostgreSQL, MongoDB, Docker, AWS"
           }
         }
@@ -452,7 +506,7 @@
           "1": "Quảng cáo PPC (Pay Per Click)",
           "2": "Tiếp thị truyền thông xã hội",
           "3": "Quảng cáo trên mạng xã hội",
-          "4": "Viết nội dung và tiếp thị",
+          "4": "Viết nội dung and tiếp thị",
           "5": "Tối ưu hóa cửa hàng ứng dụng"
         }
       },
@@ -483,18 +537,18 @@
       "seeMore": "Xem thêm",
       "startup": {
         "title": "Giải pháp phần mềm khởi nghiệp",
-        "desc": "Đồng hành cùng startup từ ý tưởng đến MVP và mở rộng quy mô với các công nghệ hiện đại nhất."
+        "desc": "Đồng hành cùng startup từ ý tưởng đến MVP and mở rộng quy mô với các công nghệ hiện đại nhất."
       },
       "enterprise": {
         "title": "Giải pháp di động doanh nghiệp",
-        "desc": "Tối ưu hóa quy trình vận hành và tương tác khách hàng thông qua ứng dụng di động chuyên nghiệp."
+        "desc": "Tối ưu hóa quy trình vận hành and tương tác khách hàng thông qua ứng dụng di động chuyên nghiệp."
       },
       "onDemand": {
         "title": "Giải pháp kinh doanh theo yêu cầu",
         "items": {
           "food": "Ứng dụng giao đồ ăn",
           "grocery": "Ứng dụng giao hàng tạp hóa",
-          "fitness": "Ứng dụng thể dục và sức khỏe",
+          "fitness": "Ứng dụng thể dục and sức khỏe",
           "telemedicine": "Ứng dụng y tế từ xa",
           "ticketing": "Ứng dụng đặt vé",
           "travel": "Ứng dụng lập kế hoạch du lịch",
@@ -509,7 +563,7 @@
         },
         "transformation": {
           "title": "Biến đổi sản phẩm số",
-          "desc": "Số hóa và hiện đại hóa quy trình doanh nghiệp với các giải pháp kỹ thuật số mới nhất."
+          "desc": "Số hóa and hiện đại hóa quy trình doanh nghiệp với các giải pháp kỹ thuật số mới nhất."
         },
         "mvp": {
           "title": "Sản phẩm mẫu (MVP)",
@@ -530,10 +584,140 @@
         "button": "Xem thêm giải pháp DevOps"
       }
     },
+    "industries": {
+      "badge": "Chuyên môn ngành nghề",
+      "title": "Giải pháp số hóa cho nhiều ngành nghề",
+      "subtitle": "Chuyên môn đa ngành phục vụ sự phát triển của bạn",
+      "explore": "Khám phá giải pháp",
+      "ctaTitle": "Ngành nghề của bạn?",
+      "ctaDesc": "Không tìm thấy ngành nghề của bạn? Hãy thảo luận để chúng tôi tạo ra giải pháp dành riêng cho bạn.",
+      "ctaButton": "Trò chuyện với chuyên gia",
+      "healthcare": {
+        "title": "Chăm sóc sức khỏe",
+        "items": [
+          "Giải pháp Telemedicine",
+          "Hồ sơ sức khỏe điện tử (EHR)",
+          "Hệ thống quản lý thực hành",
+          "Giải pháp phần mềm lâm sàng",
+          "Giải pháp tích hợp thiết bị y tế"
+        ]
+      },
+      "fintech": {
+        "title": "Công nghệ tài chính",
+        "items": [
+          "Hệ thống thanh toán số",
+          "Giải pháp ngân hàng số tùy chỉnh",
+          "Giải pháp quản lý tài sản/tài chính",
+          "Phát triển ứng dụng thanh toán di động",
+          "Phát triển ứng dụng bảo hiểm"
+        ]
+      },
+      "realestate": {
+        "title": "Bất động sản",
+        "items": [
+          "Giải pháp MLS cho bất động sản",
+          "Tour bất động sản ảo",
+          "Công cụ định giá bất động sản",
+          "Nền tảng đầu tư bất động sản",
+          "Giải pháp quản lý bất động sản"
+        ]
+      },
+      "ecommerce": {
+        "title": "Thương mại điện tử",
+        "items": [
+          "Phát triển cửa hàng thương mại điện tử tùy chỉnh",
+          "Giải pháp vận chuyển and thực hiện đơn hàng",
+          "Ứng dụng thương mại điện tử cho hàng tạp hóa",
+          "Thị trường trực tuyến toàn diện",
+          "Giải pháp thương mại điện tử dựa trên AR"
+        ]
+      },
+      "fitness": {
+        "title": "Thể hình",
+        "items": [
+          "Ứng dụng huấn luyện thể dục trực tuyến",
+          "Máy theo dõi sức khỏe (tích hợp thiết bị đeo)",
+          "Giải pháp quản lý phòng gym",
+          "Cửa hàng bổ sung dinh dưỡng trực tuyến",
+          "Ứng dụng chăm sóc sức khỏe"
+        ]
+      },
+      "restaurant": {
+        "title": "Nhà hàng",
+        "items": [
+          "Phát triển ứng dụng giao đồ ăn",
+          "Giải pháp giao hàng cho bếp đám mây",
+          "Giải pháp giao hàng thực phẩm",
+          "Giải pháp giao hàng trực tiếp",
+          "Phát triển phần mềm PoS cho nhà hàng"
+        ]
+      },
+      "travel": {
+        "title": "Du lịch",
+        "items": [
+          "Giải pháp lập kế hoạch du lịch",
+          "Nền tảng quản lý hành trình",
+          "Giải pháp đặt vé and khách sạn",
+          "Giải pháp khách hàng thân thiết & phần thưởng du lịch",
+          "Giải pháp đặt xe"
+        ]
+      },
+      "business": {
+        "title": "Kinh doanh",
+        "items": [
+          "Bán hàng & tiếp thị (CRMS)",
+          "Quản lý nhân sự (HRMS)",
+          "Cổng thông tin nhân sự (Nền tảng tuyển dụng)",
+          "Giải pháp đám mây",
+          "Giải pháp tự động hóa quy trình kinh doanh"
+        ]
+      },
+      "education": {
+        "title": "Giáo dục",
+        "items": [
+          "Phát triển ứng dụng giáo dục",
+          "Phát triển ứng dụng eLearning E2C",
+          "Lớp học ảo & hội nghị truyền hình",
+          "Hệ thống quản lý học tập (LMS)",
+          "Hệ thống quản lý thi trực tuyến"
+        ]
+      },
+      "entertainment": {
+        "title": "Giải trí",
+        "items": [
+          "Giải pháp phát video trực tuyến",
+          "Giải pháp tạo kịch bản and cộng tác",
+          "Nền tảng đặt vé sự kiện trực tiếp",
+          "Giải pháp ML cho dữ liệu lớn",
+          "Giải pháp VFX"
+        ]
+      },
+      "logistics": {
+        "title": "Kho vận",
+        "items": [
+          "Quản lý giao hàng",
+          "Quản lý logistics vận chuyển",
+          "Phần mềm quản lý đội xe",
+          "Phần mềm quản lý tồn kho",
+          "Phát triển phần mềm telematics"
+        ]
+      }
+    },
     "contactCTA": {
       "title": "Hãy nói về dự án của bạn",
-      "description": "Hãy cho chúng tôi biết ý tưởng dự án của bạn và nhận tư vấn miễn phí để biến nó thành một sản phẩm kỹ thuật số tuyệt vời.",
+      "description": "Hãy cho chúng tôi biết ý tưởng dự án của bạn and nhận tư vấn miễn phí để biến nó thành một sản phẩm kỹ thuật số tuyệt vời.",
       "button": "Tư vấn từ chuyên gia"
     }
+  },
+  "JoinSection": {
+    "title": "Cách chúng tôi tham gia vào",
+    "hourly": "Thuê theo giờ",
+    "monthly": "Thuê theo hàng tháng",
+    "fixed": "Chi phí cố định",
+    "twoDays": "Bắt đầu chỉ trong vòng <highlight>2 ngày</highlight> làm việc",
+    "hireNow": "Thuê Ngay",
+    "emailPlaceholder": "Nhập email",
+    "sendNow": "GỬI NGAY",
+    "spamNotice": "Chúng tôi sẽ không bao giờ gửi thư rác cho bạn!"
   }
 }

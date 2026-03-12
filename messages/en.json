@@ -123,36 +123,60 @@
         "title": "Frontend",
         "description": "Crafting immersive digital experiences with cutting-edge UI/UX.",
         "details": {
-          "0": { "label": "Core Tech" },
-          "1": { "label": "Styling" },
-          "2": { "label": "Performance" }
+          "0": {
+            "label": "Core Tech"
+          },
+          "1": {
+            "label": "Styling"
+          },
+          "2": {
+            "label": "Performance"
+          }
         }
       },
       "backend": {
         "title": "Backend",
         "description": "Architecting robust, scalable, and high-performance server logic.",
         "details": {
-          "0": { "label": "Runtime" },
-          "1": { "label": "Database" },
-          "2": { "label": "Security" }
+          "0": {
+            "label": "Runtime"
+          },
+          "1": {
+            "label": "Database"
+          },
+          "2": {
+            "label": "Security"
+          }
         }
       },
       "mobile": {
         "title": "Mobile App",
         "description": "Building seamless cross-platform mobile solutions for Android and iOS.",
         "details": {
-          "0": { "label": "Framework" },
-          "1": { "label": "Delivery" },
-          "2": { "label": "Features" }
+          "0": {
+            "label": "Framework"
+          },
+          "1": {
+            "label": "Delivery"
+          },
+          "2": {
+            "label": "Features"
+          }
         }
       },
       "ai": {
         "title": "AI Development",
         "description": "Integrating intelligent machine learning models into modern products.",
         "details": {
-          "0": { "label": "Models" },
-          "1": { "label": "Platforms" },
-          "2": { "label": "Applications" }
+          "0": {
+            "label": "Models"
+          },
+          "1": {
+            "label": "Platforms"
+          },
+          "2": {
+            "label": "Applications"
+          }
         }
       }
     }
@@ -166,28 +190,52 @@
       "security": {
         "title": "Multi-Layer Security",
         "subItems": {
-          "0": { "label": "Education" },
-          "1": { "label": "Healthcare" },
-          "2": { "label": "Finance" },
-          "3": { "label": "Government" }
+          "0": {
+            "label": "Education"
+          },
+          "1": {
+            "label": "Healthcare"
+          },
+          "2": {
+            "label": "Finance"
+          },
+          "3": {
+            "label": "Government"
+          }
         }
       },
       "architecture": {
         "title": "Agile Architecture",
         "subItems": {
-          "0": { "label": "Startup" },
-          "1": { "label": "Enterprise" },
-          "2": { "label": "Retail" },
-          "3": { "label": "Media" }
+          "0": {
+            "label": "Startup"
+          },
+          "1": {
+            "label": "Enterprise"
+          },
+          "2": {
+            "label": "Retail"
+          },
+          "3": {
+            "label": "Media"
+          }
         }
       },
       "growth": {
         "title": "Breakthrough Growth",
         "subItems": {
-          "0": { "label": "Analytics" },
-          "1": { "label": "Marketing" },
-          "2": { "label": "Supply Chain" },
-          "3": { "label": "E-commerce" }
+          "0": {
+            "label": "Analytics"
+          },
+          "1": {
+            "label": "Marketing"
+          },
+          "2": {
+            "label": "Supply Chain"
+          },
+          "3": {
+            "label": "E-commerce"
+          }
         }
       }
     }
@@ -213,9 +261,15 @@
       }
     },
     "stats": {
-      "0": { "label": "Projects Completed" },
-      "1": { "label": "Happy Clients" },
-      "2": { "label": "Years Experience" }
+      "0": {
+        "label": "Projects Completed"
+      },
+      "1": {
+        "label": "Happy Clients"
+      },
+      "2": {
+        "label": "Years Experience"
+      }
     },
     "activeSupport": "Active Support"
   },
@@ -530,10 +584,140 @@
         "button": "See More DevOps Solutions"
       }
     },
+    "industries": {
+      "badge": "Industry Expertise",
+      "title": "Digital Transformation Solutions for Many Industries",
+      "subtitle": "Multidisciplinary expertise for your growth",
+      "explore": "Explore Solutions",
+      "ctaTitle": "Your Industry?",
+      "ctaDesc": "Don't see your industry here? Let's discuss how we can tailor our solutions.",
+      "ctaButton": "Talk to Experts",
+      "healthcare": {
+        "title": "Healthcare",
+        "items": [
+          "Telemedicine Solutions",
+          "Electronic Health Records (EHR)",
+          "Practice Management Systems",
+          "Clinical Software Solutions",
+          "Medical Device Integration Solutions"
+        ]
+      },
+      "fintech": {
+        "title": "Fintech",
+        "items": [
+          "Digital Payment Systems",
+          "Custom Digital Banking Solutions",
+          "Wealth/Finance Management Solutions",
+          "Mobile Payment App Development",
+          "Insurance App Development"
+        ]
+      },
+      "realestate": {
+        "title": "Real Estate",
+        "items": [
+          "Real Estate MLS Solutions",
+          "Virtual Property Tours",
+          "Property Valuation Tools",
+          "Real Estate Investment Platforms",
+          "Property Management Solutions"
+        ]
+      },
+      "ecommerce": {
+        "title": "E-commerce",
+        "items": [
+          "Custom E-commerce Store Development",
+          "Shipping & Fulfillment Solutions",
+          "Grocery E-commerce Apps",
+          "Comprehensive Online Marketplaces",
+          "AR-based E-commerce Solutions"
+        ]
+      },
+      "fitness": {
+        "title": "Fitness",
+        "items": [
+          "Online Fitness Coaching Apps",
+          "Health Trackers (Wearable Integration)",
+          "Gym Management Solutions",
+          "Online Nutrition Supplement Stores",
+          "Wellness Apps"
+        ]
+      },
+      "restaurant": {
+        "title": "Restaurant",
+        "items": [
+          "Food Delivery App Development",
+          "Cloud Kitchen Delivery Solutions",
+          "Food Delivery Solutions",
+          "Direct Delivery Solutions",
+          "Restaurant PoS Software Development"
+        ]
+      },
+      "travel": {
+        "title": "Travel",
+        "items": [
+          "Travel Planning Solutions",
+          "Itinerary Management Platforms",
+          "Hotel & Ticket Booking Solutions",
+          "Travel Loyalty & Rewards Solutions",
+          "Car Rental Solutions"
+        ]
+      },
+      "business": {
+        "title": "Business",
+        "items": [
+          "Sales & Marketing (CRMS)",
+          "Human Resource Management (HRMS)",
+          "Employee Portal (Recruitment Platforms)",
+          "Cloud Solutions",
+          "Business Process Automation Solutions"
+        ]
+      },
+      "education": {
+        "title": "Education",
+        "items": [
+          "Education App Development",
+          "E2C eLearning App Development",
+          "Virtual Classrooms & Video Conferencing",
+          "Learning Management Systems (LMS)",
+          "Online Examination Management Systems"
+        ]
+      },
+      "entertainment": {
+        "title": "Entertainment",
+        "items": [
+          "Video Streaming Solutions",
+          "Scriptwriting & Collaboration Solutions",
+          "Live Event Ticketing Platforms",
+          "ML Solutions for Big Data",
+          "VFX Solutions"
+        ]
+      },
+      "logistics": {
+        "title": "Logistics",
+        "items": [
+          "Delivery Management",
+          "Shipping Logistics Management",
+          "Fleet Management Software",
+          "Inventory Management Software",
+          "Telematics Software Development"
+        ]
+      }
+    },
     "contactCTA": {
       "title": "Let's talk about your project",
-      "description": "Tell us about your project idea and get a free consultation to turn it into a great digital product.",
+      "description": "Let's talk about your project idea and get a free consultation to turn it into a great digital product.",
       "button": "Expert consultation"
     }
+  },
+  "JoinSection": {
+    "title": "How we join",
+    "hourly": "Hourly",
+    "monthly": "Monthly",
+    "fixed": "Fixed Cost",
+    "twoDays": "Start within <highlight>2 business days</highlight>",
+    "hireNow": "Hire Now",
+    "emailPlaceholder": "Enter email",
+    "sendNow": "SEND NOW",
+    "spamNotice": "We'll never send you spam!"
   }
 }
