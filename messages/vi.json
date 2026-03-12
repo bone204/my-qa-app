@@ -125,7 +125,7 @@
       },
       "backend": {
         "title": "Backend (Hệ Thống)",
-        "description": "Thiết kế kiến trúc hệ thống máy chủ mạnh mẽ, hiệu suất cao và dễ mở rộng.",
+        "description": "Thiết kế kiến trúc hệ thống máy chủ mạnh mẽ, hiệu suất cao and dễ mở rộng.",
         "details": {
           "0": { "label": "Môi Trường" },
           "1": { "label": "Cơ sở dữ liệu" },
@@ -225,11 +225,11 @@
       },
       "2": {
         "role": "Quản Lý Sản Phẩm",
-        "content": "Làm việc với đội ngũ thật sự rất thoải mái. Họ đã bàn giao một trang quản trị phức tạp đúng hạn với độ hoàn thiện mà chúng tôi còn không nghĩ là có thể."
+        "content": "Làm việc with đội ngũ thật sự rất thoải mái. Họ đã bàn giao một trang quản trị phức tạp đúng hạn với độ hoàn thiện mà chúng tôi còn không nghĩ là có thể."
       },
       "3": {
         "role": "Nhà Sáng Lập",
-        "content": "Không còn nghi ngờ gì nữa, đội ngũ công nghệ sáng tạo đỉnh nhất trong khu vực. Khả năng kết hợp chức năng sâu với hình ảnh thẩm mỹ khiến họ thực sự khác biệt so với phần còn lại."
+        "content": "Không còn nghi ngờ gì nữa, đội ngũ công nghệ sáng tạo đỉnh nhất trong khu vực. Khả năng kết hợp chức năng sâu và hình ảnh thẩm mỹ khiến họ thực sự khác biệt so với phần còn lại."
       },
       "4": {
         "role": "Giám Đốc Marketing",
@@ -241,7 +241,7 @@
       },
       "6": {
         "role": "Trưởng Nhóm Kỹ Thuật",
-        "content": "Đáng tin cậy, cực kỳ dễ mở rộng và giao diện xuất sắc. Kiến trúc mã nguồn của họ sạch và mạnh mẽ như thiết kế của họ vậy. Cực kỳ, cực kỳ đáng để giới thiệu."
+        "content": "Đáng tin cậy, cực kỳ dễ mở rộng và giao diện xuất sắc. Kiến trúc mã nguồn của họ sạch and mạnh mẽ như thiết kế của họ vậy. Cực kỳ, cực kỳ đáng để giới thiệu."
       }
     }
   },
@@ -380,8 +380,44 @@
       "description": "Chúng tôi cung cấp các giải pháp công nghệ đột phá, giúp bạn dẫn đầu trong kỷ nguyên số.",
       "card": {
         "title": "Thuê dự án chuyên nghiệp",
-        "description": "Đội ngũ chuyên gia sẵn sàng biến ý tưởng của bạn thành hiện thực với quy trình làm việc chuẩn quốc tế.",
+        "description": "Đội ngũ chuyên gia sẵn sàng biến ý tưởng của bạn thành thực tế với quy trình làm việc chuẩn quốc tế.",
         "button": "Liên hệ ngay"
+      }
+    },
+    "hiring": {
+      "subtitle": "Chuyên gia hàng đầu",
+      "title": "Giải pháp Nhân sự Công nghệ cao",
+      "designer": {
+        "title": "Thiết kế UI/UX",
+        "desc": "Kết hợp giữa thẩm mỹ hiện đại và tư duy trải nghiệm tối ưu. Đội ngũ thiết kế của chúng tôi không chỉ vẽ đẹp, mà còn tạo ra giải pháp chuyển đổi.",
+        "hireButton": "Thuê Chuyên Gia Thiết Kế",
+        "tasks": {
+          "0": "Nghiên cứu hành vi người dùng",
+          "1": "Thiết kế Wireframe & Prototyping chuyên sâu",
+          "2": "Kiểm tra và tối ưu tính khả dụng",
+          "3": "Thiết kế giao diện hiện đại"
+        }
+      },
+      "developer": {
+        "title": "Đội ngũ Lập trình viên Chuyên nghiệp",
+        "hireButton": "Thuê ngay",
+        "roles": {
+          "mobile": {
+            "title": "Nhà phát triển Di động",
+            "desc": "Xây dựng các ứng dụng iOS và Android hiệu năng cao với trải nghiệm native tuyệt vời.",
+            "tech": "Swift (iOS), Kotlin (Android), Flutter, React Native"
+          },
+          "web": {
+            "title": "Nhà phát triển Web",
+            "desc": "Phát triển các hệ thống web hiện đại, dễ mở rộng và tối ưu hóa hiệu suất.",
+            "tech": "React, Next.js, Vue.js, Angular, Tailwind CSS"
+          },
+          "fullstack": {
+            "title": "Full-stack Developer",
+            "desc": "Chuyên gia làm chủ cả frontend và backend, mang đến giải pháp toàn diện cho dự án của bạn.",
+            "tech": "Node.js, Python, PostgreSQL, MongoDB, Docker, AWS"
+          }
+        }
       }
     }
   }

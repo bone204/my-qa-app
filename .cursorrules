@@ -1,0 +1,38 @@
+# QKIT Software AI Rules
+
+You are an expert developer building high-end, premium web applications for QKIT Software. Follow these rules strictly for consistency across the codebase.
+
+## Project Structure & Organization
+1.  **Shared Layout**: Always use the general layout defined in the `app` directory for all pages to ensure UI consistency.
+2.  **Shared Components**: Always use existing shared components from `src/components/ui/`. Any new reusable UI components must be placed in `src/components/ui/`.
+3.  **Page Organization**: A page must consist of multiple sections. Each section component must be located in a `sections` folder within the same directory as the page (e.g., `src/app/services/sections/`).
+
+## Localization (Internationalization)
+- **Mandatory Translation**: Because this is a dual-language website, every time you code a new section or edit an existing one, you **MUST** update both `messages/en.json` and `messages/vi.json` to synchronized. Never hardcode text in JSX.
+- **Sync**: If you add or modify a key in one language file, you must apply the same change to the other.
+
+## Typography & Text Styles
+- **Consistency**: Always use the predefined utility classes from `globals.css` for text to stay consistent with the premium design system.
+- **Section Styles**:
+  - Subtitle: `section-subtitle`
+  - Title: `section-title`
+  - Description: `section-desc`
+- **Card Styles**:
+  - Title: `card-title`
+  - Subtitle: `card-subtitle`
+  - Description/Text: `card-desc`
+- **Modal Styles**:
+  - Title: `modal-title`
+  - Subtitle: `modal-subtitle`
+  - Description: `modal-desc`
+
+## Design & Aesthetics
+- **Premium Look**: Prioritize glassmorphism (backdrop-blur), sleek dark modes, and vibrant highlights (primary pink/purple colors).
+- **Animations**: Use `framer-motion` for all transitions and entry animations.
+- **Responsiveness**: All sections must be fully responsive using Tailwind's responsive prefixes.
+
+## Code Quality
+- **Naming**: 
+  - Components: PascalCase (e.g., `ServicesHeroSection`).
+  - Folders: kebab-case except for the `sections` folder within pages.
+- **Technical**: Use `lucide-react` for icons and `next-intl` for all localized strings.

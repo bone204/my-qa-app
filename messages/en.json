@@ -229,7 +229,7 @@
       },
       "3": {
         "role": "Founder",
-        "content": "The best creative & tech team in the region, no contest. Their ability to blend deep-tech functionality with peak aesthetics is what truly sets them apart from everyone else."
+        "content": "The best creative & tech team in the region, no contest. Their ability to blend deep-tech functionality and peak aesthetics is what truly sets them apart from everyone else."
       },
       "4": {
         "role": "Marketing Director",
@@ -382,6 +382,42 @@
         "title": "Professional Project Hiring",
         "description": "Our expert team is ready to turn your ideas into reality with international standard workflows.",
         "button": "Contact Now"
+      }
+    },
+    "hiring": {
+      "subtitle": "Elite Talent",
+      "title": "Elite Tech Talent Solutions",
+      "designer": {
+        "title": "UX/UI Design",
+        "desc": "A blend of modern aesthetics and user-centric thinking. Our design team doesn't just create visuals; they create solutions that convert.",
+        "hireButton": "Hire Design Specialists",
+        "tasks": {
+          "0": "User Behavior Research",
+          "1": "Advanced Wireframing & Prototyping",
+          "2": "Usability Testing & Optimization",
+          "3": "Modern, Pixel-Perfect UI Design"
+        }
+      },
+      "developer": {
+        "title": "Professional Engineering Teams",
+        "hireButton": "Hire Now",
+        "roles": {
+          "mobile": {
+            "title": "Mobile Developer",
+            "desc": "Build high-performance iOS and Android apps with exceptional native experiences.",
+            "tech": "Swift (iOS), Kotlin (Android), Flutter, React Native"
+          },
+          "web": {
+            "title": "Web Developer",
+            "desc": "Develop modern, scalable web systems optimized for peak performance.",
+            "tech": "React, Next.js, Vue.js, Angular, Tailwind CSS"
+          },
+          "fullstack": {
+            "title": "Full-stack Developer",
+            "desc": "Experts mastering both frontend and backend, providing comprehensive solutions for your projects.",
+            "tech": "Node.js, Python, PostgreSQL, MongoDB, Docker, AWS"
+          }
+        }
       }
     }
   }

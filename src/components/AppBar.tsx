@@ -20,6 +20,7 @@ export default function AppBar() {
   const t = useTranslations('AppBar');
   const locale = useLocale();
   const [isVisible, setIsVisible] = useState(true);
+  const [isMouseAtTop, setIsMouseAtTop] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -75,6 +76,22 @@ export default function AppBar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY, isMobileMenuOpen]);
 
+  // Show AppBar when mouse is near the top of the screen
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      // If mouse is within top 40px of the viewport, show the bar
+      // If it moves below 100px, we stop "forcing" it visible from mouse peak
+      if (e.clientY <= 40) {
+        setIsMouseAtTop(true);
+      } else if (e.clientY > 100) {
+        setIsMouseAtTop(false);
+      }
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   // Hide AppBar when a modal is opened in ServiceSection
   useEffect(() => {
     const handleModalToggle = (e: any) => {
@@ -86,10 +103,12 @@ export default function AppBar() {
     return () => window.removeEventListener("modal-toggle", handleModalToggle);
   }, []);
 
+  const isAppBarVisible = isVisible || isMouseAtTop;
+
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 flex justify-center pointer-events-none transition-all duration-500 ease-in-out ${isVisible ? "top-0 opacity-100" : "-top-24 opacity-0 select-none"
+        className={`fixed inset-x-0 top-0 z-50 flex justify-center pointer-events-none transition-all duration-500 ease-in-out ${isAppBarVisible ? "top-0 opacity-100" : "-top-24 opacity-0 select-none"
           }`}
       >
         <div
