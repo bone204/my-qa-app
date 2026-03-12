@@ -51,14 +51,14 @@ export default function HiringSection() {
                         className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6"
                     >
                         <Sparkles className="w-4 h-4 text-primary" />
-                        <span className="text-xs font-bold text-zinc-400 uppercase tracking-widest">{t('subtitle')}</span>
+                        <span className="section-subtitle">{t('subtitle')}</span>
                     </motion.div>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: false }}
                         transition={{ delay: 0.1 }}
-                        className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] tracking-tight"
+                        className="section-title text-center"
                     >
                         {t('title')}
                     </motion.h2>
@@ -79,7 +79,7 @@ export default function HiringSection() {
                                     <div className="p-4 rounded-2xl bg-primary/10 border border-primary/20 shadow-[0_0_20px_rgba(236,72,153,0.2)]">
                                         <Monitor className="w-8 h-8 text-primary" />
                                     </div>
-                                    <h3 className="card-title text-3xl md:text-5xl font-black tracking-tighter">
+                                    <h3 className="card-title text-3xl md:text-5xl tracking-tighter">
                                         {t('designer.title')}
                                     </h3>
                                 </div>
@@ -162,7 +162,7 @@ export default function HiringSection() {
                                         <div className="p-5 rounded-2xl bg-zinc-950 border border-white/10 text-primary shadow-2xl group-hover:scale-110 transition-transform duration-500">
                                             {role.icon}
                                         </div>
-                                        <h4 className="card-title text-2xl font-black tracking-tight">
+                                        <h4 className="card-title text-2xl tracking-tight">
                                             {role.title}
                                         </h4>
                                     </div>

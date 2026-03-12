@@ -476,6 +476,56 @@
         }
       }
     },
+    "solutions": {
+      "subtitle": "Scale your business",
+      "title": "Solutions We Provide",
+      "seeMore": "See More",
+      "startup": {
+        "title": "Startup Software Solutions",
+        "desc": "Empowering startups from idea to MVP and scaling with cutting-edge technologies."
+      },
+      "enterprise": {
+        "title": "Enterprise Mobile Solutions",
+        "desc": "Optimizing business processes and customer engagement through professional mobile applications."
+      },
+      "onDemand": {
+        "title": "On-Demand Business Solutions",
+        "items": {
+          "food": "Food Delivery App",
+          "grocery": "Grocery Delivery App",
+          "fitness": "Fitness & Health App",
+          "telemedicine": "Telemedicine App",
+          "ticketing": "Ticketing App",
+          "travel": "Travel Planning App",
+          "taxi": "Taxi App",
+          "logistics": "Logistics Management App"
+        }
+      },
+      "products": {
+        "saas": {
+          "title": "SaaS Development",
+          "desc": "Building highly scalable Software-as-a-Service platforms."
+        },
+        "transformation": {
+          "title": "Digital Transformation",
+          "desc": "Digitizing and modernizing business processes with the latest digital solutions."
+        },
+        "mvp": {
+          "title": "MVP Product Solutions",
+          "desc": "Rapid development of core features to validate business ideas."
+        }
+      },
+      "devops": {
+        "title": "DevOps & Infrastructure Solutions",
+        "items": {
+          "consulting": "DevOps Consulting",
+          "cicd": "CI/CD Pipeline Setup",
+          "iac": "IaC Services",
+          "container": "Application Containerization"
+        },
+        "button": "See More DevOps Solutions"
+      }
+    },
     "contactCTA": {
       "title": "Let's talk about your project",
       "description": "Tell us about your project idea and get a free consultation to turn it into a great digital product.",

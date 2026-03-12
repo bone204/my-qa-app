@@ -54,12 +54,12 @@ export default function ExtendedServicesSection() {
                         className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6"
                     >
                         <Sparkles className="w-4 h-4 text-primary" />
-                        <span className="text-xs font-bold text-zinc-400 uppercase tracking-widest">{t('sectionSubtitle')}</span>
+                        <span className="section-subtitle">{t('sectionSubtitle')}</span>
                     </motion.div>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        className="text-4xl md:text-5xl font-bold text-white tracking-tight"
+                        className="section-title text-center"
                     >
                         {t('sectionTitle')}
                     </motion.h2>

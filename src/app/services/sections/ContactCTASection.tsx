@@ -49,7 +49,7 @@ export default function ContactCTASection() {
                                 whileInView={{ y: 0, opacity: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.3, duration: 0.6 }}
-                                className="text-4xl md:text-7xl font-bold text-white tracking-tight leading-[1.1]"
+                                className="section-title text-4xl md:text-7xl"
                             >
                                 {t('title')}
                             </motion.h2>
@@ -58,7 +58,7 @@ export default function ContactCTASection() {
                                 whileInView={{ y: 0, opacity: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.4, duration: 0.6 }}
-                                className="text-lg md:text-2xl text-zinc-400 font-medium max-w-2xl mx-auto leading-relaxed"
+                                className="section-desc text-lg md:text-2xl font-medium max-w-2xl mx-auto"
                             >
                                 {t('description')}
                             </motion.p>

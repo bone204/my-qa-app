@@ -476,6 +476,56 @@
         }
       }
     },
+    "solutions": {
+      "subtitle": "Nâng tầm doanh nghiệp",
+      "title": "Các giải pháp chúng tôi cung cấp",
+      "seeMore": "Xem thêm",
+      "startup": {
+        "title": "Giải pháp phần mềm khởi nghiệp",
+        "desc": "Đồng hành cùng startup từ ý tưởng đến MVP và mở rộng quy mô với các công nghệ hiện đại nhất."
+      },
+      "enterprise": {
+        "title": "Giải pháp di động doanh nghiệp",
+        "desc": "Tối ưu hóa quy trình vận hành và tương tác khách hàng thông qua ứng dụng di động chuyên nghiệp."
+      },
+      "onDemand": {
+        "title": "Giải pháp kinh doanh theo yêu cầu",
+        "items": {
+          "food": "Ứng dụng giao đồ ăn",
+          "grocery": "Ứng dụng giao hàng tạp hóa",
+          "fitness": "Ứng dụng thể dục và sức khỏe",
+          "telemedicine": "Ứng dụng y tế từ xa",
+          "ticketing": "Ứng dụng đặt vé",
+          "travel": "Ứng dụng lập kế hoạch du lịch",
+          "taxi": "Ứng dụng taxi",
+          "logistics": "Ứng dụng quản trị vận tải"
+        }
+      },
+      "products": {
+        "saas": {
+          "title": "Phát triển SaaS",
+          "desc": "Xây dựng các nền tảng phần mềm dưới dạng dịch vụ có khả năng mở rộng cao."
+        },
+        "transformation": {
+          "title": "Biến đổi sản phẩm số",
+          "desc": "Số hóa và hiện đại hóa quy trình doanh nghiệp với các giải pháp kỹ thuật số mới nhất."
+        },
+        "mvp": {
+          "title": "Sản phẩm mẫu (MVP)",
+          "desc": "Phát triển nhanh chóng các tính năng cốt lổi để kiểm chứng ý tưởng kinh doanh."
+        }
+      },
+      "devops": {
+        "title": "Giải pháp DevOps & Hạ tầng",
+        "items": {
+          "consulting": "Tư Vấn DevOps",
+          "cicd": "Thiết Lập CI/CD Pipeline",
+          "iac": "Dịch Vụ IaC",
+          "container": "Đóng Gói Ứng Dụng"
+        },
+        "button": "Xem thêm giải pháp DevOps"
+      }
+    },
     "contactCTA": {
       "title": "Hãy nói về dự án của bạn",
       "description": "Hãy cho chúng tôi biết ý tưởng dự án của bạn và nhận tư vấn miễn phí để biến nó thành một sản phẩm kỹ thuật số tuyệt vời.",
