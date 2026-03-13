@@ -126,9 +126,9 @@ const CloudNode = ({ node }: { node: SolutionNode }) => {
             delay: node.delay
           }}
           className={cn(
-            "relative z-10 w-80 min-h-[240px] flex flex-col items-center justify-center px-8 py-10 gap-7",
-            "bg-zinc-950/40 backdrop-blur-2xl border border-white/10 shadow-2xl",
-            "group-hover:bg-zinc-900/50 transition-colors duration-500 will-change-[border-radius]"
+            "relative z-10 w-64 md:w-80 min-h-[220px] md:min-h-[240px] flex flex-col items-center justify-center px-6 md:px-8 py-8 md:py-10 gap-6 md:gap-7",
+            "bg-zinc-950/60 backdrop-blur-3xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]",
+            "group-hover:bg-zinc-900/70 transition-colors duration-500 will-change-[border-radius]"
           )}
         >
           {/* Main icon + title */}
@@ -150,17 +150,17 @@ const CloudNode = ({ node }: { node: SolutionNode }) => {
                 color: "#ffffff"
               }}
             >
-                {/* Inner shine */}
-                <div className="absolute inset-0 bg-linear-to-br from-white/20 to-transparent pointer-events-none" />
-                <node.icon className="w-9 h-9 relative z-10" />
+              {/* Inner shine */}
+              <div className="absolute inset-0 bg-linear-to-br from-white/20 to-transparent pointer-events-none" />
+              <node.icon className="w-9 h-9 relative z-10" />
             </motion.div>
 
             <div className="space-y-1 text-center">
-                <h4 className="text-white font-black text-lg uppercase tracking-[0.15em] leading-tight">
+              <h4 className="text-white font-black text-lg uppercase tracking-[0.15em] leading-tight">
                 {t(`${node.id}.title`)}
-                </h4>
-                <div className="h-0.5 w-12 bg-white/20 mx-auto rounded-full group-hover:w-20 transition-all duration-500"
-                     style={{ backgroundColor: `${node.color}aa` }} />
+              </h4>
+              <div className="h-0.5 w-12 bg-white/20 mx-auto rounded-full group-hover:w-20 transition-all duration-500"
+                style={{ backgroundColor: `${node.color}aa` }} />
             </div>
           </div>
 

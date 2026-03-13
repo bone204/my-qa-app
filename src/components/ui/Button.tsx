@@ -16,10 +16,14 @@ export default function Button({ variant = "primary", className = "", children, 
     if (variant === "secondary") {
         return (
             <button
-                className={`rounded-full border border-gray-200 bg-white px-5 py-2 text-base font-bold text-black shadow-sm transition-all duration-300 hover:border-gray-300 hover:bg-gray-50 hover:shadow-md active:scale-95 ${className}`}
+                className={cn(
+                    "group relative overflow-hidden rounded-full border border-white/10 bg-white/5 px-6 py-2.5 text-base font-bold text-zinc-400 transition-all duration-300 hover:bg-white hover:text-zinc-950 hover:border-white active:scale-95",
+                    className
+                )}
                 {...props}
             >
-                {children}
+                <span className="relative z-10">{children}</span>
+                <div className="absolute inset-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-linear-to-b from-white/10 to-transparent pointer-events-none" />
             </button>
         );
     }
@@ -29,14 +33,14 @@ export default function Button({ variant = "primary", className = "", children, 
             <button
                 className={cn(
                     "group relative w-auto cursor-pointer overflow-hidden rounded-full font-bold transition-all duration-300 py-4 px-10 md:py-5 md:px-12",
-                    "border border-pink-500/20 bg-background shadow-none hover:border-pink-500/50 hover:shadow-[0_0_30px_rgba(236,72,153,0.3)]",
+                    "border border-primary/20 bg-background shadow-none hover:border-primary/50 hover:shadow-[0_0_30px_rgba(236,72,153,0.3)]",
                     className
                 )}
                 {...props}
             >
                 <div className="relative z-10 flex items-center justify-center gap-3">
-                    <div className="bg-pink-500 h-2.5 w-2.5 rounded-full transition-all duration-500 lg:group-hover:scale-[160] group-active:scale-[160]"></div>
-                    <span className="text-pink-500 transition-all duration-500 lg:group-hover:opacity-0 lg:group-hover:translate-x-8">
+                    <div className="bg-primary h-2.5 w-2.5 rounded-full transition-all duration-500 lg:group-hover:scale-[160] group-active:scale-[160]"></div>
+                    <span className="text-primary transition-all duration-500 lg:group-hover:opacity-0 lg:group-hover:translate-x-8">
                         {children}
                     </span>
                 </div>
@@ -52,7 +56,7 @@ export default function Button({ variant = "primary", className = "", children, 
     return (
         <button
             className={cn(
-                "group relative overflow-hidden rounded-full bg-primary px-5 py-2 text-base font-bold text-white shadow-sm transition-all duration-300 hover:scale-105 hover:bg-primary/80 hover:shadow-md hover:ring-2 hover:ring-primary/50 hover:ring-offset-2 active:scale-95",
+                "group relative overflow-hidden rounded-full bg-primary px-6 py-2.5 text-base font-bold text-white shadow-sm transition-all duration-300 hover:scale-105 hover:bg-primary/80 hover:shadow-md hover:ring-2 hover:ring-primary/50 hover:ring-offset-2 active:scale-95",
                 className
             )}
             {...props}

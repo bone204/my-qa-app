@@ -20,6 +20,7 @@ export default function AppBar() {
   const t = useTranslations('AppBar');
   const locale = useLocale();
   const [isVisible, setIsVisible] = useState(true);
+  const [isMouseAtTop, setIsMouseAtTop] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -28,7 +29,7 @@ export default function AppBar() {
   // Close mobile menu when resizing to desktop
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768) {
+      if (window.innerWidth >= 1024) {
         setIsMobileMenuOpen(false);
       }
     };
@@ -75,6 +76,22 @@ export default function AppBar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY, isMobileMenuOpen]);
 
+  // Show AppBar when mouse is near the top of the screen
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      // If mouse is within top 40px of the viewport, show the bar
+      // If it moves below 100px, we stop "forcing" it visible from mouse peak
+      if (e.clientY <= 40) {
+        setIsMouseAtTop(true);
+      } else if (e.clientY > 100) {
+        setIsMouseAtTop(false);
+      }
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   // Hide AppBar when a modal is opened in ServiceSection
   useEffect(() => {
     const handleModalToggle = (e: any) => {
@@ -86,10 +103,12 @@ export default function AppBar() {
     return () => window.removeEventListener("modal-toggle", handleModalToggle);
   }, []);
 
+  const isAppBarVisible = isVisible || isMouseAtTop;
+
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 flex justify-center pointer-events-none transition-all duration-500 ease-in-out ${isVisible ? "top-0 opacity-100" : "-top-24 opacity-0"
+        className={`fixed inset-x-0 top-0 z-50 flex justify-center pointer-events-none transition-all duration-500 ease-in-out ${isAppBarVisible ? "top-0 opacity-100" : "-top-24 opacity-0 select-none"
           }`}
       >
         <div
@@ -120,126 +139,127 @@ export default function AppBar() {
 
             {/* Center Nav */}
             <nav
-              className="hidden md:flex items-center gap-1 lg:gap-2"
+              className="hidden lg:flex items-center gap-1 lg:gap-2"
               onMouseLeave={() => setHoveredItem(null)}
             >
               {['services', 'successStories', 'portfolio', 'aboutUs', 'news'].map((key) => {
                 const item = t(`nav.${key}`);
                 return (
-                <div
-                  key={key}
-                  className="relative group/nav-item"
-                  onMouseEnter={() => setHoveredItem(key)}
-                >
-                  <Link
-                    href={key === 'aboutUs' ? '#' : `/${key.toLowerCase()}`}
-                    onClick={(e) => {
-                      if (key === 'aboutUs') {
-                        e.preventDefault();
-                      }
-                    }}
-                    className={cn(
-                      "group flex items-center gap-1.5 relative px-5 py-2 text-[14px] font-bold transition-all duration-300 outline-none rounded-full",
-                      hoveredItem === key ? "text-white" : "text-zinc-400 focus-visible:ring-2 focus-visible:ring-primary"
-                    )}
+                  <div
+                    key={key}
+                    className="relative group/nav-item"
+                    onMouseEnter={() => setHoveredItem(key)}
                   >
-                    <span className="relative z-10">{item}</span>
-                    {key === 'aboutUs' && (
-                      <ChevronDown className="relative z-10 w-4 h-4 transition-transform duration-300 group-hover/nav-item:rotate-180" />
-                    )}
+                    <Link
+                      href={key === 'aboutUs' ? '#' : `/${key.toLowerCase()}`}
+                      onClick={(e) => {
+                        if (key === 'aboutUs') {
+                          e.preventDefault();
+                        }
+                      }}
+                      className={cn(
+                        "group flex items-center gap-1.5 relative px-5 py-2 text-[14px] font-bold transition-all duration-300 outline-none rounded-full",
+                        hoveredItem === key ? "text-white" : "text-zinc-400 focus-visible:ring-2 focus-visible:ring-primary"
+                      )}
+                    >
+                      <span className="relative z-10">{item}</span>
+                      {key === 'aboutUs' && (
+                        <ChevronDown className="relative z-10 w-4 h-4 transition-transform duration-300 group-hover/nav-item:rotate-180" />
+                      )}
 
-                    {hoveredItem === key && (
-                      <motion.div
-                        layoutId="nav-hover-bg"
-                        className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-full border border-white/10"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
-                      />
-                    )}
-
-                    <span className="absolute bottom-1 left-1/2 -translate-x-1/2 h-[2px] w-0 bg-primary transition-all duration-300 group-hover/nav-item:w-4 z-20"></span>
-                  </Link>
-
-                  {/* Dropdown Menu cho Về Chúng Tôi */}
-                  {key === 'aboutUs' && (
-                    <AnimatePresence>
                       {hoveredItem === key && (
                         <motion.div
-                          initial={{ opacity: 0, y: 15, scale: 0.95 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                          transition={{ duration: 0.2, ease: "easeOut" }}
-                          className="absolute left-1/2 -translate-x-1/2 top-full pt-4 w-56"
-                        >
-                          <div className="rounded-2xl border border-white/10 bg-[#1a1c23]/95 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] overflow-hidden flex flex-col min-w-[500px] w-max">
-                            {/* Top Section */}
-                            <div className="flex p-6">
-                              {/* Left Column */}
-                              <div className="flex-1 pr-6 border-r border-white/10 group/col-left">
-                                <h4 className="text-xs font-bold text-zinc-500 group-hover/col-left:text-white transition-colors duration-300 mb-5">{t('aboutDropdown.aboutUs')}</h4>
-                                <div className="flex flex-col space-y-4">
-                                  {[
-                                    { name: t('aboutDropdown.overview'), href: "/tong-quan" },
-                                    { name: t('aboutDropdown.feedback'), href: "/phan-hoi" },
-                                    { name: t('aboutDropdown.contact'), href: "/lien-he" },
-                                  ].map((subItem) => (
-                                    <Link key={subItem.name} href={subItem.href} className="group/link flex items-center gap-3">
-                                      <div className="w-3.5 h-3.5 rounded-full border-[1.5px] border-primary group-hover/link:bg-primary/20 transition-colors shrink-0" />
-                                      <span className="text-sm font-semibold text-white group-hover/link:text-primary transition-colors">{subItem.name}</span>
-                                    </Link>
-                                  ))}
-                                </div>
-                              </div>
-
-                              {/* Right Column */}
-                              <div className="flex-1 pl-6 group/col-right">
-                                <h4 className="text-xs font-bold text-zinc-500 group-hover/col-right:text-white transition-colors duration-300 mb-5">{t('aboutDropdown.others')}</h4>
-                                <div className="flex flex-col space-y-4">
-                                  {[
-                                    { name: t('aboutDropdown.life'), href: "/cuoc-song" },
-                                    { name: t('aboutDropdown.faq'), href: "/faq" },
-                                  ].map((subItem) => (
-                                    <Link key={subItem.name} href={subItem.href} className="group/link flex items-center gap-3">
-                                      <div className="w-3.5 h-3.5 rounded-full border-[1.5px] border-primary group-hover/link:bg-primary/20 transition-colors shrink-0" />
-                                      <span className="text-sm font-semibold text-white group-hover/link:text-primary transition-colors">{subItem.name}</span>
-                                    </Link>
-                                  ))}
-                                </div>
-                              </div>
-                            </div>
-
-                            {/* Bottom Section */}
-                            <Link href="/su-nghiep" className="group/career relative px-6 py-5 overflow-hidden flex items-center justify-between">
-                              <div className="absolute inset-0 bg-linear-to-r from-indigo-900 via-purple-700 to-pink-600 opacity-90 transition-opacity group-hover/career:opacity-100" />
-                              <div className="relative z-10 flex items-center gap-4">
-                                <Briefcase className="w-7 h-7 text-white stroke-[1.5]" />
-                                <div className="flex flex-col">
-                                  <h4 className="text-[15px] font-bold text-white mb-0.5">{t('career.title')}</h4>
-                                  <p className="text-xs font-medium text-white/70">{t('career.desc')}</p>
-                                </div>
-                              </div>
-                              <ArrowRight className="relative z-10 w-4 h-4 text-white/50 group-hover/career:text-white group-hover/career:translate-x-1 transition-all" />
-                            </Link>
-
-                          </div>
-                        </motion.div>
+                          layoutId="nav-hover-bg"
+                          className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-full border border-white/10"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                          transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
+                        />
                       )}
-                    </AnimatePresence>
-                  )}
-                </div>
-              )})}
+
+                      <span className="absolute bottom-1 left-1/2 -translate-x-1/2 h-[2px] w-0 bg-primary transition-all duration-300 group-hover/nav-item:w-4 z-20"></span>
+                    </Link>
+
+                    {/* Dropdown Menu cho Về Chúng Tôi */}
+                    {key === 'aboutUs' && (
+                      <AnimatePresence>
+                        {hoveredItem === key && (
+                          <motion.div
+                            initial={{ opacity: 0, y: 15, scale: 0.95 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                            transition={{ duration: 0.2, ease: "easeOut" }}
+                            className="absolute left-1/2 -translate-x-1/2 top-full pt-4 w-56"
+                          >
+                            <div className="rounded-2xl border border-white/10 bg-[#1a1c23]/95 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] overflow-hidden flex flex-col min-w-[500px] w-max">
+                              {/* Top Section */}
+                              <div className="flex p-6">
+                                {/* Left Column */}
+                                <div className="flex-1 pr-6 border-r border-white/10 group/col-left">
+                                  <h4 className="text-xs font-bold text-zinc-500 group-hover/col-left:text-white transition-colors duration-300 mb-5">{t('aboutDropdown.aboutUs')}</h4>
+                                  <div className="flex flex-col space-y-4">
+                                    {[
+                                      { name: t('aboutDropdown.overview'), href: "/tong-quan" },
+                                      { name: t('aboutDropdown.feedback'), href: "/phan-hoi" },
+                                      { name: t('aboutDropdown.contact'), href: "/lien-he" },
+                                    ].map((subItem) => (
+                                      <Link key={subItem.name} href={subItem.href} className="group/link flex items-center gap-3">
+                                        <div className="w-3.5 h-3.5 rounded-full border-[1.5px] border-primary group-hover/link:bg-primary/20 transition-colors shrink-0" />
+                                        <span className="text-sm font-semibold text-white group-hover/link:text-primary transition-colors">{subItem.name}</span>
+                                      </Link>
+                                    ))}
+                                  </div>
+                                </div>
+
+                                {/* Right Column */}
+                                <div className="flex-1 pl-6 group/col-right">
+                                  <h4 className="text-xs font-bold text-zinc-500 group-hover/col-right:text-white transition-colors duration-300 mb-5">{t('aboutDropdown.others')}</h4>
+                                  <div className="flex flex-col space-y-4">
+                                    {[
+                                      { name: t('aboutDropdown.life'), href: "/cuoc-song" },
+                                      { name: t('aboutDropdown.faq'), href: "/faq" },
+                                    ].map((subItem) => (
+                                      <Link key={subItem.name} href={subItem.href} className="group/link flex items-center gap-3">
+                                        <div className="w-3.5 h-3.5 rounded-full border-[1.5px] border-primary group-hover/link:bg-primary/20 transition-colors shrink-0" />
+                                        <span className="text-sm font-semibold text-white group-hover/link:text-primary transition-colors">{subItem.name}</span>
+                                      </Link>
+                                    ))}
+                                  </div>
+                                </div>
+                              </div>
+
+                              {/* Bottom Section */}
+                              <Link href="/su-nghiep" className="group/career relative px-6 py-5 overflow-hidden flex items-center justify-between">
+                                <div className="absolute inset-0 bg-linear-to-r from-indigo-900 via-purple-700 to-pink-600 opacity-90 transition-opacity group-hover/career:opacity-100" />
+                                <div className="relative z-10 flex items-center gap-4">
+                                  <Briefcase className="w-7 h-7 text-white stroke-[1.5]" />
+                                  <div className="flex flex-col">
+                                    <h4 className="text-[15px] font-bold text-white mb-0.5">{t('career.title')}</h4>
+                                    <p className="text-xs font-medium text-white/70">{t('career.desc')}</p>
+                                  </div>
+                                </div>
+                                <ArrowRight className="relative z-10 w-4 h-4 text-white/50 group-hover/career:text-white group-hover/career:translate-x-1 transition-all" />
+                              </Link>
+
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    )}
+                  </div>
+                )
+              })}
             </nav>
 
             {/* Auth Buttons Right */}
             <div
-              className="hidden md:flex items-center justify-end gap-3"
+              className="hidden lg:flex items-center justify-end gap-3"
               onMouseLeave={() => setHoveredItem(null)}
             >
-              <div 
-                className="relative group/lang font-sans" 
-                onMouseEnter={() => setHoveredItem('lang')} 
+              <div
+                className="relative group/lang font-sans"
+                onMouseEnter={() => setHoveredItem('lang')}
                 onMouseLeave={() => setHoveredItem(null)}
               >
                 <button
@@ -265,8 +285,8 @@ export default function AppBar() {
                     >
                       <div className="rounded-2xl border border-white/10 bg-[#1a1c23]/95 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] overflow-hidden flex flex-col p-2 space-y-1">
                         {[
-                          { code: 'vi', label: 'Tiếng Việt' },
-                          { code: 'en', label: 'English' }
+                          { code: 'vi', label: t('languages.vi') },
+                          { code: 'en', label: t('languages.en') }
                         ].map((lang) => (
                           <button
                             key={lang.code}
@@ -276,8 +296,8 @@ export default function AppBar() {
                             }}
                             className={cn(
                               "flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300",
-                              locale === lang.code 
-                                ? "bg-primary/20 text-primary" 
+                              locale === lang.code
+                                ? "bg-primary/20 text-primary"
                                 : "text-zinc-300 hover:bg-white/10 hover:text-white"
                             )}
                           >
@@ -293,23 +313,11 @@ export default function AppBar() {
 
               <Link
                 href="/signin"
-                onMouseEnter={() => setHoveredItem('signin')}
-                className={cn(
-                  "relative px-5 py-2 text-sm font-bold transition-all duration-300 outline-none rounded-full",
-                  hoveredItem === 'signin' ? "text-white" : "text-zinc-400"
-                )}
+                className="outline-none rounded-full"
               >
-                <span className="relative z-10">{t('buttons.hire')}</span>
-                {hoveredItem === 'signin' && (
-                  <motion.div
-                    layoutId="nav-hover-bg"
-                    className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-full border border-white/10"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
-                  />
-                )}
+                <Button variant="secondary" className="px-5 py-2 text-sm">
+                  {t('buttons.hire')}
+                </Button>
               </Link>
               <Button
                 variant="primary"
@@ -320,7 +328,7 @@ export default function AppBar() {
             </div>
 
             {/* Mobile Menu Toggle Button */}
-            <div className="flex items-center md:hidden">
+            <div className="flex items-center lg:hidden">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="relative p-2 text-zinc-400 hover:text-white transition-all focus:outline-none"
@@ -346,11 +354,11 @@ export default function AppBar() {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="md:hidden absolute top-full left-4 right-4 mt-2 overflow-hidden bg-[#0d1117]/95 backdrop-blur-2xl shadow-2xl border border-white/10 flex flex-col rounded-3xl pointer-events-auto"
+              className="lg:hidden absolute top-full left-4 right-4 mt-2 overflow-hidden bg-[#0d1117]/95 backdrop-blur-2xl shadow-2xl border border-white/10 flex flex-col rounded-3xl pointer-events-auto"
             >
               <div className="flex flex-col px-6 py-8">
                 <nav className="flex flex-col space-y-4 mb-8">
-                  {['home', 'aboutUs', 'services'].map((key, i) => (
+                  {['home', 'services', 'successStories', 'portfolio', 'aboutUs', 'news'].map((key, i) => (
                     <motion.div
                       key={key}
                       initial={{ opacity: 0, x: -20 }}
@@ -358,7 +366,7 @@ export default function AppBar() {
                       transition={{ delay: 0.1 + i * 0.1, duration: 0.3 }}
                     >
                       <Link
-                        href={key === "home" ? "/" : `/${key.toLowerCase()}`}
+                        href={key === "home" ? "/" : (key === 'aboutUs' ? '/tong-quan' : `/${key.toLowerCase()}`)}
                         onClick={() => setIsMobileMenuOpen(false)}
                         className="block py-2 text-2xl font-black tracking-tight text-white hover:text-primary transition-all"
                       >
@@ -374,21 +382,21 @@ export default function AppBar() {
                   transition={{ delay: 0.3, duration: 0.3 }}
                   className="flex flex-col gap-4"
                 >
-                  <Button variant="secondary" className="w-full py-4 text-base font-bold border-white/10 text-white rounded-2xl">
+                  <Button variant="secondary" className="w-full py-4 text-base">
                     {t('buttons.hire')}
                   </Button>
-                  <Button variant="primary" className="w-full py-4 text-base font-bold rounded-2xl shadow-primary/30">
+                  <Button variant="primary" className="w-full py-4 text-base shadow-primary/30">
                     {t('buttons.contact')}
                   </Button>
                   <div className="flex flex-col gap-3 mt-2 pt-5 border-t border-white/10">
                     <div className="flex items-center gap-2 pl-2">
                       <Globe className="w-4 h-4 text-zinc-500" />
-                      <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest">Select Language</p>
+                      <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest">{t('selectLanguage')}</p>
                     </div>
                     <div className="grid grid-cols-2 gap-3">
                       {[
-                        { code: 'vi', label: 'Tiếng Việt' },
-                        { code: 'en', label: 'English' }
+                        { code: 'vi', label: t('languages.vi') },
+                        { code: 'en', label: t('languages.en') }
                       ].map((lang) => (
                         <button
                           key={lang.code}
@@ -423,7 +431,7 @@ export default function AppBar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-black/40 backdrop-blur-[2px] z-40 md:hidden"
+            className="fixed inset-0 bg-black/40 backdrop-blur-[2px] z-40 lg:hidden"
             onClick={() => setIsMobileMenuOpen(false)}
           />
         )}

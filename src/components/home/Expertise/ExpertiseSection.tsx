@@ -139,7 +139,7 @@ export default function ExpertiseSection() {
         className="container mx-auto px-4 z-10"
       >
         {/* Aligned Row Layout */}
-        <div className="flex flex-wrap items-center justify-center gap-12 md:gap-28 max-w-6xl mx-auto">
+        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 lg:gap-28 max-w-7xl mx-auto">
           {expertiseData.map((item) => (
             <div
               key={item.id}

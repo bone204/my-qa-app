@@ -24,6 +24,11 @@
     "buttons": {
       "hire": "Hire Us",
       "contact": "Contact Us"
+    },
+    "selectLanguage": "Select Language",
+    "languages": {
+      "vi": "Vietnamese",
+      "en": "English"
     }
   },
   "Metadata": {
@@ -118,36 +123,60 @@
         "title": "Frontend",
         "description": "Crafting immersive digital experiences with cutting-edge UI/UX.",
         "details": {
-          "0": { "label": "Core Tech" },
-          "1": { "label": "Styling" },
-          "2": { "label": "Performance" }
+          "0": {
+            "label": "Core Tech"
+          },
+          "1": {
+            "label": "Styling"
+          },
+          "2": {
+            "label": "Performance"
+          }
         }
       },
       "backend": {
         "title": "Backend",
         "description": "Architecting robust, scalable, and high-performance server logic.",
         "details": {
-          "0": { "label": "Runtime" },
-          "1": { "label": "Database" },
-          "2": { "label": "Security" }
+          "0": {
+            "label": "Runtime"
+          },
+          "1": {
+            "label": "Database"
+          },
+          "2": {
+            "label": "Security"
+          }
         }
       },
       "mobile": {
         "title": "Mobile App",
         "description": "Building seamless cross-platform mobile solutions for Android and iOS.",
         "details": {
-          "0": { "label": "Framework" },
-          "1": { "label": "Delivery" },
-          "2": { "label": "Features" }
+          "0": {
+            "label": "Framework"
+          },
+          "1": {
+            "label": "Delivery"
+          },
+          "2": {
+            "label": "Features"
+          }
         }
       },
       "ai": {
         "title": "AI Development",
         "description": "Integrating intelligent machine learning models into modern products.",
         "details": {
-          "0": { "label": "Models" },
-          "1": { "label": "Platforms" },
-          "2": { "label": "Applications" }
+          "0": {
+            "label": "Models"
+          },
+          "1": {
+            "label": "Platforms"
+          },
+          "2": {
+            "label": "Applications"
+          }
         }
       }
     }
@@ -161,28 +190,52 @@
       "security": {
         "title": "Multi-Layer Security",
         "subItems": {
-          "0": { "label": "Education" },
-          "1": { "label": "Healthcare" },
-          "2": { "label": "Finance" },
-          "3": { "label": "Government" }
+          "0": {
+            "label": "Education"
+          },
+          "1": {
+            "label": "Healthcare"
+          },
+          "2": {
+            "label": "Finance"
+          },
+          "3": {
+            "label": "Government"
+          }
         }
       },
       "architecture": {
         "title": "Agile Architecture",
         "subItems": {
-          "0": { "label": "Startup" },
-          "1": { "label": "Enterprise" },
-          "2": { "label": "Retail" },
-          "3": { "label": "Media" }
+          "0": {
+            "label": "Startup"
+          },
+          "1": {
+            "label": "Enterprise"
+          },
+          "2": {
+            "label": "Retail"
+          },
+          "3": {
+            "label": "Media"
+          }
         }
       },
       "growth": {
         "title": "Breakthrough Growth",
         "subItems": {
-          "0": { "label": "Analytics" },
-          "1": { "label": "Marketing" },
-          "2": { "label": "Supply Chain" },
-          "3": { "label": "E-commerce" }
+          "0": {
+            "label": "Analytics"
+          },
+          "1": {
+            "label": "Marketing"
+          },
+          "2": {
+            "label": "Supply Chain"
+          },
+          "3": {
+            "label": "E-commerce"
+          }
         }
       }
     }
@@ -208,9 +261,15 @@
       }
     },
     "stats": {
-      "0": { "label": "Projects Completed" },
-      "1": { "label": "Happy Clients" },
-      "2": { "label": "Years Experience" }
+      "0": {
+        "label": "Projects Completed"
+      },
+      "1": {
+        "label": "Happy Clients"
+      },
+      "2": {
+        "label": "Years Experience"
+      }
     },
     "activeSupport": "Active Support"
   },
@@ -229,7 +288,7 @@
       },
       "3": {
         "role": "Founder",
-        "content": "The best creative & tech team in the region, no contest. Their ability to blend deep-tech functionality with peak aesthetics is what truly sets them apart from everyone else."
+        "content": "The best creative & tech team in the region, no contest. Their ability to blend deep-tech functionality and peak aesthetics is what truly sets them apart from everyone else."
       },
       "4": {
         "role": "Marketing Director",
@@ -372,5 +431,293 @@
     "supportEmail": "Support Email",
     "allRightsReserved": "All rights reserved.",
     "designedBy": "Designed by"
+  },
+  "ServicesPage": {
+    "hero": {
+      "subtitle": "Comprehensive Solutions",
+      "title": "Elevate Your <highlight>Digital</highlight> Experience.",
+      "description": "We provide breakthrough technology solutions, from mobile app development to complex enterprise systems, helping you lead in the digital era.",
+      "card": {
+        "title": "Professional Project Hiring",
+        "description": "Our expert team is ready to turn your ideas into reality with international standard workflows.",
+        "features": {
+          "0": "24/7 Request Handling",
+          "1": "Free Solution Consultation",
+          "2": "Professional Technical Team"
+        },
+        "button": "Contact Now"
+      }
+    },
+    "hiring": {
+      "subtitle": "Elite Talent",
+      "title": "Elite Tech Talent Solutions",
+      "designer": {
+        "title": "UX/UI Design",
+        "desc": "A blend of modern aesthetics and user-centric thinking. Our design team doesn't just create visuals; they create solutions that convert.",
+        "hireButton": "Hire Design Specialists",
+        "tasks": {
+          "0": "User Behavior Research",
+          "1": "Advanced Wireframing & Prototyping",
+          "2": "Usability Testing & Optimization",
+          "3": "Modern, Pixel-Perfect UI Design"
+        }
+      },
+      "developer": {
+        "title": "Professional Engineering Teams",
+        "hireButton": "Hire Now",
+        "roles": {
+          "mobile": {
+            "title": "Mobile Developer",
+            "desc": "Build high-performance iOS and Android apps with exceptional native experiences.",
+            "tech": "Swift (iOS), Kotlin (Android), Flutter, React Native"
+          },
+          "web": {
+            "title": "Web Developer",
+            "desc": "Develop modern, scalable web systems optimized for peak performance.",
+            "tech": "React, Next.js, Vue.js, Angular, Tailwind CSS"
+          },
+          "fullstack": {
+            "title": "Full-stack Developer",
+            "desc": "Experts mastering both frontend and backend, providing comprehensive solutions for your projects.",
+            "tech": "Node.js, Python, PostgreSQL, MongoDB, Docker, AWS"
+          }
+        }
+      }
+    },
+    "extended": {
+      "sectionTitle": "Comprehensive Tech Solutions",
+      "sectionSubtitle": "Pushing boundaries with QKit's specialized service ecosystem",
+      "seeMore": "See More",
+      "cloud": {
+        "title": "Cloud Computing",
+        "items": {
+          "0": "Cloud App Development",
+          "1": "Cloud Configuration",
+          "2": "Cloud Integration",
+          "3": "Cloud Security",
+          "4": "Cloud Server Solutions",
+          "5": "Cloud Migration"
+        }
+      },
+      "marketing": {
+        "title": "Digital Marketing",
+        "items": {
+          "0": "Search Engine Optimization (SEO)",
+          "1": "Pay Per Click (PPC) Advertising",
+          "2": "Social Media Marketing",
+          "3": "Social Media Advertising",
+          "4": "Content Writing & Marketing",
+          "5": "App Store Optimization"
+        }
+      },
+      "blockchain": {
+        "title": "Blockchain Development",
+        "items": {
+          "0": "Smart Contracts",
+          "1": "DApp Development",
+          "2": "Exchange Platform Development",
+          "3": "Crypto Wallet Development",
+          "4": "NFT Marketplace Development"
+        }
+      },
+      "web3": {
+        "title": "Web 3.0 & Metaverse",
+        "items": {
+          "0": "Custom Blockchain Solutions",
+          "1": "DeFi Ecosystem Development",
+          "2": "Cryptocurrency Solutions",
+          "3": "Custom Metaverse Solutions",
+          "4": "DAO Governance & Solutions"
+        }
+      }
+    },
+    "solutions": {
+      "subtitle": "Scale your business",
+      "title": "Solutions We Provide",
+      "seeMore": "See More",
+      "startup": {
+        "title": "Startup Software Solutions",
+        "desc": "Empowering startups from idea to MVP and scaling with cutting-edge technologies."
+      },
+      "enterprise": {
+        "title": "Enterprise Mobile Solutions",
+        "desc": "Optimizing business processes and customer engagement through professional mobile applications."
+      },
+      "onDemand": {
+        "title": "On-Demand Business Solutions",
+        "items": {
+          "food": "Food Delivery App",
+          "grocery": "Grocery Delivery App",
+          "fitness": "Fitness & Health App",
+          "telemedicine": "Telemedicine App",
+          "ticketing": "Ticketing App",
+          "travel": "Travel Planning App",
+          "taxi": "Taxi App",
+          "logistics": "Logistics Management App"
+        }
+      },
+      "products": {
+        "saas": {
+          "title": "SaaS Development",
+          "desc": "Building highly scalable Software-as-a-Service platforms."
+        },
+        "transformation": {
+          "title": "Digital Transformation",
+          "desc": "Digitizing and modernizing business processes with the latest digital solutions."
+        },
+        "mvp": {
+          "title": "MVP Product Solutions",
+          "desc": "Rapid development of core features to validate business ideas."
+        }
+      },
+      "devops": {
+        "badge": "Agile Infrastructure",
+        "title": "DevOps Solutions",
+        "items": {
+          "consulting": "DevOps Consulting",
+          "cicd": "CI/CD Pipeline Setup",
+          "iac": "IaC Services",
+          "container": "Application Containerization",
+          "monitoring": "Monitoring & Logging",
+          "security": "Cloud Security & Compliance"
+        },
+        "button": "See More DevOps Solutions"
+      }
+    },
+    "industries": {
+      "badge": "Industry Expertise",
+      "title": "Digital Transformation Solutions for Many Industries",
+      "subtitle": "Multidisciplinary expertise for your growth",
+      "explore": "Explore Solutions",
+      "ctaTitle": "Your Industry?",
+      "ctaDesc": "Don't see your industry here? Let's discuss how we can tailor our solutions.",
+      "ctaButton": "Talk to Experts",
+      "healthcare": {
+        "title": "Healthcare",
+        "items": [
+          "Telemedicine Solutions",
+          "Electronic Health Records (EHR)",
+          "Practice Management Systems",
+          "Clinical Software Solutions",
+          "Medical Device Integration Solutions"
+        ]
+      },
+      "fintech": {
+        "title": "Fintech",
+        "items": [
+          "Digital Payment Systems",
+          "Custom Digital Banking Solutions",
+          "Wealth/Finance Management Solutions",
+          "Mobile Payment App Development",
+          "Insurance App Development"
+        ]
+      },
+      "realestate": {
+        "title": "Real Estate",
+        "items": [
+          "Real Estate MLS Solutions",
+          "Virtual Property Tours",
+          "Property Valuation Tools",
+          "Real Estate Investment Platforms",
+          "Property Management Solutions"
+        ]
+      },
+      "ecommerce": {
+        "title": "E-commerce",
+        "items": [
+          "Custom E-commerce Store Development",
+          "Shipping & Fulfillment Solutions",
+          "Grocery E-commerce Apps",
+          "Comprehensive Online Marketplaces",
+          "AR-based E-commerce Solutions"
+        ]
+      },
+      "fitness": {
+        "title": "Fitness",
+        "items": [
+          "Online Fitness Coaching Apps",
+          "Health Trackers (Wearable Integration)",
+          "Gym Management Solutions",
+          "Online Nutrition Supplement Stores",
+          "Wellness Apps"
+        ]
+      },
+      "restaurant": {
+        "title": "Restaurant",
+        "items": [
+          "Food Delivery App Development",
+          "Cloud Kitchen Delivery Solutions",
+          "Food Delivery Solutions",
+          "Direct Delivery Solutions",
+          "Restaurant PoS Software Development"
+        ]
+      },
+      "travel": {
+        "title": "Travel",
+        "items": [
+          "Travel Planning Solutions",
+          "Itinerary Management Platforms",
+          "Hotel & Ticket Booking Solutions",
+          "Travel Loyalty & Rewards Solutions",
+          "Car Rental Solutions"
+        ]
+      },
+      "business": {
+        "title": "Business",
+        "items": [
+          "Sales & Marketing (CRMS)",
+          "Human Resource Management (HRMS)",
+          "Employee Portal (Recruitment Platforms)",
+          "Cloud Solutions",
+          "Business Process Automation Solutions"
+        ]
+      },
+      "education": {
+        "title": "Education",
+        "items": [
+          "Education App Development",
+          "E2C eLearning App Development",
+          "Virtual Classrooms & Video Conferencing",
+          "Learning Management Systems (LMS)",
+          "Online Examination Management Systems"
+        ]
+      },
+      "entertainment": {
+        "title": "Entertainment",
+        "items": [
+          "Video Streaming Solutions",
+          "Scriptwriting & Collaboration Solutions",
+          "Live Event Ticketing Platforms",
+          "ML Solutions for Big Data",
+          "VFX Solutions"
+        ]
+      },
+      "logistics": {
+        "title": "Logistics",
+        "items": [
+          "Delivery Management",
+          "Shipping Logistics Management",
+          "Fleet Management Software",
+          "Inventory Management Software",
+          "Telematics Software Development"
+        ]
+      }
+    },
+    "contactCTA": {
+      "title": "Let's talk about your project",
+      "description": "Let's talk about your project idea and get a free consultation to turn it into a great digital product.",
+      "button": "Expert consultation"
+    }
+  },
+  "JoinSection": {
+    "title": "How we join",
+    "hourly": "Hourly",
+    "monthly": "Monthly",
+    "fixed": "Fixed Cost",
+    "twoDays": "Start within <highlight>2 business days</highlight>",
+    "hireNow": "Hire Now",
+    "emailPlaceholder": "Enter email",
+    "sendNow": "SEND NOW",
+    "spamNotice": "We'll never send you spam!"
   }
 }
