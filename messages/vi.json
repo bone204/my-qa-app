@@ -709,6 +709,45 @@
       "button": "Tư vấn từ chuyên gia"
     }
   },
+  "ServicesBlog": {
+    "label": "Góc nhìn Chuyên gia",
+    "title": "Dẫn đầu <highlight>Xu hướng</highlight> Công nghệ.",
+    "description": "Khám phá những xu hướng, công nghệ và chiến lược mới nhất trong chuyển đổi số từ đội ngũ chuyên gia của chúng tôi.",
+    "readMore": "Xem thêm",
+    "readingTime": "{time} phút đọc",
+    "posts": {
+      "1": {
+        "title": "Tương lai phát triển ứng dụng di động năm 2026",
+        "excerpt": "Khám phá những công nghệ then chốt sẽ thống trị thị trường di động và cách để duy trì lợi thế cạnh tranh trong môi trường luôn thay đổi.",
+        "category": "Phát triển di động",
+        "date": "15 tháng 3, 2026"
+      },
+      "2": {
+        "title": "Tối ưu hóa hạ tầng đám mây cho quy mô lớn",
+        "excerpt": "Tìm hiểu các phương pháp xây dựng giải pháp đám mây mạnh mẽ và có khả năng mở rộng, giúp doanh nghiệp phát triển mà vẫn tối ưu chi phí.",
+        "category": "Điện toán đám mây",
+        "date": "10 tháng 3, 2026"
+      },
+      "3": {
+        "title": "Tác động của AI đối với thiết kế UX",
+        "excerpt": "Khám phá cách trí tuệ nhân tạo đang định hình lại thiết kế trải nghiệm người dùng và tạo ra những hành trình số hóa cá nhân hóa hơn.",
+        "category": "UI/UX & AI",
+        "date": "5 tháng 3, 2026"
+      },
+      "4": {
+        "title": "Xu hướng bảo mật cho doanh nghiệp hiện đại",
+        "excerpt": "Cách bảo vệ tài sản số của bạn trong thời đại của các mối đe dọa mạng tinh vi và các yêu cầu quy định ngày càng khắt khe.",
+        "category": "An ninh mạng",
+        "date": "1 tháng 3, 2026"
+      },
+      "5": {
+        "title": "Blockchain vượt ra ngoài Tiền điện tử",
+        "excerpt": "Cách công nghệ sổ cái phi tập trung đang cách mạng hóa quản lý chuỗi cung ứng và xác minh danh tính kỹ thuật số và nhiều hơn thế nữa.",
+        "category": "Công nghệ Blockchain",
+        "date": "25 tháng 2, 2026"
+      }
+    }
+  },
   "JoinSection": {
     "subtitle": "Linh hoạt & Tối ưu",
     "title": "Mô hình <highlight>Hợp tác</highlight>",

@@ -6,6 +6,7 @@ import SolutionsSection from "@/app/services/sections/SolutionsSection";
 import ContactCTASection from "@/app/services/sections/ContactCTASection";
 import JoinSection from "@/app/services/sections/JoinSection";
 import FAQSection from "@/app/services/sections/FAQSection";
+import ServicesBlogSection from "@/app/services/sections/ServicesBlogSection";
 
 export default function ServicesPage() {
     return (
@@ -18,6 +19,7 @@ export default function ServicesPage() {
             <IndustrySolutionsSection />
             <JoinSection />
             <FAQSection />
+            <ServicesBlogSection />
         </div>
     );
 }

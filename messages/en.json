@@ -709,6 +709,45 @@
       "button": "Expert consultation"
     }
   },
+  "ServicesBlog": {
+    "label": "Latest Insights",
+    "title": "Stay <highlight>Ahead</highlight> of the Curve.",
+    "description": "Explore the latest trends, technologies, and strategies in digital transformation and software engineering from our expert team.",
+    "readMore": "See More",
+    "readingTime": "{time} min read",
+    "posts": {
+      "1": {
+        "title": "Future of Mobile App Development in 2026",
+        "excerpt": "Discover the key technologies that will dominate the mobile landscape and how to stay competitive in an ever-evolving market.",
+        "category": "Mobile development",
+        "date": "March 15, 2026"
+      },
+      "2": {
+        "title": "Optimizing Cloud Infrastructure for Scale",
+        "excerpt": "Learn the best practices for building robust and scalable cloud solutions that grow with your business needs without breaking the bank.",
+        "category": "Cloud computing",
+        "date": "March 10, 2026"
+      },
+      "3": {
+        "title": "The Impact of AI on UX Design",
+        "excerpt": "Explore how artificial intelligence is reshaping user experience design and creating more personalized digital journeys for users.",
+        "category": "UI/UX & AI",
+        "date": "March 5, 2026"
+      },
+      "4": {
+        "title": "Cybersecurity Trends for Modern Enterprise",
+        "excerpt": "How to protect your digital assets in an era of sophisticated cyber threats and evolving regulatory requirements.",
+        "category": "Cybersecurity",
+        "date": "March 1, 2026"
+      },
+      "5": {
+        "title": "Blockchain Beyond Cryptocurrency",
+        "excerpt": "How decentralized ledger technology is revolutionizing supply chain management and digital identity verification and many more things.",
+        "category": "Blockchain Tech",
+        "date": "February 25, 2026"
+      }
+    }
+  },
   "JoinSection": {
     "subtitle": "Flexible & Optimized",
     "title": "Engagement <highlight>Models</highlight>",
