@@ -51,11 +51,11 @@ const JoinSection = () => {
             style: { padding: 0, minHeight: 'auto' },
             content: (
                 <div className="grid grid-cols-1 md:grid-cols-2 w-full h-full min-h-[300px]">
-                    {/* Left side: Premium Gradient */}
-                    <div className="bg-linear-to-br from-primary via-blue-600 to-indigo-800 p-10 flex items-center justify-center text-center md:text-left">
+                    {/* Left side: Premium Gradient - Refined to match primary color palette */}
+                    <div className="bg-linear-to-br from-primary via-rose-600 to-pink-900 p-10 flex items-center justify-center text-center md:text-left transition-all duration-700 group-hover:via-rose-500">
                         <h2 className="text-2xl md:text-3xl font-light text-white leading-tight">
                             {t.rich('twoDays', {
-                                highlight: (chunks) => <span className="text-5xl md:text-7xl font-bold block mt-2">{chunks}</span>
+                                highlight: (chunks) => <span className="text-5xl md:text-7xl font-bold block mt-2 text-white/90">{chunks}</span>
                             })}
                         </h2>
                     </div>
@@ -108,7 +108,11 @@ const JoinSection = () => {
                     </motion.h2>
                 </div>
 
-                <MagicBento cards={cards} glowColor="132, 0, 255" />
+                <MagicBento 
+                    cards={cards} 
+                    glowColor="215, 38, 90" 
+                    enableMagnetism={false}
+                />
             </div>
         </section>
     );

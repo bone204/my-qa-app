@@ -69,7 +69,7 @@ export default function HiringSection() {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="relative w-full rounded-[40px] overflow-hidden border border-white/10 bg-zinc-900/30 backdrop-blur-sm mb-20"
+                    className="group/card relative w-full rounded-[40px] overflow-hidden border border-white/10 bg-zinc-900/30 backdrop-blur-sm mb-20"
                 >
                     <div className="flex flex-col lg:flex-row items-center">
                         {/* Content Left Part */}
@@ -103,7 +103,7 @@ export default function HiringSection() {
 
                             <div className="pt-8">
                                 <Link href="#contact">
-                                    <Button variant="body">
+                                    <Button variant="body" parentGroup="card">
                                         {t('designer.hireButton')}
                                     </Button>
                                 </Link>
@@ -152,9 +152,9 @@ export default function HiringSection() {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.15 }}
-                                className="group relative w-full rounded-3xl overflow-hidden border border-white/5 bg-zinc-900/10 hover:border-primary/30 hover:bg-zinc-900/40 transition-all duration-500"
+                                className="group/card relative w-full rounded-3xl overflow-hidden border border-white/5 bg-zinc-900/10 hover:border-primary/30 hover:bg-zinc-900/40 transition-all duration-500"
                             >
-                                <div className={`absolute inset-0 bg-linear-to-r ${role.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                                <div className={`absolute inset-0 bg-linear-to-r ${role.color} opacity-0 group-hover/card:opacity-100 transition-opacity duration-500`} />
 
                                 <div className="relative z-10 flex flex-col lg:flex-row lg:items-center p-8 lg:p-10 gap-8">
                                     {/* Icon & Title */}
@@ -189,7 +189,7 @@ export default function HiringSection() {
                                     {/* Hire Button */}
                                     <div className="lg:w-auto">
                                         <Link href="#contact">
-                                            <Button variant="body" className="whitespace-nowrap">
+                                            <Button variant="body" parentGroup="card" className="whitespace-nowrap">
                                                 {t('developer.hireButton')}
                                             </Button>
                                         </Link>

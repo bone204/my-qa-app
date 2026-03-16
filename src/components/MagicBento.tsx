@@ -26,7 +26,7 @@ interface MagicBentoProps {
   enableMagnetism?: boolean;
 }
 
-const DEFAULT_PARTICLE_COUNT = 12;
+const DEFAULT_PARTICLE_COUNT = 24;
 const DEFAULT_SPOTLIGHT_RADIUS = 300;
 const DEFAULT_GLOW_COLOR = '132, 0, 255';
 const MOBILE_BREAKPOINT = 768;
@@ -36,11 +36,11 @@ const createParticleElement = (x: number, y: number, color: string = DEFAULT_GLO
   el.className = 'particle';
   el.style.cssText = `
     position: absolute;
-    width: 4px;
-    height: 4px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
     background: rgba(${color}, 1);
-    box-shadow: 0 0 6px rgba(${color}, 0.6);
+    box-shadow: 0 0 8px rgba(${color}, 0.8), 0 0 16px rgba(${color}, 0.4);
     pointer-events: none;
     z-index: 100;
     left: ${x}px;
@@ -153,7 +153,8 @@ const ParticleCard = ({
         });
 
         gsap.to(clone, {
-          opacity: 0.3,
+          opacity: 0.6,
+          scale: 1.2,
           duration: 1.5,
           ease: 'power2.inOut',
           repeat: -1,
