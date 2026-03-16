@@ -720,5 +720,48 @@
     "emailPlaceholder": "Nhập email",
     "sendNow": "GỬI NGAY",
     "spamNotice": "Chúng tôi sẽ không bao giờ gửi thư rác cho bạn!"
+  },
+  "FAQSection": {
+    "badge": "Hỗ Trợ",
+    "title": "Câu hỏi <highlight>Thường Gặp</highlight>",
+    "description": "Bạn có câu hỏi khác? Đội ngũ của chúng tôi luôn sẵn sàng giúp đỡ bạn trong suốt quy trình.",
+    "questions": {
+      "0": {
+        "q": "QKIT Software cung cấp những dịch vụ gì?",
+        "a": "Chúng tôi cung cấp các dịch vụ phát triển phần mềm toàn diện bao gồm: Phát triển Web (React, Next.js), Ứng dụng di động (Flutter, React Native), Thiết kế UI/UX, Giải pháp Cloud/DevOps và tích hợp AI/Machine Learning."
+      },
+      "1": {
+        "q": "Quy trình bắt đầu một dự án như thế nào?",
+        "a": "Quy trình của chúng tôi bắt đầu từ việc tiếp nhận yêu cầu, tư vấn giải pháp, báo giá, thiết kế UI/UX, phát triển phần mềm, kiểm thử và cuối cùng là bàn giao/vận hành. Đội ngũ kỹ thuật có thể bắt đầu làm việc chỉ trong vòng 2 ngày làm việc."
+      },
+      "2": {
+        "q": "Tôi có thể thuê nhân sự riêng lẻ không?",
+        "a": "Có, chúng tôi cung cấp mô hình cho thuê nhân sự chuyên nghiệp (Staff Augmentation) bao gồm Designer, Developer (Web/Mobile/Fullstack) theo giờ hoặc theo tháng để phù hợp với quy mô dự án của bạn."
+      },
+      "3": {
+        "q": "QKIT có hỗ trợ bảo trì sau khi bàn giao không?",
+        "a": "Tất nhiên. Chúng tôi cam kết hỗ trợ kỹ thuật và bảo trì lâu dài sau khi bàn giao dự án để đảm bảo hệ thống luôn hoạt động ổn định và cập nhật theo xu hướng công nghệ mới nhất."
+      },
+      "4": {
+        "q": "Làm thế nào để nhận được báo giá dự án?",
+        "a": "Bạn có thể điền thông tin vào biểu mẫu liên hệ hoặc gửi email trực tiếp cho chúng tôi. Đội ngũ chuyên gia sẽ phản hồi và tư vấn giải pháp kèm báo giá sơ bộ trong vòng 24 giờ."
+      },
+      "5": {
+        "q": "QKIT có nhận các dự án từ nước ngoài không?",
+        "a": "Có, chúng tôi làm việc với nhiều đối tác toàn cầu từ Singapore, Úc, Mỹ và Châu Âu. Quy trình làm việc và giao tiếp được tối ưu hóa cho múi giờ và nhu cầu quốc tế."
+      },
+      "6": {
+        "q": "Chi phí phát triển dự án được tính như thế nào?",
+        "a": "Chi phí phụ thuộc vào độ phức tạp, quy mô và thời hạn của dự án. Chúng tôi cung cấp các gói linh hoạt: Fixed Price (giá cố định cho yêu cầu rõ ràng) hoặc T&M (Time & Materials) cho các dự án linh hoạt."
+      },
+      "7": {
+        "q": "Dữ liệu của tôi được bảo mật như thế nào?",
+        "a": "Chúng tôi tuân thủ nghiêm ngặt các tiêu chuẩn bảo mật dữ liệu quốc tế như GDPR. Mọi dự án đều bắt đầu với thỏa thuận bảo mật thông tin (NDA) và triển khai trên các hạ tầng đám mây an toàn bậc nhất."
+      },
+      "8": {
+        "q": "Tôi có được sở hữu mã nguồn sau dự án không?",
+        "a": "Hoàn toàn có. Sau khi hoàn thành các nghĩa vụ hợp đồng, khách hàng sẽ sở hữu toàn bộ mã nguồn, tài liệu thiết kế và các tài sản số liên quan của dự án."
+      }
+    }
   }
 }

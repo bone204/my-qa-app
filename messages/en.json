@@ -720,5 +720,48 @@
     "emailPlaceholder": "Enter email",
     "sendNow": "SEND NOW",
     "spamNotice": "We'll never send you spam!"
+  },
+  "FAQSection": {
+    "badge": "Support",
+    "title": "Frequently <highlight>Asked Questions</highlight>",
+    "description": "Have a different question? Our team is always here to help you navigate through the process.",
+    "questions": {
+      "0": {
+        "q": "What services does QKIT Software provide?",
+        "a": "We provide comprehensive software development services including: Web Development (React, Next.js), Mobile App Development (Flutter, React Native), UI/UX Design, Cloud/DevOps Solutions, and AI/Machine Learning integration."
+      },
+      "1": {
+        "q": "How does the project initiation process work?",
+        "a": "Our process starts with requirement gathering, solution consulting, quoting, UI/UX design, software development, testing, and finally delivery/operation. Our technical team can start working within just 2 business days."
+      },
+      "2": {
+        "q": "Can I hire individual personnel?",
+        "a": "Yes, we provide professional staff augmentation models including Designers and Developers (Web/Mobile/Fullstack) on an hourly or monthly basis to suit your project scale."
+      },
+      "3": {
+        "q": "Does QKIT provide post-delivery maintenance?",
+        "a": "Absolutely. We are committed to long-term technical support and maintenance after project delivery to ensure systems remain stable and updated with the latest technology trends."
+      },
+      "4": {
+        "q": "How can I get a project quote?",
+        "a": "You can fill out our contact form or email us directly. Our expert team will respond with a consultation and preliminary quote within 24 hours."
+      },
+      "5": {
+        "q": "Does QKIT accept international projects?",
+        "a": "Yes, we work with global partners from Singapore, Australia, US, and Europe. Our workflow and communication are optimized for international time zones and requirements."
+      },
+      "6": {
+        "q": "How are project development costs calculated?",
+        "a": "Costs depend on the project's complexity, scope, and timeline. We offer flexible models: Fixed Price for clear requirements or Time & Materials (T&M) for more agile projects."
+      },
+      "7": {
+        "q": "How is my data secured?",
+        "a": "We strictly follow international data security standards such as GDPR. Every project starts with a Non-Disclosure Agreement (NDA) and is deployed on the most secure cloud infrastructures."
+      },
+      "8": {
+        "q": "Will I own the source code after the project?",
+        "a": "Absolutely. Upon completion of contractual obligations, the client owns the full source code, design documentation, and all associated digital assets of the project."
+      }
+    }
   }
 }
