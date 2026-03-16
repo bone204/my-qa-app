@@ -10,9 +10,10 @@ function cn(...inputs: ClassValue[]) {
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: "primary" | "secondary" | "body";
     children: ReactNode;
+    parentGroup?: "card" | "solution" | "item";
 }
 
-export default function Button({ variant = "primary", className = "", children, ...props }: ButtonProps) {
+export default function Button({ variant = "primary", className = "", children, parentGroup, ...props }: ButtonProps) {
     if (variant === "secondary") {
         return (
             <button
@@ -39,13 +40,31 @@ export default function Button({ variant = "primary", className = "", children, 
                 {...props}
             >
                 <div className="relative z-10 flex items-center justify-center gap-3">
-                    <div className="bg-primary h-2.5 w-2.5 rounded-full transition-all duration-500 lg:group-hover:scale-[160] group-active:scale-[160]"></div>
-                    <span className="text-primary transition-all duration-500 lg:group-hover:opacity-0 lg:group-hover:translate-x-8">
+                    <div className={cn(
+                        "bg-primary h-2.5 w-2.5 rounded-full transition-all duration-500",
+                        "lg:group-hover:scale-[160] group-active:scale-[160]",
+                        parentGroup === "card" && "lg:group-hover/card:scale-[160]",
+                        parentGroup === "solution" && "lg:group-hover/solution:scale-[160]",
+                        parentGroup === "item" && "lg:group-hover/item:scale-[160]"
+                    )}></div>
+                    <span className={cn(
+                        "text-primary transition-all duration-500",
+                        "lg:group-hover:opacity-0 lg:group-hover:translate-x-8",
+                        parentGroup === "card" && "lg:group-hover/card:opacity-0 lg:group-hover/card:translate-x-8",
+                        parentGroup === "solution" && "lg:group-hover/solution:opacity-0 lg:group-hover/solution:translate-x-8",
+                        parentGroup === "item" && "lg:group-hover/item:opacity-0 lg:group-hover/item:translate-x-8"
+                    )}>
                         {children}
                     </span>
                 </div>
 
-                <div className="absolute inset-0 z-20 flex h-full w-full items-center justify-center gap-3 transition-all duration-500 opacity-0 translate-x-8 lg:group-hover:opacity-100 lg:group-hover:translate-x-0 group-active:opacity-100 group-active:translate-x-0">
+                <div className={cn(
+                    "absolute inset-0 z-20 flex h-full w-full items-center justify-center gap-3 transition-all duration-500 opacity-0 translate-x-8",
+                    "lg:group-hover:opacity-100 lg:group-hover:translate-x-0 group-active:opacity-100 group-active:translate-x-0",
+                    parentGroup === "card" && "lg:group-hover/card:opacity-100 lg:group-hover/card:translate-x-0",
+                    parentGroup === "solution" && "lg:group-hover/solution:opacity-100 lg:group-hover/solution:translate-x-0",
+                    parentGroup === "item" && "lg:group-hover/item:opacity-100 lg:group-hover/item:translate-x-0"
+                )}>
                     <span className="text-base md:text-lg font-bold text-white whitespace-nowrap">{children}</span>
                     <ArrowRight className="h-5 w-5 text-white" strokeWidth={2.5} />
                 </div>

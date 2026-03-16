@@ -136,7 +136,7 @@
       },
       "backend": {
         "title": "Backend (Hệ Thống)",
-        "description": "Thiết kế kiến trúc hệ thống máy chủ mạnh mẽ, hiệu suất cao and dễ mở rộng.",
+        "description": "Thiết kế kiến trúc hệ thống máy chủ mạnh mẽ, hiệu suất cao và dễ mở rộng.",
         "details": {
           "0": {
             "label": "Môi Trường"
@@ -284,7 +284,7 @@
       },
       "2": {
         "role": "Quản Lý Sản Phẩm",
-        "content": "Làm việc with đội ngũ thật sự rất thoải mái. Họ đã bàn giao một trang quản trị phức tạp đúng hạn với độ hoàn thiện mà chúng tôi còn không nghĩ là có thể."
+        "content": "Làm việc với đội ngũ thật sự rất thoải mái. Họ đã bàn giao một trang quản trị phức tạp đúng hạn với độ hoàn thiện mà chúng tôi còn không nghĩ là có thể."
       },
       "3": {
         "role": "Nhà Sáng Lập",
@@ -292,7 +292,7 @@
       },
       "4": {
         "role": "Giám Đốc Marketing",
-        "content": "Hình ảnh tuyệt đẹp và trải nghiệm mượt mà. Tỷ lệ chuyển đổi của chúng tôi đã tăng 40% after khi thiết kế lại. Lợi tức đầu tư (ROI) là quá tuyệt vời."
+        "content": "Hình ảnh tuyệt đẹp và trải nghiệm mượt mà. Tỷ lệ chuyển đổi của chúng tôi đã tăng 40% sau khi thiết kế lại. Lợi tức đầu tư (ROI) là quá tuyệt vời."
       },
       "5": {
         "role": "Trưởng Nhóm Thiết Kế UX",
@@ -300,7 +300,7 @@
       },
       "6": {
         "role": "Trưởng Nhóm Kỹ Thuật",
-        "content": "Đáng tin cậy, cực kỳ dễ mở rộng và giao diện xuất sắc. Kiến trúc mã nguồn của họ sạch and mạnh mẽ như thiết kế của họ vậy. Cực kỳ, cực kỳ đáng để giới thiệu."
+        "content": "Đáng tin cậy, cực kỳ dễ mở rộng và giao diện xuất sắc. Kiến trúc mã nguồn của họ sạch và mạnh mẽ như thiết kế của họ vậy. Cực kỳ, cực kỳ đáng để giới thiệu."
       }
     }
   },
@@ -453,7 +453,7 @@
       "title": "Giải pháp Nhân sự Công nghệ cao",
       "designer": {
         "title": "Thiết kế UI/UX",
-        "desc": "Kết hợp giữa thẩm mỹ hiện đại and tư duy trải nghiệm tối ưu. Đội ngũ thiết kế của chúng tôi không chỉ vẽ đẹp, mà còn tạo ra giải pháp chuyển đổi.",
+        "desc": "Kết hợp giữa thẩm mỹ hiện đại và tư duy trải nghiệm tối ưu. Đội ngũ thiết kế của chúng tôi không chỉ vẽ đẹp, mà còn tạo ra giải pháp chuyển đổi.",
         "hireButton": "Thuê Chuyên Gia Thiết Kế",
         "tasks": {
           "0": "Nghiên cứu hành vi người dùng",
@@ -468,17 +468,17 @@
         "roles": {
           "mobile": {
             "title": "Nhà phát triển Di động",
-            "desc": "Xây dựng các ứng dụng iOS and Android hiệu năng cao with trải nghiệm native tuyệt vời.",
+            "desc": "Xây dựng các ứng dụng iOS và Android hiệu năng cao với trải nghiệm native tuyệt vời.",
             "tech": "Swift (iOS), Kotlin (Android), Flutter, React Native"
           },
           "web": {
             "title": "Nhà phát triển Web",
-            "desc": "Phát triển các hệ thống web hiện đại, dễ mở rộng and tối ưu hóa hiệu suất.",
+            "desc": "Phát triển các hệ thống web hiện đại, dễ mở rộng và tối ưu hóa hiệu suất.",
             "tech": "React, Next.js, Vue.js, Angular, Tailwind CSS"
           },
           "fullstack": {
             "title": "Full-stack Developer",
-            "desc": "Chuyên gia làm chủ cả frontend and backend, mang đến giải pháp toàn diện cho dự án của bạn.",
+            "desc": "Chuyên gia làm chủ cả frontend và backend, mang đến giải pháp toàn diện cho dự án của bạn.",
             "tech": "Node.js, Python, PostgreSQL, MongoDB, Docker, AWS"
           }
         }
@@ -506,7 +506,7 @@
           "1": "Quảng cáo PPC (Pay Per Click)",
           "2": "Tiếp thị truyền thông xã hội",
           "3": "Quảng cáo trên mạng xã hội",
-          "4": "Viết nội dung and tiếp thị",
+          "4": "Viết nội dung và tiếp thị",
           "5": "Tối ưu hóa cửa hàng ứng dụng"
         }
       },
@@ -537,18 +537,18 @@
       "seeMore": "Xem thêm",
       "startup": {
         "title": "Giải pháp phần mềm khởi nghiệp",
-        "desc": "Đồng hành cùng startup từ ý tưởng đến MVP and mở rộng quy mô với các công nghệ hiện đại nhất."
+        "desc": "Đồng hành cùng startup từ ý tưởng đến MVP và mở rộng quy mô với các công nghệ hiện đại nhất."
       },
       "enterprise": {
         "title": "Giải pháp di động doanh nghiệp",
-        "desc": "Tối ưu hóa quy trình vận hành and tương tác khách hàng thông qua ứng dụng di động chuyên nghiệp."
+        "desc": "Tối ưu hóa quy trình vận hành và tương tác khách hàng thông qua ứng dụng di động chuyên nghiệp."
       },
       "onDemand": {
         "title": "Giải pháp kinh doanh theo yêu cầu",
         "items": {
           "food": "Ứng dụng giao đồ ăn",
           "grocery": "Ứng dụng giao hàng tạp hóa",
-          "fitness": "Ứng dụng thể dục and sức khỏe",
+          "fitness": "Ứng dụng thể dục và sức khỏe",
           "telemedicine": "Ứng dụng y tế từ xa",
           "ticketing": "Ứng dụng đặt vé",
           "travel": "Ứng dụng lập kế hoạch du lịch",
@@ -563,7 +563,7 @@
         },
         "transformation": {
           "title": "Biến đổi sản phẩm số",
-          "desc": "Số hóa and hiện đại hóa quy trình doanh nghiệp với các giải pháp kỹ thuật số mới nhất."
+          "desc": "Số hóa và hiện đại hóa quy trình doanh nghiệp với các giải pháp kỹ thuật số mới nhất."
         },
         "mvp": {
           "title": "Sản phẩm mẫu (MVP)",
@@ -626,7 +626,7 @@
         "title": "Thương mại điện tử",
         "items": [
           "Phát triển cửa hàng thương mại điện tử tùy chỉnh",
-          "Giải pháp vận chuyển and thực hiện đơn hàng",
+          "Giải pháp vận chuyển và thực hiện đơn hàng",
           "Ứng dụng thương mại điện tử cho hàng tạp hóa",
           "Thị trường trực tuyến toàn diện",
           "Giải pháp thương mại điện tử dựa trên AR"
@@ -657,7 +657,7 @@
         "items": [
           "Giải pháp lập kế hoạch du lịch",
           "Nền tảng quản lý hành trình",
-          "Giải pháp đặt vé and khách sạn",
+          "Giải pháp đặt vé và khách sạn",
           "Giải pháp khách hàng thân thiết & phần thưởng du lịch",
           "Giải pháp đặt xe"
         ]
@@ -686,7 +686,7 @@
         "title": "Giải trí",
         "items": [
           "Giải pháp phát video trực tuyến",
-          "Giải pháp tạo kịch bản and cộng tác",
+          "Giải pháp tạo kịch bản và cộng tác",
           "Nền tảng đặt vé sự kiện trực tiếp",
           "Giải pháp ML cho dữ liệu lớn",
           "Giải pháp VFX"
@@ -705,12 +705,13 @@
     },
     "contactCTA": {
       "title": "Hãy nói về dự án của bạn",
-      "description": "Hãy cho chúng tôi biết ý tưởng dự án của bạn and nhận tư vấn miễn phí để biến nó thành một sản phẩm kỹ thuật số tuyệt vời.",
+      "description": "Hãy cho chúng tôi biết ý tưởng dự án của bạn và nhận tư vấn miễn phí để biến nó thành một sản phẩm kỹ thuật số tuyệt vời.",
       "button": "Tư vấn từ chuyên gia"
     }
   },
   "JoinSection": {
-    "title": "Cách chúng tôi tham gia vào",
+    "subtitle": "Linh hoạt & Tối ưu",
+    "title": "Mô hình <highlight>Hợp tác</highlight>",
     "hourly": "Thuê theo giờ",
     "monthly": "Thuê theo hàng tháng",
     "fixed": "Chi phí cố định",
@@ -719,5 +720,48 @@
     "emailPlaceholder": "Nhập email",
     "sendNow": "GỬI NGAY",
     "spamNotice": "Chúng tôi sẽ không bao giờ gửi thư rác cho bạn!"
+  },
+  "FAQSection": {
+    "badge": "Hỗ Trợ",
+    "title": "Câu hỏi <highlight>Thường Gặp</highlight>",
+    "description": "Bạn có câu hỏi khác? Đội ngũ của chúng tôi luôn sẵn sàng giúp đỡ bạn trong suốt quy trình.",
+    "questions": {
+      "0": {
+        "q": "QKIT Software cung cấp những dịch vụ gì?",
+        "a": "Chúng tôi cung cấp các dịch vụ phát triển phần mềm toàn diện bao gồm: Phát triển Web (React, Next.js), Ứng dụng di động (Flutter, React Native), Thiết kế UI/UX, Giải pháp Cloud/DevOps và tích hợp AI/Machine Learning."
+      },
+      "1": {
+        "q": "Quy trình bắt đầu một dự án như thế nào?",
+        "a": "Quy trình của chúng tôi bắt đầu từ việc tiếp nhận yêu cầu, tư vấn giải pháp, báo giá, thiết kế UI/UX, phát triển phần mềm, kiểm thử và cuối cùng là bàn giao/vận hành. Đội ngũ kỹ thuật có thể bắt đầu làm việc chỉ trong vòng 2 ngày làm việc."
+      },
+      "2": {
+        "q": "Tôi có thể thuê nhân sự riêng lẻ không?",
+        "a": "Có, chúng tôi cung cấp mô hình cho thuê nhân sự chuyên nghiệp (Staff Augmentation) bao gồm Designer, Developer (Web/Mobile/Fullstack) theo giờ hoặc theo tháng để phù hợp với quy mô dự án của bạn."
+      },
+      "3": {
+        "q": "QKIT có hỗ trợ bảo trì sau khi bàn giao không?",
+        "a": "Tất nhiên. Chúng tôi cam kết hỗ trợ kỹ thuật và bảo trì lâu dài sau khi bàn giao dự án để đảm bảo hệ thống luôn hoạt động ổn định và cập nhật theo xu hướng công nghệ mới nhất."
+      },
+      "4": {
+        "q": "Làm thế nào để nhận được báo giá dự án?",
+        "a": "Bạn có thể điền thông tin vào biểu mẫu liên hệ hoặc gửi email trực tiếp cho chúng tôi. Đội ngũ chuyên gia sẽ phản hồi và tư vấn giải pháp kèm báo giá sơ bộ trong vòng 24 giờ."
+      },
+      "5": {
+        "q": "QKIT có nhận các dự án từ nước ngoài không?",
+        "a": "Có, chúng tôi làm việc với nhiều đối tác toàn cầu từ Singapore, Úc, Mỹ và Châu Âu. Quy trình làm việc và giao tiếp được tối ưu hóa cho múi giờ và nhu cầu quốc tế."
+      },
+      "6": {
+        "q": "Chi phí phát triển dự án được tính như thế nào?",
+        "a": "Chi phí phụ thuộc vào độ phức tạp, quy mô và thời hạn của dự án. Chúng tôi cung cấp các gói linh hoạt: Fixed Price (giá cố định cho yêu cầu rõ ràng) hoặc T&M (Time & Materials) cho các dự án linh hoạt."
+      },
+      "7": {
+        "q": "Dữ liệu của tôi được bảo mật như thế nào?",
+        "a": "Chúng tôi tuân thủ nghiêm ngặt các tiêu chuẩn bảo mật dữ liệu quốc tế như GDPR. Mọi dự án đều bắt đầu với thỏa thuận bảo mật thông tin (NDA) và triển khai trên các hạ tầng đám mây an toàn bậc nhất."
+      },
+      "8": {
+        "q": "Tôi có được sở hữu mã nguồn sau dự án không?",
+        "a": "Hoàn toàn có. Sau khi hoàn thành các nghĩa vụ hợp đồng, khách hàng sẽ sở hữu toàn bộ mã nguồn, tài liệu thiết kế và các tài sản số liên quan của dự án."
+      }
+    }
   }
 }

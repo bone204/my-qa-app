@@ -177,6 +177,11 @@ export default function SolutionsSection() {
                             </p>
                             
                             <LinkAction label={t('seeMore')} className="mt-6 select-none" />
+                            <div className="mt-4">
+                                <Button variant="body" parentGroup="solution">
+                                    {t('seeMore')}
+                                </Button>
+                            </div>
                         </motion.div>
                     ))}
                 </div>
@@ -186,7 +191,7 @@ export default function SolutionsSection() {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="group/devops relative rounded-[3rem] p-8 md:p-12 border border-primary/20 bg-linear-to-br from-zinc-950 via-primary/5 to-black overflow-hidden shadow-2xl shadow-primary/5"
+                    className="group/card relative rounded-[3rem] p-8 md:p-12 border border-primary/20 bg-linear-to-br from-zinc-950 via-primary/5 to-black overflow-hidden shadow-2xl shadow-primary/5"
                 >
                     
                     
@@ -220,7 +225,7 @@ export default function SolutionsSection() {
                                     </motion.div>
                                 ))}
                             </div>
-                            <Button variant="body" className="mt-8">
+                            <Button variant="body" parentGroup="card" className="mt-8">
                                 {t('devops.button')}
                             </Button>
                         </div>
@@ -229,7 +234,7 @@ export default function SolutionsSection() {
                             <MetaBalls
                                 color="#ffffff"
                                 cursorBallColor="#ffffff"
-                                cursorBallSize={2}
+                                cursorBallSize={4}
                                 ballCount={15}
                                 animationSize={30}
                                 enableMouseInteraction
@@ -278,6 +283,7 @@ function SolutionCard({ icon: Icon, title, desc, btnText, variant }: { icon: any
                 <div className="mt-auto">
                     <Button 
                         variant="body"
+                        parentGroup="card"
                         className="rounded-full px-10"
                     >
                         {btnText}

@@ -140,6 +140,7 @@ body {
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(calc(-1 * (8 * (320px + 24px))));
   }
@@ -450,7 +451,7 @@ select:-webkit-autofill:focus {
   .card-grid {
     grid-template-columns: 1fr !important;
   }
-  
+
   .magic-bento-card {
     grid-column: span 1 !important;
   }
@@ -462,12 +463,10 @@ select:-webkit-autofill:focus {
   position: absolute;
   inset: 0;
   padding: 6px;
-  background: radial-gradient(
-    var(--glow-radius) circle at var(--glow-x) var(--glow-y),
-    rgba(132, 0, 255, calc(var(--glow-intensity) * 0.8)) 0%,
-    rgba(132, 0, 255, calc(var(--glow-intensity) * 0.4)) 30%,
-    transparent 60%
-  );
+  background: radial-gradient(var(--glow-radius) circle at var(--glow-x) var(--glow-y),
+      rgba(215, 38, 90, calc(var(--glow-intensity) * 0.8)) 0%,
+      rgba(215, 38, 90, calc(var(--glow-intensity) * 0.4)) 30%,
+      transparent 60%);
   border-radius: inherit;
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
