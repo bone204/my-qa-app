@@ -751,13 +751,24 @@
   },
   "SuccessPage": {
     "hero": {
-      "subtitle": "SUCCESS JOURNEYS",
-      "title": "Our <highlight>Success</highlight> Stories",
-      "description": "Explore how we partner with our clients to create breakthrough value through technology."
+      "subtitle": "Comprehensive solutions",
+      "title": "Turning Vision Into Digital <highlight>Masterpieces</highlight>.",
+      "description": "We provide breakthrough technological solutions, helping you lead in the digital era through successful products.",
+      "card": {
+        "title": "Hire professional projects",
+        "description": "A team of experts ready to turn your ideas into reality with international standard workflows.",
+        "features": {
+          "0": "Request reception 24/7",
+          "1": "Free solution consulting",
+          "2": "Professional technical team"
+        },
+        "button": "Contact Now"
+      }
     },
     "projects": {
-      "title": "Featured Projects",
-      "all": "All",
+      "badge": "PROJECT PORTFOLIO",
+      "title": "Featured <highlight>Success</highlight> Projects",
+      "subtitle": "Explore how we partner with our clients to create breakthrough value through technology.",
       "web": "Web Apps",
       "mobile": "Mobile Apps",
       "ai": "AI Integration",

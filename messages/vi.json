@@ -751,13 +751,24 @@
   },
   "SuccessPage": {
     "hero": {
-      "subtitle": "HÀNH TRÌNH THÀNH CÔNG",
-      "title": "Những <highlight>Dự Án</highlight> Tiêu Biểu",
-      "description": "Khám phá cách chúng tôi đồng hành cùng khách hàng để tạo ra những giá trị đột phá thông qua công nghệ."
+      "subtitle": "Giải pháp toàn diện",
+      "title": "Biến Tầm Nhìn Thành <highlight>Kiệt Tác</highlight> Số.",
+      "description": "Chúng tôi cung cấp các giải pháp công nghệ đột phá, giúp bạn dẫn đầu trong kỷ nguyên số thông qua những sản phẩm thành công.",
+      "card": {
+        "title": "Thuê dự án chuyên nghiệp",
+        "description": "Đội ngũ chuyên gia sẵn sàng biến ý tưởng của bạn thành thực tế với quy trình làm việc chuẩn quốc tế.",
+        "features": {
+          "0": "Tiếp nhận yêu cầu 24/7",
+          "1": "Tư vấn giải pháp miễn phí",
+          "2": "Đội ngũ kỹ thuật chuyên nghiệp"
+        },
+        "button": "Liên hệ ngay"
+      }
     },
     "projects": {
-      "title": "Dự án tiêu biểu",
-      "all": "Tất cả",
+      "badge": "DANH MỤC DỰ ÁN",
+      "title": "Những <highlight>Dự Án</highlight> Tiêu Biểu",
+      "subtitle": "Khám phá cách chúng tôi đồng hành cùng khách hàng để tạo ra những giá trị đột phá thông qua technology.",
       "web": "Ứng dụng Web",
       "mobile": "Ứng dụng Di động",
       "ai": "Tích hợp AI",
