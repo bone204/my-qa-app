@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight, Calendar, TrendingUp, Clock, ChevronRight } from "lucide-react";
+import { ROUTES } from "@/constants/routes";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
@@ -124,7 +125,7 @@ export default function ServicesBlogSection() {
                             <TrendingUp className="w-4 h-4 text-primary" />
                             <span>Trending Now</span>
                         </div>
-                        <Link href="/blog">
+                        <Link href={ROUTES.BLOG}>
                             <Button variant="body">
                                 {t('readMore')}
                             </Button>

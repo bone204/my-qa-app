@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { IMAGES } from "@/constants/images";
+import { ROUTES } from "@/constants/routes";
 import { useState, useEffect } from "react";
 import Button from "./ui/Button";
 import { motion, AnimatePresence } from "framer-motion";
@@ -122,7 +123,7 @@ export default function AppBar() {
             {/* Logo Left */}
             <div className="flex items-center">
               <Link
-                href="/"
+                href={ROUTES.HOME}
                 className="flex items-center space-x-2 outline-none rounded-lg focus-visible:ring-2 focus-visible:ring-primary"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -151,7 +152,7 @@ export default function AppBar() {
                     onMouseEnter={() => setHoveredItem(key)}
                   >
                     <Link
-                      href={key === 'aboutUs' ? '#' : (key === 'successStories' ? '/success' : (key === 'portfolio' ? '/projects' : `/${key.toLowerCase()}`))}
+                      href={key === 'aboutUs' ? '#' : (key === 'successStories' ? ROUTES.SUCCESS_STORIES : (key === 'portfolio' ? ROUTES.PORTFOLIO : `/${key.toLowerCase()}`))}
                       onClick={(e) => {
                         if (key === 'aboutUs') {
                           e.preventDefault();
@@ -200,9 +201,9 @@ export default function AppBar() {
                                   <h4 className="text-xs font-bold text-zinc-500 group-hover/col-left:text-white transition-colors duration-300 mb-5">{t('aboutDropdown.aboutUs')}</h4>
                                   <div className="flex flex-col space-y-4">
                                     {[
-                                      { name: t('aboutDropdown.overview'), href: "/tong-quan" },
-                                      { name: t('aboutDropdown.feedback'), href: "/phan-hoi" },
-                                      { name: t('aboutDropdown.contact'), href: "/lien-he" },
+                                      { name: t('aboutDropdown.overview'), href: ROUTES.ABOUT_US.OVERVIEW },
+                                      { name: t('aboutDropdown.feedback'), href: ROUTES.ABOUT_US.FEEDBACK },
+                                      { name: t('aboutDropdown.contact'), href: ROUTES.ABOUT_US.CONTACT },
                                     ].map((subItem) => (
                                       <Link key={subItem.name} href={subItem.href} className="group/link flex items-center gap-3">
                                         <div className="w-3.5 h-3.5 rounded-full border-[1.5px] border-primary group-hover/link:bg-primary/20 transition-colors shrink-0" />
@@ -211,14 +212,14 @@ export default function AppBar() {
                                     ))}
                                   </div>
                                 </div>
-
+                                
                                 {/* Right Column */}
                                 <div className="flex-1 pl-6 group/col-right">
                                   <h4 className="text-xs font-bold text-zinc-500 group-hover/col-right:text-white transition-colors duration-300 mb-5">{t('aboutDropdown.others')}</h4>
                                   <div className="flex flex-col space-y-4">
                                     {[
-                                      { name: t('aboutDropdown.life'), href: "/cuoc-song" },
-                                      { name: t('aboutDropdown.faq'), href: "/faq" },
+                                      { name: t('aboutDropdown.life'), href: ROUTES.ABOUT_US.LIFE },
+                                      { name: t('aboutDropdown.faq'), href: ROUTES.ABOUT_US.FAQ },
                                     ].map((subItem) => (
                                       <Link key={subItem.name} href={subItem.href} className="group/link flex items-center gap-3">
                                         <div className="w-3.5 h-3.5 rounded-full border-[1.5px] border-primary group-hover/link:bg-primary/20 transition-colors shrink-0" />
@@ -230,7 +231,7 @@ export default function AppBar() {
                               </div>
 
                               {/* Bottom Section */}
-                              <Link href="/su-nghiep" className="group/career relative px-6 py-5 overflow-hidden flex items-center justify-between">
+                              <Link href={ROUTES.CAREER} className="group/career relative px-6 py-5 overflow-hidden flex items-center justify-between">
                                 <div className="absolute inset-0 bg-linear-to-r from-indigo-900 via-purple-700 to-pink-600 opacity-90 transition-opacity group-hover/career:opacity-100" />
                                 <div className="relative z-10 flex items-center gap-4">
                                   <Briefcase className="w-7 h-7 text-white stroke-[1.5]" />
@@ -312,7 +313,7 @@ export default function AppBar() {
               </div>
 
               <Link
-                href="/signin"
+                href={ROUTES.SIGN_IN}
                 className="outline-none rounded-full"
               >
                 <Button variant="secondary" className="px-5 py-2 text-sm">
@@ -366,7 +367,7 @@ export default function AppBar() {
                       transition={{ delay: 0.1 + i * 0.1, duration: 0.3 }}
                     >
                       <Link
-                        href={key === "home" ? "/" : (key === 'aboutUs' ? '/tong-quan' : (key === 'successStories' ? '/success' : (key === 'portfolio' ? '/projects' : `/${key.toLowerCase()}` )))}
+                        href={key === "home" ? ROUTES.HOME : (key === 'aboutUs' ? ROUTES.ABOUT_US.OVERVIEW : (key === 'successStories' ? ROUTES.SUCCESS_STORIES : (key === 'portfolio' ? ROUTES.PORTFOLIO : `/${key.toLowerCase()}` )))}
                         onClick={() => setIsMobileMenuOpen(false)}
                         className="block py-2 text-2xl font-black tracking-tight text-white hover:text-primary transition-all"
                       >
