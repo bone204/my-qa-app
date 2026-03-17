@@ -2,18 +2,16 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Briefcase, CheckCircle2 } from 'lucide-react';
+import { Briefcase, CheckCircle2 } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import { useTranslations } from 'next-intl';
 
-export default function ServicesHeroSection() {
-    const t = useTranslations('ServicesPage.hero');
+export default function ProjectsHero() {
+    const t = useTranslations('ProjectsPage.hero');
 
     return (
         <section className="relative min-h-screen w-full flex items-center justify-center pt-32 pb-20 overflow-hidden select-none">
             {/* Background Decorations */}
-            <div className="absolute top-1/4 -left-20 w-80 h-80 bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
-            <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />
 
             <div className="mx-auto w-full max-w-7xl px-4 md:px-8 relative z-10">
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
@@ -44,7 +42,7 @@ export default function ServicesHeroSection() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 }}
-                            className="section-desc text-start max-w-none! font-medium"
+                            className="section-desc text-start max-w-none!"
                         >
                             {t('description')}
                         </motion.p>

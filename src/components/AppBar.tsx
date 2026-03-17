@@ -151,7 +151,7 @@ export default function AppBar() {
                     onMouseEnter={() => setHoveredItem(key)}
                   >
                     <Link
-                      href={key === 'aboutUs' ? '#' : (key === 'successStories' ? '/success' : `/${key.toLowerCase()}`)}
+                      href={key === 'aboutUs' ? '#' : (key === 'successStories' ? '/success' : (key === 'portfolio' ? '/projects' : `/${key.toLowerCase()}`))}
                       onClick={(e) => {
                         if (key === 'aboutUs') {
                           e.preventDefault();
@@ -366,7 +366,7 @@ export default function AppBar() {
                       transition={{ delay: 0.1 + i * 0.1, duration: 0.3 }}
                     >
                       <Link
-                        href={key === "home" ? "/" : (key === 'aboutUs' ? '/tong-quan' : (key === 'successStories' ? '/success' : `/${key.toLowerCase()}`))}
+                        href={key === "home" ? "/" : (key === 'aboutUs' ? '/tong-quan' : (key === 'successStories' ? '/success' : (key === 'portfolio' ? '/projects' : `/${key.toLowerCase()}` )))}
                         onClick={() => setIsMobileMenuOpen(false)}
                         className="block py-2 text-2xl font-black tracking-tight text-white hover:text-primary transition-all"
                       >

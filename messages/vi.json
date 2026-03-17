@@ -37,7 +37,7 @@
   },
   "AboutSection": {
     "subtitle": "Sứ mệnh của chúng tôi",
-    "title": "Kiến tạo kiệt tác <highlight>Số Hóa</highlight>.",
+    "title": "Kiến tạo kiệt tác <highlight>Số Hóa</highlight>",
     "description": "Chuyên cung cấp phần mềm hiệu suất cao và các nền tảng công nghệ cao cấp. Chúng tôi kết hợp sự xuất sắc về thẩm mỹ với độ chính xác về kỹ thuật để mang lại kết quả ấn tượng cho khách hàng toàn cầu.",
     "button": "Khám Phá Thêm"
   },
@@ -183,7 +183,7 @@
   },
   "SolutionSection": {
     "backgroundText": "GIẢI PHÁP",
-    "subtitle": "Hệ Tinh Thái Công Nghệ",
+    "subtitle": "H hệ Tinh Thái Công Nghệ",
     "title": "Mạng Lưới <highlight>Thần Kinh</highlight> Số Hóa.",
     "description": "Vượt xa những dòng code tiêu chuẩn, chúng tôi xây dựng hệ sinh thái thông minh kết nối hoàn hảo tầm nhìn với công nghệ.",
     "nodes": {
@@ -356,7 +356,7 @@
   "ContactSection": {
     "subtitle": "Hãy kết nối với chúng tôi",
     "title": "Bắt đầu <highlight>Dự án</highlight> của bạn",
-    "description": "Điền vào biểu mẫu bên dưới và đội ngũ chuyên gia của chúng tôi sẽ liên hệ với bạn trong vòng 24 giờ.",
+    "description": "Điền vào biểu mẫu bên dưới và đội ngũ chuyên gia của chúng tôi sẽ liên hệ with bạn trong vòng 24 giờ.",
     "form": {
       "lastName": "Họ",
       "lastNamePlaceholder": "Nhập họ...",
@@ -435,11 +435,11 @@
   "ServicesPage": {
     "hero": {
       "subtitle": "Giải pháp toàn diện",
-      "title": "Nâng tầm <highlight>Trải nghiệm</highlight> Số.",
+      "title": "Nâng tầm <highlight>Trải nghiệm</highlight> Số",
       "description": "Chúng tôi cung cấp các giải pháp công nghệ đột phá, giúp bạn dẫn đầu trong kỷ nguyên số.",
       "card": {
         "title": "Thuê dự án chuyên nghiệp",
-        "description": "Đội ngũ chuyên gia sẵn sàng biến ý tưởng của bạn thành thực tế với quy trình làm việc chuẩn quốc tế.",
+        "description": "Đội ngũ chuyên gia sẵn sàng biến ý tưởng của bạn thành thực tế with quy trình làm việc chuẩn quốc tế.",
         "features": {
           "0": "Tiếp nhận yêu cầu 24/7",
           "1": "Tư vấn giải pháp miễn phí",
@@ -468,7 +468,7 @@
         "roles": {
           "mobile": {
             "title": "Nhà phát triển Di động",
-            "desc": "Xây dựng các ứng dụng iOS và Android hiệu năng cao với trải nghiệm native tuyệt vời.",
+            "desc": "Xây dựng các ứng dụng iOS và Android hiệu năng cao with trải nghiệm native tuyệt vời.",
             "tech": "Swift (iOS), Kotlin (Android), Flutter, React Native"
           },
           "web": {
@@ -538,7 +538,7 @@
       "explore": "Khám phá giải pháp",
       "startup": {
         "title": "Giải pháp phần mềm khởi nghiệp",
-        "desc": "Đồng hành cùng startup từ ý tưởng đến MVP và mở rộng quy mô với các công nghệ hiện đại nhất."
+        "desc": "Đồng hành cùng startup từ ý tưởng đến MVP và mở rộng quy mô with các công nghệ hiện đại nhất."
       },
       "enterprise": {
         "title": "Giải pháp di động doanh nghiệp",
@@ -564,7 +564,7 @@
         },
         "transformation": {
           "title": "Biến đổi sản phẩm số",
-          "desc": "Số hóa và hiện đại hóa quy trình doanh nghiệp với các giải pháp kỹ thuật số mới nhất."
+          "desc": "Số hóa và hiện đại hóa quy trình doanh nghiệp with các giải pháp kỹ thuật số mới nhất."
         },
         "mvp": {
           "title": "Sản phẩm mẫu (MVP)",
@@ -639,7 +639,7 @@
           "Ứng dụng huấn luyện thể dục trực tuyến",
           "Máy theo dõi sức khỏe (tích hợp thiết bị đeo)",
           "Giải pháp quản lý phòng gym",
-          "Cửa hàng bổ sung dinh dưỡng trực tuyến",
+          "Cửa hàng thực phẩm chức năng trực tuyến",
           "Ứng dụng chăm sóc sức khỏe"
         ]
       },
@@ -752,11 +752,11 @@
   "SuccessPage": {
     "hero": {
       "subtitle": "Giải pháp toàn diện",
-      "title": "Biến Tầm Nhìn Thành <highlight>Kiệt Tác</highlight> Số.",
+      "title": "Biến Tầm Nhìn Thành <highlight>Kiệt Tác</highlight> Số",
       "description": "Chúng tôi cung cấp các giải pháp công nghệ đột phá, giúp bạn dẫn đầu trong kỷ nguyên số thông qua những sản phẩm thành công.",
       "card": {
         "title": "Thuê dự án chuyên nghiệp",
-        "description": "Đội ngũ chuyên gia sẵn sàng biến ý tưởng của bạn thành thực tế với quy trình làm việc chuẩn quốc tế.",
+        "description": "Đội ngũ chuyên gia sẵn sàng biến ý tưởng của bạn thành thực tế with quy trình làm việc chuẩn quốc tế.",
         "features": {
           "0": "Tiếp nhận yêu cầu 24/7",
           "1": "Tư vấn giải pháp miễn phí",
@@ -766,9 +766,9 @@
       }
     },
     "projects": {
-      "badge": "DANH MỤC DỰ ÁN",
-      "title": "Những <highlight>Dự Án</highlight> Tiêu Biểu",
-      "subtitle": "Khám phá cách chúng tôi đồng hành cùng khách hàng để tạo ra những giá trị đột phá thông qua technology.",
+      "badge": "CÂU CHUYỆN THÀNH CÔNG",
+      "title": "Những <highlight>Dự Án</highlight> Thành Công",
+      "subtitle": "Khám phá cách chúng tôi đồng hành cùng khách hàng để tạo ra những giá trị đột phá thông qua công nghệ.",
       "web": "Ứng dụng Web",
       "mobile": "Ứng dụng Di động",
       "ai": "Tích hợp AI",
@@ -787,7 +787,7 @@
         "2": {
           "title": "Nền tảng Edge-AI dành cho doanh nghiệp",
           "category": "Enterprise AI",
-          "desc": "Nền tảng AI biên cho phép các công ty nắm bắt ứng dụng và văn hóa của họ với UX do AI điều khiển.",
+          "desc": "Nền tảng AI biên cho phép các công ty nắm bắt ứng dụng và văn hóa của họ with UX do AI điều khiển.",
           "tech": [
             "Python",
             "TensorFlow",
@@ -809,7 +809,7 @@
         "4": {
           "title": "Ứng dụng tập luyện AB",
           "category": "Fitness AI",
-          "desc": "Một ứng dụng tập luyện cơ bụng sáng tạo, được hỗ trợ bởi AI, do Jeff Cavaliere phụ trách, thiết lập các tiêu chuẩn mới với khả năng truy cập ngoại tuyến.",
+          "desc": "Một ứng dụng tập luyện cơ bụng sáng tạo, được hỗ trợ bởi AI, do Jeff Cavaliere phụ trách, thiết lập các tiêu chuẩn mới with khả năng truy cập ngoại tuyến.",
           "tech": [
             "React Native",
             "AI Vision",
@@ -820,7 +820,7 @@
         "5": {
           "title": "Ứng dụng giao đồ ăn",
           "category": "Delivery",
-          "desc": "Ứng dụng giao hàng thực phẩm & tạp hóa tương lai của Nepal chiếm ưu thế trong giao hàng trực tuyến với những tính năng mạnh mẽ.",
+          "desc": "Ứng dụng giao hàng thực phẩm & tạp hóa tương lai của Nepal chiếm ưu thế trong giao hàng trực tuyến with những tính năng mạnh mẽ.",
           "tech": [
             "Node.js",
             "Socket.io",
@@ -831,7 +831,7 @@
         "6": {
           "title": "Ứng dụng Telehealth theo yêu cầu",
           "category": "Healthcare",
-          "desc": "Một ứng dụng telehealth cho phép tư vấn với bác sĩ mà không cần chờ đợi, với việc tìm và đặt lịch hẹn nhanh chóng và dễ dàng.",
+          "desc": "Một ứng dụng telehealth cho phép tư vấn with bác sĩ mà không cần chờ đợi, with việc tìm và đặt lịch hẹn nhanh chóng và dễ dàng.",
           "tech": [
             "WebRTC",
             "Next.js",
@@ -853,7 +853,7 @@
         "8": {
           "title": "Sàn Thương mại Điện tử Thời trang",
           "category": "E-commerce",
-          "desc": "Nền tảng mua sắm hiện đại với trải nghiệm AR thử đồ ảo và tích hợp thanh toán đa kênh thông minh.",
+          "desc": "Nền tảng mua sắm hiện đại with trải nghiệm AR thử đồ ảo và tích hợp thanh toán đa kênh thông minh.",
           "tech": [
             "Node.js",
             "Three.js",
@@ -864,7 +864,7 @@
       }
     },
     "sidebar": {
-      "question": "Bạn muốn thuê nguồn lực để làm việc với bạn?",
+      "question": "Bạn muốn thuê nguồn lực để làm việc with bạn?",
       "badge": "Bắt đầu chỉ trong vòng",
       "highlight": "2 ngày làm việc",
       "title": "Thuê Ngay",
@@ -906,7 +906,7 @@
       },
       "2": {
         "q": "Tôi có thể thuê nhân sự riêng lẻ không?",
-        "a": "Có, chúng tôi cung cấp mô hình cho thuê nhân sự chuyên nghiệp (Staff Augmentation) bao gồm Designer, Developer (Web/Mobile/Fullstack) theo giờ hoặc theo tháng để phù hợp với quy mô dự án của bạn."
+        "a": "Có, chúng tôi cung cấp mô hình cho thuê nhân sự chuyên nghiệp (Staff Augmentation) bao gồm Designer, Developer (Web/Mobile/Fullstack) theo giờ hoặc theo tháng để phù hợp with quy mô dự án của bạn."
       },
       "3": {
         "q": "QKIT có hỗ trợ bảo trì sau khi bàn giao không?",
@@ -918,7 +918,7 @@
       },
       "5": {
         "q": "QKIT có nhận các dự án từ nước ngoài không?",
-        "a": "Có, chúng tôi làm việc với nhiều đối tác toàn cầu từ Singapore, Úc, Mỹ và Châu Âu. Quy trình làm việc và giao tiếp được tối ưu hóa cho múi giờ và nhu cầu quốc tế."
+        "a": "Có, chúng tôi làm việc with nhiều đối tác toàn cầu từ Singapore, Úc, Mỹ và Châu Âu. Quy trình làm việc và giao tiếp được tối ưu hóa cho múi giờ và nhu cầu quốc tế."
       },
       "6": {
         "q": "Chi phí phát triển dự án được tính như thế nào?",
@@ -926,12 +926,34 @@
       },
       "7": {
         "q": "Dữ liệu của tôi được bảo mật như thế nào?",
-        "a": "Chúng tôi tuân thủ nghiêm ngặt các tiêu chuẩn bảo mật dữ liệu quốc tế như GDPR. Mọi dự án đều bắt đầu với thỏa thuận bảo mật thông tin (NDA) và triển khai trên các hạ tầng đám mây an toàn bậc nhất."
+        "a": "Chúng tôi tuân thủ nghiêm ngặt các tiêu chuẩn bảo mật dữ liệu quốc tế như GDPR. Mọi dự án đều bắt đầu with thỏa thuận bảo mật thông tin (NDA) và triển khai trên các hạ tầng đám mây an toàn bậc nhất."
       },
       "8": {
         "q": "Tôi có được sở hữu mã nguồn sau dự án không?",
         "a": "Hoàn toàn có. Sau khi hoàn thành các nghĩa vụ hợp đồng, khách hàng sẽ sở hữu toàn bộ mã nguồn, tài liệu thiết kế và các tài sản số liên quan của dự án."
       }
+    }
+  },
+  "ProjectsPage": {
+    "hero": {
+      "subtitle": "Danh Mục Toàn Cầu",
+      "title": "Kiến Tạo Sự <highlight>Xuất Sắc</highlight> Số Hóa",
+      "description": "Khám phá danh mục dự án đa dạng của chúng tôi. Từ giải pháp doanh nghiệp đến ứng dụng người dùng, chúng tôi mang lại sự xuất sắc ở mọi quy mô.",
+      "card": {
+        "title": "Thuê dự án chuyên nghiệp",
+        "description": "Sẵn sàng xây dựng ý tưởng lớn tiếp theo của bạn? Đội ngũ ưu tú của chúng tôi luôn sẵn sàng hỗ trợ bạn thành công.",
+        "features": {
+          "0": "Phát triển linh hoạt",
+          "1": "Chất lượng cao cấp",
+          "2": "Chuyên gia toàn diện"
+        },
+        "button": "Bắt đầu dự án"
+      }
+    },
+    "content": {
+      "badge": "Dự Án Nổi Bật",
+      "title": "Danh Mục <highlight>Dự Án</highlight>",
+      "subtitle": "Nơi trình diễn những đổi mới kỹ thuật và sự xuất sắc trong thiết kế trên nhiều lĩnh vực khác nhau."
     }
   }
 }

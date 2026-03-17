@@ -37,7 +37,7 @@
   },
   "AboutSection": {
     "subtitle": "Our Mission",
-    "title": "We Build <highlight>Digital</highlight> Masterpieces.",
+    "title": "We Build <highlight>Digital</highlight> Masterpieces",
     "description": "Specializing in high-performance software and luxury logistics platforms. We combine aesthetic excellence with technical precision to deliver extraordinary results for our global partners.",
     "button": "Discover More"
   },
@@ -435,7 +435,7 @@
   "ServicesPage": {
     "hero": {
       "subtitle": "Comprehensive Solutions",
-      "title": "Elevate Your <highlight>Digital</highlight> Experience.",
+      "title": "Elevate Your <highlight>Digital</highlight> Experience",
       "description": "We provide breakthrough technology solutions, from mobile app development to complex enterprise systems, helping you lead in the digital era.",
       "card": {
         "title": "Professional Project Hiring",
@@ -752,7 +752,7 @@
   "SuccessPage": {
     "hero": {
       "subtitle": "Comprehensive solutions",
-      "title": "Turning Vision Into Digital <highlight>Masterpieces</highlight>.",
+      "title": "Turning Vision Into Digital <highlight>Masterpieces</highlight>",
       "description": "We provide breakthrough technological solutions, helping you lead in the digital era through successful products.",
       "card": {
         "title": "Hire professional projects",
@@ -766,8 +766,8 @@
       }
     },
     "projects": {
-      "badge": "PROJECT PORTFOLIO",
-      "title": "Featured <highlight>Success</highlight> Projects",
+      "badge": "SUCCESS STORIES",
+      "title": "Featured <highlight>Success</highlight> Stories",
       "subtitle": "Explore how we partner with our clients to create breakthrough value through technology.",
       "web": "Web Apps",
       "mobile": "Mobile Apps",
@@ -932,6 +932,28 @@
         "q": "Will I own the source code after the project?",
         "a": "Absolutely. Upon completion of contractual obligations, the client owns the full source code, design documentation, and all associated digital assets of the project."
       }
+    }
+  },
+  "ProjectsPage": {
+    "hero": {
+      "subtitle": "Global Portfolio",
+      "title": "Crafting <highlight>Digital</highlight> Excellence",
+      "description": "Explore our diverse portfolio of high-impact projects. From enterprise solutions to consumer apps, we deliver excellence at every scale.",
+      "card": {
+        "title": "Hire professional projects",
+        "description": "Ready to build your next big idea? Our elite team is standing by to help you succeed.",
+        "features": {
+          "0": "Agile Development",
+          "1": "Premium Quality",
+          "2": "Full-stack Experts"
+        },
+        "button": "Start Project"
+      }
+    },
+    "content": {
+      "badge": "Portfolio Highlights",
+      "title": "Our <highlight>Project</highlight> Portfolio",
+      "subtitle": "A showcase of technical innovation and design excellence across various industries."
     }
   }
 }
