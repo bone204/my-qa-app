@@ -152,7 +152,7 @@ export default function SolutionsSection() {
                                 transition: { type: "spring", stiffness: 400, damping: 20 }
                             }}
                             whileTap={{ scale: 0.95 }}
-                            className="group/solution relative cursor-pointer overflow-hidden rounded-4xl bg-white/5 backdrop-blur-md border border-white/10 p-8 shadow-xl hover:shadow-primary/10 hover:border-primary/30"
+                            className="group/solution relative cursor-pointer overflow-hidden rounded-4xl bg-white/5 backdrop-blur-md border border-white/10 p-8 shadow-xl hover:shadow-primary/10 hover:border-primary/30 flex flex-col"
                             style={{ 
                                 borderRadius: 32,
                                 transitionProperty: 'border-color, box-shadow, background-color',
@@ -172,15 +172,12 @@ export default function SolutionsSection() {
                             <h4 className="card-title mb-2 select-none">
                                 {t(`products.${item.key}.title`)}
                             </h4>
-                            <p className="card-desc line-clamp-3 select-none">
+                            <p className="card-desc line-clamp-3 select-none grow">
                                 {t(`products.${item.key}.desc`)}
                             </p>
                             
-                            <LinkAction label={t('seeMore')} className="mt-6 select-none" />
-                            <div className="mt-4">
-                                <Button variant="body" parentGroup="solution">
-                                    {t('seeMore')}
-                                </Button>
+                            <div className="mt-8 flex items-center text-primary text-xs font-bold uppercase tracking-widest pt-6 border-t border-white/5 opacity-0 group-hover/solution:opacity-100 -translate-x-4 group-hover/solution:translate-x-0 transition-all duration-500">
+                                {t('explore')} <ArrowRight className="ml-2 w-4 h-4" />
                             </div>
                         </motion.div>
                     ))}

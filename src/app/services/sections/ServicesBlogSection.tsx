@@ -111,7 +111,7 @@ export default function ServicesBlogSection() {
                             className="text-4xl sm:text-5xl font-black tracking-tighter leading-none"
                         >
                              {t.rich('title', {
-                                highlight: (chunks) => <span className="text-gray-500">{chunks}</span>
+                                highlight: (chunks) => <span className="text-primary">{chunks}</span>
                             })}
                         </motion.h2>
                     </div>
