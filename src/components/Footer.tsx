@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { IMAGES } from "@/constants/images";
+import { ROUTES } from "@/constants/routes";
 import { useTranslations } from "next-intl";
 
 export default function Footer() {
@@ -19,7 +20,7 @@ export default function Footer() {
 
                     {/* Company Info */}
                     <div className="lg:w-1/3 xl:w-2/5 space-y-8">
-                        <Link href="/" className="inline-block transition-transform duration-500 hover:scale-105 group">
+                        <Link href={ROUTES.HOME} className="inline-block transition-transform duration-500 hover:scale-105 group">
                             <div className="relative">
                                 {/* Logo Glow */}
                                 <div className="absolute -inset-4 bg-primary/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

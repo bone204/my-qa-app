@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
-import { X, CheckCircle2 } from "lucide-react";
+import { X, CheckCircle2, Sparkles } from "lucide-react";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { expertiseData, type ExpertiseItem } from "./ExpertiseData";
@@ -119,15 +119,24 @@ export default function ExpertiseSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={hasAnimated ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="text-center"
+          className="flex flex-col items-center text-center"
         >
-          <span className="section-subtitle select-none">{t('subtitle')}</span>
-          <h2 className="section-title mt-4 select-none">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: false }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6"
+          >
+            <Sparkles className="w-4 h-4 text-primary" />
+            <span className="review-label">{t('subtitle')}</span>
+          </motion.div>
+
+          <h2 className="review-title text-center">
             {t.rich('title', {
-                highlight: (chunks) => <span className="text-primary select-none">{chunks}</span>
+              highlight: (chunks) => <span className="text-primary select-none">{chunks}</span>
             })}
           </h2>
-          <p className="section-desc mx-auto mt-6 select-none">
+          <p className="text-xl text-zinc-400 font-medium max-w-2xl mt-4 select-none">
             {t('description')}
           </p>
         </motion.div>

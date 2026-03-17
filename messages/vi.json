@@ -37,7 +37,7 @@
   },
   "AboutSection": {
     "subtitle": "Sứ mệnh của chúng tôi",
-    "title": "Kiến tạo kiệt tác <highlight>Số Hóa</highlight>.",
+    "title": "Kiến tạo kiệt tác <highlight>Số Hóa</highlight>",
     "description": "Chuyên cung cấp phần mềm hiệu suất cao và các nền tảng công nghệ cao cấp. Chúng tôi kết hợp sự xuất sắc về thẩm mỹ với độ chính xác về kỹ thuật để mang lại kết quả ấn tượng cho khách hàng toàn cầu.",
     "button": "Khám Phá Thêm"
   },
@@ -183,7 +183,7 @@
   },
   "SolutionSection": {
     "backgroundText": "GIẢI PHÁP",
-    "subtitle": "Hệ Tinh Thái Công Nghệ",
+    "subtitle": "H hệ Tinh Thái Công Nghệ",
     "title": "Mạng Lưới <highlight>Thần Kinh</highlight> Số Hóa.",
     "description": "Vượt xa những dòng code tiêu chuẩn, chúng tôi xây dựng hệ sinh thái thông minh kết nối hoàn hảo tầm nhìn với công nghệ.",
     "nodes": {
@@ -356,7 +356,7 @@
   "ContactSection": {
     "subtitle": "Hãy kết nối với chúng tôi",
     "title": "Bắt đầu <highlight>Dự án</highlight> của bạn",
-    "description": "Điền vào biểu mẫu bên dưới và đội ngũ chuyên gia của chúng tôi sẽ liên hệ với bạn trong vòng 24 giờ.",
+    "description": "Điền vào biểu mẫu bên dưới và đội ngũ chuyên gia của chúng tôi sẽ liên hệ with bạn trong vòng 24 giờ.",
     "form": {
       "lastName": "Họ",
       "lastNamePlaceholder": "Nhập họ...",
@@ -435,11 +435,11 @@
   "ServicesPage": {
     "hero": {
       "subtitle": "Giải pháp toàn diện",
-      "title": "Nâng tầm <highlight>Trải nghiệm</highlight> Số.",
+      "title": "Nâng tầm <highlight>Trải nghiệm</highlight> Số",
       "description": "Chúng tôi cung cấp các giải pháp công nghệ đột phá, giúp bạn dẫn đầu trong kỷ nguyên số.",
       "card": {
         "title": "Thuê dự án chuyên nghiệp",
-        "description": "Đội ngũ chuyên gia sẵn sàng biến ý tưởng của bạn thành thực tế với quy trình làm việc chuẩn quốc tế.",
+        "description": "Đội ngũ chuyên gia sẵn sàng biến ý tưởng của bạn thành thực tế with quy trình làm việc chuẩn quốc tế.",
         "features": {
           "0": "Tiếp nhận yêu cầu 24/7",
           "1": "Tư vấn giải pháp miễn phí",
@@ -468,7 +468,7 @@
         "roles": {
           "mobile": {
             "title": "Nhà phát triển Di động",
-            "desc": "Xây dựng các ứng dụng iOS và Android hiệu năng cao với trải nghiệm native tuyệt vời.",
+            "desc": "Xây dựng các ứng dụng iOS và Android hiệu năng cao with trải nghiệm native tuyệt vời.",
             "tech": "Swift (iOS), Kotlin (Android), Flutter, React Native"
           },
           "web": {
@@ -535,9 +535,10 @@
       "subtitle": "Nâng tầm doanh nghiệp",
       "title": "Các giải pháp chúng tôi cung cấp",
       "seeMore": "Xem thêm",
+      "explore": "Khám phá giải pháp",
       "startup": {
         "title": "Giải pháp phần mềm khởi nghiệp",
-        "desc": "Đồng hành cùng startup từ ý tưởng đến MVP và mở rộng quy mô với các công nghệ hiện đại nhất."
+        "desc": "Đồng hành cùng startup từ ý tưởng đến MVP và mở rộng quy mô with các công nghệ hiện đại nhất."
       },
       "enterprise": {
         "title": "Giải pháp di động doanh nghiệp",
@@ -563,7 +564,7 @@
         },
         "transformation": {
           "title": "Biến đổi sản phẩm số",
-          "desc": "Số hóa và hiện đại hóa quy trình doanh nghiệp với các giải pháp kỹ thuật số mới nhất."
+          "desc": "Số hóa và hiện đại hóa quy trình doanh nghiệp with các giải pháp kỹ thuật số mới nhất."
         },
         "mvp": {
           "title": "Sản phẩm mẫu (MVP)",
@@ -638,7 +639,7 @@
           "Ứng dụng huấn luyện thể dục trực tuyến",
           "Máy theo dõi sức khỏe (tích hợp thiết bị đeo)",
           "Giải pháp quản lý phòng gym",
-          "Cửa hàng bổ sung dinh dưỡng trực tuyến",
+          "Cửa hàng thực phẩm chức năng trực tuyến",
           "Ứng dụng chăm sóc sức khỏe"
         ]
       },
@@ -709,6 +710,175 @@
       "button": "Tư vấn từ chuyên gia"
     }
   },
+  "ServicesBlog": {
+    "label": "Góc nhìn Chuyên gia",
+    "title": "Dẫn đầu <highlight>Xu hướng</highlight> Công nghệ.",
+    "description": "Khám phá những xu hướng, công nghệ và chiến lược mới nhất trong chuyển đổi số từ đội ngũ chuyên gia của chúng tôi.",
+    "readMore": "Xem thêm",
+    "readingTime": "{time} phút đọc",
+    "posts": {
+      "1": {
+        "title": "Tương lai phát triển ứng dụng di động năm 2026",
+        "excerpt": "Khám phá những công nghệ then chốt sẽ thống trị thị trường di động và cách để duy trì lợi thế cạnh tranh trong môi trường luôn thay đổi.",
+        "category": "Phát triển di động",
+        "date": "15 tháng 3, 2026"
+      },
+      "2": {
+        "title": "Tối ưu hóa hạ tầng đám mây cho quy mô lớn",
+        "excerpt": "Tìm hiểu các phương pháp xây dựng giải pháp đám mây mạnh mẽ và có khả năng mở rộng, giúp doanh nghiệp phát triển mà vẫn tối ưu chi phí.",
+        "category": "Điện toán đám mây",
+        "date": "10 tháng 3, 2026"
+      },
+      "3": {
+        "title": "Tác động của AI đối với thiết kế UX",
+        "excerpt": "Khám phá cách trí tuệ nhân tạo đang định hình lại thiết kế trải nghiệm người dùng và tạo ra những hành trình số hóa cá nhân hóa hơn.",
+        "category": "UI/UX & AI",
+        "date": "5 tháng 3, 2026"
+      },
+      "4": {
+        "title": "Xu hướng bảo mật cho doanh nghiệp hiện đại",
+        "excerpt": "Cách bảo vệ tài sản số của bạn trong thời đại của các mối đe dọa mạng tinh vi và các yêu cầu quy định ngày càng khắt khe.",
+        "category": "An ninh mạng",
+        "date": "1 tháng 3, 2026"
+      },
+      "5": {
+        "title": "Blockchain vượt ra ngoài Tiền điện tử",
+        "excerpt": "Cách công nghệ sổ cái phi tập trung đang cách mạng hóa quản lý chuỗi cung ứng và xác minh danh tính kỹ thuật số và nhiều hơn thế nữa.",
+        "category": "Công nghệ Blockchain",
+        "date": "25 tháng 2, 2026"
+      }
+    }
+  },
+  "SuccessPage": {
+    "hero": {
+      "subtitle": "Giải pháp toàn diện",
+      "title": "Biến Tầm Nhìn Thành <highlight>Kiệt Tác</highlight> Số",
+      "description": "Chúng tôi cung cấp các giải pháp công nghệ đột phá, giúp bạn dẫn đầu trong kỷ nguyên số thông qua những sản phẩm thành công.",
+      "card": {
+        "title": "Thuê dự án chuyên nghiệp",
+        "description": "Đội ngũ chuyên gia sẵn sàng biến ý tưởng của bạn thành thực tế with quy trình làm việc chuẩn quốc tế.",
+        "features": {
+          "0": "Tiếp nhận yêu cầu 24/7",
+          "1": "Tư vấn giải pháp miễn phí",
+          "2": "Đội ngũ kỹ thuật chuyên nghiệp"
+        },
+        "button": "Liên hệ ngay"
+      }
+    },
+    "projects": {
+      "badge": "CÂU CHUYỆN THÀNH CÔNG",
+      "title": "Những <highlight>Dự Án</highlight> Thành Công",
+      "subtitle": "Khám phá cách chúng tôi đồng hành cùng khách hàng để tạo ra những giá trị đột phá thông qua công nghệ.",
+      "web": "Ứng dụng Web",
+      "mobile": "Ứng dụng Di động",
+      "ai": "Tích hợp AI",
+      "items": {
+        "1": {
+          "title": "Nền tảng cho thuê nhà",
+          "category": "Real Estate",
+          "desc": "Một ứng dụng web xuất sắc, đơn giản hóa việc cho thuê bất động sản ở Úc bằng cách tiếp cận sáng tạo.",
+          "tech": [
+            "Next.js",
+            "Edge Computing",
+            "AI"
+          ],
+          "video": "https://assets.mixkit.co/videos/preview/mixkit-working-at-a-clean-desk-with-a-laptop-4217-large.mp4"
+        },
+        "2": {
+          "title": "Nền tảng Edge-AI dành cho doanh nghiệp",
+          "category": "Enterprise AI",
+          "desc": "Nền tảng AI biên cho phép các công ty nắm bắt ứng dụng và văn hóa của họ with UX do AI điều khiển.",
+          "tech": [
+            "Python",
+            "TensorFlow",
+            "React"
+          ],
+          "video": "https://assets.mixkit.co/videos/preview/mixkit-business-woman-working-on-her-laptop-in-the-office-4251-large.mp4"
+        },
+        "3": {
+          "title": "Ứng dụng Kiểm tra tính cách Enneagram",
+          "category": "Psychology",
+          "desc": "Một ứng dụng tâm lý năng động cho phép người dùng kiểm tra loại tính cách của họ bằng bài kiểm tra Enneagram.",
+          "tech": [
+            "Flutter",
+            "Firebase",
+            "Algorithms"
+          ],
+          "video": "https://assets.mixkit.co/videos/preview/mixkit-group-of-friends-having-a-good-time-at-a-cafe-4211-large.mp4"
+        },
+        "4": {
+          "title": "Ứng dụng tập luyện AB",
+          "category": "Fitness AI",
+          "desc": "Một ứng dụng tập luyện cơ bụng sáng tạo, được hỗ trợ bởi AI, do Jeff Cavaliere phụ trách, thiết lập các tiêu chuẩn mới with khả năng truy cập ngoại tuyến.",
+          "tech": [
+            "React Native",
+            "AI Vision",
+            "Offline Mode"
+          ],
+          "video": "https://assets.mixkit.co/videos/preview/mixkit-close-up-of-a-person-exercising-in-a-gym-4243-large.mp4"
+        },
+        "5": {
+          "title": "Ứng dụng giao đồ ăn",
+          "category": "Delivery",
+          "desc": "Ứng dụng giao hàng thực phẩm & tạp hóa tương lai của Nepal chiếm ưu thế trong giao hàng trực tuyến with những tính năng mạnh mẽ.",
+          "tech": [
+            "Node.js",
+            "Socket.io",
+            "Google Maps"
+          ],
+          "video": "https://assets.mixkit.co/videos/preview/mixkit-man-delivering-food-on-a-bicycle-4228-large.mp4"
+        },
+        "6": {
+          "title": "Ứng dụng Telehealth theo yêu cầu",
+          "category": "Healthcare",
+          "desc": "Một ứng dụng telehealth cho phép tư vấn with bác sĩ mà không cần chờ đợi, with việc tìm và đặt lịch hẹn nhanh chóng và dễ dàng.",
+          "tech": [
+            "WebRTC",
+            "Next.js",
+            "PostgreSQL"
+          ],
+          "video": "https://assets.mixkit.co/videos/preview/mixkit-doctor-working-with-his-laptop-in-hospital-4246-large.mp4"
+        },
+        "7": {
+          "title": "Hệ thống Quản trị Doanh nghiệp (ERP)",
+          "category": "Enterprise",
+          "desc": "Giải pháp toàn diện giúp doanh nghiệp tự động hóa quy trình vận hành, quản lý nhân sự và tài chính tập trung.",
+          "tech": [
+            "Java Spring",
+            "React",
+            "Docker"
+          ],
+          "video": "https://assets.mixkit.co/videos/preview/mixkit-man-working-with-multiple-monitors-4252-large.mp4"
+        },
+        "8": {
+          "title": "Sàn Thương mại Điện tử Thời trang",
+          "category": "E-commerce",
+          "desc": "Nền tảng mua sắm hiện đại with trải nghiệm AR thử đồ ảo và tích hợp thanh toán đa kênh thông minh.",
+          "tech": [
+            "Node.js",
+            "Three.js",
+            "AWS"
+          ],
+          "video": "https://assets.mixkit.co/videos/preview/mixkit-woman-shopping-online-with-credit-card-4244-large.mp4"
+        }
+      }
+    },
+    "sidebar": {
+      "question": "Bạn muốn thuê nguồn lực để làm việc with bạn?",
+      "badge": "Bắt đầu chỉ trong vòng",
+      "highlight": "2 ngày làm việc",
+      "title": "Thuê Ngay",
+      "emailPlaceholder": "Nhập email",
+      "button": "GỬI",
+      "notice": "Chúng tôi sẽ không bao giờ gửi thư rác cho bạn!",
+      "features": [
+        "100% ký NDA",
+        "Mô hình làm việc linh hoạt",
+        "Đảm bảo 160 giờ làm việc",
+        "Cập nhật báo cáo dự án hằng ngày/hằng tuần"
+      ]
+    }
+  },
   "JoinSection": {
     "subtitle": "Linh hoạt & Tối ưu",
     "title": "Mô hình <highlight>Hợp tác</highlight>",
@@ -736,7 +906,7 @@
       },
       "2": {
         "q": "Tôi có thể thuê nhân sự riêng lẻ không?",
-        "a": "Có, chúng tôi cung cấp mô hình cho thuê nhân sự chuyên nghiệp (Staff Augmentation) bao gồm Designer, Developer (Web/Mobile/Fullstack) theo giờ hoặc theo tháng để phù hợp với quy mô dự án của bạn."
+        "a": "Có, chúng tôi cung cấp mô hình cho thuê nhân sự chuyên nghiệp (Staff Augmentation) bao gồm Designer, Developer (Web/Mobile/Fullstack) theo giờ hoặc theo tháng để phù hợp with quy mô dự án của bạn."
       },
       "3": {
         "q": "QKIT có hỗ trợ bảo trì sau khi bàn giao không?",
@@ -748,7 +918,7 @@
       },
       "5": {
         "q": "QKIT có nhận các dự án từ nước ngoài không?",
-        "a": "Có, chúng tôi làm việc với nhiều đối tác toàn cầu từ Singapore, Úc, Mỹ và Châu Âu. Quy trình làm việc và giao tiếp được tối ưu hóa cho múi giờ và nhu cầu quốc tế."
+        "a": "Có, chúng tôi làm việc with nhiều đối tác toàn cầu từ Singapore, Úc, Mỹ và Châu Âu. Quy trình làm việc và giao tiếp được tối ưu hóa cho múi giờ và nhu cầu quốc tế."
       },
       "6": {
         "q": "Chi phí phát triển dự án được tính như thế nào?",
@@ -756,12 +926,34 @@
       },
       "7": {
         "q": "Dữ liệu của tôi được bảo mật như thế nào?",
-        "a": "Chúng tôi tuân thủ nghiêm ngặt các tiêu chuẩn bảo mật dữ liệu quốc tế như GDPR. Mọi dự án đều bắt đầu với thỏa thuận bảo mật thông tin (NDA) và triển khai trên các hạ tầng đám mây an toàn bậc nhất."
+        "a": "Chúng tôi tuân thủ nghiêm ngặt các tiêu chuẩn bảo mật dữ liệu quốc tế như GDPR. Mọi dự án đều bắt đầu with thỏa thuận bảo mật thông tin (NDA) và triển khai trên các hạ tầng đám mây an toàn bậc nhất."
       },
       "8": {
         "q": "Tôi có được sở hữu mã nguồn sau dự án không?",
         "a": "Hoàn toàn có. Sau khi hoàn thành các nghĩa vụ hợp đồng, khách hàng sẽ sở hữu toàn bộ mã nguồn, tài liệu thiết kế và các tài sản số liên quan của dự án."
       }
+    }
+  },
+  "ProjectsPage": {
+    "hero": {
+      "subtitle": "Danh Mục Toàn Cầu",
+      "title": "Kiến Tạo Sự <highlight>Xuất Sắc</highlight> Số Hóa",
+      "description": "Khám phá danh mục dự án đa dạng của chúng tôi. Từ giải pháp doanh nghiệp đến ứng dụng người dùng, chúng tôi mang lại sự xuất sắc ở mọi quy mô.",
+      "card": {
+        "title": "Thuê dự án chuyên nghiệp",
+        "description": "Sẵn sàng xây dựng ý tưởng lớn tiếp theo của bạn? Đội ngũ ưu tú của chúng tôi luôn sẵn sàng hỗ trợ bạn thành công.",
+        "features": {
+          "0": "Phát triển linh hoạt",
+          "1": "Chất lượng cao cấp",
+          "2": "Chuyên gia toàn diện"
+        },
+        "button": "Bắt đầu dự án"
+      }
+    },
+    "content": {
+      "badge": "Dự Án Nổi Bật",
+      "title": "Danh Mục <highlight>Dự Án</highlight>",
+      "subtitle": "Nơi trình diễn những đổi mới kỹ thuật và sự xuất sắc trong thiết kế trên nhiều lĩnh vực khác nhau."
     }
   }
 }

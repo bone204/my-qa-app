@@ -118,7 +118,7 @@ export default function ContactSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="section-desc mx-auto"
+                        className="section-desc mx-auto font-medium"
                     >
                         {t('description')}
                     </motion.p>
@@ -145,7 +145,7 @@ export default function ContactSection() {
                                         </label>
                                         <input
                                             type="text" name="firstName" placeholder={t('form.lastNamePlaceholder')}
-                                            className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-hidden focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all placeholder:text-zinc-600"
+                                            className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white font-medium focus:outline-hidden focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all placeholder:text-zinc-600"
                                             onChange={handleChange}
                                         />
                                     </div>
@@ -155,7 +155,7 @@ export default function ContactSection() {
                                         </label>
                                         <input
                                             type="text" name="lastName" placeholder={t('form.firstNamePlaceholder')}
-                                            className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-hidden focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all placeholder:text-zinc-600"
+                                            className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white font-medium focus:outline-hidden focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all placeholder:text-zinc-600"
                                             onChange={handleChange}
                                         />
                                     </div>
@@ -169,7 +169,7 @@ export default function ContactSection() {
                                         </label>
                                         <input
                                             type="email" name="email" placeholder={t('form.emailPlaceholder')}
-                                            className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-hidden focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all placeholder:text-zinc-600"
+                                            className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white font-medium focus:outline-hidden focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all placeholder:text-zinc-600"
                                             onChange={handleChange}
                                         />
                                     </div>
@@ -179,7 +179,7 @@ export default function ContactSection() {
                                         </label>
                                         <input
                                             type="tel" name="phone" placeholder={t('form.phonePlaceholder')}
-                                            className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-hidden focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all placeholder:text-zinc-600"
+                                            className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white font-medium focus:outline-hidden focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all placeholder:text-zinc-600"
                                             onChange={handleChange}
                                         />
                                     </div>
@@ -194,7 +194,7 @@ export default function ContactSection() {
                                         <select
                                             name="position"
                                             value={formData.position}
-                                            className="w-full bg-zinc-900 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-hidden focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all appearance-none cursor-pointer"
+                                            className="w-full bg-zinc-900 border border-white/10 rounded-xl px-5 py-4 text-white font-medium focus:outline-hidden focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all appearance-none cursor-pointer"
                                             onChange={handleChange}
                                         >
                                             {POSITIONS.map((p, idx) => <option key={p} value={p}>{t(`positions.${idx}`)}</option>)}
@@ -207,7 +207,7 @@ export default function ContactSection() {
                                         <select
                                             name="industry"
                                             value={formData.industry}
-                                            className="w-full bg-zinc-900 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-hidden focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all appearance-none cursor-pointer"
+                                            className="w-full bg-zinc-900 border border-white/10 rounded-xl px-5 py-4 text-white font-medium focus:outline-hidden focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all appearance-none cursor-pointer"
                                             onChange={handleChange}
                                         >
                                             {INDUSTRIES.map((i, idx) => <option key={i} value={i}>{t(`industries.${idx}`)}</option>)}
@@ -224,7 +224,7 @@ export default function ContactSection() {
                                         <select
                                             name="platform"
                                             value={formData.platform}
-                                            className="w-full bg-zinc-900 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-hidden focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all appearance-none cursor-pointer"
+                                            className="w-full bg-zinc-900 border border-white/10 rounded-xl px-5 py-4 text-white font-medium focus:outline-hidden focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all appearance-none cursor-pointer"
                                             onChange={handleChange}
                                         >
                                             {CONTACT_PLATFORMS.map((p, idx) => <option key={p} value={p}>{t(`platforms.${idx}`)}</option>)}
@@ -257,7 +257,7 @@ export default function ContactSection() {
                                     </label>
                                     <textarea
                                         name="message" rows={4} placeholder={t('form.messagePlaceholder')}
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-hidden focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all placeholder:text-zinc-600 resize-none"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white font-medium focus:outline-hidden focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all placeholder:text-zinc-600 resize-none"
                                         onChange={handleChange}
                                     />
                                 </div>

@@ -108,7 +108,7 @@ export default function FAQSection() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.2 }}
-                                className="section-desc text-left mt-8"
+                                className="text-xl text-zinc-400 font-medium max-w-2xl mt-8 text-left"
                             >
                                 {t('description')}
                             </motion.p>
