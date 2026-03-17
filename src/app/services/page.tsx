@@ -1,12 +1,12 @@
-import ServicesHeroSection from "@/app/services/sections/ServicesHeroSection";
-import HiringSection from "@/app/services/sections/HiringSection";
-import ExtendedServicesSection from "@/app/services/sections/ExtendedServicesSection";
-import IndustrySolutionsSection from "@/app/services/sections/IndustrySolutionsSection";
-import SolutionsSection from "@/app/services/sections/SolutionsSection";
-import ContactCTASection from "@/app/services/sections/ContactCTASection";
-import JoinSection from "@/app/services/sections/JoinSection";
-import FAQSection from "@/app/services/sections/FAQSection";
-import ServicesBlogSection from "@/app/services/sections/ServicesBlogSection";
+import ServicesHeroSection from "@/app/services/_sections/ServicesHeroSection";
+import HiringSection from "@/app/services/_sections/HiringSection";
+import ExtendedServicesSection from "@/app/services/_sections/ExtendedServicesSection";
+import IndustrySolutionsSection from "@/app/services/_sections/IndustrySolutionsSection";
+import SolutionsSection from "@/app/services/_sections/SolutionsSection";
+import ContactCTASection from "@/app/services/_sections/ContactCTASection";
+import JoinSection from "@/app/services/_sections/JoinSection";
+import FAQSection from "@/app/services/_sections/FAQSection";
+import ServicesBlogSection from "@/app/services/_sections/ServicesBlogSection";
 
 export default function ServicesPage() {
     return (

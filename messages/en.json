@@ -749,6 +749,125 @@
       }
     }
   },
+  "SuccessPage": {
+    "hero": {
+      "subtitle": "SUCCESS JOURNEYS",
+      "title": "Our <highlight>Success</highlight> Stories",
+      "description": "Explore how we partner with our clients to create breakthrough value through technology."
+    },
+    "projects": {
+      "title": "Featured Projects",
+      "all": "All",
+      "web": "Web Apps",
+      "mobile": "Mobile Apps",
+      "ai": "AI Integration",
+      "items": {
+        "1": {
+          "title": "Home Rental Platform",
+          "category": "Real Estate",
+          "desc": "An outstanding web application that simplifies real estate rentals in Australia with an innovative approach.",
+          "tech": [
+            "Next.js",
+            "Edge Computing",
+            "AI"
+          ],
+          "video": "https://assets.mixkit.co/videos/preview/mixkit-working-at-a-clean-desk-with-a-laptop-4217-large.mp4"
+        },
+        "2": {
+          "title": "Enterprise Edge-AI Platform",
+          "category": "Enterprise AI",
+          "desc": "An edge AI platform that enables companies to capture their applications and culture with AI-driven UX.",
+          "tech": [
+            "Python",
+            "TensorFlow",
+            "React"
+          ],
+          "video": "https://assets.mixkit.co/videos/preview/mixkit-business-woman-working-on-her-laptop-in-the-office-4251-large.mp4"
+        },
+        "3": {
+          "title": "Enneagram Personality Test App",
+          "category": "Psychology",
+          "desc": "A dynamic psychological application that allows users to test their personality type with the Enneagram test.",
+          "tech": [
+            "Flutter",
+            "Firebase",
+            "Algorithms"
+          ],
+          "video": "https://assets.mixkit.co/videos/preview/mixkit-group-of-friends-having-a-good-time-at-a-cafe-4211-large.mp4"
+        },
+        "4": {
+          "title": "AB Workout App",
+          "category": "Fitness AI",
+          "desc": "An innovative AI-powered abdominal workout app curated by Jeff Cavaliere, setting new standards with offline access.",
+          "tech": [
+            "React Native",
+            "AI Vision",
+            "Offline Mode"
+          ],
+          "video": "https://assets.mixkit.co/videos/preview/mixkit-close-up-of-a-person-exercising-in-a-gym-4243-large.mp4"
+        },
+        "5": {
+          "title": "Food Delivery App",
+          "category": "Delivery",
+          "desc": "Nepal's futuristic food & grocery delivery app dominates online delivery with powerful features.",
+          "tech": [
+            "Node.js",
+            "Socket.io",
+            "Google Maps"
+          ],
+          "video": "https://assets.mixkit.co/videos/preview/mixkit-man-delivering-food-on-a-bicycle-4228-large.mp4"
+        },
+        "6": {
+          "title": "On-demand Telehealth App",
+          "category": "Healthcare",
+          "desc": "A telehealth app that allows consultations with doctors without waiting, with fast and easy appointment finding and booking.",
+          "tech": [
+            "WebRTC",
+            "Next.js",
+            "PostgreSQL"
+          ],
+          "video": "https://assets.mixkit.co/videos/preview/mixkit-doctor-working-with-his-laptop-in-hospital-4246-large.mp4"
+        },
+        "7": {
+          "title": "Enterprise Resource Planning (ERP)",
+          "category": "Enterprise",
+          "desc": "A comprehensive solution helping businesses automate operations, HR management, and centralized finance.",
+          "tech": [
+            "Java Spring",
+            "React",
+            "Docker"
+          ],
+          "video": "https://assets.mixkit.co/videos/preview/mixkit-man-working-with-multiple-monitors-4252-large.mp4"
+        },
+        "8": {
+          "title": "Fashion E-commerce Marketplace",
+          "category": "E-commerce",
+          "desc": "A modern shopping platform with AR virtual try-on experience and smart multi-channel payment integration.",
+          "tech": [
+            "Node.js",
+            "Three.js",
+            "AWS"
+          ],
+          "video": "https://assets.mixkit.co/videos/preview/mixkit-woman-shopping-online-with-credit-card-4244-large.mp4"
+        }
+      }
+    },
+    "sidebar": {
+      "question": "Do you want to hire resources to work with you?",
+      "badge": "Start in just",
+      "highlight": "2 business days",
+      "title": "Hire Now",
+      "emailPlaceholder": "Enter email",
+      "button": "SEND",
+      "notice": "We'll never send you spam!",
+      "features": [
+        "100% NDA signing",
+        "Flexible working model",
+        "Guaranteed 160 working hours",
+        "Daily/weekly project report updates"
+      ]
+    }
+  },
   "JoinSection": {
     "subtitle": "Flexible & Optimized",
     "title": "Engagement <highlight>Models</highlight>",

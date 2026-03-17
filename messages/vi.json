@@ -749,6 +749,125 @@
       }
     }
   },
+  "SuccessPage": {
+    "hero": {
+      "subtitle": "HÀNH TRÌNH THÀNH CÔNG",
+      "title": "Những <highlight>Dự Án</highlight> Tiêu Biểu",
+      "description": "Khám phá cách chúng tôi đồng hành cùng khách hàng để tạo ra những giá trị đột phá thông qua công nghệ."
+    },
+    "projects": {
+      "title": "Dự án tiêu biểu",
+      "all": "Tất cả",
+      "web": "Ứng dụng Web",
+      "mobile": "Ứng dụng Di động",
+      "ai": "Tích hợp AI",
+      "items": {
+        "1": {
+          "title": "Nền tảng cho thuê nhà",
+          "category": "Real Estate",
+          "desc": "Một ứng dụng web xuất sắc, đơn giản hóa việc cho thuê bất động sản ở Úc bằng cách tiếp cận sáng tạo.",
+          "tech": [
+            "Next.js",
+            "Edge Computing",
+            "AI"
+          ],
+          "video": "https://assets.mixkit.co/videos/preview/mixkit-working-at-a-clean-desk-with-a-laptop-4217-large.mp4"
+        },
+        "2": {
+          "title": "Nền tảng Edge-AI dành cho doanh nghiệp",
+          "category": "Enterprise AI",
+          "desc": "Nền tảng AI biên cho phép các công ty nắm bắt ứng dụng và văn hóa của họ với UX do AI điều khiển.",
+          "tech": [
+            "Python",
+            "TensorFlow",
+            "React"
+          ],
+          "video": "https://assets.mixkit.co/videos/preview/mixkit-business-woman-working-on-her-laptop-in-the-office-4251-large.mp4"
+        },
+        "3": {
+          "title": "Ứng dụng Kiểm tra tính cách Enneagram",
+          "category": "Psychology",
+          "desc": "Một ứng dụng tâm lý năng động cho phép người dùng kiểm tra loại tính cách của họ bằng bài kiểm tra Enneagram.",
+          "tech": [
+            "Flutter",
+            "Firebase",
+            "Algorithms"
+          ],
+          "video": "https://assets.mixkit.co/videos/preview/mixkit-group-of-friends-having-a-good-time-at-a-cafe-4211-large.mp4"
+        },
+        "4": {
+          "title": "Ứng dụng tập luyện AB",
+          "category": "Fitness AI",
+          "desc": "Một ứng dụng tập luyện cơ bụng sáng tạo, được hỗ trợ bởi AI, do Jeff Cavaliere phụ trách, thiết lập các tiêu chuẩn mới với khả năng truy cập ngoại tuyến.",
+          "tech": [
+            "React Native",
+            "AI Vision",
+            "Offline Mode"
+          ],
+          "video": "https://assets.mixkit.co/videos/preview/mixkit-close-up-of-a-person-exercising-in-a-gym-4243-large.mp4"
+        },
+        "5": {
+          "title": "Ứng dụng giao đồ ăn",
+          "category": "Delivery",
+          "desc": "Ứng dụng giao hàng thực phẩm & tạp hóa tương lai của Nepal chiếm ưu thế trong giao hàng trực tuyến với những tính năng mạnh mẽ.",
+          "tech": [
+            "Node.js",
+            "Socket.io",
+            "Google Maps"
+          ],
+          "video": "https://assets.mixkit.co/videos/preview/mixkit-man-delivering-food-on-a-bicycle-4228-large.mp4"
+        },
+        "6": {
+          "title": "Ứng dụng Telehealth theo yêu cầu",
+          "category": "Healthcare",
+          "desc": "Một ứng dụng telehealth cho phép tư vấn với bác sĩ mà không cần chờ đợi, với việc tìm và đặt lịch hẹn nhanh chóng và dễ dàng.",
+          "tech": [
+            "WebRTC",
+            "Next.js",
+            "PostgreSQL"
+          ],
+          "video": "https://assets.mixkit.co/videos/preview/mixkit-doctor-working-with-his-laptop-in-hospital-4246-large.mp4"
+        },
+        "7": {
+          "title": "Hệ thống Quản trị Doanh nghiệp (ERP)",
+          "category": "Enterprise",
+          "desc": "Giải pháp toàn diện giúp doanh nghiệp tự động hóa quy trình vận hành, quản lý nhân sự và tài chính tập trung.",
+          "tech": [
+            "Java Spring",
+            "React",
+            "Docker"
+          ],
+          "video": "https://assets.mixkit.co/videos/preview/mixkit-man-working-with-multiple-monitors-4252-large.mp4"
+        },
+        "8": {
+          "title": "Sàn Thương mại Điện tử Thời trang",
+          "category": "E-commerce",
+          "desc": "Nền tảng mua sắm hiện đại với trải nghiệm AR thử đồ ảo và tích hợp thanh toán đa kênh thông minh.",
+          "tech": [
+            "Node.js",
+            "Three.js",
+            "AWS"
+          ],
+          "video": "https://assets.mixkit.co/videos/preview/mixkit-woman-shopping-online-with-credit-card-4244-large.mp4"
+        }
+      }
+    },
+    "sidebar": {
+      "question": "Bạn muốn thuê nguồn lực để làm việc với bạn?",
+      "badge": "Bắt đầu chỉ trong vòng",
+      "highlight": "2 ngày làm việc",
+      "title": "Thuê Ngay",
+      "emailPlaceholder": "Nhập email",
+      "button": "GỬI",
+      "notice": "Chúng tôi sẽ không bao giờ gửi thư rác cho bạn!",
+      "features": [
+        "100% ký NDA",
+        "Mô hình làm việc linh hoạt",
+        "Đảm bảo 160 giờ làm việc",
+        "Cập nhật báo cáo dự án hằng ngày/hằng tuần"
+      ]
+    }
+  },
   "JoinSection": {
     "subtitle": "Linh hoạt & Tối ưu",
     "title": "Mô hình <highlight>Hợp tác</highlight>",
