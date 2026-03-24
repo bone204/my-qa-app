@@ -979,6 +979,60 @@
       "subtitle": "Từ 2018",
       "headline": "Đạt được sự tin tưởng của khách hàng & Và còn nhiều điều nữa",
       "content": "Chúng tôi vẽ ra tương lai tươi sáng cho các doanh nghiệp hoạt động trong lĩnh vực kỹ thuật số và tin tưởng chắc chắn vào việc cung cấp các mối quan hệ kinh doanh lâu dài hiệu quả."
+    },
+    "journeyDetails": {
+      "milestone1": {
+        "date": "Tháng 1 2018",
+        "title": "Trồng cây",
+        "desc": "Tất cả bắt đầu từ suy nghĩ về những gì trí óc con người có thể và không thể làm cũng như trí tưởng tượng về việc có một đội ngũ những người có cùng chí hướng để tạo ra những sản phẩm tạo nên sự khác biệt trên thế giới.",
+        "engineers": "Bắt đầu chỉ với 3 kỹ sư lập trình",
+        "office": "Bắt đầu với Văn phòng 200 feet vuông",
+        "language": "Bắt đầu với chỉ một ngôn ngữ lập trình"
+      }
+    },
+    "life": {
+      "title": "Cuộc sống tại QKIT",
+      "subtitle": "Phúc lợi & Môi trường",
+      "content": "Truyền cảm hứng cho đội ngũ với các phúc lợi cao cấp và môi trường chuyên nghiệp, thúc đẩy sự sáng tạo và phát triển bền vững.",
+      "benefits": {
+        "performance": {
+          "title": "Tiền thưởng hiệu suất",
+          "desc": "Performance Bonus"
+        },
+        "relocation": {
+          "title": "Hỗ trợ di dời",
+          "desc": "Relocation Reimbursement"
+        },
+        "health": {
+          "title": "Bảo hiểm sức khỏe gia đình",
+          "desc": "Family Health Insurance"
+        },
+        "leave": {
+          "title": "Chế độ thai sản & nghỉ phép",
+          "desc": "Maternity & Paternity Leave"
+        },
+        "snacks": {
+          "title": "Bữa ăn & Đồ ăn nhẹ",
+          "desc": "Free snacks & subsidized meals"
+        },
+        "retreat": {
+          "title": "Thưởng tết & Du lịch",
+          "desc": "Yearly business retreat & Tet bonus"
+        },
+        "upskill": {
+          "title": "Nâng cao kỹ năng",
+          "desc": "Employee upskill programs"
+        },
+        "flexible": {
+          "title": "Làm việc linh hoạt",
+          "desc": "Flexible work arrangement"
+        }
+      }
+    },
+    "contactCTA": {
+      "title": "Bạn muốn tham gia với QKIT Software?",
+      "description": "Hãy tìm cơ hội việc làm phù hợp cho bạn và nộp đơn ngay để bắt tay vào thực hiện các dự án thú vị!",
+      "button": "Khám phá ngay"
     }
   },
   "Common": {

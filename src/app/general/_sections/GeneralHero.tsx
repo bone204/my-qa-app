@@ -84,13 +84,6 @@ export default function GeneralHero() {
           </div>
         </motion.div>
       </div>
-
-      {/* Side decorative text */}
-      <div className="absolute left-10 top-1/2 -translate-y-1/2 hidden xl:block">
-        <span className="text-[120px] font-black text-white/[0.02] select-none vertical-text">
-          EST. 2024
-        </span>
-      </div>
     </section>
   );
 }

@@ -979,6 +979,60 @@
       "subtitle": "Since 2018",
       "headline": "Achieving customer trust & And much more",
       "content": "We envision a bright future for digital businesses and firmly believe in providing effective long-term business relationships."
+    },
+    "journeyDetails": {
+      "milestone1": {
+        "date": "January 2018",
+        "title": "Planting the seed",
+        "desc": "It all started with thoughts of what the human mind can and cannot do, and the imagination of having a team of like-minded people to create products that make a difference in the world.",
+        "engineers": "Started with only 3 software engineers",
+        "office": "Started with a 200 square feet office",
+        "language": "Started with only one programming language"
+      }
+    },
+    "life": {
+      "title": "Life at QKIT",
+      "subtitle": "Benefits & Environment",
+      "content": "Empowering our team with premium benefits and a collaborative environment designed for growth and well-being.",
+      "benefits": {
+        "performance": {
+          "title": "Performance Bonus",
+          "desc": "Recognizing your hard work and dedication"
+        },
+        "relocation": {
+          "title": "Relocation Reimbursement",
+          "desc": "Helping you settle into your new home"
+        },
+        "health": {
+          "title": "Family Health Insurance",
+          "desc": "Keeping you and your loved ones safe"
+        },
+        "leave": {
+          "title": "Maternity & Paternity Leave",
+          "desc": "Quality time with your new family member"
+        },
+        "snacks": {
+          "title": "Free Snacks & Meals",
+          "desc": "Fueling your creativity and energy"
+        },
+        "retreat": {
+          "title": "Yearly Business Retreat",
+          "desc": "Annual trips and festive bonuses"
+        },
+        "upskill": {
+          "title": "Employee Upskill Programs",
+          "desc": "Investing in your professional growth"
+        },
+        "flexible": {
+          "title": "Flexible Working",
+          "desc": "Flexible work arrangement"
+        }
+      }
+    },
+    "contactCTA": {
+      "title": "Want to join QKIT Software?",
+      "description": "Find the right job opportunity for you and apply now to start working on exciting projects!",
+      "button": "Explore Now"
     }
   },
   "Common": {

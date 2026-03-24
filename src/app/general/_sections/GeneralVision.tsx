@@ -23,7 +23,7 @@ export default function GeneralVision() {
     <section className="min-h-screen flex items-center justify-center py-32 px-4 relative overflow-hidden select-none">
       <div className="container max-w-7xl mx-auto">
         {/* Vision Section - Left aligned large typography */}
-        <motion.div 
+        <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
@@ -34,17 +34,17 @@ export default function GeneralVision() {
               <div className="h-px w-12 bg-primary/50" />
               <span className="text-sm font-bold tracking-[0.3em] text-primary uppercase">01. {t("vision.title")}</span>
             </motion.div>
-            
+
             <motion.h2 custom={1} variants={fadeIn} className="text-4xl md:text-6xl font-black text-white leading-tight mb-8 tracking-tighter">
               {t("vision.desc").split(' ').slice(0, 5).join(' ')}
               <span className="text-primary italic"> {t("vision.desc").split(' ').slice(5).join(' ')}</span>
             </motion.h2>
           </div>
 
-          <motion.div 
-             custom={2} 
-             variants={fadeIn}
-             className="absolute -right-20 top-0 opacity-[0.02] select-none pointer-events-none hidden lg:block -z-10"
+          <motion.div
+            custom={2}
+            variants={fadeIn}
+            className="absolute -right-20 top-0 opacity-[0.02] select-none pointer-events-none hidden lg:block -z-10"
           >
             <span className="text-[18vw] text-white/5 font-black italic leading-none uppercase">VISION</span>
           </motion.div>
