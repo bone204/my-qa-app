@@ -29,15 +29,16 @@ export default function GeneralVision() {
           viewport={{ once: true, margin: "-100px" }}
           className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-center w-full"
         >
-          <div className="lg:col-span-7 z-10">
+          <div className="lg:col-span-12 z-10">
             <motion.div custom={0} variants={fadeIn} className="flex items-center gap-4 mb-6">
               <div className="h-px w-12 bg-primary/50" />
               <span className="text-sm font-bold tracking-[0.3em] text-primary uppercase">01. {t("vision.title")}</span>
             </motion.div>
 
-            <motion.h2 custom={1} variants={fadeIn} className="text-4xl md:text-6xl font-black text-white leading-tight mb-8 tracking-tighter">
-              {t("vision.desc").split(' ').slice(0, 5).join(' ')}
-              <span className="text-primary italic"> {t("vision.desc").split(' ').slice(5).join(' ')}</span>
+            <motion.h2 custom={1} variants={fadeIn} className="text-4xl md:text-6xl font-black text-white leading-tight mb-8 tracking-tighter max-w-[100%]">
+              {t.rich("vision.desc", {
+                highlight: (chunks) => <span className="text-primary italic">{chunks}</span>
+              })}
             </motion.h2>
           </div>
 

@@ -37,15 +37,16 @@ export default function GeneralMission() {
             <span className="text-[18vw] text-white/5  font-black italic leading-none uppercase">MISSION</span>
           </motion.div>
 
-          <div className="lg:col-span-7 lg:col-start-6  z-10 text-left lg:text-right flex flex-col items-start lg:items-end">
-            <motion.div custom={0} variants={fadeIn} className="flex items-center gap-4 mb-6 flex-row lg:flex-row-reverse">
+          <div className="lg:col-span-12 z-10 text-right flex flex-col items-end">
+            <motion.div custom={0} variants={fadeIn} className="flex items-center gap-4 mb-6">
               <div className="h-px w-12 bg-primary/50" />
               <span className="text-sm font-bold tracking-[0.3em] text-primary uppercase">02. {t("mission.title")}</span>
             </motion.div>
-
-            <motion.h2 custom={1} variants={fadeIn} className="text-4xl md:text-6xl font-black text-white leading-tight mb-8 tracking-tighter">
-              {t("mission.desc").split(' ').slice(0, 5).join(' ')}
-              <span className="text-primary italic"> {t("mission.desc").split(' ').slice(5).join(' ')}</span>
+ 
+            <motion.h2 custom={1} variants={fadeIn} className="text-3xl md:text-6xl font-black text-white leading-tight mb-8 tracking-tighter max-w-[100%]">
+              {t.rich("mission.desc", {
+                highlight: (chunks) => <span className="text-primary italic">{chunks}</span>
+              })}
             </motion.h2>
           </div>
         </motion.div>

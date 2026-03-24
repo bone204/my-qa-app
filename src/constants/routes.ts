@@ -5,7 +5,7 @@ export const ROUTES = {
   PORTFOLIO: '/projects',
   ABOUT_US: {
     OVERVIEW: '/general',
-    FEEDBACK: '/phan-hoi',
+    FEEDBACK: '/reviews',
     CONTACT: '/lien-he',
     LIFE: '/cuoc-song',
     FAQ: '/faq',
