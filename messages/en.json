@@ -279,26 +279,32 @@
     "description": "Don't take our word for it. Here's what our partners have to say about working with us.",
     "reviews": {
       "1": {
+        "name": "Alex Thompson",
         "role": "CEO",
         "content": "Phuc Thinh transformed our digital presence completely. Their attention to detail and innovative approach to user experience is unlike anything I've seen before. Absolutely elite work."
       },
       "2": {
+        "name": "Sarah Chen",
         "role": "Product Manager",
         "content": "Working with the team was a total breeze. They delivered a incredibly complex dashboard on time and with a level of polish that we didn't even think was possible."
       },
       "3": {
+        "name": "James Wilson",
         "role": "Founder",
         "content": "The best creative & tech team in the region, no contest. Their ability to blend deep-tech functionality and peak aesthetics is what truly sets them apart from everyone else."
       },
       "4": {
+        "name": "Emily Rodriguez",
         "role": "Marketing Director",
         "content": "Stunning visuals and seamless user journeys. Our conversion rates increased by 40% after the redesign of our landing pages. The ROI has been exceptional."
       },
       "5": {
+        "name": "Michael Bauer",
         "role": "Lead UX Designer",
         "content": "As an experienced designer myself, I'm incredibly picky about who I work with. But Phuc Thinh exceeded every one of my expectations with pixel-perfect execution and beautiful motion design."
       },
       "6": {
+        "name": "David Miller",
         "role": "Technical Lead",
         "content": "Reliable, beautifully scalable, and visually elite. Their code architecture is as clean and robust as their design is breathtakingly beautiful. Highly, highly recommended."
       }
@@ -955,5 +961,94 @@
       "title": "Our <highlight>Project</highlight> Portfolio",
       "subtitle": "A showcase of technical innovation and design excellence across various industries."
     }
+  },
+  "General": {
+    "hero": {
+      "title": "About Us",
+      "subtitle": "QKIT Software",
+      "whoWeAre": "Who are we?",
+      "headline": "A Creative Intelligence group designing the best Apps and Websites for the World.",
+      "culture": "At QKIT Software, we ensure that along with the company's growth, our employees and clients also grow by providing an industry-leading work-life culture."
+    },
+    "visionMission": {
+      "vision": {
+        "title": "Our Vision",
+        "desc": "We envision a <highlight>bright future</highlight> for businesses operating in the digital landscape and firmly believe in delivering effective <highlight>long-term business relationships</highlight>."
+      },
+      "mission": {
+        "title": "Mission",
+        "desc": "Delivering modern and future-proof <highlight>mobile and web software solutions</highlight> to businesses from startups to enterprises with affordability and <highlight>satisfaction</highlight>."
+      }
+    },
+    "journey": {
+      "title": "Journey",
+      "subtitle": "Since 2018",
+      "headline": "Achieving customer trust & And much more",
+      "content": "We envision a bright future for digital businesses and firmly believe in providing effective long-term business relationships."
+    },
+    "journeyDetails": {
+      "milestone1": {
+        "date": "January 2018",
+        "title": "Planting the seed",
+        "desc": "It all started with thoughts of what the human mind can and cannot do, and the imagination of having a team of like-minded people to create products that make a difference in the world.",
+        "engineers": "Started with only 3 software engineers",
+        "office": "Started with a 200 square feet office",
+        "language": "Started with only one programming language"
+      }
+    },
+    "life": {
+      "title": "Life at QKIT",
+      "subtitle": "Benefits & Environment",
+      "content": "Empowering our team with premium benefits and a collaborative environment designed for growth and well-being.",
+      "benefits": {
+        "performance": {
+          "title": "Performance Bonus",
+          "desc": "Recognizing your hard work and dedication"
+        },
+        "relocation": {
+          "title": "Relocation Reimbursement",
+          "desc": "Helping you settle into your new home"
+        },
+        "health": {
+          "title": "Family Health Insurance",
+          "desc": "Keeping you and your loved ones safe"
+        },
+        "leave": {
+          "title": "Maternity & Paternity Leave",
+          "desc": "Quality time with your new family member"
+        },
+        "snacks": {
+          "title": "Free Snacks & Meals",
+          "desc": "Fueling your creativity and energy"
+        },
+        "retreat": {
+          "title": "Yearly Business Retreat",
+          "desc": "Annual trips and festive bonuses"
+        },
+        "upskill": {
+          "title": "Employee Upskill Programs",
+          "desc": "Investing in your professional growth"
+        },
+        "flexible": {
+          "title": "Flexible Working",
+          "desc": "Flexible work arrangement"
+        }
+      }
+    },
+    "contactCTA": {
+      "title": "Want to join QKIT Software?",
+      "description": "Find the right job opportunity for you and apply now to start working on exciting projects!",
+      "button": "Explore Now"
+    }
+  },
+  "ReviewsPage": {
+    "hero": {
+      "subtitle": "Testimonials",
+      "title": "Trusted by <highlight>Partners</highlight>",
+      "description": "We are proud to be a companion to businesses on their digital transformation journey. Here are some real-life stories from partners who have trusted and cooperated with QKIT Software."
+    }
+  },
+  "Common": {
+    "discoverMore": "Discover more"
   }
 }

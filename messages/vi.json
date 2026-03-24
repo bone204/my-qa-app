@@ -279,26 +279,32 @@
     "description": "Đừng chỉ nghe chúng tôi nói. Hãy xem những đối tác nói gì về việc hợp tác với chúng tôi.",
     "reviews": {
       "1": {
+        "name": "Alex Thompson",
         "role": "Giám Đốc (CEO)",
         "content": "Phuc Thinh đã chuyển đổi hoàn toàn sự hiện diện kỹ thuật số của chúng tôi. Sự tỉ mỉ và giải pháp trải nghiệm người dùng sáng tạo của họ thật sự khác biệt. Một đẳng cấp hoàn toàn mới."
       },
       "2": {
+        "name": "Sarah Chen",
         "role": "Quản Lý Sản Phẩm",
         "content": "Làm việc với đội ngũ thật sự rất thoải mái. Họ đã bàn giao một trang quản trị phức tạp đúng hạn với độ hoàn thiện mà chúng tôi còn không nghĩ là có thể."
       },
       "3": {
+        "name": "James Wilson",
         "role": "Nhà Sáng Lập",
         "content": "Không còn nghi ngờ gì nữa, đội ngũ công nghệ sáng tạo đỉnh nhất trong khu vực. Khả năng kết hợp chức năng sâu và hình ảnh thẩm mỹ khiến họ thực sự khác biệt so với phần còn lại."
       },
       "4": {
+        "name": "Emily Rodriguez",
         "role": "Giám Đốc Marketing",
         "content": "Hình ảnh tuyệt đẹp và trải nghiệm mượt mà. Tỷ lệ chuyển đổi của chúng tôi đã tăng 40% sau khi thiết kế lại. Lợi tức đầu tư (ROI) là quá tuyệt vời."
       },
       "5": {
+        "name": "Michael Bauer",
         "role": "Trưởng Nhóm Thiết Kế UX",
         "content": "Là một nhà thiết kế kinh nghiệm, tôi vô cùng kỹ tính khi chọn đối tác. Nhưng họ đã vượt qua mọi kỳ vọng với sự thực thi chính xác đến từng pixel và thiết kế chuyển động tuyệt đẹp."
       },
       "6": {
+        "name": "David Miller",
         "role": "Trưởng Nhóm Kỹ Thuật",
         "content": "Đáng tin cậy, cực kỳ dễ mở rộng và giao diện xuất sắc. Kiến trúc mã nguồn của họ sạch và mạnh mẽ như thiết kế của họ vậy. Cực kỳ, cực kỳ đáng để giới thiệu."
       }
@@ -955,5 +961,94 @@
       "title": "Danh Mục <highlight>Dự Án</highlight>",
       "subtitle": "Nơi trình diễn những đổi mới kỹ thuật và sự xuất sắc trong thiết kế trên nhiều lĩnh vực khác nhau."
     }
+  },
+  "General": {
+    "hero": {
+      "title": "Về chúng tôi",
+      "subtitle": "QKIT Software",
+      "whoWeAre": "Chúng tôi là ai?",
+      "headline": "Một nhóm Trí tuệ sáng tạo thiết kế Ứng dụng và Trang web tốt nhất cho Thế giới.",
+      "culture": "Tại QKIT Software, chúng tôi đảm bảo rằng cùng với sự phát triển của công ty, nhân viên và khách hàng của chúng tôi cũng phát triển bằng cách cung cấp Văn hóa cuộc sống-làm việc tuyệt vời trong ngành."
+    },
+    "visionMission": {
+      "vision": {
+        "title": "Tầm nhìn của chúng tôi",
+        "desc": "Chúng tôi vẽ ra <highlight>tương lai tươi sáng</highlight> cho các doanh nghiệp hoạt động trong lĩnh vực kỹ thuật số và tin tưởng chắc chắn vào việc cung cấp các mối quan hệ kinh doanh <highlight>lâu dài hiệu quả</highlight>."
+      },
+      "mission": {
+        "title": "Nhiệm vụ",
+        "desc": "Bàn giao các giải pháp <highlight>phần mềm di động và web</highlight> hiện đại và tương lai cho các doanh nghiệp từ công ty khởi nghiệp đến doanh nghiệp với khả năng chi trả và <highlight>sự hài lòng</highlight>."
+      }
+    },
+    "journey": {
+      "title": "Hành trình",
+      "subtitle": "Từ 2018",
+      "headline": "Đạt được sự tin tưởng của khách hàng & Và còn nhiều điều nữa",
+      "content": "Chúng tôi vẽ ra tương lai tươi sáng cho các doanh nghiệp hoạt động trong lĩnh vực kỹ thuật số và tin tưởng chắc chắn vào việc cung cấp các mối quan hệ kinh doanh lâu dài hiệu quả."
+    },
+    "journeyDetails": {
+      "milestone1": {
+        "date": "Tháng 1 2018",
+        "title": "Trồng cây",
+        "desc": "Tất cả bắt đầu từ suy nghĩ về những gì trí óc con người có thể và không thể làm cũng như trí tưởng tượng về việc có một đội ngũ những người có cùng chí hướng để tạo ra những sản phẩm tạo nên sự khác biệt trên thế giới.",
+        "engineers": "Bắt đầu chỉ với 3 kỹ sư lập trình",
+        "office": "Bắt đầu với Văn phòng 200 feet vuông",
+        "language": "Bắt đầu với chỉ một ngôn ngữ lập trình"
+      }
+    },
+    "life": {
+      "title": "Cuộc sống tại QKIT",
+      "subtitle": "Phúc lợi & Môi trường",
+      "content": "Truyền cảm hứng cho đội ngũ với các phúc lợi cao cấp và môi trường chuyên nghiệp, thúc đẩy sự sáng tạo và phát triển bền vững.",
+      "benefits": {
+        "performance": {
+          "title": "Tiền thưởng hiệu suất",
+          "desc": "Performance Bonus"
+        },
+        "relocation": {
+          "title": "Hỗ trợ di dời",
+          "desc": "Relocation Reimbursement"
+        },
+        "health": {
+          "title": "Bảo hiểm sức khỏe gia đình",
+          "desc": "Family Health Insurance"
+        },
+        "leave": {
+          "title": "Chế độ thai sản & nghỉ phép",
+          "desc": "Maternity & Paternity Leave"
+        },
+        "snacks": {
+          "title": "Bữa ăn & Đồ ăn nhẹ",
+          "desc": "Free snacks & subsidized meals"
+        },
+        "retreat": {
+          "title": "Thưởng tết & Du lịch",
+          "desc": "Yearly business retreat & Tet bonus"
+        },
+        "upskill": {
+          "title": "Nâng cao kỹ năng",
+          "desc": "Employee upskill programs"
+        },
+        "flexible": {
+          "title": "Làm việc linh hoạt",
+          "desc": "Flexible work arrangement"
+        }
+      }
+    },
+    "contactCTA": {
+      "title": "Bạn muốn tham gia với QKIT Software?",
+      "description": "Hãy tìm cơ hội việc làm phù hợp cho bạn và nộp đơn ngay để bắt tay vào thực hiện các dự án thú vị!",
+      "button": "Khám phá ngay"
+    }
+  },
+  "ReviewsPage": {
+    "hero": {
+      "subtitle": "Lời chứng thực",
+      "title": "Niềm tin từ <highlight>Đối tác</highlight>",
+      "description": "Chúng tôi tự hào là người bạn đồng hành cùng các doanh nghiệp trên con đường chuyển đổi số. Dưới đây là những chia sẻ thực tế từ các đối tác đã tin tưởng và hợp tác cùng QKIT Software."
+    }
+  },
+  "Common": {
+    "discoverMore": "Khám phá thêm"
   }
 }

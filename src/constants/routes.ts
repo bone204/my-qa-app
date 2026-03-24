@@ -4,8 +4,8 @@ export const ROUTES = {
   SUCCESS_STORIES: '/success',
   PORTFOLIO: '/projects',
   ABOUT_US: {
-    OVERVIEW: '/tong-quan',
-    FEEDBACK: '/phan-hoi',
+    OVERVIEW: '/general',
+    FEEDBACK: '/reviews',
     CONTACT: '/lien-he',
     LIFE: '/cuoc-song',
     FAQ: '/faq',
@@ -15,3 +15,4 @@ export const ROUTES = {
   CAREER: '/su-nghiep',
   SIGN_IN: '/signin',
 };
+  
