@@ -11,7 +11,7 @@ import { Menu, X, ChevronDown, Briefcase, ArrowRight, Globe } from "lucide-react
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { useTranslations, useLocale } from 'next-intl';
-import { setLocale } from '@/app/(actions)/locale';
+import { setLocale } from '@/lib/locale';
 
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));

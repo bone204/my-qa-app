@@ -955,5 +955,33 @@
       "title": "Danh Mục <highlight>Dự Án</highlight>",
       "subtitle": "Nơi trình diễn những đổi mới kỹ thuật và sự xuất sắc trong thiết kế trên nhiều lĩnh vực khác nhau."
     }
+  },
+  "General": {
+    "hero": {
+      "title": "Về chúng tôi",
+      "subtitle": "QKIT Software",
+      "whoWeAre": "Chúng tôi là ai?",
+      "headline": "Một nhóm Trí tuệ sáng tạo thiết kế Ứng dụng và Trang web tốt nhất cho Thế giới.",
+      "culture": "Tại QKIT Software, chúng tôi đảm bảo rằng cùng với sự phát triển của công ty, nhân viên và khách hàng của chúng tôi cũng phát triển bằng cách cung cấp Văn hóa cuộc sống-làm việc tuyệt vời trong ngành."
+    },
+    "visionMission": {
+      "vision": {
+        "title": "Tầm nhìn của chúng tôi",
+        "desc": "Chúng tôi vẽ ra tương lai tươi sáng cho các doanh nghiệp hoạt động trong lĩnh vực kỹ thuật số và tin tưởng chắc chắn vào việc cung cấp các mối quan hệ kinh doanh lâu dài hiệu quả."
+      },
+      "mission": {
+        "title": "Nhiệm vụ",
+        "desc": "Bàn giao các giải pháp phần mềm di động và web hiện đại và tương lai cho các doanh nghiệp từ công ty khởi nghiệp đến doanh nghiệp với khả năng chi trả và sự hài lòng."
+      }
+    },
+    "journey": {
+      "title": "Hành trình",
+      "subtitle": "Từ 2018",
+      "headline": "Đạt được sự tin tưởng của khách hàng & Và còn nhiều điều nữa",
+      "content": "Chúng tôi vẽ ra tương lai tươi sáng cho các doanh nghiệp hoạt động trong lĩnh vực kỹ thuật số và tin tưởng chắc chắn vào việc cung cấp các mối quan hệ kinh doanh lâu dài hiệu quả."
+    }
+  },
+  "Common": {
+    "discoverMore": "Khám phá thêm"
   }
 }

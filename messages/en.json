@@ -955,5 +955,33 @@
       "title": "Our <highlight>Project</highlight> Portfolio",
       "subtitle": "A showcase of technical innovation and design excellence across various industries."
     }
+  },
+  "General": {
+    "hero": {
+      "title": "About Us",
+      "subtitle": "QKIT Software",
+      "whoWeAre": "Who are we?",
+      "headline": "A Creative Intelligence group designing the best Apps and Websites for the World.",
+      "culture": "At QKIT Software, we ensure that along with the company's growth, our employees and clients also grow by providing an industry-leading work-life culture."
+    },
+    "visionMission": {
+      "vision": {
+        "title": "Our Vision",
+        "desc": "We envision a bright future for digital businesses and firmly believe in providing effective long-term business relationships."
+      },
+      "mission": {
+        "title": "Mission",
+        "desc": "Delivering modern and futuristic mobile and web software solutions for businesses from startups to enterprises with affordability and satisfaction."
+      }
+    },
+    "journey": {
+      "title": "Journey",
+      "subtitle": "Since 2018",
+      "headline": "Achieving customer trust & And much more",
+      "content": "We envision a bright future for digital businesses and firmly believe in providing effective long-term business relationships."
+    }
+  },
+  "Common": {
+    "discoverMore": "Discover more"
   }
 }

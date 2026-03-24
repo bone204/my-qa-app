@@ -4,7 +4,7 @@ export const ROUTES = {
   SUCCESS_STORIES: '/success',
   PORTFOLIO: '/projects',
   ABOUT_US: {
-    OVERVIEW: '/tong-quan',
+    OVERVIEW: '/general',
     FEEDBACK: '/phan-hoi',
     CONTACT: '/lien-he',
     LIFE: '/cuoc-song',
@@ -15,3 +15,4 @@ export const ROUTES = {
   CAREER: '/su-nghiep',
   SIGN_IN: '/signin',
 };
+  

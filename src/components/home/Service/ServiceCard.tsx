@@ -18,6 +18,7 @@ interface ServiceCardProps {
 
 export function ServiceCard({ service, isSelected, onClick, variants }: ServiceCardProps) {
   const t = useTranslations('ServiceSection.services');
+  const tCommon = useTranslations('Common');
   return (
     <motion.div
       variants={variants}
@@ -61,7 +62,10 @@ export function ServiceCard({ service, isSelected, onClick, variants }: ServiceC
         {t(`${service.id}.description`)}
       </p>
       
-      <LinkAction className="mt-6 select-none" />
+      <LinkAction 
+        label={tCommon('discoverMore')} 
+        className="mt-6 select-none" 
+      />
     </motion.div>
   );
 }
