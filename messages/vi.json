@@ -1059,21 +1059,66 @@
       "title": "Đặc quyền & Lợi ích",
       "header": "QKIT <highlight>BENEFITS</highlight>",
       "items": {
-        "0": { "title": "Bảo hiểm sức khỏe", "desc": "Chăm sóc sức khỏe toàn diện và an tâm tuyệt đối." },
-        "1": { "title": "5 ngày làm việc/tuần", "desc": "Nghỉ Thứ 7 & Chủ Nhật để tái tạo năng lượng tối đa." },
-        "2": { "title": "Thưởng hiệu suất", "desc": "Ghi nhận xứng đáng những đóng góp vượt trội và nỗ lực cá nhân." },
-        "3": { "title": "Kỳ nghỉ & Lễ hội", "desc": "Ngày nghỉ phép có lương và các kỳ nghỉ lễ dài hạn." },
-        "4": { "title": "Lương cạnh tranh", "desc": "Mức thu nhập hấp dẫn cùng gói phúc lợi cao cấp hàng đầu thị trường." },
-        "5": { "title": "Lễ hội & Kỷ niệm", "desc": "Gắn kết đội ngũ qua các buổi tiệc sinh nhật và kỷ niệm làm việc." },
-        "6": { "title": "Chính sách nghỉ phép", "desc": "Linh hoạt và thân thiện, tôn trọng nhu cầu cá nhân của nhân viên." },
-        "7": { "title": "Khu vực Pantry", "desc": "Không gian ăn uống tiện nghi, hiện đại ngay tại văn phòng." },
-        "8": { "title": "Tiếp xúc quốc tế", "desc": "Cơ hội làm việc và trao đổi với các chuyên gia toàn cầu." },
-        "9": { "title": "Bữa trưa trợ giá", "desc": "Hỗ trợ chi phí ăn uống dinh dưỡng và tiết kiệm hàng ngày." },
-        "10": { "title": "Snacks & Drinks", "desc": "Đồ ăn nhẹ và nước uống luôn sẵn sàng phục vụ 24/7." },
-        "11": { "title": "Văn hóa cởi mở", "desc": "Môi trường làm việc tôn trọng, minh bạch và luôn lắng nghe." },
-        "12": { "title": "Phần thưởng xứng đáng", "desc": "Hệ thống vinh danh và phần thưởng cho nhân sự xuất sắc." },
-        "13": { "title": "Cơ hội học tập", "desc": "Tài trợ các khóa đào tạo và hội thảo nâng cao chuyên môn." },
-        "14": { "title": "Phòng thư giãn", "desc": "Khu vực giải trí, chơi game và nghỉ ngơi sau giờ làm việc." }
+        "0": {
+          "title": "Bảo hiểm sức khỏe",
+          "desc": "Chăm sóc sức khỏe toàn diện và an tâm tuyệt đối."
+        },
+        "1": {
+          "title": "5 ngày làm việc/tuần",
+          "desc": "Nghỉ Thứ 7 & Chủ Nhật để tái tạo năng lượng tối đa."
+        },
+        "2": {
+          "title": "Thưởng hiệu suất",
+          "desc": "Ghi nhận xứng đáng những đóng góp vượt trội và nỗ lực cá nhân."
+        },
+        "3": {
+          "title": "Kỳ nghỉ & Lễ hội",
+          "desc": "Ngày nghỉ phép có lương và các kỳ nghỉ lễ dài hạn."
+        },
+        "4": {
+          "title": "Lương cạnh tranh",
+          "desc": "Mức thu nhập hấp dẫn cùng gói phúc lợi cao cấp hàng đầu thị trường."
+        },
+        "5": {
+          "title": "Lễ hội & Kỷ niệm",
+          "desc": "Gắn kết đội ngũ qua các buổi tiệc sinh nhật và kỷ niệm làm việc."
+        },
+        "6": {
+          "title": "Chính sách nghỉ phép",
+          "desc": "Linh hoạt và thân thiện, tôn trọng nhu cầu cá nhân của nhân viên."
+        },
+        "7": {
+          "title": "Khu vực Pantry",
+          "desc": "Không gian ăn uống tiện nghi, hiện đại ngay tại văn phòng."
+        },
+        "8": {
+          "title": "Tiếp xúc quốc tế",
+          "desc": "Cơ hội làm việc và trao đổi với các chuyên gia toàn cầu."
+        },
+        "9": {
+          "title": "Bữa trưa trợ giá",
+          "desc": "Hỗ trợ chi phí ăn uống dinh dưỡng và tiết kiệm hàng ngày."
+        },
+        "10": {
+          "title": "Snacks & Drinks",
+          "desc": "Đồ ăn nhẹ và nước uống luôn sẵn sàng phục vụ 24/7."
+        },
+        "11": {
+          "title": "Văn hóa cởi mở",
+          "desc": "Môi trường làm việc tôn trọng, minh bạch và luôn lắng nghe."
+        },
+        "12": {
+          "title": "Phần thưởng xứng đáng",
+          "desc": "Hệ thống vinh danh và phần thưởng cho nhân sự xuất sắc."
+        },
+        "13": {
+          "title": "Cơ hội học tập",
+          "desc": "Tài trợ các khóa đào tạo và hội thảo nâng cao chuyên môn."
+        },
+        "14": {
+          "title": "Phòng thư giãn",
+          "desc": "Khu vực giải trí, chơi game và nghỉ ngơi sau giờ làm việc."
+        }
       },
       "majorBadge": "Đặc quyền chính",
       "sidebar": {
@@ -1129,5 +1174,65 @@
       "6": "QC/Tester",
       "7": "Khác"
     }
+  },
+  "FAQPage": {
+    "hero": {
+      "subtitle": "Hỏi đáp",
+      "title": "Bạn cần <highlight>Hỗ trợ?</highlight>",
+      "description": "Tìm câu trả lời cho các câu hỏi phổ biến nhất về dịch vụ, quy trình tuyển dụng và hợp tác kỹ thuật tại QKIT Software."
+    },
+    "categories": {
+      "business": {
+        "title": "Kinh doanh & Hợp tác",
+        "questions": {
+          "0": {
+            "q": "QKIT Software cung cấp những mô hình hợp tác nào?",
+            "a": "Chúng tôi cung cấp 3 mô hình chính: Fixed Price (Dự án trọn gói), Time & Materials (Theo thời gian và nguyên vật liệu) và Dedicated Team (Đội ngũ nhân sự riêng biệt)."
+          },
+          "1": {
+            "q": "Làm thế nào để bắt đầu một dự án với QKIT?",
+            "a": "Bạn chỉ cần gửi yêu cầu qua form liên hệ. Chúng tôi sẽ phản hồi trong vòng 24h để thảo luận chi tiết và tư vấn giải pháp tối ưu nhất cho bạn."
+          },
+          "2": {
+            "q": "Chi phí phát triển phần mềm được tính như thế nào?",
+            "a": "Chi phí phụ thuộc vào phạm vi công việc, độ phức tạp của tính năng và thời gian thực hiện. Chúng tôi sẽ cung cấp báo giá chi tiết sau khi phân tích yêu cầu của bạn."
+          }
+        }
+      },
+      "hiring": {
+        "title": "Tuyển dụng & Nhân sự",
+        "questions": {
+          "0": {
+            "q": "Quy trình tuyển dụng tại QKIT diễn ra như thế nào?",
+            "a": "Quy trình gồm 4 bước: Sàng lọc hồ sơ, Phỏng vấn kỹ thuật, Phỏng vấn văn hóa và Thỏa thuận công việc (Offer)."
+          },
+          "1": {
+            "q": "Tôi có cần phải làm bài test kỹ thuật không?",
+            "a": "Tùy vị trí ứng tuyển. Thông thường chúng tôi sẽ có bài test nhỏ hoặc thảo luận sâu về các dự án thực tế bạn đã tham gia."
+          },
+          "2": {
+            "q": "Môi trường làm việc tại QKIT có gì đặc biệt?",
+            "a": "Chúng tôi đề cao sự sáng tạo, cởi mở và linh hoạt. Bạn sẽ được làm việc trong không gian hiện đại, có khu vực pantry và nhiều hoạt động gắn kết đội ngũ."
+          }
+        }
+      },
+      "development": {
+        "title": "Kỹ thuật & Công nghệ",
+        "questions": {
+          "0": {
+            "q": "QKIT sử dụng những công nghệ gì để phát triển?",
+            "a": "Chúng tôi chuyên về React/Next.js cho Web, Flutter/React Native cho Mobile và Node.js/Python cho Backend. Chúng tôi luôn cập nhật các công nghệ tiên tiến nhất."
+          },
+          "1": {
+            "q": "Các dự án có được đảm bảo tính bảo mật không?",
+            "a": "Chắc chắn. Mọi dự án đều bắt đầu với thỏa thuận bảo mật NDA và mã nguồn được quản lý trên các hệ thống bảo mật cao cấp."
+          },
+          "2": {
+            "q": "QKIT có hỗ trợ triển khai lên App Store và Play Store không?",
+            "a": "Có, chúng tôi hỗ trợ toàn bộ quy trình từ đưa ứng dụng lên store, cấu hình CI/CD cho đến khi ứng dụng hoạt động ổn định trên môi trường thực tế."
+          }
+        }
+      }
+    }
   }
-}
+}

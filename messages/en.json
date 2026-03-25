@@ -1059,21 +1059,66 @@
       "title": "Perks & Benefits",
       "header": "QKIT <highlight>BENEFITS</highlight>",
       "items": {
-        "0": { "title": "Health Insurance", "desc": "Comprehensive health care and absolute peace of mind." },
-        "1": { "title": "5-Day Work Week", "desc": "Off Saturday & Sunday to maximize energy recharge." },
-        "2": { "title": "Performance Bonus", "desc": "Worthy recognition for outstanding contributions and individual efforts." },
-        "3": { "title": "Vacations & Holidays", "desc": "Paid leave and long-term public holidays." },
-        "4": { "title": "Competitive Salary", "desc": "Attractive income and top-tier premium benefit packages." },
-        "5": { "title": "Festivals & Anniversaries", "desc": "Team bonding through birthday parties and work milestones." },
-        "6": { "title": "Leave Policy", "desc": "Flexible and friendly, respecting employees' personal needs." },
-        "7": { "title": "Pantry Area", "desc": "Modern and convenient dining space right at the office." },
-        "8": { "title": "International Exposure", "desc": "Opportunity to work and exchange with global experts." },
-        "9": { "title": "Subsidized Lunch", "desc": "Support for nutritious and economical daily meals." },
-        "10": { "title": "Snacks & Drinks", "desc": "Snacks and beverages always available 24/7." },
-        "11": { "title": "Open Culture", "desc": "Respectful, transparent work environment that always listens." },
-        "12": { "title": "Worthy Rewards", "desc": "Honor system and rewards for excellent personnel." },
-        "13": { "title": "Learning Opportunities", "desc": "Funding for training courses and specialized workshops." },
-        "14": { "title": "Relaxation Room", "desc": "Entertainment area with games and rest after work hours." }
+        "0": {
+          "title": "Health Insurance",
+          "desc": "Comprehensive health care and absolute peace of mind."
+        },
+        "1": {
+          "title": "5-Day Work Week",
+          "desc": "Off Saturday & Sunday to maximize energy recharge."
+        },
+        "2": {
+          "title": "Performance Bonus",
+          "desc": "Worthy recognition for outstanding contributions and individual efforts."
+        },
+        "3": {
+          "title": "Vacations & Holidays",
+          "desc": "Paid leave and long-term public holidays."
+        },
+        "4": {
+          "title": "Competitive Salary",
+          "desc": "Attractive income and top-tier premium benefit packages."
+        },
+        "5": {
+          "title": "Festivals & Anniversaries",
+          "desc": "Team bonding through birthday parties and work milestones."
+        },
+        "6": {
+          "title": "Leave Policy",
+          "desc": "Flexible and friendly, respecting employees' personal needs."
+        },
+        "7": {
+          "title": "Pantry Area",
+          "desc": "Modern and convenient dining space right at the office."
+        },
+        "8": {
+          "title": "International Exposure",
+          "desc": "Opportunity to work and exchange with global experts."
+        },
+        "9": {
+          "title": "Subsidized Lunch",
+          "desc": "Support for nutritious and economical daily meals."
+        },
+        "10": {
+          "title": "Snacks & Drinks",
+          "desc": "Snacks and beverages always available 24/7."
+        },
+        "11": {
+          "title": "Open Culture",
+          "desc": "Respectful, transparent work environment that always listens."
+        },
+        "12": {
+          "title": "Worthy Rewards",
+          "desc": "Honor system and rewards for excellent personnel."
+        },
+        "13": {
+          "title": "Learning Opportunities",
+          "desc": "Funding for training courses and specialized workshops."
+        },
+        "14": {
+          "title": "Relaxation Room",
+          "desc": "Entertainment area with games and rest after work hours."
+        }
       },
       "majorBadge": "Major Perk",
       "sidebar": {
@@ -1128,6 +1173,66 @@
       "5": "Project Manager",
       "6": "QC/Tester",
       "7": "Others"
+    }
+  },
+  "FAQPage": {
+    "hero": {
+      "subtitle": "FAQ",
+      "title": "Need <highlight>Support?</highlight>",
+      "description": "Find answers to the most common questions about our services, recruitment process, and technical collaboration at QKIT Software."
+    },
+    "categories": {
+      "business": {
+        "title": "Business & Partnership",
+        "questions": {
+          "0": {
+            "q": "What cooperation models does QKIT Software offer?",
+            "a": "We provide 3 main models: Fixed Price, Time & Materials, and Dedicated Team (Staff Augmentation)."
+          },
+          "1": {
+            "q": "How to start a project with QKIT?",
+            "a": "Simply send your request via our contact form. We will respond within 24 hours to discuss details and advise on the most optimal solution for you."
+          },
+          "2": {
+            "q": "How is software development cost calculated?",
+            "a": "Costs depend on the scope of work, feature complexity, and implementation time. We will provide a detailed quote after analyzing your requirements."
+          }
+        }
+      },
+      "hiring": {
+        "title": "Hiring & Careers",
+        "questions": {
+          "0": {
+            "q": "What is the recruitment process at QKIT?",
+            "a": "The process consists of 4 steps: CV Screening, Technical Interview, Cultural Fit Interview, and Job Offer."
+          },
+          "1": {
+            "q": "Do I need to take a technical test?",
+            "a": "It depends on the position. Usually, we have a small test or a deep discussion about real-world projects you've participated in."
+          },
+          "2": {
+            "q": "What's special about the work environment at QKIT?",
+            "a": "We value creativity, openness, and flexibility. You'll work in a modern space with a pantry area and many team bonding activities."
+          }
+        }
+      },
+      "development": {
+        "title": "Tech & Development",
+        "questions": {
+          "0": {
+            "q": "What technologies does QKIT use for development?",
+            "a": "We specialize in React/Next.js for Web, Flutter/React Native for Mobile, and Node.js/Python for Backend. We always stay updated with the latest technologies."
+          },
+          "1": {
+            "q": "Are the projects guaranteed to be secure?",
+            "a": "Absolutely. Every project starts with an NDA, and source code is managed on high-security systems."
+          },
+          "2": {
+            "q": "Does QKIT support deployment to App Store and Play Store?",
+            "a": "Yes, we support the entire process from submitting apps to stores, CI/CD configuration, until the app is stable in the production environment."
+          }
+        }
+      }
     }
   }
 }
