@@ -15,7 +15,8 @@
       "contact": "Contact",
       "others": "Others",
       "life": "Life @ QKIT Software",
-      "faq": "FAQ"
+      "faq": "FAQ",
+      "news": "News & Blog"
     },
     "career": {
       "title": "Careers",
@@ -1233,6 +1234,36 @@
           }
         }
       }
+    }
+  },
+  "BlogPage": {
+    "hero": {
+      "subtitle": "Blog & News",
+      "title": "Tech <highlight>Insights</highlight>",
+      "description": "Sharing the latest in technology, design trends, and success stories from the QKIT Software team."
+    },
+    "filters": {
+      "all": "All",
+      "technology": "Technology",
+      "design": "Design",
+      "business": "Business",
+      "tutorial": "Tutorial"
+    },
+    "stats": {
+      "views": "views",
+      "readTime": "min read"
+    },
+    "noResults": "No posts found.",
+    "trending": "Trending Now",
+    "latestTitle": "Latest",
+    "latestHighlight": "Articles",
+    "explore": "Explore our collection of insights and stories.",
+    "newsletter": {
+      "title": "Stay ahead of the",
+      "highlight": "curve.",
+      "description": "Join our elite newsletter and receive high-performance tech insights directly in your inbox. No spam, just excellence.",
+      "placeholder": "your@email.com",
+      "button": "Subscribe Now"
     }
   }
 }

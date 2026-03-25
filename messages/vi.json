@@ -15,7 +15,8 @@
       "contact": "Liên hệ",
       "others": "Khác",
       "life": "Cuộc sống @ QKIT Software",
-      "faq": "FAQ"
+      "faq": "FAQ",
+      "news": "Tin tức & Blog"
     },
     "career": {
       "title": "Sự nghiệp",
@@ -1233,6 +1234,36 @@
           }
         }
       }
+    }
+  },
+  "BlogPage": {
+    "hero": {
+      "subtitle": "Blog & Tin tức",
+      "title": "Điểm tin <highlight>Công nghệ</highlight>",
+      "description": "Nơi chia sẻ những kiến thức mới nhất về công nghệ, xu hướng thiết kế và những câu chuyện thành công từ đội ngũ QKIT Software."
+    },
+    "filters": {
+      "all": "Tất cả",
+      "technology": "Công nghệ",
+      "design": "Thiết kế",
+      "business": "Kinh doanh",
+      "tutorial": "Hướng dẫn"
+    },
+    "stats": {
+      "views": "lượt xem",
+      "readTime": "phút đọc"
+    },
+    "noResults": "Không tìm thấy bài viết nào.",
+    "trending": "Đang Thịnh Hành",
+    "latestTitle": "Bài viết",
+    "latestHighlight": "mới nhất",
+    "explore": "Khám phá bộ sưu tập những kiến thức và câu chuyện của chúng tôi.",
+    "newsletter": {
+      "title": "Luôn dẫn đầu",
+      "highlight": "xu hướng.",
+      "description": "Tham gia bản tin cao cấp của chúng tôi để nhận những hiểu biết công nghệ hiệu suất cao trực tiếp vào hộp thư của bạn. Không spam, chỉ có những giá trị tốt nhất.",
+      "placeholder": "email@cua-ban.com",
+      "button": "Đăng ký ngay"
     }
   }
 }

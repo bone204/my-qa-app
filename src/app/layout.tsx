@@ -2,17 +2,25 @@ import "./globals.css";
 import AppBar from "@/components/AppBar";
 import Footer from "@/components/Footer";
 import CursorEffect from "@/components/ui/CursorEffect";
-import { Be_Vietnam_Pro } from "next/font/google";
+import { Be_Vietnam_Pro, Playfair_Display } from "next/font/google";
 import { cn } from "@/lib/utils";
 import LightRays from "@/components/ui/LightRays";
 import { Metadata } from "next";
 import {NextIntlClientProvider} from 'next-intl';
 import {getLocale, getMessages, getTranslations} from 'next-intl/server';
 import FooterContact from "@/components/FooterContact";
+
 const beVietnamPro = Be_Vietnam_Pro({ 
   subsets: ['vietnamese', 'latin'], 
   weight: ['400', '500', '600', '700', '800', '900'],
   variable: '--font-sans' 
+});
+
+const playfair = Playfair_Display({
+  subsets: ['vietnamese', 'latin'],
+  weight: ['400', '700', '900'],
+  style: ['normal', 'italic'],
+  variable: '--font-serif'
 });
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -38,7 +46,7 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={cn("font-sans", beVietnamPro.variable)}>
+    <html lang={locale} className={cn("font-sans", beVietnamPro.variable, playfair.variable)}>
       <body className="relative">
         <NextIntlClientProvider messages={messages}>
           <div className="fixed inset-0 -z-10">
