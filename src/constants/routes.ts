@@ -7,7 +7,7 @@ export const ROUTES = {
     OVERVIEW: '/general',
     FEEDBACK: '/reviews',
     CONTACT: '/contact',
-    LIFE: '/cuoc-song',
+    LIFE: '/life',
     FAQ: '/faq',
   },
   NEWS: '/news',

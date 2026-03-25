@@ -1265,5 +1265,95 @@
       "placeholder": "your@email.com",
       "button": "Subscribe Now"
     }
+  },
+  "LifePage": {
+    "hero": {
+      "subtitle": "Memories & Fragements",
+      "title": "Life <highlight>Album</highlight>",
+      "description": "Where everyday moments become priceless memories. Welcome to the world of QKIT Software family."
+    },
+    "gallery": {
+      "title": "Memory <highlight>Vault</highlight>",
+      "subtitle": "Every photo is a unique story.",
+      "filters": {
+        "all": "All",
+        "team": "Team",
+        "office": "Office",
+        "events": "Events",
+        "growth": "Growth"
+      },
+      "polaroid": {
+        "office": "Where crazy ideas begin.",
+        "team": "My second family.",
+        "events": "Full of joy, full of life!",
+        "growth": "Journey to break limits."
+      }
+    },
+    "stories": {
+      "milestone1": {
+        "title": "First Steps",
+        "description": "Started in a small room with big dreams. QKIT Software is not just a company, it is a place where digital aspirations are nurtured since the early days of hardship."
+      },
+      "milestone2": {
+        "title": "Conquer Together",
+        "description": "When each individual is a perfect piece to create success. We believe the greatest strength lies in unity and unlimited passion for technology."
+      },
+      "milestone3": {
+        "title": "Scaling New Heights",
+        "description": "Every successful project is a testament to our team's exceptional effort and creativity."
+      }
+    },
+    "photos": {
+      "photo_1": "QKIT family on a summer outing in 2025.",
+      "photo_2": "Intense focus on key projects.",
+      "photo_3": "Celebrating new members' birthdays.",
+      "photo_4": "Learning and growing together.",
+      "photo_5": "Super chill workspace at the office.",
+      "photo_6": "Fiery year-end party.",
+      "event_summit": "Tech Summit 2026.",
+      "event_gala": "Cozy Year-end Gala Night.",
+      "event_kickoff": "Exciting new project kickoff.",
+      "event_party": "Bustling birthday party in the office.",
+      "event_celebration": "Celebrating our 8-year growth journey.",
+      "team_collab": "Team spirit in every line of code.",
+      "team_meeting": "Passionate discussions for optimal solutions.",
+      "team_workshop": "Internal knowledge sharing workshop.",
+      "team_smiles": "Radiant smiles of QKIT 'warriors'.",
+      "team_success": "Celebrating when projects 'Go Live' successfully.",
+      "office_view": "Panorama view from the 20th-floor office.",
+      "office_modern": "Modern and professional workspace.",
+      "office_tech": "State-of-the-art equipment supporting work.",
+      "office_creative": "Creative corner for inspiration.",
+      "office_coding": "Where lines of code change the future.",
+      "growth_learning": "Constantly learning new technologies.",
+      "growth_mentoring": "Guidance from experienced seniors.",
+      "growth_brainstorm": "Brainstorming for breakthrough ideas.",
+      "growth_presentation": "Presenting tech solutions to the board.",
+      "growth_award": "Honoring outstanding individuals of the month.",
+      "team_coffee": "Coffee break with aromatic coffee.",
+      "team_whiteboard": "Drafting system architecture on the whiteboard.",
+      "team_outing": "Teambuilding outing for bonding.",
+      "team_hacker": "Passionate about conquering coding challenges.",
+      "event_dinner": "Intimate dinner bonding the QKIT family.",
+      "event_food": "Enjoying cuisine at company events.",
+      "event_conference": "Attending international tech conferences.",
+      "team_hangout": "Relaxing moments after stressful work.",
+      "office_reception": "Elegant and hospitable reception lobby.",
+      "office_manager": "Tender guidance from project managers.",
+      "growth_career": "Clear career path at QKIT.",
+      "office_break": "Relaxation corner for recharging energy.",
+      "growth_pair": "Pair programming - Learning and progressing together.",
+      "growth_focus": "Absolute focus on product quality.",
+      "team_diversity": "Diverse, united, and creative team.",
+      "event_workshop": "Practical soft skills training session.",
+      "event_meeting": "Meeting and exchanging with strategic partners.",
+      "office_vibe": "Positive energy spreading throughout the office.",
+      "office_dev": "International standard software development environment.",
+      "team_fun": "Endless joyful moments.",
+      "growth_mentor": "Accompanying Mentor in career.",
+      "growth_together": "Growing together through challenges.",
+      "event_outdoor": "Outdoor activities for health.",
+      "growth_training": "Periodic deep training programs."
+    }
   }
 }

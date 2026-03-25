@@ -220,7 +220,6 @@ export default function AppBar() {
                                     {[
                                       { name: t('aboutDropdown.life'), href: ROUTES.ABOUT_US.LIFE },
                                       { name: t('aboutDropdown.faq'), href: ROUTES.ABOUT_US.FAQ },
-                                      { name: t('aboutDropdown.news'), href: ROUTES.BLOG },
                                     ].map((subItem) => (
                                       <Link key={subItem.name} href={subItem.href} className="group/link flex items-center gap-3">
                                         <div className="w-3.5 h-3.5 rounded-full border-[1.5px] border-primary group-hover/link:bg-primary/20 transition-colors shrink-0" />
