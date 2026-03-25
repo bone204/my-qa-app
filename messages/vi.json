@@ -1050,5 +1050,84 @@
   },
   "Common": {
     "discoverMore": "Khám phá thêm"
+  },
+  "Career": {
+    "subtitle": "Gia nhập đại gia đình QKIT",
+    "title": "Nơi <highlight>Tài năng</highlight> Tỏa sáng",
+    "description": "Chúng tôi không chỉ xây dựng phần mềm, chúng tôi kiến tạo tương lai. Hãy trở thành một phần của hành trình đột phá cùng QKIT.",
+    "perks": {
+      "title": "Đặc quyền & Lợi ích",
+      "header": "QKIT <highlight>BENEFITS</highlight>",
+      "items": {
+        "0": { "title": "Bảo hiểm sức khỏe", "desc": "Chăm sóc sức khỏe toàn diện và an tâm tuyệt đối." },
+        "1": { "title": "5 ngày làm việc/tuần", "desc": "Nghỉ Thứ 7 & Chủ Nhật để tái tạo năng lượng tối đa." },
+        "2": { "title": "Thưởng hiệu suất", "desc": "Ghi nhận xứng đáng những đóng góp vượt trội và nỗ lực cá nhân." },
+        "3": { "title": "Kỳ nghỉ & Lễ hội", "desc": "Ngày nghỉ phép có lương và các kỳ nghỉ lễ dài hạn." },
+        "4": { "title": "Lương cạnh tranh", "desc": "Mức thu nhập hấp dẫn cùng gói phúc lợi cao cấp hàng đầu thị trường." },
+        "5": { "title": "Lễ hội & Kỷ niệm", "desc": "Gắn kết đội ngũ qua các buổi tiệc sinh nhật và kỷ niệm làm việc." },
+        "6": { "title": "Chính sách nghỉ phép", "desc": "Linh hoạt và thân thiện, tôn trọng nhu cầu cá nhân của nhân viên." },
+        "7": { "title": "Khu vực Pantry", "desc": "Không gian ăn uống tiện nghi, hiện đại ngay tại văn phòng." },
+        "8": { "title": "Tiếp xúc quốc tế", "desc": "Cơ hội làm việc và trao đổi với các chuyên gia toàn cầu." },
+        "9": { "title": "Bữa trưa trợ giá", "desc": "Hỗ trợ chi phí ăn uống dinh dưỡng và tiết kiệm hàng ngày." },
+        "10": { "title": "Snacks & Drinks", "desc": "Đồ ăn nhẹ và nước uống luôn sẵn sàng phục vụ 24/7." },
+        "11": { "title": "Văn hóa cởi mở", "desc": "Môi trường làm việc tôn trọng, minh bạch và luôn lắng nghe." },
+        "12": { "title": "Phần thưởng xứng đáng", "desc": "Hệ thống vinh danh và phần thưởng cho nhân sự xuất sắc." },
+        "13": { "title": "Cơ hội học tập", "desc": "Tài trợ các khóa đào tạo và hội thảo nâng cao chuyên môn." },
+        "14": { "title": "Phòng thư giãn", "desc": "Khu vực giải trí, chơi game và nghỉ ngơi sau giờ làm việc." }
+      },
+      "majorBadge": "Đặc quyền chính",
+      "sidebar": {
+        "subtitle": "Gia nhập đội ngũ",
+        "title": "Làm kiến tạo <lineBreak></lineBreak> những giá trị thực",
+        "readyTitle": "Sẵn sàng cho <lineBreak></lineBreak> <highlight>Sự bứt phá?</highlight>",
+        "readyDesc": "Trở thành một phần của tập thể tiên phong, nơi tài năng của bạn được khai phá và tôn vinh.",
+        "button": "Khám phá vị trí"
+      },
+      "additional": {
+        "badge": "Văn hóa & Đời sống",
+        "title": "Không chỉ là <lineBreak></lineBreak> <highlight>Phúc lợi.</highlight>"
+      }
+    },
+    "card": {
+      "title": "Gia nhập đội ngũ",
+      "description": "Chúng tôi liên tục tìm kiếm những tài năng đam mê công nghệ và mong muốn kiến tạo những giá trị đặc biệt.",
+      "features": {
+        "0": "Môi trường làm việc năng động",
+        "1": "Cơ hội thăng tiến rõ ràng",
+        "2": "Chế độ đãi ngộ hấp dẫn"
+      },
+      "button": "Xem vị trí tuyển dụng"
+    },
+    "contact": {
+      "subtitle": "Ứng tuyển ngay",
+      "title": "Bắt đầu <highlight>Sự nghiệp</highlight> của bạn",
+      "description": "Hãy để lại thông tin và CV của bạn, đội ngũ nhân sự của chúng tôi sẽ xem xét và phản hồi sớm nhất.",
+      "form": {
+        "lastName": "Họ",
+        "lastNamePlaceholder": "Nhập họ...",
+        "firstName": "Tên",
+        "firstNamePlaceholder": "Nhập tên...",
+        "email": "Email",
+        "emailPlaceholder": "example@email.com",
+        "phone": "Số điện thoại",
+        "phonePlaceholder": "090 ...",
+        "position": "Vị trí ứng tuyển",
+        "cv": "Gửi CV của bạn",
+        "cvPlaceholder": "Kéo thả CV vào đây hoặc bấm để chọn file (PDF, DOCX)...",
+        "message": "Giới thiệu bản thân (Không bắt buộc)",
+        "messagePlaceholder": "Hãy cho chúng tôi biết thêm về kinh nghiệm và mong muốn của bạn...",
+        "submit": "Gửi hồ sơ ứng tuyển"
+      }
+    },
+    "positions": {
+      "0": "Frontend Developer (React/Next.js)",
+      "1": "Backend Developer (Node.js/Python)",
+      "2": "Mobile Developer (Flutter/React Native)",
+      "3": "UI/UX Designer",
+      "4": "Fullstack Developer",
+      "5": "Project Manager",
+      "6": "QC/Tester",
+      "7": "Khác"
+    }
   }
-}
+}

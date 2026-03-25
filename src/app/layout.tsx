@@ -8,7 +8,7 @@ import LightRays from "@/components/ui/LightRays";
 import { Metadata } from "next";
 import {NextIntlClientProvider} from 'next-intl';
 import {getLocale, getMessages, getTranslations} from 'next-intl/server';
-import ContactSection from "@/components/ContactSection";
+import FooterContact from "@/components/FooterContact";
 const beVietnamPro = Be_Vietnam_Pro({ 
   subsets: ['vietnamese', 'latin'], 
   weight: ['400', '500', '600', '700', '800', '900'],
@@ -56,7 +56,7 @@ export default async function RootLayout({
             <AppBar />
             <main className="flex-1">
               {children}
-              <ContactSection />
+              <FooterContact />
             </main>
             <Footer />
           </div>

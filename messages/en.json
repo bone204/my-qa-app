@@ -1050,5 +1050,84 @@
   },
   "Common": {
     "discoverMore": "Discover more"
+  },
+  "Career": {
+    "subtitle": "Join the QKIT Family",
+    "title": "Where <highlight>Talent</highlight> Shines",
+    "description": "We don’t just build software, we build the future. Become part of a breakthrough journey with QKIT.",
+    "perks": {
+      "title": "Perks & Benefits",
+      "header": "QKIT <highlight>BENEFITS</highlight>",
+      "items": {
+        "0": { "title": "Health Insurance", "desc": "Comprehensive health care and absolute peace of mind." },
+        "1": { "title": "5-Day Work Week", "desc": "Off Saturday & Sunday to maximize energy recharge." },
+        "2": { "title": "Performance Bonus", "desc": "Worthy recognition for outstanding contributions and individual efforts." },
+        "3": { "title": "Vacations & Holidays", "desc": "Paid leave and long-term public holidays." },
+        "4": { "title": "Competitive Salary", "desc": "Attractive income and top-tier premium benefit packages." },
+        "5": { "title": "Festivals & Anniversaries", "desc": "Team bonding through birthday parties and work milestones." },
+        "6": { "title": "Leave Policy", "desc": "Flexible and friendly, respecting employees' personal needs." },
+        "7": { "title": "Pantry Area", "desc": "Modern and convenient dining space right at the office." },
+        "8": { "title": "International Exposure", "desc": "Opportunity to work and exchange with global experts." },
+        "9": { "title": "Subsidized Lunch", "desc": "Support for nutritious and economical daily meals." },
+        "10": { "title": "Snacks & Drinks", "desc": "Snacks and beverages always available 24/7." },
+        "11": { "title": "Open Culture", "desc": "Respectful, transparent work environment that always listens." },
+        "12": { "title": "Worthy Rewards", "desc": "Honor system and rewards for excellent personnel." },
+        "13": { "title": "Learning Opportunities", "desc": "Funding for training courses and specialized workshops." },
+        "14": { "title": "Relaxation Room", "desc": "Entertainment area with games and rest after work hours." }
+      },
+      "majorBadge": "Major Perk",
+      "sidebar": {
+        "subtitle": "Join Our Team",
+        "title": "Creating <lineBreak></lineBreak> Real Value",
+        "readyTitle": "Ready for <lineBreak></lineBreak> <highlight>Greatness?</highlight>",
+        "readyDesc": "Become part of a pioneering collective where your talent is discovered and celebrated.",
+        "button": "Explore Positions"
+      },
+      "additional": {
+        "badge": "Daily Life & Culture",
+        "title": "More Than Just <lineBreak></lineBreak> <highlight>Benefits.</highlight>"
+      }
+    },
+    "card": {
+      "title": "Join the team",
+      "description": "We are constantly looking for talents who are passionate about technology and want to create special values.",
+      "features": {
+        "0": "Dynamic work environment",
+        "1": "Clear promotion opportunities",
+        "2": "Attractive benefits"
+      },
+      "button": "View vacancies"
+    },
+    "contact": {
+      "subtitle": "Apply Now",
+      "title": "Start <highlight>Your Career</highlight>",
+      "description": "Please leave your information and CV, our HR team will review and respond as soon as possible.",
+      "form": {
+        "lastName": "Last Name",
+        "lastNamePlaceholder": "Enter last name...",
+        "firstName": "First Name",
+        "firstNamePlaceholder": "Enter first name...",
+        "email": "Email",
+        "emailPlaceholder": "example@email.com",
+        "phone": "Phone Number",
+        "phonePlaceholder": "090 ...",
+        "position": "Applying Position",
+        "cv": "Send Your CV",
+        "cvPlaceholder": "Drag and drop CV here or click to select file (PDF, DOCX)...",
+        "message": "Introduce Yourself (Optional)",
+        "messagePlaceholder": "Let us know more about your experience and expectations...",
+        "submit": "Submit Application"
+      }
+    },
+    "positions": {
+      "0": "Frontend Developer (React/Next.js)",
+      "1": "Backend Developer (Node.js/Python)",
+      "2": "Mobile Developer (Flutter/React Native)",
+      "3": "UI/UX Designer",
+      "4": "Fullstack Developer",
+      "5": "Project Manager",
+      "6": "QC/Tester",
+      "7": "Others"
+    }
   }
 }

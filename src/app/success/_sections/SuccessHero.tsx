@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Briefcase, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Briefcase, CheckCircle2, Sparkles } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import { useTranslations } from 'next-intl';
 
@@ -21,13 +21,14 @@ export default function SuccessHero() {
                     {/* Left Side: Title & Description */}
                     <div className="w-full lg:flex-1 lg:max-w-2xl flex flex-col space-y-8 animate-in fade-in slide-in-from-left duration-700">
                         <div className="flex flex-col space-y-4">
-                            <motion.span
+                            <motion.div
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
-                                className="section-subtitle text-start"
+                                className="flex items-center gap-2"
                             >
-                                {t('subtitle')}
-                            </motion.span>
+                                <Sparkles className="w-4 h-4 text-primary" />
+                                <span className="section-subtitle">{t('subtitle')}</span>
+                            </motion.div>
                             <motion.h1
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}

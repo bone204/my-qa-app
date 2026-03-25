@@ -6,13 +6,13 @@ export const ROUTES = {
   ABOUT_US: {
     OVERVIEW: '/general',
     FEEDBACK: '/reviews',
-    CONTACT: '/lien-he',
+    CONTACT: '/contact',
     LIFE: '/cuoc-song',
     FAQ: '/faq',
   },
   NEWS: '/news',
   BLOG: '/blog',
-  CAREER: '/su-nghiep',
+  CAREER: '/career',
   SIGN_IN: '/signin',
 };
   
