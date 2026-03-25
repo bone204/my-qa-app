@@ -46,7 +46,7 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={cn("font-sans", beVietnamPro.variable, playfair.variable)}>
+    <html lang={locale} className={cn("font-sans", beVietnamPro.variable, playfair.variable)} suppressHydrationWarning>
       <body className="relative">
         <NextIntlClientProvider messages={messages}>
           <div className="fixed inset-0 -z-10">

@@ -133,6 +133,7 @@ export default function AppBar() {
                   width={100}
                   height={100}
                   className="w-16 md:w-28 h-auto object-contain transition-transform hover:scale-105 duration-300 brightness-110"
+                  style={{ height: 'auto' }}
                   priority
                 />
               </Link>

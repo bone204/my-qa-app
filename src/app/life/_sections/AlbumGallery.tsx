@@ -1,22 +1,43 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
-import { LIFE_PHOTOS } from '@/data/life/life-data';
 import { cn } from '@/lib/utils';
+import { getLifeImages } from '@/services/lifeService';
+import { LifeImage } from '@/types/life';
 
 export default function AlbumGallery() {
     const t = useTranslations('LifePage.gallery');
-    const tp = useTranslations('LifePage.photos');
+    const locale = useLocale();
     const [activeFilter, setActiveFilter] = useState('all');
+    const [photos, setPhotos] = useState<LifeImage[]>([]);
+    const [loading, setLoading] = useState(true);
 
-    const filteredPhotos = LIFE_PHOTOS.filter(photo => 
-        activeFilter === 'all' || photo.category === activeFilter
+    useEffect(() => {
+        const fetchPhotos = async () => {
+            setLoading(true);
+            const data = await getLifeImages();
+            setPhotos(data);
+            setLoading(false);
+        };
+        fetchPhotos();
+    }, []);
+
+    const filteredPhotos = photos.filter(photo => 
+        activeFilter === 'all' || photo.type === activeFilter
     );
 
     const categories = ['all', 'team', 'office', 'events', 'growth'];
+
+    if (loading && photos.length === 0) {
+        return (
+            <div className="py-32 flex items-center justify-center">
+                <motion.div animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 1, ease: "linear" }} className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full" />
+            </div>
+        );
+    }
 
     return (
         <section className="py-32 px-4 md:px-8 max-w-7xl mx-auto">
@@ -64,43 +85,55 @@ export default function AlbumGallery() {
                 </div>
             </div>
 
-            <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+            <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8 min-h-[400px]">
                 <AnimatePresence mode='popLayout'>
                     {filteredPhotos.map((photo) => (
                         <motion.div
                             layout
                             key={photo.id}
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={{ opacity: 1, scale: 1 }}
+                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.9 }}
                             transition={{ duration: 0.5 }}
                             className="break-inside-avoid"
                         >
-                            <div className="group relative bg-[#fdfdfd] p-4 pb-12 shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:rotate-1 active:scale-95 cursor-pointer rounded-sm">
+                            <div className="group relative bg-[#fdfdfd] p-4 pb-6 shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:rotate-1 active:scale-95 cursor-pointer rounded-sm">
                                 <div className="relative aspect-square overflow-hidden mb-4 rounded-xs">
                                     <Image 
                                         src={photo.url} 
-                                        alt={tp(photo.captionKey)} 
+                                        alt={locale === 'vi' ? photo.description.vi : photo.description.en} 
                                         fill 
                                         className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     />
                                     <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                                 </div>
-                                <div className="px-2">
+                                <div className="px-2 space-y-4">
                                     <p className="text-zinc-800 font-semibold text-sm leading-relaxed font-serif italic text-center">
-                                         {tp(photo.captionKey)}
+                                         {locale === 'vi' ? photo.description.vi : photo.description.en}
                                     </p>
-                                </div>
-                                <div className="absolute bottom-4 right-4 text-[9px] font-black text-zinc-300 tracking-[0.2em] uppercase">
-                                    #{t(`filters.${photo.category}`)}
-                                </div>
-                                <div className="absolute top-4 left-4 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm border border-black/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-sm">
-                                     <span className="text-black text-xs">📷</span>
+                                    
+                                    <div className="flex items-center justify-between pt-3 border-t border-zinc-100">
+                                        <span className="text-[10px] md:text-xs font-black text-primary/60 tracking-widest uppercase">
+                                            #{t(`filters.${photo.type}`)}
+                                        </span>
+                                        {photo.date && (
+                                            <span className="text-[10px] md:text-xs font-bold text-zinc-400 font-mono">
+                                                {new Date(photo.date).toLocaleDateString(locale === 'vi' ? 'vi-VN' : 'en-US')}
+                                            </span>
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                         </motion.div>
                     ))}
                 </AnimatePresence>
+                
+                {!loading && filteredPhotos.length === 0 && (
+                    <div className="col-span-full h-64 flex items-center justify-center">
+                        <p className="text-zinc-500 italic">Chưa có ảnh nào trong mục này.</p>
+                    </div>
+                )}
             </div>
         </section>
     );
