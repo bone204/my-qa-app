@@ -136,13 +136,13 @@ body {
   }
 }
 
-@keyframes scroll {
-  from {
+@keyframes marquee {
+  0% {
     transform: translateX(0);
   }
 
-  to {
-    transform: translateX(calc(-1 * (8 * (320px + 24px))));
+  100% {
+    transform: translateX(-50%);
   }
 }
 
