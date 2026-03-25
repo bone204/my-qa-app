@@ -100,16 +100,17 @@ export default function SolutionsSection() {
                             WebkitMaskImage: 'linear-gradient(to right, transparent, black 15%, black 85%, transparent)'
                         }}
                     >
-                        <motion.div 
-                            className="flex gap-6 w-max group-hover:[animation-play-state:paused]"
+                        <div 
+                            className="flex gap-6 w-max pr-6 group-hover:[animation-play-state:paused]"
                             style={{ 
-                                animation: 'scroll 40s linear infinite',
+                                animation: 'marquee 40s linear infinite',
+                                willChange: 'transform'
                             }}
                         >
                             {[...onDemandItems, ...onDemandItems].map((item, idx) => (
                                 <div
                                     key={idx}
-                                    className="w-[280px] md:w-[320px]"
+                                    className="w-[280px] md:w-[320px] shrink-0"
                                 >
                                     <div className={cn(
                                         "group/item relative h-48 rounded-3xl p-8 bg-zinc-900/40 border border-white/5 overflow-hidden transition-all duration-500 hover:border-white/20",
@@ -126,7 +127,7 @@ export default function SolutionsSection() {
                                     </div>
                                 </div>
                             ))}
-                        </motion.div>
+                        </div>
                     </div>
                 </div>
 

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Send, Phone, Mail, Globe, MapPin, Building2, Briefcase, MessageSquare, User, Smartphone, Layout, MessageCircle } from 'lucide-react';
+import { Send, Phone, Mail, Globe, MapPin, Building2, Briefcase, MessageSquare, User, Smartphone, Layout, MessageCircle, Sparkles } from 'lucide-react';
 import axios from 'axios';
 import { Particles } from '@/components/ui/Particles';
 import { useTranslations } from 'next-intl';
@@ -94,14 +94,17 @@ export default function ContactSection() {
 
             <div className="mx-auto max-w-7xl px-4 md:px-8 relative z-10">
                 <div className="text-center mb-16 space-y-4">
-                    <motion.span
+                    <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="section-subtitle"
+                        className="flex items-center justify-center gap-2"
                     >
-                        {t('subtitle')}
-                    </motion.span>
+                        <Sparkles className="w-4 h-4 text-primary" />
+                        <span className="section-subtitle">
+                            {t('subtitle')}
+                        </span>
+                    </motion.div>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}

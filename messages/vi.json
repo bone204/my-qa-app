@@ -15,7 +15,8 @@
       "contact": "Liên hệ",
       "others": "Khác",
       "life": "Cuộc sống @ QKIT Software",
-      "faq": "FAQ"
+      "faq": "FAQ",
+      "news": "Tin tức & Blog"
     },
     "career": {
       "title": "Sự nghiệp",
@@ -1050,5 +1051,309 @@
   },
   "Common": {
     "discoverMore": "Khám phá thêm"
+  },
+  "Career": {
+    "subtitle": "Gia nhập đại gia đình QKIT",
+    "title": "Nơi <highlight>Tài năng</highlight> Tỏa sáng",
+    "description": "Chúng tôi không chỉ xây dựng phần mềm, chúng tôi kiến tạo tương lai. Hãy trở thành một phần của hành trình đột phá cùng QKIT.",
+    "perks": {
+      "title": "Đặc quyền & Lợi ích",
+      "header": "QKIT <highlight>BENEFITS</highlight>",
+      "items": {
+        "0": {
+          "title": "Bảo hiểm sức khỏe",
+          "desc": "Chăm sóc sức khỏe toàn diện và an tâm tuyệt đối."
+        },
+        "1": {
+          "title": "5 ngày làm việc/tuần",
+          "desc": "Nghỉ Thứ 7 & Chủ Nhật để tái tạo năng lượng tối đa."
+        },
+        "2": {
+          "title": "Thưởng hiệu suất",
+          "desc": "Ghi nhận xứng đáng những đóng góp vượt trội và nỗ lực cá nhân."
+        },
+        "3": {
+          "title": "Kỳ nghỉ & Lễ hội",
+          "desc": "Ngày nghỉ phép có lương và các kỳ nghỉ lễ dài hạn."
+        },
+        "4": {
+          "title": "Lương cạnh tranh",
+          "desc": "Mức thu nhập hấp dẫn cùng gói phúc lợi cao cấp hàng đầu thị trường."
+        },
+        "5": {
+          "title": "Lễ hội & Kỷ niệm",
+          "desc": "Gắn kết đội ngũ qua các buổi tiệc sinh nhật và kỷ niệm làm việc."
+        },
+        "6": {
+          "title": "Chính sách nghỉ phép",
+          "desc": "Linh hoạt và thân thiện, tôn trọng nhu cầu cá nhân của nhân viên."
+        },
+        "7": {
+          "title": "Khu vực Pantry",
+          "desc": "Không gian ăn uống tiện nghi, hiện đại ngay tại văn phòng."
+        },
+        "8": {
+          "title": "Tiếp xúc quốc tế",
+          "desc": "Cơ hội làm việc và trao đổi với các chuyên gia toàn cầu."
+        },
+        "9": {
+          "title": "Bữa trưa trợ giá",
+          "desc": "Hỗ trợ chi phí ăn uống dinh dưỡng và tiết kiệm hàng ngày."
+        },
+        "10": {
+          "title": "Snacks & Drinks",
+          "desc": "Đồ ăn nhẹ và nước uống luôn sẵn sàng phục vụ 24/7."
+        },
+        "11": {
+          "title": "Văn hóa cởi mở",
+          "desc": "Môi trường làm việc tôn trọng, minh bạch và luôn lắng nghe."
+        },
+        "12": {
+          "title": "Phần thưởng xứng đáng",
+          "desc": "Hệ thống vinh danh và phần thưởng cho nhân sự xuất sắc."
+        },
+        "13": {
+          "title": "Cơ hội học tập",
+          "desc": "Tài trợ các khóa đào tạo và hội thảo nâng cao chuyên môn."
+        },
+        "14": {
+          "title": "Phòng thư giãn",
+          "desc": "Khu vực giải trí, chơi game và nghỉ ngơi sau giờ làm việc."
+        }
+      },
+      "majorBadge": "Đặc quyền chính",
+      "sidebar": {
+        "subtitle": "Gia nhập đội ngũ",
+        "title": "Làm kiến tạo <lineBreak></lineBreak> những giá trị thực",
+        "readyTitle": "Sẵn sàng cho <lineBreak></lineBreak> <highlight>Sự bứt phá?</highlight>",
+        "readyDesc": "Trở thành một phần của tập thể tiên phong, nơi tài năng của bạn được khai phá và tôn vinh.",
+        "button": "Khám phá vị trí"
+      },
+      "additional": {
+        "badge": "Văn hóa & Đời sống",
+        "title": "Không chỉ là <lineBreak></lineBreak> <highlight>Phúc lợi.</highlight>"
+      }
+    },
+    "card": {
+      "title": "Gia nhập đội ngũ",
+      "description": "Chúng tôi liên tục tìm kiếm những tài năng đam mê công nghệ và mong muốn kiến tạo những giá trị đặc biệt.",
+      "features": {
+        "0": "Môi trường làm việc năng động",
+        "1": "Cơ hội thăng tiến rõ ràng",
+        "2": "Chế độ đãi ngộ hấp dẫn"
+      },
+      "button": "Xem vị trí tuyển dụng"
+    },
+    "contact": {
+      "subtitle": "Ứng tuyển ngay",
+      "title": "Bắt đầu <highlight>Sự nghiệp</highlight> của bạn",
+      "description": "Hãy để lại thông tin và CV của bạn, đội ngũ nhân sự của chúng tôi sẽ xem xét và phản hồi sớm nhất.",
+      "form": {
+        "lastName": "Họ",
+        "lastNamePlaceholder": "Nhập họ...",
+        "firstName": "Tên",
+        "firstNamePlaceholder": "Nhập tên...",
+        "email": "Email",
+        "emailPlaceholder": "example@email.com",
+        "phone": "Số điện thoại",
+        "phonePlaceholder": "090 ...",
+        "position": "Vị trí ứng tuyển",
+        "cv": "Gửi CV của bạn",
+        "cvPlaceholder": "Kéo thả CV vào đây hoặc bấm để chọn file (PDF, DOCX)...",
+        "message": "Giới thiệu bản thân (Không bắt buộc)",
+        "messagePlaceholder": "Hãy cho chúng tôi biết thêm về kinh nghiệm và mong muốn của bạn...",
+        "submit": "Gửi hồ sơ ứng tuyển"
+      }
+    },
+    "positions": {
+      "0": "Frontend Developer (React/Next.js)",
+      "1": "Backend Developer (Node.js/Python)",
+      "2": "Mobile Developer (Flutter/React Native)",
+      "3": "UI/UX Designer",
+      "4": "Fullstack Developer",
+      "5": "Project Manager",
+      "6": "QC/Tester",
+      "7": "Khác"
+    }
+  },
+  "FAQPage": {
+    "hero": {
+      "subtitle": "Hỏi đáp",
+      "title": "Bạn cần <highlight>Hỗ trợ?</highlight>",
+      "description": "Tìm câu trả lời cho các câu hỏi phổ biến nhất về dịch vụ, quy trình tuyển dụng và hợp tác kỹ thuật tại QKIT Software."
+    },
+    "categories": {
+      "business": {
+        "title": "Kinh doanh & Hợp tác",
+        "questions": {
+          "0": {
+            "q": "QKIT Software cung cấp những mô hình hợp tác nào?",
+            "a": "Chúng tôi cung cấp 3 mô hình chính: Fixed Price (Dự án trọn gói), Time & Materials (Theo thời gian và nguyên vật liệu) và Dedicated Team (Đội ngũ nhân sự riêng biệt)."
+          },
+          "1": {
+            "q": "Làm thế nào để bắt đầu một dự án với QKIT?",
+            "a": "Bạn chỉ cần gửi yêu cầu qua form liên hệ. Chúng tôi sẽ phản hồi trong vòng 24h để thảo luận chi tiết và tư vấn giải pháp tối ưu nhất cho bạn."
+          },
+          "2": {
+            "q": "Chi phí phát triển phần mềm được tính như thế nào?",
+            "a": "Chi phí phụ thuộc vào phạm vi công việc, độ phức tạp của tính năng và thời gian thực hiện. Chúng tôi sẽ cung cấp báo giá chi tiết sau khi phân tích yêu cầu của bạn."
+          }
+        }
+      },
+      "hiring": {
+        "title": "Tuyển dụng & Nhân sự",
+        "questions": {
+          "0": {
+            "q": "Quy trình tuyển dụng tại QKIT diễn ra như thế nào?",
+            "a": "Quy trình gồm 4 bước: Sàng lọc hồ sơ, Phỏng vấn kỹ thuật, Phỏng vấn văn hóa và Thỏa thuận công việc (Offer)."
+          },
+          "1": {
+            "q": "Tôi có cần phải làm bài test kỹ thuật không?",
+            "a": "Tùy vị trí ứng tuyển. Thông thường chúng tôi sẽ có bài test nhỏ hoặc thảo luận sâu về các dự án thực tế bạn đã tham gia."
+          },
+          "2": {
+            "q": "Môi trường làm việc tại QKIT có gì đặc biệt?",
+            "a": "Chúng tôi đề cao sự sáng tạo, cởi mở và linh hoạt. Bạn sẽ được làm việc trong không gian hiện đại, có khu vực pantry và nhiều hoạt động gắn kết đội ngũ."
+          }
+        }
+      },
+      "development": {
+        "title": "Kỹ thuật & Công nghệ",
+        "questions": {
+          "0": {
+            "q": "QKIT sử dụng những công nghệ gì để phát triển?",
+            "a": "Chúng tôi chuyên về React/Next.js cho Web, Flutter/React Native cho Mobile và Node.js/Python cho Backend. Chúng tôi luôn cập nhật các công nghệ tiên tiến nhất."
+          },
+          "1": {
+            "q": "Các dự án có được đảm bảo tính bảo mật không?",
+            "a": "Chắc chắn. Mọi dự án đều bắt đầu với thỏa thuận bảo mật NDA và mã nguồn được quản lý trên các hệ thống bảo mật cao cấp."
+          },
+          "2": {
+            "q": "QKIT có hỗ trợ triển khai lên App Store và Play Store không?",
+            "a": "Có, chúng tôi hỗ trợ toàn bộ quy trình từ đưa ứng dụng lên store, cấu hình CI/CD cho đến khi ứng dụng hoạt động ổn định trên môi trường thực tế."
+          }
+        }
+      }
+    }
+  },
+  "BlogPage": {
+    "hero": {
+      "subtitle": "Blog & Tin tức",
+      "title": "Điểm tin <highlight>Công nghệ</highlight>",
+      "description": "Nơi chia sẻ những kiến thức mới nhất về công nghệ, xu hướng thiết kế và những câu chuyện thành công từ đội ngũ QKIT Software."
+    },
+    "filters": {
+      "all": "Tất cả",
+      "technology": "Công nghệ",
+      "design": "Thiết kế",
+      "business": "Kinh doanh",
+      "tutorial": "Hướng dẫn"
+    },
+    "stats": {
+      "views": "lượt xem",
+      "readTime": "phút đọc"
+    },
+    "noResults": "Không tìm thấy bài viết nào.",
+    "trending": "Đang Thịnh Hành",
+    "latestTitle": "Bài viết",
+    "latestHighlight": "mới nhất",
+    "explore": "Khám phá bộ sưu tập những kiến thức và câu chuyện của chúng tôi.",
+    "newsletter": {
+      "title": "Luôn dẫn đầu",
+      "highlight": "xu hướng.",
+      "description": "Tham gia bản tin cao cấp của chúng tôi để nhận những hiểu biết công nghệ hiệu suất cao trực tiếp vào hộp thư của bạn. Không spam, chỉ có những giá trị tốt nhất.",
+      "placeholder": "email@cua-ban.com",
+      "button": "Đăng ký ngay"
+    }
+  },
+  "LifePage": {
+    "hero": {
+      "subtitle": "Gói Trọn Khoảnh Khắc & Hồi Ức",
+      "title": "Thước Phim <highlight>Cuộc Sống</highlight>",
+      "description": "Nơi mỗi giây phút đời thường hóa thành những hồi ức vô giá. Chào mừng bạn bước vào thế giới đầy sắc màu của đại gia đình QKIT Software."
+    },
+    "gallery": {
+      "title": "Bảo Tàng <highlight>Kỷ Niệm</highlight>",
+      "subtitle": "Nơi mỗi khung hình kể lại một hành trình duy nhất.",
+      "filters": {
+        "all": "Tất cả",
+        "team": "Đội ngũ",
+        "office": "Văn phòng",
+        "events": "Sự kiện",
+        "growth": "Phát triển"
+      },
+      "polaroid": {
+        "office": "Khởi nguồn của những ý tưởng đột phá.",
+        "team": "Gia đình thứ hai - Nơi tình thân gắn kết.",
+        "events": "Cháy hết mình cùng những cung bậc cảm xúc.",
+        "growth": "Vươn mình bứt phá mọi giới hạn."
+      }
+    },
+    "stories": {
+      "milestone1": {
+        "title": "Khởi Đầu Từ Những Ước Mơ",
+        "description": "Bắt đầu từ căn phòng nhỏ cùng những hoài bão lớn. QKIT không chỉ là một doanh nghiệp, mà là cái nôi nuôi dưỡng khát vọng số hóa từ những ngày đầu đầy thử thách."
+      },
+      "milestone2": {
+        "title": "Sức Mạnh Của Sự Đồng Lòng",
+        "description": "Mỗi cá nhân là một mảnh ghép hoàn hảo tạo nên sức mạnh tổng thể. Chúng tôi tin rằng sự đoàn kết và niềm đam mê công nghệ bất tận là chìa khóa của mọi thành công."
+      },
+      "milestone3": {
+        "title": "Sáng Tạo Vươn Tầm",
+        "description": "Mỗi dự án hoàn thành là một dấu son chói lọi, minh chứng cho sự nỗ lực không ngừng nghỉ và tư duy sáng tạo vượt thời đại của đội ngũ."
+      }
+    },
+    "photos": {
+      "photo_1": "Gia đình QKIT rạng rỡ trong buổi dã ngoại hè 2025.",
+      "photo_2": "Sự tập trung tuyệt đối vào những dự án chiến lược.",
+      "photo_3": "Khoảnh khắc ấm áp mừng sinh nhật thành viên mới.",
+      "photo_4": "Cùng nhau học hỏi, cùng nhau vươn xa.",
+      "photo_5": "Góc làm việc đầy cảm hứng, khơi nguồn sáng tạo.",
+      "photo_6": "Đêm tiệc cuối năm bùng nổ cảm xúc.",
+      "event_summit": "Hội nghị thượng đỉnh công nghệ 2026.",
+      "event_gala": "Đêm tiệc Gala cuối năm tri ân và gắn kết.",
+      "event_kickoff": "Khởi động dự án mới với tinh thần quyết thắng.",
+      "event_party": "Không khí sinh nhật rộn ràng tại văn phòng.",
+      "event_celebration": "Kỷ niệm chặng đường 8 năm kiến tạo giá trị.",
+      "team_collab": "Sự giao thoa của trí tuệ trong từng dòng mã.",
+      "team_meeting": "Thảo luận hăng say tìm kiếm giải pháp tối ưu.",
+      "team_workshop": "Workshop chia sẻ tri thức và kinh nghiệm nội bộ.",
+      "team_smiles": "Nụ cười rạng rỡ của những 'chiến binh' QKIT.",
+      "team_success": "Khoảnh khắc hạnh phúc khi dự án chính thức 'Go Live'.",
+      "office_view": "Tầm nhìn panorama khoáng đạt từ tầng 20.",
+      "office_modern": "Không gian làm việc hiện đại, chuẩn quốc tế.",
+      "office_tech": "Trang thiết bị tối tân nâng tầm hiệu suất.",
+      "office_creative": "Góc sáng tạo khơi dậy những ý tưởng mới.",
+      "office_coding": "Nơi những dòng code thay đổi tương lai số.",
+      "growth_learning": "Không ngừng khát khao chinh phục công nghệ mới.",
+      "growth_mentoring": "Sự dẫn dắt tận tâm từ những chuyên gia dày dạn.",
+      "growth_brainstorm": "Brainstorming tìm kiếm những giải pháp đột phá.",
+      "growth_presentation": "Thuyết trình giải pháp công nghệ trước hội đồng.",
+      "growth_award": "Vinh danh những cá nhân xuất sắc đạt thành tích ấn tượng.",
+      "team_coffee": "Giờ nghỉ giải lao bên tách cà phê đậm đà.",
+      "team_whiteboard": "Phác thảo kiến trúc hệ thống trên bảng trắng.",
+      "team_outing": "Chuyến dã ngoại thắt chặt tình đồng đội.",
+      "team_hacker": "Đam mê chinh phục những thử thách mã hóa phức tạp.",
+      "event_dinner": "Bữa tối thân mật gắn kết đại gia đình QKIT.",
+      "event_food": "Thưởng thức tinh hoa ẩm thực trong các sự kiện.",
+      "event_conference": "Đại diện QKIT tham dự hội thảo công nghệ quốc tế.",
+      "team_hangout": "Phút giây thư giãn, nạp lại năng lượng sau giờ làm.",
+      "office_reception": "Sảnh đón tiếp sang trọng, chuyên nghiệp.",
+      "office_manager": "Sự dẫn dắt sát sao từ quản lý dự án.",
+      "growth_career": "Lộ trình phát triển sự nghiệp rộng mở tại QKIT.",
+      "office_break": "Góc thư giãn tái tạo cảm hứng sáng tạo.",
+      "growth_pair": "Lập trình cặp - Cùng nhau tiến bộ, cùng nhau thành công.",
+      "growth_focus": "Sự tập trung tuyệt đối vào chất lượng sản phẩm.",
+      "team_diversity": "Đội ngũ đa dạng, đoàn kết và không ngừng sáng tạo.",
+      "event_workshop": "Buổi đào tạo kỹ năng mềm đầy thú vị.",
+      "event_meeting": "Gặp gỡ và trao đổi chuyên sâu cùng đối tác chiến lược.",
+      "office_vibe": "Nguồn cảm hứng bất tận lan tỏa trong không gian làm việc.",
+      "office_dev": "Môi trường phát triển phần mềm chuẩn mực quốc tế.",
+      "team_fun": "Những khoảnh khắc vui vẻ, tràn đầy tiếng cười.",
+      "growth_mentor": "Đồng hành cùng Mentor trên con đường sự nghiệp.",
+      "growth_together": "Cùng nhau trưởng thành qua từng thử thách cam go.",
+      "event_outdoor": "Hoạt động ngoài trời tăng cường sức khỏe và gắn kết.",
+      "growth_training": "Chương trình đào tạo chuyên môn định kỳ chất lượng."
+    }
   }
 }

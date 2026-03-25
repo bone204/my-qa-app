@@ -75,7 +75,7 @@ export default function GeneralJourneyDetail() {
         </motion.h1>
       </div>
 
-      <div className="container max-w-[90rem] mx-auto px-4 relative z-10">
+      <div className="container max-w-360 mx-auto px-4 relative z-10">
         {/* Header Section */}
         <div className=" max-w-7xl mb-32">
           <motion.div
@@ -129,11 +129,11 @@ export default function GeneralJourneyDetail() {
                     className="object-cover transition-transform duration-1000 group-hover:scale-110"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90" />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent opacity-90" />
 
                   {/* Milestone Text Inside Card */}
                   <div className="absolute bottom-6 left-6 right-6">
-                      <div className="p-6 rounded-[2rem] bg-black/40 backdrop-blur-xl border border-white/10 space-y-3">
+                      <div className="p-6 rounded-4xl bg-black/40 backdrop-blur-xl border border-white/10 space-y-3">
                         <div className="flex items-center gap-3 text-primary">
                           <div className="w-1.5 h-5 bg-primary rounded-full shadow-[0_0_15px_rgba(var(--primary),0.5)]" />
                           <span className="text-xs font-black tracking-[0.3em] uppercase">{img.title}</span>

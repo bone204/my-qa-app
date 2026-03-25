@@ -14,12 +14,13 @@ import {
   GraduationCap,
   Clock
 } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 /**
  * GeneralLife Component
  * 
  * Displays company benefits in a high-performance, ultra-smooth auto-scrolling horizontal carousel.
- * Optimized using useAnimationFrame and useMotionValue for sub-pixel precision.
+ * Optimized using motion for infinite scrolling, matching the design in SolutionsSection.
  */
 const GeneralLife = () => {
   const t = useTranslations("General.life");
@@ -27,121 +28,51 @@ const GeneralLife = () => {
   const benefits = [
     {
       id: "performance",
-      icon: <TrendingUp className="w-6 h-6" />,
+      icon: TrendingUp,
       color: "from-blue-500/20 to-cyan-500/20",
-      border: "border-blue-500/30",
-      textColor: "text-blue-400",
     },
     {
       id: "relocation",
-      icon: <MapPin className="w-6 h-6" />,
+      icon: MapPin,
       color: "from-orange-500/20 to-red-500/20",
-      border: "border-orange-500/30",
-      textColor: "text-orange-400",
     },
     {
       id: "health",
-      icon: <HeartPulse className="w-6 h-6" />,
+      icon: HeartPulse,
       color: "from-emerald-500/20 to-teal-500/20",
-      border: "border-emerald-500/30",
-      textColor: "text-emerald-400",
     },
     {
       id: "leave",
-      icon: <Baby className="w-6 h-6" />,
+      icon: Baby,
       color: "from-pink-500/20 to-rose-500/20",
-      border: "border-pink-500/30",
-      textColor: "text-pink-400",
     },
     {
       id: "snacks",
-      icon: <Utensils className="w-6 h-6" />,
+      icon: Utensils,
       color: "from-amber-500/20 to-orange-500/20",
-      border: "border-amber-500/30",
-      textColor: "text-amber-400",
     },
     {
       id: "retreat",
-      icon: <Palmtree className="w-6 h-6" />,
+      icon: Palmtree,
       color: "from-indigo-500/20 to-purple-500/20",
-      border: "border-indigo-500/30",
-      textColor: "text-indigo-400",
     },
     {
       id: "upskill",
-      icon: <GraduationCap className="w-6 h-6" />,
+      icon: GraduationCap,
       color: "from-sky-500/20 to-blue-500/20",
-      border: "border-sky-500/30",
-      textColor: "text-sky-400",
     },
     {
       id: "flexible",
-      icon: <Clock className="w-6 h-6" />,
+      icon: Clock,
       color: "from-violet-500/20 to-fuchsia-500/20",
-      border: "border-violet-500/30",
-      textColor: "text-violet-400",
     },
   ];
 
-  // Benefit Carousel Component with Optimized Smoothness
-  const ScrollingCarousel = ({ items }: { items: typeof benefits }) => {
-    // 2 sets are enough for CSS marquee
-    const duplicatedItems = [...items, ...items];
-
-    return (
-      <div className="relative w-full overflow-hidden py-10">
-        {/* Edge Fading Shaders */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
-
-        <style jsx>{`
-          @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-          }
-          .animate-marquee {
-            display: flex;
-            width: max-content;
-            animation: marquee 40s linear infinite;
-            will-change: transform;
-          }
-          .animate-marquee:hover {
-            animation-play-state: paused;
-          }
-        `}</style>
-
-        <div className="animate-marquee gap-8">
-          {duplicatedItems.map((benefit, i) => (
-            <div
-              key={`${benefit.id}-${i}`}
-              className={`flex-shrink-0 w-80 md:w-[420px] p-10 rounded-[3rem] bg-gradient-to-br ${benefit.color} border ${benefit.border} backdrop-blur-lg transition-all duration-500 hover:scale-[1.02] group relative overflow-hidden mx-4`}
-            >
-              {/* Subtle hover glow */}
-              <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-
-              <div className={`mb-8 p-6 rounded-[2rem] bg-white/10 w-fit ${benefit.textColor} shadow-inner [&>svg]:w-10 [&>svg]:h-10`}>
-                {benefit.icon}
-              </div>
-
-              <h3 className="text-3xl md:text-4xl font-black text-white uppercase italic tracking-tighter mb-4">
-                {t(`benefits.${benefit.id}.title`)}
-              </h3>
-
-              <p className="text-base md:text-lg text-zinc-400 font-medium leading-relaxed whitespace-normal line-clamp-3 italic">
-                {t(`benefits.${benefit.id}.desc`)}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  };
-
   return (
     <section className="relative py-32 overflow-hidden select-none">
-      {/* Header Container - Contrained to match other sections */}
-      <div className="container max-w-7xl mx-auto px-6 relative z-10">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-16">
+      {/* Container matching SolutionsSection */}
+      <div className="mx-auto max-w-7xl px-4 md:px-8 relative z-10">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-32">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -174,15 +105,47 @@ const GeneralLife = () => {
             </p>
           </motion.div>
         </div>
-      </div>
 
-      {/* Carousel Section - TRUE FULL WIDTH (Outside the container) */}
-      <div className="w-full relative z-10">
-        <ScrollingCarousel items={benefits} />
+        {/* Carousel Section - Now inside the container to match SolutionsSection layout */}
+        <div 
+          className="relative overflow-hidden group"
+          style={{
+            maskImage: 'linear-gradient(to right, transparent, black 15%, black 85%, transparent)',
+            WebkitMaskImage: 'linear-gradient(to right, transparent, black 15%, black 85%, transparent)'
+          }}
+        >
+          <div 
+            className="flex gap-6 w-max pr-6 group-hover:[animation-play-state:paused]"
+            style={{ 
+              animation: 'marquee 40s linear infinite',
+              willChange: 'transform'
+            }}
+          >
+            {[...benefits, ...benefits].map((item, idx) => (
+              <div
+                key={idx}
+                className="w-[280px] md:w-[320px] shrink-0"
+              >
+                <div className={cn(
+                  "group/item relative h-48 rounded-3xl p-8 bg-zinc-900/40 border border-white/5 overflow-hidden transition-all duration-500 hover:border-white/20",
+                  "before:absolute before:inset-0 before:bg-linear-to-br before:opacity-0 before:group-hover/item:opacity-100 before:transition-opacity before:duration-500",
+                  item.color
+                )}>
+                  <item.icon className="w-12 h-12 text-white mb-6 relative z-10 transition-transform duration-500 group-hover/item:-translate-y-2" />
+                  <div className="flex items-center relative z-10 mt-auto">
+                    <span className="text-xl font-bold text-white">
+                      {t(`benefits.${item.id}.title`)}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Aesthetic Bottom Border */}
-      <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
     </section>
   );
 };

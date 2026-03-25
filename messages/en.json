@@ -15,7 +15,8 @@
       "contact": "Contact",
       "others": "Others",
       "life": "Life @ QKIT Software",
-      "faq": "FAQ"
+      "faq": "FAQ",
+      "news": "News & Blog"
     },
     "career": {
       "title": "Careers",
@@ -1050,5 +1051,309 @@
   },
   "Common": {
     "discoverMore": "Discover more"
+  },
+  "Career": {
+    "subtitle": "Join the QKIT Family",
+    "title": "Where <highlight>Talent</highlight> Shines",
+    "description": "We don’t just build software, we build the future. Become part of a breakthrough journey with QKIT.",
+    "perks": {
+      "title": "Perks & Benefits",
+      "header": "QKIT <highlight>BENEFITS</highlight>",
+      "items": {
+        "0": {
+          "title": "Health Insurance",
+          "desc": "Comprehensive health care and absolute peace of mind."
+        },
+        "1": {
+          "title": "5-Day Work Week",
+          "desc": "Off Saturday & Sunday to maximize energy recharge."
+        },
+        "2": {
+          "title": "Performance Bonus",
+          "desc": "Worthy recognition for outstanding contributions and individual efforts."
+        },
+        "3": {
+          "title": "Vacations & Holidays",
+          "desc": "Paid leave and long-term public holidays."
+        },
+        "4": {
+          "title": "Competitive Salary",
+          "desc": "Attractive income and top-tier premium benefit packages."
+        },
+        "5": {
+          "title": "Festivals & Anniversaries",
+          "desc": "Team bonding through birthday parties and work milestones."
+        },
+        "6": {
+          "title": "Leave Policy",
+          "desc": "Flexible and friendly, respecting employees' personal needs."
+        },
+        "7": {
+          "title": "Pantry Area",
+          "desc": "Modern and convenient dining space right at the office."
+        },
+        "8": {
+          "title": "International Exposure",
+          "desc": "Opportunity to work and exchange with global experts."
+        },
+        "9": {
+          "title": "Subsidized Lunch",
+          "desc": "Support for nutritious and economical daily meals."
+        },
+        "10": {
+          "title": "Snacks & Drinks",
+          "desc": "Snacks and beverages always available 24/7."
+        },
+        "11": {
+          "title": "Open Culture",
+          "desc": "Respectful, transparent work environment that always listens."
+        },
+        "12": {
+          "title": "Worthy Rewards",
+          "desc": "Honor system and rewards for excellent personnel."
+        },
+        "13": {
+          "title": "Learning Opportunities",
+          "desc": "Funding for training courses and specialized workshops."
+        },
+        "14": {
+          "title": "Relaxation Room",
+          "desc": "Entertainment area with games and rest after work hours."
+        }
+      },
+      "majorBadge": "Major Perk",
+      "sidebar": {
+        "subtitle": "Join Our Team",
+        "title": "Creating <lineBreak></lineBreak> Real Value",
+        "readyTitle": "Ready for <lineBreak></lineBreak> <highlight>Greatness?</highlight>",
+        "readyDesc": "Become part of a pioneering collective where your talent is discovered and celebrated.",
+        "button": "Explore Positions"
+      },
+      "additional": {
+        "badge": "Daily Life & Culture",
+        "title": "More Than Just <lineBreak></lineBreak> <highlight>Benefits.</highlight>"
+      }
+    },
+    "card": {
+      "title": "Join the team",
+      "description": "We are constantly looking for talents who are passionate about technology and want to create special values.",
+      "features": {
+        "0": "Dynamic work environment",
+        "1": "Clear promotion opportunities",
+        "2": "Attractive benefits"
+      },
+      "button": "View vacancies"
+    },
+    "contact": {
+      "subtitle": "Apply Now",
+      "title": "Start <highlight>Your Career</highlight>",
+      "description": "Please leave your information and CV, our HR team will review and respond as soon as possible.",
+      "form": {
+        "lastName": "Last Name",
+        "lastNamePlaceholder": "Enter last name...",
+        "firstName": "First Name",
+        "firstNamePlaceholder": "Enter first name...",
+        "email": "Email",
+        "emailPlaceholder": "example@email.com",
+        "phone": "Phone Number",
+        "phonePlaceholder": "090 ...",
+        "position": "Applying Position",
+        "cv": "Send Your CV",
+        "cvPlaceholder": "Drag and drop CV here or click to select file (PDF, DOCX)...",
+        "message": "Introduce Yourself (Optional)",
+        "messagePlaceholder": "Let us know more about your experience and expectations...",
+        "submit": "Submit Application"
+      }
+    },
+    "positions": {
+      "0": "Frontend Developer (React/Next.js)",
+      "1": "Backend Developer (Node.js/Python)",
+      "2": "Mobile Developer (Flutter/React Native)",
+      "3": "UI/UX Designer",
+      "4": "Fullstack Developer",
+      "5": "Project Manager",
+      "6": "QC/Tester",
+      "7": "Others"
+    }
+  },
+  "FAQPage": {
+    "hero": {
+      "subtitle": "FAQ",
+      "title": "Need <highlight>Support?</highlight>",
+      "description": "Find answers to the most common questions about our services, recruitment process, and technical collaboration at QKIT Software."
+    },
+    "categories": {
+      "business": {
+        "title": "Business & Partnership",
+        "questions": {
+          "0": {
+            "q": "What cooperation models does QKIT Software offer?",
+            "a": "We provide 3 main models: Fixed Price, Time & Materials, and Dedicated Team (Staff Augmentation)."
+          },
+          "1": {
+            "q": "How to start a project with QKIT?",
+            "a": "Simply send your request via our contact form. We will respond within 24 hours to discuss details and advise on the most optimal solution for you."
+          },
+          "2": {
+            "q": "How is software development cost calculated?",
+            "a": "Costs depend on the scope of work, feature complexity, and implementation time. We will provide a detailed quote after analyzing your requirements."
+          }
+        }
+      },
+      "hiring": {
+        "title": "Hiring & Careers",
+        "questions": {
+          "0": {
+            "q": "What is the recruitment process at QKIT?",
+            "a": "The process consists of 4 steps: CV Screening, Technical Interview, Cultural Fit Interview, and Job Offer."
+          },
+          "1": {
+            "q": "Do I need to take a technical test?",
+            "a": "It depends on the position. Usually, we have a small test or a deep discussion about real-world projects you've participated in."
+          },
+          "2": {
+            "q": "What's special about the work environment at QKIT?",
+            "a": "We value creativity, openness, and flexibility. You'll work in a modern space with a pantry area and many team bonding activities."
+          }
+        }
+      },
+      "development": {
+        "title": "Tech & Development",
+        "questions": {
+          "0": {
+            "q": "What technologies does QKIT use for development?",
+            "a": "We specialize in React/Next.js for Web, Flutter/React Native for Mobile, and Node.js/Python for Backend. We always stay updated with the latest technologies."
+          },
+          "1": {
+            "q": "Are the projects guaranteed to be secure?",
+            "a": "Absolutely. Every project starts with an NDA, and source code is managed on high-security systems."
+          },
+          "2": {
+            "q": "Does QKIT support deployment to App Store and Play Store?",
+            "a": "Yes, we support the entire process from submitting apps to stores, CI/CD configuration, until the app is stable in the production environment."
+          }
+        }
+      }
+    }
+  },
+  "BlogPage": {
+    "hero": {
+      "subtitle": "Blog & News",
+      "title": "Tech <highlight>Insights</highlight>",
+      "description": "Sharing the latest in technology, design trends, and success stories from the QKIT Software team."
+    },
+    "filters": {
+      "all": "All",
+      "technology": "Technology",
+      "design": "Design",
+      "business": "Business",
+      "tutorial": "Tutorial"
+    },
+    "stats": {
+      "views": "views",
+      "readTime": "min read"
+    },
+    "noResults": "No posts found.",
+    "trending": "Trending Now",
+    "latestTitle": "Latest",
+    "latestHighlight": "Articles",
+    "explore": "Explore our collection of insights and stories.",
+    "newsletter": {
+      "title": "Stay ahead of the",
+      "highlight": "curve.",
+      "description": "Join our elite newsletter and receive high-performance tech insights directly in your inbox. No spam, just excellence.",
+      "placeholder": "your@email.com",
+      "button": "Subscribe Now"
+    }
+  },
+  "LifePage": {
+    "hero": {
+      "subtitle": "Memories & Fragements",
+      "title": "Life <highlight>Album</highlight>",
+      "description": "Where everyday moments become priceless memories. Welcome to the world of QKIT Software family."
+    },
+    "gallery": {
+      "title": "Memory <highlight>Vault</highlight>",
+      "subtitle": "Every photo is a unique story.",
+      "filters": {
+        "all": "All",
+        "team": "Team",
+        "office": "Office",
+        "events": "Events",
+        "growth": "Growth"
+      },
+      "polaroid": {
+        "office": "Where crazy ideas begin.",
+        "team": "My second family.",
+        "events": "Full of joy, full of life!",
+        "growth": "Journey to break limits."
+      }
+    },
+    "stories": {
+      "milestone1": {
+        "title": "First Steps",
+        "description": "Started in a small room with big dreams. QKIT Software is not just a company, it is a place where digital aspirations are nurtured since the early days of hardship."
+      },
+      "milestone2": {
+        "title": "Conquer Together",
+        "description": "When each individual is a perfect piece to create success. We believe the greatest strength lies in unity and unlimited passion for technology."
+      },
+      "milestone3": {
+        "title": "Scaling New Heights",
+        "description": "Every successful project is a testament to our team's exceptional effort and creativity."
+      }
+    },
+    "photos": {
+      "photo_1": "QKIT family on a summer outing in 2025.",
+      "photo_2": "Intense focus on key projects.",
+      "photo_3": "Celebrating new members' birthdays.",
+      "photo_4": "Learning and growing together.",
+      "photo_5": "Super chill workspace at the office.",
+      "photo_6": "Fiery year-end party.",
+      "event_summit": "Tech Summit 2026.",
+      "event_gala": "Cozy Year-end Gala Night.",
+      "event_kickoff": "Exciting new project kickoff.",
+      "event_party": "Bustling birthday party in the office.",
+      "event_celebration": "Celebrating our 8-year growth journey.",
+      "team_collab": "Team spirit in every line of code.",
+      "team_meeting": "Passionate discussions for optimal solutions.",
+      "team_workshop": "Internal knowledge sharing workshop.",
+      "team_smiles": "Radiant smiles of QKIT 'warriors'.",
+      "team_success": "Celebrating when projects 'Go Live' successfully.",
+      "office_view": "Panorama view from the 20th-floor office.",
+      "office_modern": "Modern and professional workspace.",
+      "office_tech": "State-of-the-art equipment supporting work.",
+      "office_creative": "Creative corner for inspiration.",
+      "office_coding": "Where lines of code change the future.",
+      "growth_learning": "Constantly learning new technologies.",
+      "growth_mentoring": "Guidance from experienced seniors.",
+      "growth_brainstorm": "Brainstorming for breakthrough ideas.",
+      "growth_presentation": "Presenting tech solutions to the board.",
+      "growth_award": "Honoring outstanding individuals of the month.",
+      "team_coffee": "Coffee break with aromatic coffee.",
+      "team_whiteboard": "Drafting system architecture on the whiteboard.",
+      "team_outing": "Teambuilding outing for bonding.",
+      "team_hacker": "Passionate about conquering coding challenges.",
+      "event_dinner": "Intimate dinner bonding the QKIT family.",
+      "event_food": "Enjoying cuisine at company events.",
+      "event_conference": "Attending international tech conferences.",
+      "team_hangout": "Relaxing moments after stressful work.",
+      "office_reception": "Elegant and hospitable reception lobby.",
+      "office_manager": "Tender guidance from project managers.",
+      "growth_career": "Clear career path at QKIT.",
+      "office_break": "Relaxation corner for recharging energy.",
+      "growth_pair": "Pair programming - Learning and progressing together.",
+      "growth_focus": "Absolute focus on product quality.",
+      "team_diversity": "Diverse, united, and creative team.",
+      "event_workshop": "Practical soft skills training session.",
+      "event_meeting": "Meeting and exchanging with strategic partners.",
+      "office_vibe": "Positive energy spreading throughout the office.",
+      "office_dev": "International standard software development environment.",
+      "team_fun": "Endless joyful moments.",
+      "growth_mentor": "Accompanying Mentor in career.",
+      "growth_together": "Growing together through challenges.",
+      "event_outdoor": "Outdoor activities for health.",
+      "growth_training": "Periodic deep training programs."
+    }
   }
 }

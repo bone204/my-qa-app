@@ -152,7 +152,7 @@ export default function AppBar() {
                     onMouseEnter={() => setHoveredItem(key)}
                   >
                     <Link
-                      href={key === 'aboutUs' ? '#' : (key === 'successStories' ? ROUTES.SUCCESS_STORIES : (key === 'portfolio' ? ROUTES.PORTFOLIO : `/${key.toLowerCase()}`))}
+                      href={key === 'aboutUs' ? '#' : (key === 'successStories' ? ROUTES.SUCCESS_STORIES : (key === 'portfolio' ? ROUTES.PORTFOLIO : (key === 'news' ? ROUTES.BLOG : `/${key.toLowerCase()}`)))}
                       onClick={(e) => {
                         if (key === 'aboutUs') {
                           e.preventDefault();
