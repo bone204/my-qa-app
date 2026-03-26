@@ -7,7 +7,7 @@ import { Sparkles, CheckCircle2, MessageSquare, Search, Users, Rocket } from 'lu
 
 export default function WorkExperienceSection() {
     // IMPORTANT: Changed namespace to HirePage to resolve translation lookup issues
-    const t = useTranslations('HirePage'); 
+    const t = useTranslations('HirePage');
     const tp = useTranslations('ProcessSection');
 
     // Access nested WorkExperienceSection keys

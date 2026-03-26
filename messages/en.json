@@ -1357,8 +1357,9 @@
     }
   },
   "HirePage": {
-    "title": "Hire Dedicated Remote Developers",
-    "description": "As a strategic partner, we provide you with dedicated designers, developers, or whole teams to scale your digital products. Our remote dedicated team will collaborate closely with clients to meet deadlines and deliver top-quality solutions tailored to their requirements. Contact us for more information about our dedicated resources and services.",
+    "subtitle": "Dedicated Talent",
+    "title": "Hire <highlight>Dedicated</highlight> Remote Developers",
+    "description": "As a strategic partner, we provide you with dedicated designers, developers, or whole teams to scale your digital products. Our remote dedicated team will collaborate closely with clients to meet deadlines and deliver top-quality solutions tailored to their requirements.",
     "benefits": {
       "replacement": "100% Resource Replacement*",
       "flexible": "Flexible Working Models",
@@ -1384,14 +1385,27 @@
         },
         "countries": {
           "value": "30+",
-          "label": "Countries"
+          "label": "Years Experience"
         }
+      }
+    },
+    "ReasonSection": {
+      "subtitle": "Core Benefits",
+      "title": "Why hire <highlight>dedicated developers</highlight> from QKIT Software?",
+      "description": "Unlock the benefits of hiring dedicated developers from QKIT Software and shape your business ideas into reliable and profitable software solutions. Let's look at some reasons to hire our developers for your project:",
+      "items": {
+        "1": "On-time delivery",
+        "2": "Policy maintenance",
+        "3": "Maintenance and support",
+        "4": "Timezone flexibility",
+        "5": "Performance management",
+        "6": "Flexible engagement models"
       }
     }
   },
   "EvidenceSection": {
-    "title": "Trusted by 100+ Clients",
-    "subtitle": "Including world-leading corporations",
+    "title": "Successful Partnership",
+    "subtitle": "Trusted by <highlight>100+ Clients</highlight> & Global Brands",
     "projectsTitle": "Featured Projects",
     "projects": {
       "kids": {

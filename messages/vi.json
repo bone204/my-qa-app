@@ -1357,8 +1357,9 @@
     }
   },
   "HirePage": {
-    "title": "Thuê nhà phát triển từ xa chuyên dụng",
-    "description": "Với tư cách là đối tác chiến lược, chúng tôi cung cấp cho bạn các nhà thiết kế, nhà phát triển tận tâm hoặc cả nhóm để mở rộng quy mô sản phẩm kỹ thuật số của bạn. Nhóm chuyên trách từ xa của chúng tôi sẽ hợp tác chặt chẽ với khách hàng để đạt được thời hạn và cung cấp các giải pháp chất lượng hàng đầu theo yêu cầu của họ. Hãy liên hệ với chúng tôi để biết thêm thông tin về các nguồn lực và dịch vụ chuyên dụng của chúng tôi.",
+    "subtitle": "Tài năng chuyên trách",
+    "title": "Thuê <highlight>nhà phát triển từ xa</highlight> chuyên dụng",
+    "description": "Với tư cách là đối tác chiến lược, chúng tôi cung cấp cho bạn các nhà thiết kế, nhà phát triển tận tâm hoặc cả nhóm để mở rộng quy mô sản phẩm kỹ thuật số của bạn. Nhóm chuyên trách từ xa của chúng tôi sẽ hợp tác chặt chẽ với khách hàng để đạt trình độ và cung cấp các giải pháp chất lượng hàng đầu theo yêu cầu của họ.",
     "benefits": {
       "replacement": "Thay thế tài nguyên 100%*",
       "flexible": "Mô hình làm việc linh hoạt",
@@ -1387,11 +1388,24 @@
           "label": "Quốc gia"
         }
       }
+    },
+    "ReasonSection": {
+      "subtitle": "Lợi ích cốt lõi",
+      "title": "Tại sao nên thuê <highlight>nhà phát triển chuyên dụng</highlight> từ QKIT Software?",
+      "description": "Khai thác lợi ích của việc thuê các nhà phát triển tận tâm từ QKIT Software và định hình ý tưởng kinh doanh của bạn thành các giải pháp phần mềm đáng tin cậy và sinh lời. Hãy cùng xem một số lý do nên thuê nhà phát triển của chúng tôi cho dự án của bạn:",
+      "items": {
+        "1": "Chuyển hàng đúng giờ",
+        "2": "Duy trì chính sách",
+        "3": "Bảo trì và hỗ trợ",
+        "4": "Tính linh hoạt trong múi giờ",
+        "5": "Quản lý hiệu suất",
+        "6": "Mô hình tương tác linh hoạt"
+      }
     }
   },
   "EvidenceSection": {
-    "title": "Tin tưởng bởi 100+ khách hàng",
-    "subtitle": "Bao gồm các tập đoàn hàng đầu thế giới",
+    "title": "Hợp tác thành công",
+    "subtitle": "Tin tưởng bởi <highlight>100+ khách hàng</highlight> & tập đoàn lớn",
     "projectsTitle": "Dự án Nổi bật",
     "description": "Chúng tôi tự hào là đối tác công nghệ tin cậy của những tên tuổi lớn, mang lại giải pháp đột phá và hiệu quả.",
     "projects": {
