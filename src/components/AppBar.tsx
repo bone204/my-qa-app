@@ -314,7 +314,7 @@ export default function AppBar() {
               </div>
 
               <Link
-                href={ROUTES.SIGN_IN}
+                href={ROUTES.HIRE}
                 className="outline-none rounded-full"
               >
                 <Button variant="secondary" className="px-5 py-2 text-sm">

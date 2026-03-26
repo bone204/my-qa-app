@@ -37,17 +37,25 @@ export default function LanguageCarousel() {
     const isFirstRun = useRef(true);
 
     // Reduced duplication to 2 sets as requested (max 2 occurrences of each icon)
-    const itemsRef = useRef(
+    const itemsRef = useRef<any[]>(
         [...LANGUAGES, ...LANGUAGES].map((lang, idx) => ({
             ...lang,
             id: idx,
-            x: 0,
+            x: -200,
             y: 0,
             targetY: 0,
-            speed: 0.8 + Math.random() * 1.0,
-            scale: 0.8 + Math.random() * 0.4,
+            speed: 1.0,
+            scale: 1.0,
         }))
     );
+
+    useEffect(() => {
+        // Randomize speed and scale only on client
+        itemsRef.current.forEach((item) => {
+            item.speed = 0.8 + Math.random() * 1.0;
+            item.scale = 0.8 + Math.random() * 0.4;
+        });
+    }, []);
 
     useEffect(() => {
         heldIdRef.current = heldId;
@@ -141,16 +149,20 @@ export default function LanguageCarousel() {
         }
     };
 
-    const [bubbles] = useState(() =>
-        Array.from({ length: 15 }).map((_, i) => ({
-            id: i,
-            left: `${Math.random() * 100}%`,
-            duration: `${4 + Math.random() * 6}s`,
-            delay: `${Math.random() * 5}s`,
-            size: `${4 + Math.random() * 8}px`,
-            drift: `${(Math.random() - 0.5) * 100}px`
-        }))
-    );
+    const [bubbles, setBubbles] = useState<any[]>([]);
+
+    useEffect(() => {
+        setBubbles(
+            Array.from({ length: 15 }).map((_, i) => ({
+                id: i,
+                left: `${Math.random() * 100}%`,
+                duration: `${4 + Math.random() * 6}s`,
+                delay: `${Math.random() * 5}s`,
+                size: `${4 + Math.random() * 8}px`,
+                drift: `${(Math.random() - 0.5) * 100}px`
+            }))
+        );
+    }, []);
 
     return (
         <section

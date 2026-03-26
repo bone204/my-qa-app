@@ -1355,5 +1355,90 @@
       "event_outdoor": "Outdoor activities for health.",
       "growth_training": "Periodic deep training programs."
     }
+  },
+  "HirePage": {
+    "title": "Hire Dedicated Remote Developers",
+    "description": "As a strategic partner, we provide you with dedicated designers, developers, or whole teams to scale your digital products. Our remote dedicated team will collaborate closely with clients to meet deadlines and deliver top-quality solutions tailored to their requirements. Contact us for more information about our dedicated resources and services.",
+    "benefits": {
+      "replacement": "100% Resource Replacement*",
+      "flexible": "Flexible Working Models",
+      "nda": "100% NDA Protected Contracts",
+      "refund": "100% Refund Policy*"
+    },
+    "WorkExperienceSection": {
+      "subtitle": "Trusted Growth",
+      "title": "Elite <highlight>Track Record</highlight>",
+      "description": "Over a decade of engineering excellence, delivering high-impact solutions for industry leaders worldwide.",
+      "stats": {
+        "years": {
+          "value": "10+",
+          "label": "Years Experience"
+        },
+        "projects": {
+          "value": "250+",
+          "label": "Projects Completed"
+        },
+        "clients": {
+          "value": "150+",
+          "label": "Global Clients"
+        },
+        "countries": {
+          "value": "30+",
+          "label": "Countries"
+        }
+      }
+    }
+  },
+  "EvidenceSection": {
+    "title": "Trusted by 100+ Clients",
+    "subtitle": "Including world-leading corporations",
+    "projectsTitle": "Featured Projects",
+    "projects": {
+      "kids": {
+        "title": "Kid's Learning App",
+        "description": "Among online learning tools for kids, Zoomer is the first to bring a high-quality, super-intelligent online learning experience."
+      },
+      "fitness": {
+        "title": "AB Training App",
+        "description": "An innovative, AI-powered abdominal workout app by Jeff Cavaliere, setting new standards with offline accessibility."
+      },
+      "psychology": {
+        "title": "Enneagram Personality Test App",
+        "description": "A dynamic psychology app that allows users to test their personality type using the Enneagram test."
+      }
+    },
+    "description": "We are proud to be the trusted technology partner for industry giants, delivering innovative and impactful solutions."
+  },
+  "ProcessSection": {
+    "left": {
+      "title": "Hire Top IT Talent in Vietnam in 4 Simple Steps",
+      "subtitle": "What we guarantee to provide",
+      "guarantees": [
+        "Guaranteed 160 hours of work",
+        "Hire weekly/monthly/yearly",
+        "Daily/weekly/monthly email reporting",
+        "Daily/weekly/monthly code submission",
+        "Direct communication with our resources",
+        "Flexible working hours based on time zone"
+      ]
+    },
+    "steps": {
+      "1": {
+        "title": "Share Your Requirements",
+        "description": "We will schedule a quick call to deep dive into your app development needs. Don't worry! It's safe and confidential."
+      },
+      "2": {
+        "title": "Matched Talent Shortlist",
+        "description": "We will conduct talent screening, carefully selecting a list of dedicated talents suitable for hire."
+      },
+      "3": {
+        "title": "Talent Interview",
+        "description": "Schedule interviews with talent, matching skill sets to your specific requirements."
+      },
+      "4": {
+        "title": "Kickoff the Project",
+        "description": "Once you find the right talent, we'll assist with remote onboarding and provide ongoing support."
+      }
+    }
   }
 }

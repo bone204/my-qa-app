@@ -184,7 +184,7 @@
   },
   "SolutionSection": {
     "backgroundText": "GIẢI PHÁP",
-    "subtitle": "H hệ Tinh Thái Công Nghệ",
+    "subtitle": "Hệ Sinh Thái Công Nghệ",
     "title": "Mạng Lưới <highlight>Thần Kinh</highlight> Số Hóa.",
     "description": "Vượt xa những dòng code tiêu chuẩn, chúng tôi xây dựng hệ sinh thái thông minh kết nối hoàn hảo tầm nhìn với công nghệ.",
     "nodes": {
@@ -1354,6 +1354,91 @@
       "growth_together": "Cùng nhau trưởng thành qua từng thử thách cam go.",
       "event_outdoor": "Hoạt động ngoài trời tăng cường sức khỏe và gắn kết.",
       "growth_training": "Chương trình đào tạo chuyên môn định kỳ chất lượng."
+    }
+  },
+  "HirePage": {
+    "title": "Thuê nhà phát triển từ xa chuyên dụng",
+    "description": "Với tư cách là đối tác chiến lược, chúng tôi cung cấp cho bạn các nhà thiết kế, nhà phát triển tận tâm hoặc cả nhóm để mở rộng quy mô sản phẩm kỹ thuật số của bạn. Nhóm chuyên trách từ xa của chúng tôi sẽ hợp tác chặt chẽ với khách hàng để đạt được thời hạn và cung cấp các giải pháp chất lượng hàng đầu theo yêu cầu của họ. Hãy liên hệ với chúng tôi để biết thêm thông tin về các nguồn lực và dịch vụ chuyên dụng của chúng tôi.",
+    "benefits": {
+      "replacement": "Thay thế tài nguyên 100%*",
+      "flexible": "Mô hình làm việc linh hoạt",
+      "nda": "Hợp đồng được bảo vệ 100% NDA",
+      "refund": "Chính sách hoàn tiền 100%*"
+    },
+    "WorkExperienceSection": {
+      "subtitle": "Sự tin tưởng & Phát triển",
+      "title": "Bề dày <highlight>Kinh nghiệm</highlight>",
+      "description": "Hơn một thập kỷ dẫn đầu về kỹ thuật, cung cấp các giải pháp tác động cao cho các doanh nghiệp hàng đầu trên toàn thế giới.",
+      "stats": {
+        "years": {
+          "value": "10+",
+          "label": "Năm kinh nghiệm"
+        },
+        "projects": {
+          "value": "250+",
+          "label": "Dự án hoàn thành"
+        },
+        "clients": {
+          "value": "150+",
+          "label": "Khách hàng quốc tế"
+        },
+        "countries": {
+          "value": "30+",
+          "label": "Quốc gia"
+        }
+      }
+    }
+  },
+  "EvidenceSection": {
+    "title": "Tin tưởng bởi 100+ khách hàng",
+    "subtitle": "Bao gồm các tập đoàn hàng đầu thế giới",
+    "projectsTitle": "Dự án Nổi bật",
+    "description": "Chúng tôi tự hào là đối tác công nghệ tin cậy của những tên tuổi lớn, mang lại giải pháp đột phá và hiệu quả.",
+    "projects": {
+      "kids": {
+        "title": "Ứng dụng học tập dành cho trẻ em",
+        "description": "Trong các công cụ học trực tuyến dành cho trẻ em, Zoomer là công cụ đầu tiên mang đến trải nghiệm học trực tuyến chất lượng cao và siêu thông minh."
+      },
+      "fitness": {
+        "title": "Ứng dụng tập luyện AB",
+        "description": "Một ứng dụng tập luyện cơ bụng sáng tạo, được hỗ trợ bởi AI, do Jeff Cavaliere phụ trách, thiết lập các tiêu chuẩn mới với khả năng truy cập ngoại tuyến."
+      },
+      "psychology": {
+        "title": "Ứng dụng Kiểm tra tính cách Enneagram",
+        "description": "Một ứng dụng tâm lý năng động cho phép người dùng kiểm tra loại tính cách của mình bằng bài kiểm tra Enneagram."
+      }
+    }
+  },
+  "ProcessSection": {
+    "left": {
+      "title": "Thuê nhân sự IT giỏi tại Việt Nam 4 bước đơn giản",
+      "subtitle": "Những gì chúng tôi đảm bảo cung cấp",
+      "guarantees": [
+        "Đảm bảo 160 giờ làm việc",
+        "Thuê theo hàng tuần/tháng/năm",
+        "Báo cáo hàng ngày/tuần/tháng qua email",
+        "Gửi mã hàng ngày/hàng tuần/hàng tháng",
+        "Hỗ trợ liên lạc trực tiếp với tài nguyên của chúng tôi",
+        "Giờ hành chính linh hoạt tùy theo múi giờ"
+      ]
+    },
+    "steps": {
+      "1": {
+        "title": "Chia sẻ yêu cầu của bạn",
+        "description": "Chúng tôi sẽ lên lịch cuộc gọi nhanh và tìm hiểu kỹ nhu cầu phát triển ứng dụng của bạn. Đừng lo lắng! Nó an toàn và bí mật."
+      },
+      "2": {
+        "title": "Danh sách rút gọn nhân tài phù hợp",
+        "description": "Chúng tôi sẽ tiến hành sàng lọc tài năng, chọn lọc và tuyển chọn danh sách những tài năng chuyên dụng phù hợp để thuê."
+      },
+      "3": {
+        "title": "Phỏng vấn tài năng",
+        "description": "Lên lịch phỏng vấn với nhân tài, kết hợp các bộ kỹ năng phù hợp với yêu cầu của bạn."
+      },
+      "4": {
+        "title": "Bắt đầu dự án",
+        "description": "Sau khi bạn tìm được tài năng phù hợp, chúng tôi sẽ giúp bạn tham gia từ xa, bắt đầu dự án và cung cấp hỗ trợ."
+      }
     }
   }
 }

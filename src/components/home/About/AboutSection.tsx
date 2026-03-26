@@ -25,8 +25,12 @@ const VIDEOS_LIST = [
     }
 ];
 
+import { ROUTES } from '@/constants/routes';
+import { useRouter } from 'next/navigation';
+
 export default function AboutSection() {
     const t = useTranslations('AboutSection');
+    const router = useRouter();
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isHovered, setIsHovered] = useState(false);
     const [direction, setDirection] = useState(0);
@@ -125,7 +129,11 @@ export default function AboutSection() {
                         </p>
 
                         <div className="flex gap-4 pt-2">
-                            <Button variant="body" className="w-full sm:w-auto">
+                            <Button 
+                                variant="body" 
+                                className="w-full sm:w-auto"
+                                onClick={() => router.push(ROUTES.SERVICES)}
+                            >
                                 {t('button')}
                             </Button>
                         </div>
