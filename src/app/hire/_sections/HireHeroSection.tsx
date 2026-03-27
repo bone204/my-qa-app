@@ -5,14 +5,20 @@ import { motion } from 'framer-motion';
 import { CheckCircle2, Sparkles } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
-export default function HireHeroSection() {
-    const t = useTranslations('HirePage');
+interface HireHeroSectionProps {
+    ns?: string;
+    slug?: string;
+}
+
+export default function HireHeroSection({ ns = 'HirePage', slug }: HireHeroSectionProps) {
+    const t = useTranslations(ns as any);
+    const tBenefits = useTranslations('HirePage');
 
     const benefits = [
-        t('benefits.replacement'),
-        t('benefits.flexible'),
-        t('benefits.nda'),
-        t('benefits.refund')
+        tBenefits('benefits.replacement'),
+        tBenefits('benefits.flexible'),
+        tBenefits('benefits.nda'),
+        tBenefits('benefits.refund')
     ];
 
     return (
@@ -33,7 +39,7 @@ export default function HireHeroSection() {
                                 className="flex items-center gap-2"
                             >
                                 <Sparkles className="w-4 h-4 text-primary" />
-                                <span className="section-subtitle">{t('subtitle')}</span>
+                                <span className="section-subtitle">{t(slug ? `${slug}.subtitle` : 'subtitle')}</span>
                             </motion.div>
 
                             <motion.div
@@ -42,7 +48,7 @@ export default function HireHeroSection() {
                                 transition={{ duration: 0.6, delay: 0.1 }}
                             >
                                 <h1 className="section-title text-start max-w-none!">
-                                    {t.rich('title', {
+                                    {t.rich(slug ? `${slug}.title` : 'title', {
                                         highlight: (chunks) => <span className="text-primary">{chunks}</span>
                                     })}
                                 </h1>
@@ -55,7 +61,7 @@ export default function HireHeroSection() {
                             transition={{ duration: 0.6, delay: 0.2 }}
                             className="section-desc text-start max-w-none! font-medium"
                         >
-                            {t('description')}
+                            {t(slug ? `${slug}.description` : 'description')}
                         </motion.p>
                     </div>
 

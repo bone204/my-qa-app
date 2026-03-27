@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { Smartphone, Monitor, Palette, Terminal, Sparkles, CheckCircle2, ArrowRight } from 'lucide-react';
 import Button from '@/components/ui/Button';
+import Link from 'next/link';
 
 const HireCategorySection = () => {
     const t = useTranslations('HirePage.CategorySection');
@@ -12,21 +13,25 @@ const HireCategorySection = () => {
     const categories = [
         {
             key: 'mobile',
+            slug: 'hire-mobile-app-development',
             icon: <Smartphone className="w-8 h-8 text-primary" />,
             items: t.raw('categories.mobile.items') as string[]
         },
         {
             key: 'frontend',
+            slug: 'hire-frontend-development',
             icon: <Monitor className="w-8 h-8 text-primary" />,
             items: t.raw('categories.frontend.items') as string[]
         },
         {
             key: 'design',
+            slug: 'hire-ui-ux-design',
             icon: <Palette className="w-8 h-8 text-primary" />,
             items: t.raw('categories.design.items') as string[]
         },
         {
             key: 'devops',
+            slug: 'hire-devops-engineering',
             icon: <Terminal className="w-8 h-8 text-primary" />,
             items: t.raw('categories.devops.items') as string[]
         }
@@ -102,9 +107,11 @@ const HireCategorySection = () => {
                                 </ul>
 
                                 <div className="flex justify-center mt-auto">
-                                    <Button variant="body" parentGroup="card" className="w-full">
-                                        {t('hireButton')}
-                                    </Button>
+                                    <Link href={`/hire/${cat.slug}`} className="w-full">
+                                        <Button variant="body" parentGroup="card" className="w-full">
+                                            {t('hireButton')}
+                                        </Button>
+                                    </Link>
                                 </div>
                             </div>
                         </motion.div>
@@ -140,9 +147,11 @@ const HireCategorySection = () => {
                                             </p>
                                         </div>
 
-                                        <Button variant="body" parentGroup="card" className="w-full">
-                                            {t('hireButton')}
-                                        </Button>
+                                        <Link href={`/hire/${cat.slug}`} className="w-full">
+                                            <Button variant="body" parentGroup="card" className="w-full">
+                                                {t('hireButton')}
+                                            </Button>
+                                        </Link>
                                     </div>
                                 </div>
                                 

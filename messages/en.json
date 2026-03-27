@@ -1506,5 +1506,100 @@
         "description": "Once you find the right talent, we'll assist with remote onboarding and provide ongoing support."
       }
     }
+  },
+  "HireCategoryPages": {
+    "hire-mobile-app-development": {
+      "subtitle": "Optimal Mobile Solutions",
+      "title": "Hire <highlight>Dedicated</highlight> Mobile App Developers",
+      "description": "QKIT Software provides a team of experts building high-quality apps on iOS, Android, and cross-platform platforms.",
+      "intro": "In the digital age, a powerful mobile app is key to connecting with customers. Our mobile development team doesn't just write code; they create seamless, efficient experiences with exceptional scalability.",
+      "skills": [
+        "Flutter",
+        "React Native",
+        "Swift (iOS)",
+        "Kotlin (Android)",
+        "Firebase Integration",
+        "App Store Deployment",
+        "Mobile UI Patterns",
+        "Performance Optimization"
+      ],
+      "flowingMenu": [
+        { "text": "Programming Languages", "details": "Kotlin, Java", "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=600" },
+        { "text": "Frameworks", "details": "React Native, Ionic, Flutter", "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=600" },
+        { "text": "Plugins & Libraries", "details": "Jetpack, Compose", "image": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=600" },
+        { "text": "Databases", "details": "Room, SQLite, Firebase", "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=600" },
+        { "text": "Tools & Utilities", "details": "Figma, Android Studio, Jira", "image": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=600" }
+      ]
+    },
+    "hire-frontend-development": {
+      "subtitle": "Modern & Fluent Interfaces",
+      "title": "Hire Talented <highlight>Front-end</highlight> Developers",
+      "description": "Create top-tier web experiences with the most modern frameworks from our leading experts.",
+      "intro": "The user interface is the first touchpoint of your brand. We focus on building high-speed, responsive websites with maximum aesthetics, ensuring absolute satisfaction across all devices.",
+      "skills": [
+        "React.js",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Redux / Zustand",
+        "Unit Testing (Jest)",
+        "Web Performance",
+        "Responsive Design"
+      ],
+      "flowingMenu": [
+        { "text": "Languages", "details": "TypeScript, JavaScript, HTML/CSS", "image": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?q=80&w=600" },
+        { "text": "Frameworks", "details": "React, Next.js, Vue, Angular", "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=600" },
+        { "text": "Styling", "details": "Tailwind CSS, Sass, Styled Components", "image": "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?q=80&w=600" },
+        { "text": "State Management", "details": "Redux, Recoil, Zustand", "image": "https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80&w=600" },
+        { "text": "Tools", "details": "Webpack, Vite, Chromatic, Storybook", "image": "https://images.unsplash.com/photo-1522252234503-e356532cafd5?q=80&w=600" }
+      ]
+    },
+    "hire-ui-ux-design": {
+      "subtitle": "Design Elevating Brand",
+      "title": "Hire Professional <highlight>UI-UX</highlight> Designers",
+      "description": "Turn ideas into reality with an in-depth design process focused on user experience.",
+      "intro": "Good design is not just beautiful; it must work effectively. Our design process combines deep user research and modern aesthetic thinking to create digital products that are easy to use and inspiring.",
+      "skills": [
+        "Figma",
+        "Adobe XD",
+        "User Research",
+        "Wireframing & Prototyping",
+        "Design Systems",
+        "Interaction Design",
+        "Mobile-First Design",
+        "Usability Testing"
+      ],
+      "flowingMenu": [
+        { "text": "Design Tools", "details": "Figma, Adobe XD, Sketch", "image": "https://images.unsplash.com/photo-1586717791821-3f44a563dc4c?q=80&w=600" },
+        { "text": "Prototyping", "details": "Framer, Protopie, Principle", "image": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=600" },
+        { "text": "Research", "details": "User Interviews, Surveys, Heatmaps", "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=600" },
+        { "text": "Handover", "details": "Zeplin, Storybook, Zeroheight", "image": "https://images.unsplash.com/photo-1551288049-bbbda536339a?q=80&w=600" },
+        { "text": "Methodology", "details": "Design Thinking, Atomic Design", "image": "https://images.unsplash.com/photo-1512314889357-e157c22f938d?q=80&w=600" }
+      ]
+    },
+    "hire-devops-engineering": {
+      "subtitle": "Stable Infrastructure & Automation",
+      "title": "Hire High-Level <highlight>DevOps</highlight> Engineers",
+      "description": "Optimize the development, deployment, and operation process with the latest solutions.",
+      "intro": "Ensure stability and record deployment speed for your project. Our DevOps engineers help automate every process from code to production, minimizing errors and optimizing cloud infrastructure costs.",
+      "skills": [
+        "AWS / Azure / GCP",
+        "Docker & Kubernetes",
+        "CI/CD Pipelines",
+        "Terraform (IaC)",
+        "Monitoring & Logging",
+        "Cloud Security",
+        "Nginx / Server Config",
+        "Automation Scripts"
+      ],
+      "flowingMenu": [
+        { "text": "Cloud Platforms", "details": "AWS, Azure, Google Cloud", "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=600" },
+        { "text": "Containerization", "details": "Docker, Kubernetes", "image": "https://images.unsplash.com/photo-1605745341112-85968b193ef5?q=80&w=600" },
+        { "text": "CI/CD", "details": "GitHub Actions, Jenkins, GitLab CI", "image": "https://images.unsplash.com/photo-1618401471353-b98aadebc255?q=80&w=600" },
+        { "text": "Infrastructure", "details": "Terraform, Ansible, Pulumi", "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600" },
+        { "text": "Monitoring", "details": "Prometheus, Grafana, ELK Stack", "image": "https://images.unsplash.com/photo-1551288049-bbbda536339a?q=80&w=600" }
+      ]
+    },
+    "coreCompetencies": "Core Competencies"
   }
 }
