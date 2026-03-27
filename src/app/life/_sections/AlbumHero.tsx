@@ -15,7 +15,7 @@ const HERO_ASSETS = [
 export default function AlbumHero() {
     const t = useTranslations('LifePage.hero');
     const { scrollY } = useScroll();
-    
+
     // Parallax effect for scattered photos
     const y1 = useTransform(scrollY, [0, 500], [0, -100]);
     const y2 = useTransform(scrollY, [0, 500], [0, 100]);
@@ -27,22 +27,22 @@ export default function AlbumHero() {
                 {HERO_ASSETS.map((asset, index) => (
                     <motion.div
                         key={asset.id}
-                        style={{ 
-                            left: `${asset.x}%`, 
+                        style={{
+                            left: `${asset.x}%`,
                             top: `${asset.y}%`,
                             y: index % 2 === 0 ? y1 : y2,
                             rotate: asset.rotate
                         }}
                         className="absolute w-32 md:w-64 aspect-4/5 bg-white p-1.5 pb-6 md:p-2 md:pb-8 shadow-2xl skew-x-1"
                     >
-                         <div className="relative w-full h-full grayscale-50 hover:grayscale-0 transition-all duration-700 overflow-hidden rounded-xs">
-                            <Image 
-                                src={asset.src} 
-                                alt="Memory" 
-                                fill 
+                        <div className="relative w-full h-full grayscale-50 hover:grayscale-0 transition-all duration-700 overflow-hidden rounded-xs">
+                            <Image
+                                src={asset.src}
+                                alt="Memory"
+                                fill
                                 className="object-cover"
                             />
-                         </div>
+                        </div>
                     </motion.div>
                 ))}
             </div>
@@ -60,7 +60,7 @@ export default function AlbumHero() {
                     </span>
                 </motion.div>
 
-                <motion.h1 
+                <motion.h1
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}

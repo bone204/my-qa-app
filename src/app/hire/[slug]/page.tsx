@@ -30,7 +30,7 @@ export default function HireCategoryPage({ params }: { params: Promise<{ slug: s
   const skillItems = t.raw(`${slug}.flowingMenu`) as Array<{ text: string; details: string; image: string }>;
 
   return (
-    <div className="relative w-full flex flex-col select-none overflow-x-hidden pt-20">
+    <div className="relative w-full flex flex-col select-none overflow-x-hidden pt-10 md:pt-20">
       
       {/* Section 1: Hero with MagicRings (The "vòng tròn cũ" from About Us) */}
       <section className="relative min-h-[90vh] w-full flex flex-col items-center justify-center px-6 overflow-hidden">
@@ -113,13 +113,13 @@ export default function HireCategoryPage({ params }: { params: Promise<{ slug: s
       </section>
 
       {/* Section 2: Skills Card Grid */}
-      <section className="relative w-full z-10 bg-transparent py-24">
+      <section className="relative w-full z-10 bg-transparent py-16 md:py-24">
         <div className="container mx-auto max-w-7xl px-6">
             <motion.div
                initial={{ opacity: 0, y: 20 }}
                whileInView={{ opacity: 1, y: 0 }}
                viewport={{ once: true }}
-               className="text-center mb-16"
+               className="text-center mb-10 md:mb-16"
              >
                <h2 className="section-subtitle mb-4 uppercase tracking-[0.3em]">
                   {t('coreCompetencies')}

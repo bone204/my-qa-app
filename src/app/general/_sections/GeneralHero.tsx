@@ -8,7 +8,7 @@ export default function GeneralHero() {
   const t = useTranslations("General.hero");
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden flex flex-col items-center justify-center pt-20 px-4 select-none">
+    <section className="relative min-h-screen w-full overflow-hidden flex flex-col items-center justify-center pt-16 md:pt-20 px-4 select-none">
       {/* Background Effect */}
       <div className="absolute inset-0 -z-10 opacity-50">
         <MagicRings

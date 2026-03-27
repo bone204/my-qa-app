@@ -83,9 +83,9 @@ const JoinSection = () => {
     ];
 
     return (
-        <section className="py-24 bg-background overflow-hidden">
+        <section className="py-16 md:py-24 bg-background overflow-hidden">
             <div className="mx-auto w-full max-w-7xl px-4 md:px-8 relative z-10">
-                <div className="flex flex-col items-center text-center mb-20">
+                <div className="flex flex-col items-center text-center mb-12 md:mb-20">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}

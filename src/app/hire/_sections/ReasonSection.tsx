@@ -18,9 +18,9 @@ const ReasonSection = () => {
     ];
 
     return (
-        <section className="relative py-24 overflow-hidden select-none">
+        <section className="relative py-16 md:py-24 overflow-hidden select-none">
             <div className="container mx-auto px-6 relative z-10 max-w-7xl">
-                <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-20 space-y-4">
+                <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-12 md:mb-20 space-y-4">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}

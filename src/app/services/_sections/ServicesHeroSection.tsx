@@ -10,7 +10,7 @@ export default function ServicesHeroSection() {
     const t = useTranslations('ServicesPage.hero');
 
     return (
-        <section className="relative min-h-screen w-full flex items-center justify-center pt-32 pb-20 overflow-hidden select-none">
+        <section className="relative min-h-screen w-full flex items-center justify-center pt-24 md:pt-32 pb-12 md:pb-20 overflow-hidden select-none">
             {/* Background Decorations */}
             <div className="absolute top-1/4 -left-20 w-80 h-80 bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
             <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />

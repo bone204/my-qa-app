@@ -22,7 +22,7 @@ export default function HireHeroSection({ ns = 'HirePage', slug }: HireHeroSecti
     ];
 
     return (
-        <main className="relative min-h-screen w-full flex items-center justify-center overflow-hidden py-24 select-none">
+        <main className="relative min-h-screen w-full flex items-center justify-center overflow-hidden py-16 md:py-24 select-none">
             {/* Background Decorations */}
             <div className="absolute top-1/4 -left-20 w-80 h-80 bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
             <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />

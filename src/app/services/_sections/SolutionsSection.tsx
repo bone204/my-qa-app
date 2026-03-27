@@ -33,10 +33,10 @@ export default function SolutionsSection() {
     ];
 
     return (
-        <section className="relative py-32 overflow-hidden select-none">
+        <section className="relative py-16 md:py-32 overflow-hidden select-none">
             <div className="mx-auto max-w-7xl px-4 md:px-8 relative z-10">
                 {/* Header */}
-                <div className="flex flex-col items-center text-center mb-24">
+                <div className="flex flex-col items-center text-center mb-12 md:mb-24">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
@@ -62,7 +62,7 @@ export default function SolutionsSection() {
                 </div>
 
                 {/* Part 1: Startup & Enterprise */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-32">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 md:mb-32">
                     <SolutionCard 
                         icon={Rocket}
                         title={t('startup.title')}
@@ -82,7 +82,7 @@ export default function SolutionsSection() {
                 </div>
 
                 {/* Part 2: On-Demand Solutions Carousel - Infinite Auto-scroll */}
-                <div className="mb-32">
+                <div className="mb-16 md:mb-32">
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
                         <motion.h3
                             initial={{ opacity: 0, x: -20 }}
@@ -141,7 +141,7 @@ export default function SolutionsSection() {
                 </div>
 
                 {/* Part 3: SaaS, Transformation, MVP */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 md:mb-32">
                     <SolutionCard 
                         icon={Zap}
                         title={t('products.saas.title')}

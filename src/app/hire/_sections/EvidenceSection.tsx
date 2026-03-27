@@ -43,11 +43,11 @@ export default function EvidenceSection() {
     ];
 
     return (
-        <section className="relative py-32 w-full overflow-hidden select-none">
+        <section className="relative py-16 md:py-32 w-full overflow-hidden select-none">
 
             <div className="mx-auto max-w-7xl px-6 md:px-12 relative z-10">
                 {/* Header Section */}
-                <div className="flex flex-col items-center text-center mb-24">
+                <div className="flex flex-col items-center text-center mb-12 md:mb-24">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}

@@ -21,7 +21,7 @@ export default function GeneralJourney() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center py-32 px-4 relative overflow-hidden select-none">
+    <section className="min-h-screen flex items-center justify-center py-16 md:py-32 px-4 relative overflow-hidden select-none">
       <div className="container max-w-7xl mx-auto flex flex-col items-center">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center w-full">
           {/* Left Content */}

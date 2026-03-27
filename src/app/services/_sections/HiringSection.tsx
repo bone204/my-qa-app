@@ -44,10 +44,10 @@ export default function HiringSection() {
     const uiuxTasks = [0, 1, 2, 3];
 
     return (
-        <section className="relative py-24 w-full overflow-hidden select-none">
+        <section className="relative py-12 md:py-24 w-full overflow-hidden select-none">
             <div className="mx-auto max-w-7xl px-4 md:px-8 relative z-10">
                 {/* Header */}
-                <div className="flex flex-col items-center text-center mb-32">
+                <div className="flex flex-col items-center text-center mb-16 md:mb-32">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
@@ -73,7 +73,7 @@ export default function HiringSection() {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="group/card relative w-full rounded-[40px] overflow-hidden border border-white/10 bg-zinc-900/30 backdrop-blur-sm mb-20"
+                    className="group/card relative w-full rounded-[40px] overflow-hidden border border-white/10 bg-zinc-900/30 backdrop-blur-sm mb-12 md:mb-20"
                 >
                     <div className="flex flex-col lg:flex-row items-center">
                         {/* Content Left Part */}

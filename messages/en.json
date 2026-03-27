@@ -321,6 +321,7 @@
       "Technology": "Technology",
       "Business": "Business"
     },
+    "comingSoon": "Coming soon...",
     "posts": {
       "1": {
         "title": "The Future of UI Design: Glassmorphism & Beyond",
@@ -1264,7 +1265,15 @@
       "description": "Join our elite newsletter and receive high-performance tech insights directly in your inbox. No spam, just excellence.",
       "placeholder": "your@email.com",
       "button": "Subscribe Now"
-    }
+    },
+    "loading": "Loading posts...",
+    "details": {
+      "author": "Author",
+      "share": "Share:",
+      "relatedPosts": "Related Posts",
+      "viewAll": "View all"
+    },
+    "comingSoon": "Coming soon..."
   },
   "LifePage": {
     "hero": {

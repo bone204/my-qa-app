@@ -321,6 +321,7 @@
       "Technology": "Công Nghệ",
       "Business": "Kinh Doanh"
     },
+    "comingSoon": "Sắp ra mắt...",
     "posts": {
       "1": {
         "title": "Tương Lại của Thiết Kế UI: Glassmorphism & Hơn Thế Nữa",
@@ -1264,7 +1265,15 @@
       "description": "Tham gia bản tin cao cấp của chúng tôi để nhận những hiểu biết công nghệ hiệu suất cao trực tiếp vào hộp thư của bạn. Không spam, chỉ có những giá trị tốt nhất.",
       "placeholder": "email@cua-ban.com",
       "button": "Đăng ký ngay"
-    }
+    },
+    "loading": "Đang tải bài viết...",
+    "details": {
+      "author": "Tác giả",
+      "share": "Chia sẻ:",
+      "relatedPosts": "Bài viết liên quan",
+      "viewAll": "Xem tất cả"
+    },
+    "comingSoon": "Sắp ra mắt..."
   },
   "LifePage": {
     "hero": {
