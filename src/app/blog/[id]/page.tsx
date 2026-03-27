@@ -62,7 +62,7 @@ export default async function BlogPostDetail({ params, searchParams }: Props) {
           <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent" />
         </div>
 
-        <div className="absolute bottom-0 left-0 w-full p-6 md:p-20">
+        <div className="absolute bottom-0 left-0 w-full px-6 py-12 md:p-20">
           <div className="max-w-4xl mx-auto space-y-6">
 
             <div className="flex flex-wrap gap-3">
@@ -76,13 +76,13 @@ export default async function BlogPostDetail({ params, searchParams }: Props) {
               )}
             </div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] tracking-tighter">
+            <h1 className="text-3xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] tracking-tighter">
               {title}
             </h1>
 
-            <div className="flex flex-wrap items-center gap-6 pt-8 border-t border-white/10">
+            <div className="flex flex-wrap items-center gap-6 pt-6 md:pt-8 border-t border-white/10">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full border-2 border-primary/30 p-0.5">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-primary/30 p-0.5">
                   <img 
                     src={post.authorAvatar || 'https://i.pravatar.cc/150'} 
                     alt={post.authorName}
@@ -95,13 +95,13 @@ export default async function BlogPostDetail({ params, searchParams }: Props) {
                 </div>
               </div>
 
-              <div className="flex items-center gap-6 text-zinc-400 text-xs font-bold uppercase tracking-widest">
+              <div className="flex flex-wrap items-center gap-4 md:gap-6 text-zinc-400 text-[10px] md:text-xs font-bold uppercase tracking-widest">
                 <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4 text-primary" />
+                  <Calendar className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary" />
                   {typeof post.date === 'string' ? post.date : post.date.toLocaleDateString('vi-VN')}
                 </div>
                 <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-primary" />
+                  <Clock className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary" />
                   {readTime}
                 </div>
               </div>
@@ -111,10 +111,10 @@ export default async function BlogPostDetail({ params, searchParams }: Props) {
       </div>
 
       {/* Content Section */}
-      <section className="py-20 px-6">
+      <section className="py-12 md:py-20 px-6">
         <div className="max-w-3xl mx-auto">
           {/* Excerpt/Intro */}
-          <p className="text-xl md:text-2xl text-zinc-300 font-medium leading-relaxed italic border-l-4 border-primary pl-8 mb-16">
+          <p className="text-lg md:text-2xl text-zinc-300 font-medium leading-relaxed italic border-l-4 border-primary pl-6 md:pl-8 mb-12 md:mb-16">
             {excerpt}
           </p>
 
@@ -127,15 +127,15 @@ export default async function BlogPostDetail({ params, searchParams }: Props) {
         </div>
 
         {/* Related Posts & Footer Container - Wider Layout */}
-        <div className="max-w-6xl mx-auto mt-32 pt-20">
+        <div className="max-w-6xl mx-auto mt-20 md:mt-32 pt-10 md:pt-20">
           {/* Related Posts Section */}
           <div>
-            <div className="flex items-center justify-between mb-12">
+            <div className="flex items-center justify-between mb-8 md:mb-12">
               <div>
-                <h2 className="text-3xl font-black text-white tracking-tight mb-2">
+                <h2 className="text-2xl md:text-3xl font-black text-white tracking-tight mb-2">
                   {t('details.relatedPosts')}
                 </h2>
-                <div className="h-1 w-20 bg-primary rounded-full" />
+                <div className="h-1 w-16 md:w-20 bg-primary rounded-full" />
               </div>
               <Link 
                 href="/blog"
@@ -153,7 +153,7 @@ export default async function BlogPostDetail({ params, searchParams }: Props) {
           </div>
 
           {/* Footer Section */}
-          <div className="mt-24 pt-10 border-t border-zinc-900/50 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="mt-16 md:mt-24 pt-8 md:pt-10 border-t border-zinc-900/50 flex flex-col md:flex-row items-center justify-between gap-8">
              <div className="flex items-center gap-4">
                 <p className="text-zinc-500 text-[10px] font-black uppercase tracking-widest">{t('details.share')}</p>
                 <div className="flex gap-2">
