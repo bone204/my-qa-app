@@ -724,6 +724,8 @@
     "description": "Explore the latest trends, technologies, and strategies in digital transformation and software engineering from our expert team.",
     "readMore": "See More",
     "readingTime": "{time} min read",
+    "trending": "Trending Now",
+    "editorsInsights": "Editor's Insights",
     "posts": {
       "1": {
         "title": "Future of Mobile App Development in 2026",
