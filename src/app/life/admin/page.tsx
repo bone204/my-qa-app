@@ -3,7 +3,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Upload, X, Check, Loader2, Calendar, FileText, AlertCircle } from 'lucide-react';
-import { uploadImage, addLifeImage } from '@/services/lifeService';
+import { uploadImage } from '@/services/cloudinary';
+import { addLifeImage } from '@/services/life';
 import ErrorDialog from '@/components/common/ErrorDialog';
 import Link from 'next/link';
 

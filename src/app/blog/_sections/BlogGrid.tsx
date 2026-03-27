@@ -1,28 +1,42 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useTranslations } from 'next-intl';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { BLOG_POSTS } from '@/data/blog/blog-data';
+import { useTranslations, useLocale } from 'next-intl';
+import { ChevronLeft, ChevronRight, Loader2 } from 'lucide-react';
+import { getBlogPosts } from '@/services/blog';
+import { BlogPost } from '@/services/blog/types';
 import { cn } from '@/lib/utils';
-import BlogCard from '../_components/BlogCard';
+import PostCard from '@/components/home/Blog/PostCard';
 
 const POSTS_PER_PAGE = 6;
 
 export default function BlogGrid() {
     const t = useTranslations('BlogPage');
-    const [activeFilter, setActiveFilter] = useState<string>('all');
+    const locale = useLocale() as 'en' | 'vi';
+    const [posts, setPosts] = useState<BlogPost[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [activeFilter, setActiveFilter] = useState<string>('All');
     const [currentPage, setCurrentPage] = useState(1);
 
-    const filteredPosts = BLOG_POSTS.filter(post => 
-        activeFilter === 'all' || post.category.toLowerCase() === activeFilter.toLowerCase()
+    useEffect(() => {
+        const fetchPosts = async () => {
+            setLoading(true);
+            const data = await getBlogPosts();
+            setPosts(data);
+            setLoading(false);
+        };
+        fetchPosts();
+    }, []);
+
+    const filteredPosts = posts.filter(post => 
+        activeFilter === 'All' || post.category.toLowerCase() === activeFilter.toLowerCase()
     );
 
     const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
     const paginatedPosts = filteredPosts.slice((currentPage - 1) * POSTS_PER_PAGE, currentPage * POSTS_PER_PAGE);
 
-    const categories = ['all', 'technology', 'design', 'business', 'tutorial'];
+    const categories = ['All', 'Design', 'Development', 'Technology', 'Business'];
 
     return (
         <section className="relative">
@@ -44,7 +58,7 @@ export default function BlogGrid() {
                                 setCurrentPage(1);
                             }}
                             className={cn(
-                                "relative px-5 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all duration-300",
+                                "relative px-6 py-3 rounded-xl text-xs font-black uppercase tracking-widest transition-all duration-300",
                                 activeFilter === cat
                                     ? "text-white"
                                     : "text-zinc-500 hover:text-zinc-300"
@@ -64,11 +78,16 @@ export default function BlogGrid() {
             </div>
 
             {/* Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 min-h-[600px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 min-h-[400px]">
                 <AnimatePresence mode='wait'>
-                    {paginatedPosts.length > 0 ? (
+                    {loading ? (
+                        <div className="col-span-full flex flex-col items-center justify-center gap-4 py-20">
+                            <Loader2 className="w-8 h-8 text-primary animate-spin" />
+                            <p className="text-zinc-500 font-medium animate-pulse">Đang tải bài viết...</p>
+                        </div>
+                    ) : paginatedPosts.length > 0 ? (
                         paginatedPosts.map((post, index) => (
-                            <BlogCard key={post.id} post={post} index={index} />
+                            <PostCard key={post.id} post={post} index={index} />
                         ))
                     ) : (
                         <div className="col-span-full flex items-center justify-center italic text-zinc-600">

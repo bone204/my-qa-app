@@ -1,10 +1,11 @@
 "use client";
 
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Rss } from "lucide-react";
 import PostCard from "./PostCard";
-import { posts, categories, BlogCategory } from "./postsData";
+import { getBlogPosts } from "@/services/blog";
+import { BlogPost, BlogCategory } from "@/services/blog/types";
 import { useTranslations } from "next-intl";
 
 const titleVariants = {
@@ -24,7 +25,9 @@ const titleVariants = {
 
 export default function BlogSection() {
     const t = useTranslations('BlogSection');
-    const [activeCategory, setActiveCategory] = useState<BlogCategory>("All");
+    const [activeCategory, setActiveCategory] = useState<BlogCategory | "All">("All");
+    const [posts, setPosts] = useState<BlogPost[]>([]);
+    const [loading, setLoading] = useState(true);
 
     const { scrollY } = useScroll();
     const [scrollDirection, setScrollDirection] = useState<"up" | "down">("down");
@@ -35,9 +38,21 @@ export default function BlogSection() {
         else if (latest < previous) setScrollDirection("up");
     });
 
-    const filteredPosts = activeCategory === "All"
-        ? posts
-        : posts.filter((p) => p.category === activeCategory);
+    useEffect(() => {
+        const fetchPosts = async () => {
+            setLoading(true);
+            const data = await getBlogPosts();
+            setPosts(data);
+            setLoading(false);
+        };
+        fetchPosts();
+    }, []);
+
+    const filteredPosts = posts.filter(post => 
+        activeCategory === "All" || post.category.toLowerCase() === activeCategory.toLowerCase()
+    );
+
+    const categories: (BlogCategory | "All")[] = ["All", "Design", "Development", "Technology", "Business"];
 
     return (
         <section className="relative w-full pb-32 bg-background overflow-hidden select-none">
@@ -76,7 +91,7 @@ export default function BlogSection() {
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: false, amount: 0.3 }}
-                            className="text-5xl md:text-6xl font-black tracking-tighter leading-none"
+                            className="text-5xl md:text-6xl font-black tracking-tight leading-[1.1]"
                         >
                             {t.rich('title', {
                                 highlight: (chunks) => <span className="text-primary">{chunks}</span>
@@ -126,9 +141,19 @@ export default function BlogSection() {
                         transition={{ duration: 0.3 }}
                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
                     >
-                        {filteredPosts.map((post, index) => (
-                            <PostCard key={post.id} post={post} index={index} />
-                        ))}
+                        {loading ? (
+                            Array.from({ length: 3 }).map((_, i) => (
+                                <div key={i} className="h-80 rounded-3xl bg-white/5 animate-pulse border border-white/10" />
+                            ))
+                        ) : filteredPosts.length > 0 ? (
+                            filteredPosts.slice(0, 3).map((post: BlogPost, index: number) => (
+                                <PostCard key={post.id} post={post} index={index} />
+                            ))
+                        ) : (
+                            <div className="col-span-full py-20 text-center">
+                                <p className="text-zinc-500 text-sm font-medium">Coming soon...</p>
+                            </div>
+                        )}
                     </motion.div>
                 </AnimatePresence>
             </div>
