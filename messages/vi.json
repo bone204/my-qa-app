@@ -1357,6 +1357,58 @@
     }
   },
   "HirePage": {
+    "CategorySection": {
+      "subtitle": "CHUYÊN MÔN CỦA CHÚNG TÔI",
+      "title": "Thuê Đội Ngũ <highlight>Chuyên Gia</highlight> Tốt Nhất",
+      "description": "Chúng tôi cung cấp đội ngũ nhân sự chất lượng cao, sẵn sàng đồng hành cùng dự án của bạn.",
+      "hireButton": "Thuê ngay",
+      "categories": {
+        "mobile": {
+          "title": "Phát triển Di động",
+          "items": [
+            "Thuê nhà phát triển ứng dụng di động",
+            "Thuê nhà phát triển IOS",
+            "Thuê nhà phát triển Android",
+            "Thuê nhà phát triển Flutter",
+            "Thuê nhà phát triển Swift",
+            "Thuê kỹ sư phát triển React-Native"
+          ]
+        },
+        "frontend": {
+          "title": "Phát triển Front-end",
+          "items": [
+            "Thuê kỹ sư phát triển Front-end",
+            "Thuê nhà phát triển Angular",
+            "Thuê nhà phát triển Reactjs",
+            "Thuê nhà phát triển Vuejs",
+            "Thuê nhà phát triển Nextjs",
+            "Thuê nhà phát triển Typescript"
+          ]
+        },
+        "design": {
+          "title": "Thiết kế UI-UX",
+          "items": [
+            "Thuê nhà thiết kế giao diện",
+            "Thuê kỹ sư thiết kế UI-UX",
+            "Thuê kỹ sư thiết kế UI-UX cho di động",
+            "Thuê kỹ sư thiết kế UI-UX cho website",
+            "Thuê kỹ sư thiết kế UI-UX cho ứng dụng máy tính"
+          ]
+        },
+        "devops": {
+          "title": "DevOps",
+          "description": "Tối ưu hóa hạ tầng, tự động hóa quy trình và nâng cao tính ổn định cho mọi sản phẩm kỹ thuật số của bạn.",
+          "items": [
+            "Thuê kỹ sư DevOps",
+            "Thiết lập CI/CD Pipeline",
+            "Dịch vụ IaC (Infrastructure as Code)",
+            "Đóng gói ứng dụng (Containerization)",
+            "Giám sát & Ghi nhật ký hệ thống",
+            "Bảo mật & Tuân thủ Đám mây"
+          ]
+        }
+      }
+    },
     "subtitle": "Tài năng chuyên trách",
     "title": "Thuê <highlight>nhà phát triển từ xa</highlight> chuyên dụng",
     "description": "Với tư cách là đối tác chiến lược, chúng tôi cung cấp cho bạn các nhà thiết kế, nhà phát triển tận tâm hoặc cả nhóm để mở rộng quy mô sản phẩm kỹ thuật số của bạn. Nhóm chuyên trách từ xa của chúng tôi sẽ hợp tác chặt chẽ với khách hàng để đạt trình độ và cung cấp các giải pháp chất lượng hàng đầu theo yêu cầu của họ.",

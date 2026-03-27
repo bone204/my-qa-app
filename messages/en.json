@@ -1357,6 +1357,58 @@
     }
   },
   "HirePage": {
+    "CategorySection": {
+      "subtitle": "OUR EXPERTISE",
+      "title": "Hire the Best <highlight>Dedicated</highlight> Team",
+      "description": "We provide high-quality personnel ready to accompany your project every step of the way.",
+      "hireButton": "Hire now",
+      "categories": {
+        "mobile": {
+          "title": "Mobile Development",
+          "items": [
+            "Hire Mobile App Developer",
+            "Hire IOS Developer",
+            "Hire Android Developer",
+            "Hire Flutter Developer",
+            "Hire Swift Developer",
+            "Hire React-Native Engineer"
+          ]
+        },
+        "frontend": {
+          "title": "Front-end Development",
+          "items": [
+            "Hire Front-end Engineer",
+            "Hire Angular Developer",
+            "Hire Reactjs Developer",
+            "Hire Vuejs Developer",
+            "Hire Nextjs Developer",
+            "Hire Typescript Developer"
+          ]
+        },
+        "design": {
+          "title": "UI-UX Design",
+          "items": [
+            "Hire Interface Designer",
+            "Hire UI-UX Engineer",
+            "Hire Mobile UI-UX Engineer",
+            "Hire Website UI-UX Engineer",
+            "Hire Desktop UI-UX Engineer"
+          ]
+        },
+        "devops": {
+          "title": "DevOps",
+          "description": "Optimize infrastructure, automate processes and enhance stability for all your digital products.",
+          "items": [
+            "Hire DevOps Engineer",
+            "CI/CD Pipeline Setup",
+            "IaC Services (Infrastructure as Code)",
+            "Containerization Services",
+            "Monitoring & Logging Solutions",
+            "Cloud Security & Compliance"
+          ]
+        }
+      }
+    },
     "subtitle": "Dedicated Talent",
     "title": "Hire <highlight>Dedicated</highlight> Remote Developers",
     "description": "As a strategic partner, we provide you with dedicated designers, developers, or whole teams to scale your digital products. Our remote dedicated team will collaborate closely with clients to meet deadlines and deliver top-quality solutions tailored to their requirements.",
