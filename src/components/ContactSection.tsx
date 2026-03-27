@@ -8,15 +8,33 @@ import { Particles } from '@/components/ui/Particles';
 import { useTranslations } from 'next-intl';
 
 const SkypeIcon = ({ size = 20, className = "" }: { size?: number, className?: string }) => (
-    <svg
+    <img
+        src="https://img.icons8.com/ios-filled/50/skype.png"
+        alt="Skype"
         width={size}
         height={size}
-        viewBox="0 0 24 24"
-        fill="currentColor"
-        className={className}
-    >
-        <path d="M22.052 16.591a11.954 11.954 0 10-14.643-14.643 6.002 6.002 0 105.881 5.881 5.925 5.925 0 00.126.331 6 6 0 108.307 8.307c.108.04.22.083.33.124z" />
-    </svg>
+        className={`${className} brightness-0 invert opacity-60 group-hover:opacity-100 transition-all`}
+    />
+);
+
+const GmailIcon = ({ size = 20, className = "" }: { size?: number, className?: string }) => (
+    <img
+        src="https://img.icons8.com/glyph-neue/64/gmail.png"
+        alt="Gmail"
+        width={size}
+        height={size}
+        className={`${className} brightness-0 invert opacity-60 group-hover:opacity-100 transition-all`}
+    />
+);
+
+const PhoneIcon = ({ size = 20, className = "" }: { size?: number, className?: string }) => (
+    <img
+        src="https://img.icons8.com/ios-filled/50/phone.png"
+        alt="Phone"
+        width={size}
+        height={size}
+        className={`${className} brightness-0 invert opacity-60 group-hover:opacity-100 transition-all`}
+    />
 );
 
 const CONTACT_PLATFORMS = [
@@ -296,7 +314,7 @@ export default function ContactSection() {
 
                     <div className="flex items-center gap-3 group cursor-pointer">
                         <div className="p-3 rounded-xl bg-white/5 group-hover:bg-primary/20 transition-colors">
-                            <Mail size={20} className="text-zinc-400 group-hover:text-primary transition-colors" />
+                            <GmailIcon size={20} className="text-zinc-400 group-hover:text-primary transition-colors" />
                         </div>
                         <div>
                             <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-500">{t('channels.Email')}</p>
@@ -306,7 +324,7 @@ export default function ContactSection() {
 
                     <div className="flex items-center gap-3 group cursor-pointer">
                         <div className="p-3 rounded-xl bg-white/5 group-hover:bg-primary/20 transition-colors">
-                            <Phone size={20} className="text-zinc-400 group-hover:text-primary transition-colors" />
+                            <PhoneIcon size={20} className="text-zinc-400 group-hover:text-primary transition-colors" />
                         </div>
                         <div>
                             <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-500">{t('channels.Hotline')}</p>
