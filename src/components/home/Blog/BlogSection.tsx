@@ -48,7 +48,7 @@ export default function BlogSection() {
         fetchPosts();
     }, []);
 
-    const filteredPosts = posts.filter(post => 
+    const filteredPosts = posts.filter(post =>
         activeCategory === "All" || post.category.toLowerCase() === activeCategory.toLowerCase()
     );
 
@@ -99,7 +99,7 @@ export default function BlogSection() {
                         </motion.h2>
                     </div>
 
-                    
+
                 </div>
 
                 {/* ── Filter bar — full width above cards ── */}
@@ -115,8 +115,8 @@ export default function BlogSection() {
                             key={cat}
                             onClick={() => setActiveCategory(cat)}
                             className={`relative px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-300 ${activeCategory === cat
-                                    ? "text-white"
-                                    : "text-zinc-500 hover:text-zinc-300"
+                                ? "text-white"
+                                : "text-zinc-500 hover:text-zinc-300"
                                 }`}
                         >
                             {activeCategory === cat && (
@@ -151,7 +151,7 @@ export default function BlogSection() {
                             ))
                         ) : (
                             <div className="col-span-full py-20 text-center">
-                                <p className="text-zinc-500 text-sm font-medium">Coming soon...</p>
+                                <p className="text-zinc-500 text-sm font-medium">{t('comingSoon')}</p>
                             </div>
                         )}
                     </motion.div>

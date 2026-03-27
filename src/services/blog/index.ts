@@ -4,18 +4,24 @@ import { BlogPost, BlogCategory } from "./types";
 
 const BLOG_COLLECTION = "blog_posts";
 
+const serializePost = (doc: any): BlogPost => {
+    const data = doc.data();
+    return {
+        id: doc.id,
+        ...data,
+        date: data.date?.toDate ? data.date.toDate().toISOString() : data.date,
+        createdAt: data.createdAt?.toDate ? data.createdAt.toDate().toISOString() : data.createdAt,
+        updatedAt: data.updatedAt?.toDate ? data.updatedAt.toDate().toISOString() : data.updatedAt,
+    } as BlogPost;
+};
+
 export async function getBlogPosts(category?: BlogCategory | "All") {
     try {
         const postsRef = collection(db, BLOG_COLLECTION);
         const q = query(postsRef, orderBy("date", "desc"));
 
         const querySnapshot = await getDocs(q);
-        return querySnapshot.docs.map((doc) => ({
-            id: doc.id,
-            ...doc.data(),
-            // Ensure date is serializable for client components
-            date: doc.data().date?.toDate?.() ? doc.data().date.toDate().toISOString() : doc.data().date
-        })) as BlogPost[];
+        return querySnapshot.docs.map(serializePost);
     } catch (error) {
         console.error("Error fetching blog posts:", error);
         return [];
@@ -29,11 +35,7 @@ export async function getBlogPostById(id: string) {
         
         if (!docSnap.exists()) return null;
         
-        return {
-            id: docSnap.id,
-            ...docSnap.data(),
-            date: docSnap.data().date?.toDate?.() ? docSnap.data().date.toDate().toISOString() : docSnap.data().date
-        } as BlogPost;
+        return serializePost(docSnap);
     } catch (error) {
         console.error("Error fetching blog post by id:", error);
         return null;

@@ -83,7 +83,7 @@ export default function BlogGrid() {
                     {loading ? (
                         <div className="col-span-full flex flex-col items-center justify-center gap-4 py-20">
                             <Loader2 className="w-8 h-8 text-primary animate-spin" />
-                            <p className="text-zinc-500 font-medium animate-pulse">Đang tải bài viết...</p>
+                            <p className="text-zinc-500 font-medium animate-pulse">{t('loading')}</p>
                         </div>
                     ) : paginatedPosts.length > 0 ? (
                         paginatedPosts.map((post, index) => (

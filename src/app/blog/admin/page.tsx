@@ -1,8 +1,10 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Upload, X, Check, Loader2, Calendar, FileText, User, Tag, Clock, Hash, Layout } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Upload, X, Check, Loader2, Calendar, FileText, User, Tag, Clock, Hash, Layout, Eye, Edit3 } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { uploadImage } from '@/services/cloudinary';
 import { addBlogPost } from '@/services/blog';
 import { BlogCategory } from '@/services/blog/types';
@@ -16,6 +18,13 @@ const CATEGORIES: { value: BlogCategory; label: string }[] = [
     { value: 'Business', label: 'Business' }
 ];
 
+const TAG_OPTIONS = [
+    { en: 'Trending', vi: 'Xu hướng' },
+    { en: 'Popular', vi: 'Phổ biến' },
+    { en: 'New', vi: 'Mới' },
+    { en: 'Featured', vi: 'Nổi bật' },
+];
+
 export default function BlogAdminPage() {
     const [mainImage, setMainImage] = useState<File | null>(null);
     const [mainPreview, setMainPreview] = useState<string | null>(null);
@@ -24,6 +33,8 @@ export default function BlogAdminPage() {
     
     const [loading, setLoading] = useState(false);
     const [showSuccess, setShowSuccess] = useState(false);
+    const [previewVi, setPreviewVi] = useState(false);
+    const [previewEn, setPreviewEn] = useState(false);
     const [errorDetails, setErrorDetails] = useState<{ isOpen: boolean; message: string }>({
         isOpen: false,
         message: ''
@@ -266,13 +277,23 @@ export default function BlogAdminPage() {
                                         required
                                     />
                                     <div className="grid grid-cols-2 gap-4">
-                                        <input
-                                            type="text"
-                                            placeholder="Tag (VD: Nổi bật)"
-                                            className="bg-transparent border-b border-zinc-800 py-2 text-sm text-zinc-400 focus:outline-none focus:border-primary"
+                                        <select
+                                            className="bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-2 text-sm text-zinc-400 focus:outline-none focus:border-primary cursor-pointer w-full"
                                             value={formData.tagVi}
-                                            onChange={(e) => setFormData({ ...formData, tagVi: e.target.value })}
-                                        />
+                                            onChange={(e) => {
+                                                const selected = TAG_OPTIONS.find(t => t.vi === e.target.value);
+                                                setFormData({ 
+                                                    ...formData, 
+                                                    tagVi: e.target.value,
+                                                    tagEn: selected ? selected.en : formData.tagEn
+                                                });
+                                            }}
+                                        >
+                                            <option value="">-- Chọn Tag (VI) --</option>
+                                            {TAG_OPTIONS.map(tag => (
+                                                <option key={tag.vi} value={tag.vi}>{tag.vi}</option>
+                                            ))}
+                                        </select>
                                         <input
                                             type="text"
                                             placeholder="Thời gian đọc (VD: 5 phút đọc)"
@@ -281,13 +302,45 @@ export default function BlogAdminPage() {
                                             onChange={(e) => setFormData({ ...formData, readTimeVi: e.target.value })}
                                         />
                                     </div>
-                                    <textarea
-                                        placeholder="Nội dung bài viết ( Markdown hoặc HTML đều được )..."
-                                        className="w-full bg-zinc-950 border border-zinc-800 rounded-xl p-4 mt-4 text-white focus:outline-none focus:border-primary min-h-[300px]"
-                                        value={formData.contentVi}
-                                        onChange={(e) => setFormData({ ...formData, contentVi: e.target.value })}
-                                        required
-                                    />
+                                    <div className="flex items-center justify-between mt-4 mb-2">
+                                        <label className="text-zinc-500 text-[10px] font-black uppercase tracking-widest">Nội dung chi tiết</label>
+                                        <button 
+                                            type="button"
+                                            onClick={() => setPreviewVi(!previewVi)}
+                                            className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-primary hover:text-primary/80 transition-colors"
+                                        >
+                                            {previewVi ? <><Edit3 className="w-3 h-3" /> Sửa bài</> : <><Eye className="w-3 h-3" /> Xem trước</>}
+                                        </button>
+                                    </div>
+                                    <div className="relative">
+                                        <AnimatePresence mode="wait">
+                                            {previewVi ? (
+                                                <motion.div 
+                                                    key="preview-vi"
+                                                    initial={{ opacity: 0, y: 10 }}
+                                                    animate={{ opacity: 1, y: 0 }}
+                                                    exit={{ opacity: 0, y: -10 }}
+                                                    className="w-full bg-zinc-950 border border-zinc-800 rounded-xl p-6 min-h-[300px] prose-markdown overflow-y-auto"
+                                                >
+                                                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                                                        {formData.contentVi || "_Chưa có nội dung..._"}
+                                                    </ReactMarkdown>
+                                                </motion.div>
+                                            ) : (
+                                                <motion.textarea
+                                                    key="edit-vi"
+                                                    initial={{ opacity: 0, y: 10 }}
+                                                    animate={{ opacity: 1, y: 0 }}
+                                                    exit={{ opacity: 0, y: -10 }}
+                                                    placeholder="Nội dung bài viết ( Markdown được khuyến khích )..."
+                                                    className="w-full bg-zinc-950 border border-zinc-800 rounded-xl p-4 text-white focus:outline-none focus:border-primary min-h-[300px] font-mono text-sm leading-relaxed"
+                                                    value={formData.contentVi}
+                                                    onChange={(e) => setFormData({ ...formData, contentVi: e.target.value })}
+                                                    required
+                                                />
+                                            )}
+                                        </AnimatePresence>
+                                    </div>
                                 </div>
                             </div>
 
@@ -311,13 +364,23 @@ export default function BlogAdminPage() {
                                         required
                                     />
                                     <div className="grid grid-cols-2 gap-4">
-                                        <input
-                                            type="text"
-                                            placeholder="Tag (e.g. Featured)"
-                                            className="bg-transparent border-b border-zinc-800 py-2 text-sm text-zinc-400 focus:outline-none focus:border-primary"
+                                        <select
+                                            className="bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-2 text-sm text-zinc-400 focus:outline-none focus:border-primary cursor-pointer w-full"
                                             value={formData.tagEn}
-                                            onChange={(e) => setFormData({ ...formData, tagEn: e.target.value })}
-                                        />
+                                            onChange={(e) => {
+                                                const selected = TAG_OPTIONS.find(t => t.en === e.target.value);
+                                                setFormData({ 
+                                                    ...formData, 
+                                                    tagEn: e.target.value,
+                                                    tagVi: selected ? selected.vi : formData.tagVi
+                                                });
+                                            }}
+                                        >
+                                            <option value="">-- Select Tag (EN) --</option>
+                                            {TAG_OPTIONS.map(tag => (
+                                                <option key={tag.en} value={tag.en}>{tag.en}</option>
+                                            ))}
+                                        </select>
                                         <input
                                             type="text"
                                             placeholder="Read Time (e.g. 5 min read)"
@@ -326,13 +389,45 @@ export default function BlogAdminPage() {
                                             onChange={(e) => setFormData({ ...formData, readTimeEn: e.target.value })}
                                         />
                                     </div>
-                                    <textarea
-                                        placeholder="Full Blog Content..."
-                                        className="w-full bg-zinc-950 border border-zinc-800 rounded-xl p-4 mt-4 text-white focus:outline-none focus:border-primary min-h-[300px]"
-                                        value={formData.contentEn}
-                                        onChange={(e) => setFormData({ ...formData, contentEn: e.target.value })}
-                                        required
-                                    />
+                                    <div className="flex items-center justify-between mt-4 mb-2">
+                                        <label className="text-zinc-500 text-[10px] font-black uppercase tracking-widest">Detailed Content</label>
+                                        <button 
+                                            type="button"
+                                            onClick={() => setPreviewEn(!previewEn)}
+                                            className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-primary hover:text-primary/80 transition-colors"
+                                        >
+                                            {previewEn ? <><Edit3 className="w-3 h-3" /> Edit Mode</> : <><Eye className="w-3 h-3" /> Preview</>}
+                                        </button>
+                                    </div>
+                                    <div className="relative">
+                                        <AnimatePresence mode="wait">
+                                            {previewEn ? (
+                                                <motion.div 
+                                                    key="preview-en"
+                                                    initial={{ opacity: 0, y: 10 }}
+                                                    animate={{ opacity: 1, y: 0 }}
+                                                    exit={{ opacity: 0, y: -10 }}
+                                                    className="w-full bg-zinc-950 border border-zinc-800 rounded-xl p-6 min-h-[300px] prose-markdown overflow-y-auto"
+                                                >
+                                                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                                                        {formData.contentEn || "_No content yet..._"}
+                                                    </ReactMarkdown>
+                                                </motion.div>
+                                            ) : (
+                                                <motion.textarea
+                                                    key="edit-en"
+                                                    initial={{ opacity: 0, y: 10 }}
+                                                    animate={{ opacity: 1, y: 0 }}
+                                                    exit={{ opacity: 0, y: -10 }}
+                                                    placeholder="Full Blog Content ( Markdown encouraged )..."
+                                                    className="w-full bg-zinc-950 border border-zinc-800 rounded-xl p-4 text-white focus:outline-none focus:border-primary min-h-[300px] font-mono text-sm leading-relaxed"
+                                                    value={formData.contentEn}
+                                                    onChange={(e) => setFormData({ ...formData, contentEn: e.target.value })}
+                                                    required
+                                                />
+                                            )}
+                                        </AnimatePresence>
+                                    </div>
                                 </div>
                             </div>
                         </div>
