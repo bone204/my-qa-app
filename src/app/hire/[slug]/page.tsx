@@ -19,7 +19,8 @@ export default function HireCategoryPage({ params }: { params: Promise<{ slug: s
     'hire-mobile-app-development',
     'hire-frontend-development',
     'hire-ui-ux-design',
-    'hire-devops-engineering'
+    'hire-devops-engineering',
+    'hire-fullstack-development'
   ];
 
   if (!validSlugs.includes(slug)) {

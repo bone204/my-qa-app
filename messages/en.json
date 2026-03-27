@@ -539,7 +539,7 @@
       }
     },
     "solutions": {
-      "subtitle": "Scale your business",
+      "subtitle": "HIGH-TECH <highlight>SOLUTIONS</highlight>",
       "title": "Solutions We Provide",
       "seeMore": "See More",
       "explore": "Explore solutions",
@@ -1406,6 +1406,18 @@
             "Monitoring & Logging Solutions",
             "Cloud Security & Compliance"
           ]
+        },
+        "fullstack": {
+          "title": "Fullstack Development",
+          "description": "Comprehensive solutions from user interface to server architecture and databases.",
+          "items": [
+            "Hire Fullstack Developers",
+            "End-to-end Web App Development",
+            "System Architecture Design",
+            "API & Microservices Integration",
+            "Database Management",
+            "Infra & Cloud Deployment"
+          ]
         }
       }
     },
@@ -1598,6 +1610,29 @@
         { "text": "CI/CD", "details": "GitHub Actions, Jenkins, GitLab CI", "image": "https://images.unsplash.com/photo-1618401471353-b98aadebc255?q=80&w=600" },
         { "text": "Infrastructure", "details": "Terraform, Ansible, Pulumi", "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600" },
         { "text": "Monitoring", "details": "Prometheus, Grafana, ELK Stack", "image": "https://images.unsplash.com/photo-1551288049-bbbda536339a?q=80&w=600" }
+      ]
+    },
+    "hire-fullstack-development": {
+      "subtitle": "Comprehensive & Agile",
+      "title": "Hire Professional <highlight>Fullstack</highlight> Developers",
+      "description": "Our experts master both Front-end and Back-end, providing comprehensive software solutions.",
+      "intro": "Maximum versatility and efficiency. Our Fullstack developers handle everything from UI design and server-side logic to database management, reducing communication friction and accelerating project delivery.",
+      "skills": [
+        "Next.js / React / Vue",
+        "Node.js / Express",
+        "Python / Django / FastAPI",
+        "PostgreSQL / MongoDB",
+        "RESTful & GraphQL API",
+        "Docker & Infrastructure",
+        "System Architecture",
+        "Security Best Practices"
+      ],
+      "flowingMenu": [
+        { "text": "System Architecture", "details": "Microservices, Serverless, Monolithic", "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=600" },
+        { "text": "Frontend Mastery", "details": "React, Next.js, Tailwind CSS", "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=600" },
+        { "text": "Backend Mastery", "details": "Node.js, Go, Python, Java", "image": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?q=80&w=600" },
+        { "text": "Infra & DevOps", "details": "AWS, Docker, CI/CD", "image": "https://images.unsplash.com/photo-1667372333114-3d443cdd3ca2?q=80&w=600" },
+        { "text": "Databases", "details": "PostgreSQL, MongoDB, Redis", "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=600" }
       ]
     },
     "coreCompetencies": "Core Competencies"

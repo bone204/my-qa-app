@@ -132,7 +132,7 @@ export default function AboutSection() {
                             <Button 
                                 variant="body" 
                                 className="w-full sm:w-auto"
-                                onClick={() => router.push(ROUTES.SERVICES)}
+                                onClick={() => router.push(ROUTES.ABOUT_US.OVERVIEW)}
                             >
                                 {t('button')}
                             </Button>

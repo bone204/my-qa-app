@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 import { Monitor, Smartphone, Layout, Code2, CheckCircle2, Cpu, Briefcase, Sparkles } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import Link from 'next/link';
+import { ROUTES } from '@/constants/routes';
 
 export default function HiringSection() {
     const t = useTranslations('ServicesPage.hiring');
@@ -17,7 +18,8 @@ export default function HiringSection() {
             title: t('developer.roles.mobile.title'),
             desc: t('developer.roles.mobile.desc'),
             tech: t('developer.roles.mobile.tech'),
-            color: 'from-blue-500/10 to-cyan-500/10'
+            color: 'from-blue-500/10 to-cyan-500/10',
+            route: ROUTES.HIRE.MOBILE
         },
         {
             id: 'web',
@@ -25,7 +27,8 @@ export default function HiringSection() {
             title: t('developer.roles.web.title'),
             desc: t('developer.roles.web.desc'),
             tech: t('developer.roles.web.tech'),
-            color: 'from-emerald-500/10 to-teal-500/10'
+            color: 'from-emerald-500/10 to-teal-500/10',
+            route: ROUTES.HIRE.FRONTEND
         },
         {
             id: 'fullstack',
@@ -33,7 +36,8 @@ export default function HiringSection() {
             title: t('developer.roles.fullstack.title'),
             desc: t('developer.roles.fullstack.desc'),
             tech: t('developer.roles.fullstack.tech'),
-            color: 'from-orange-500/10 to-yellow-500/10'
+            color: 'from-orange-500/10 to-yellow-500/10',
+            route: ROUTES.HIRE.FULLSTACK
         }
     ];
 
@@ -102,7 +106,7 @@ export default function HiringSection() {
                             </div>
 
                             <div className="pt-8">
-                                <Link href="#contact">
+                                <Link href={ROUTES.HIRE.UIUX}>
                                     <Button variant="body" parentGroup="card">
                                         {t('designer.hireButton')}
                                     </Button>
@@ -188,7 +192,7 @@ export default function HiringSection() {
 
                                     {/* Hire Button */}
                                     <div className="lg:w-auto">
-                                        <Link href="#contact">
+                                        <Link href={role.route}>
                                             <Button variant="body" parentGroup="card" className="whitespace-nowrap">
                                                 {t('developer.hireButton')}
                                             </Button>

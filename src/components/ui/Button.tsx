@@ -18,7 +18,7 @@ export default function Button({ variant = "primary", className = "", children, 
         return (
             <button
                 className={cn(
-                    "group relative overflow-hidden rounded-full border border-white/10 bg-white/5 px-6 py-2.5 text-base font-bold text-zinc-400 transition-all duration-300 hover:bg-white hover:text-zinc-950 hover:border-white active:scale-95",
+                    "group relative cursor-pointer overflow-hidden rounded-full border border-white/10 bg-white/5 px-6 py-2.5 text-base font-bold text-zinc-400 transition-all duration-300 hover:bg-white hover:text-zinc-950 hover:border-white active:scale-95",
                     className
                 )}
                 {...props}
@@ -75,7 +75,7 @@ export default function Button({ variant = "primary", className = "", children, 
     return (
         <button
             className={cn(
-                "group relative overflow-hidden rounded-full bg-primary px-6 py-2.5 text-base font-bold text-white shadow-sm transition-all duration-300 hover:scale-105 hover:bg-primary/80 hover:shadow-md hover:ring-2 hover:ring-primary/50 hover:ring-offset-2 active:scale-95",
+                "group relative cursor-pointer overflow-hidden rounded-full bg-primary px-6 py-2.5 text-base font-bold text-white shadow-sm transition-all duration-300 hover:scale-105 hover:bg-primary/80 hover:shadow-md hover:ring-2 hover:ring-primary/50 hover:ring-offset-2 active:scale-95",
                 className
             )}
             {...props}

@@ -13,7 +13,14 @@ export const ROUTES = {
   NEWS: '/news',
   BLOG: '/blog',
   CAREER: '/career',
-  HIRE: '/hire',
+  HIRE: {
+    ROOT: '/hire',
+    MOBILE: '/hire/hire-mobile-app-development',
+    FRONTEND: '/hire/hire-frontend-development',
+    UIUX: '/hire/hire-ui-ux-design',
+    DEVOPS: '/hire/hire-devops-engineering',
+    FULLSTACK: '/hire/hire-fullstack-development',
+  },
   SIGN_IN: '/signin',
 };
   

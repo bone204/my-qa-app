@@ -3,9 +3,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import { Smartphone, Monitor, Palette, Terminal, Sparkles, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Smartphone, Monitor, Palette, Terminal, Sparkles, CheckCircle2, ArrowRight, Code2 } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import Link from 'next/link';
+import { ROUTES } from '@/constants/routes';
 
 const HireCategorySection = () => {
     const t = useTranslations('HirePage.CategorySection');
@@ -13,25 +14,31 @@ const HireCategorySection = () => {
     const categories = [
         {
             key: 'mobile',
-            slug: 'hire-mobile-app-development',
+            route: ROUTES.HIRE.MOBILE,
             icon: <Smartphone className="w-8 h-8 text-primary" />,
             items: t.raw('categories.mobile.items') as string[]
         },
         {
             key: 'frontend',
-            slug: 'hire-frontend-development',
+            route: ROUTES.HIRE.FRONTEND,
             icon: <Monitor className="w-8 h-8 text-primary" />,
             items: t.raw('categories.frontend.items') as string[]
         },
         {
             key: 'design',
-            slug: 'hire-ui-ux-design',
+            route: ROUTES.HIRE.UIUX,
             icon: <Palette className="w-8 h-8 text-primary" />,
             items: t.raw('categories.design.items') as string[]
         },
         {
+            key: 'fullstack',
+            route: ROUTES.HIRE.FULLSTACK,
+            icon: <Code2 className="w-8 h-8 text-primary" />,
+            items: t.raw('categories.fullstack.items') as string[]
+        },
+        {
             key: 'devops',
-            slug: 'hire-devops-engineering',
+            route: ROUTES.HIRE.DEVOPS,
             icon: <Terminal className="w-8 h-8 text-primary" />,
             items: t.raw('categories.devops.items') as string[]
         }
@@ -107,7 +114,7 @@ const HireCategorySection = () => {
                                 </ul>
 
                                 <div className="flex justify-center mt-auto">
-                                    <Link href={`/hire/${cat.slug}`} className="w-full">
+                                    <Link href={cat.route} className="w-full">
                                         <Button variant="body" parentGroup="card" className="w-full">
                                             {t('hireButton')}
                                         </Button>
@@ -118,7 +125,7 @@ const HireCategorySection = () => {
                     ))}
                 </div>
 
-                {/* DevOps Section - Full Width and Special Design */}
+                {/* Fullstack & DevOps Section - Stacking Full Width */}
                 <div className="grid grid-cols-1 gap-8">
                     {categories.slice(3).map((cat, index) => (
                         <motion.div
@@ -139,7 +146,7 @@ const HireCategorySection = () => {
                                     </div>
                                     <div className="space-y-12">
                                         <div className="space-y-4">
-                                            <h3 className="text-4xl font-black text-white tracking-tight group-hover/card:text-primary transition-colors uppercase">
+                                            <h3 className="text-4xl font-black text-white tracking-tight group-hover/card:text-primary transition-colors uppercase leading-tight">
                                                 {t(`categories.${cat.key}.title`)}
                                             </h3>
                                             <p className="text-lg text-zinc-400 group-hover/card:text-zinc-300 transition-colors leading-relaxed font-medium">
@@ -147,7 +154,7 @@ const HireCategorySection = () => {
                                             </p>
                                         </div>
 
-                                        <Link href={`/hire/${cat.slug}`} className="w-full">
+                                        <Link href={cat.route} className="w-full">
                                             <Button variant="body" parentGroup="card" className="w-full">
                                                 {t('hireButton')}
                                             </Button>

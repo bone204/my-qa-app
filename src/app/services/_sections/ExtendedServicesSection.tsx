@@ -6,6 +6,8 @@ import { Cloud, Megaphone, Link as LinkIcon, Cpu, CheckCircle2, ArrowRight, Spar
 import { useTranslations } from 'next-intl';
 import Button from '@/components/ui/Button';
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
+import { ROUTES } from '@/constants/routes';
 
 export default function ExtendedServicesSection() {
     const t = useTranslations('ServicesPage.extended');
@@ -16,28 +18,32 @@ export default function ExtendedServicesSection() {
             icon: Cloud,
             color: "from-blue-600/20 to-indigo-600/20",
             borderColor: "group-hover:border-blue-500/50",
-            iconColor: "text-blue-400"
+            iconColor: "text-blue-400",
+            route: ROUTES.HIRE.ROOT
         },
         {
             id: 'marketing',
             icon: Megaphone,
             color: "from-purple-600/20 to-pink-600/20",
             borderColor: "group-hover:border-purple-500/50",
-            iconColor: "text-purple-400"
+            iconColor: "text-purple-400",
+            route: ROUTES.HIRE.ROOT
         },
         {
             id: 'blockchain',
             icon: LinkIcon,
             color: "from-orange-600/20 to-red-600/20",
             borderColor: "group-hover:border-orange-500/50",
-            iconColor: "text-orange-400"
+            iconColor: "text-orange-400",
+            route: ROUTES.HIRE.ROOT
         },
         {
             id: 'web3',
             icon: Cpu,
             color: "from-cyan-600/20 to-teal-600/20",
             borderColor: "group-hover:border-cyan-500/50",
-            iconColor: "text-cyan-400"
+            iconColor: "text-cyan-400",
+            route: ROUTES.HIRE.ROOT
         }
     ];
 
@@ -112,7 +118,7 @@ export default function ExtendedServicesSection() {
                                             {['0', '1', '2', '3', '4'].map((itemKey) => {
                                                 const itemText = t(`${section.id}.items.${itemKey}`);
                                                 if (itemText.includes(`${section.id}.items`)) return null;
-                                                
+
                                                 return (
                                                     <div key={itemKey} className="flex items-center gap-3 text-zinc-400 group-hover:text-zinc-200 transition-colors duration-300">
                                                         <div className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" />
@@ -123,16 +129,18 @@ export default function ExtendedServicesSection() {
                                         </div>
 
                                         <div className="mt-auto pt-6 flex justify-between items-center border-t border-white/5">
-                                            <Button variant="body" className="px-6 py-2.5 text-sm group/btn">
-                                                <span className="flex items-center gap-2">
-                                                    {t('seeMore')}
-                                                </span>
-                                            </Button>
-                                            
+                                            <Link href={section.route || ROUTES.HIRE.ROOT}>
+                                                <Button variant="body" className="px-6 py-2.5 text-sm group/btn">
+                                                    <span className="flex items-center gap-2">
+                                                        {t('seeMore')}
+                                                    </span>
+                                                </Button>
+                                            </Link>
+
                                             <div className="relative w-16 h-16 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-1000 translate-x-4 group-hover:translate-x-0 scale-90 md:scale-100">
                                                 {/* Background Energy Glow */}
                                                 <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full animate-pulse" />
-                                                
+
                                                 {/* Multi-layered Orbital System */}
                                                 {[0, 1, 2].map((i) => (
                                                     <motion.div
@@ -141,9 +149,9 @@ export default function ExtendedServicesSection() {
                                                         transition={{ duration: 6 + i * 4, repeat: Infinity, ease: "linear" }}
                                                         className={cn(
                                                             "absolute border",
-                                                            i === 0 ? "inset-0 rounded-2xl border-primary/40 shadow-[inset_0_0_10px_rgba(236,72,153,0.2)]" : 
-                                                            i === 1 ? "inset-2 rounded-full border-blue-400/30" : 
-                                                            "inset-4 rounded-xl border-white/10"
+                                                            i === 0 ? "inset-0 rounded-2xl border-primary/40 shadow-[inset_0_0_10px_rgba(236,72,153,0.2)]" :
+                                                                i === 1 ? "inset-2 rounded-full border-blue-400/30" :
+                                                                    "inset-4 rounded-xl border-white/10"
                                                         )}
                                                     >
                                                         {/* Orbital Particles */}
@@ -156,7 +164,7 @@ export default function ExtendedServicesSection() {
 
                                                 {/* Pulsing Energy Core */}
                                                 <motion.div
-                                                    animate={{ 
+                                                    animate={{
                                                         scale: [1, 1.3, 1],
                                                         filter: ["brightness(1)", "brightness(1.5)", "brightness(1)"]
                                                     }}
@@ -166,7 +174,7 @@ export default function ExtendedServicesSection() {
                                                     <div className="absolute inset-0 bg-white rounded-full shadow-[0_0_20px_white]" />
                                                     <div className="absolute inset-0 bg-primary rounded-full animate-ping opacity-75" />
                                                 </motion.div>
-                                                
+
                                                 {/* High-intensity Laser Sweep */}
                                                 <div className="absolute inset-[-4px] bg-conic-to-t from-primary/60 via-primary/5 to-transparent rounded-full opacity-60 animate-spin-slow mix-blend-screen pointer-events-none" />
                                             </div>

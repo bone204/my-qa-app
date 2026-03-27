@@ -539,7 +539,7 @@
       }
     },
     "solutions": {
-      "subtitle": "Nâng tầm doanh nghiệp",
+      "subtitle": "GIẢI PHÁP <highlight>CÔNG NGHỆ CAO</highlight>",
       "title": "Các giải pháp chúng tôi cung cấp",
       "seeMore": "Xem thêm",
       "explore": "Khám phá giải pháp",
@@ -1406,6 +1406,18 @@
             "Giám sát & Ghi nhật ký hệ thống",
             "Bảo mật & Tuân thủ Đám mây"
           ]
+        },
+        "fullstack": {
+          "title": "Phát triển Fullstack",
+          "description": "Giải pháp toàn diện từ giao diện người dùng đến kiến trúc máy chủ và cơ sở dữ liệu.",
+          "items": [
+            "Thuê nhà phát triển Fullstack",
+            "Phát triển ứng dụng Web toàn diện",
+            "Thiết kế kiến trúc hệ thống",
+            "Tích hợp API & Microservices",
+            "Quản trị cơ sở dữ liệu",
+            "Triển khai hạ tầng & Cloud"
+          ]
         }
       }
     },
@@ -1598,6 +1610,29 @@
         { "text": "CI/CD", "details": "GitHub Actions, Jenkins, GitLab CI", "image": "https://images.unsplash.com/photo-1618401471353-b98aadebc255?q=80&w=600" },
         { "text": "Hạ tầng", "details": "Terraform, Ansible, Pulumi", "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600" },
         { "text": "Giám sát", "details": "Prometheus, Grafana, ELK Stack", "image": "https://images.unsplash.com/photo-1551288049-bbbda536339a?q=80&w=600" }
+      ]
+    },
+    "hire-fullstack-development": {
+      "subtitle": "Toàn diện & Linh hoạt",
+      "title": "Thuê nhà phát triển <highlight>Fullstack</highlight> chuyên nghiệp",
+      "description": "Đội ngũ chuyên gia làm chủ cả Front-end và Back-end, mang đến giải pháp phần mềm toàn diện.",
+      "intro": "Linh hoạt và hiệu quả tối đa. Các nhà phát triển Fullstack của chúng tôi có khả năng xử lý từ thiết kế giao diện, logic phía máy chủ đến quản trị cơ sở dữ liệu, giúp giảm thiểu rủi ro giao tiếp và tăng tốc độ phát triển dự án.",
+      "skills": [
+        "Next.js / React / Vue",
+        "Node.js / Express",
+        "Python / Django / FastAPI",
+        "PostgreSQL / MongoDB",
+        "RESTful & GraphQL API",
+        "Docker & Infrastructure",
+        "System Architecture",
+        "Security Best Practices"
+      ],
+      "flowingMenu": [
+        { "text": "Kiến trúc hệ thống", "details": "Microservices, Serverless, Monolithic", "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=600" },
+        { "text": "Frontend Mastery", "details": "React, Next.js, Tailwind CSS", "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=600" },
+        { "text": "Backend Mastery", "details": "Node.js, Go, Python, Java", "image": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?q=80&w=600" },
+        { "text": "Hạ tầng & DevOps", "details": "AWS, Docker, CI/CD", "image": "https://images.unsplash.com/photo-1667372333114-3d443cdd3ca2?q=80&w=600" },
+        { "text": "Cơ sở dữ liệu", "details": "PostgreSQL, MongoDB, Redis", "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=600" }
       ]
     },
     "coreCompetencies": "Năng lực cốt lõi"
