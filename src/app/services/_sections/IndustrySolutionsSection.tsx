@@ -14,11 +14,13 @@ import {
     GraduationCap, 
     Film, 
     Truck,
-    ArrowRight,
-    CheckCircle2,
-    Sparkles
+    CheckCircle2, 
+    Sparkles, 
+    ArrowRight 
 } from "lucide-react";
 import Button from "@/components/ui/Button";
+import Link from "next/link";
+import { ROUTES } from "@/constants/routes";
 
 const industriesInfo = [
     { id: 'healthcare', icon: HeartPulse, color: 'text-rose-500', bg: 'bg-rose-500/10' },
@@ -98,9 +100,11 @@ export default function IndustrySolutionsSection() {
                         <h3 className="text-2xl font-bold text-white mb-4">{t('ctaTitle')}</h3>
                         <p className="text-zinc-400 mb-8 max-w-[250px]">{t('ctaDesc')}</p>
                         
-                        <Button variant="body">
-                            {t('ctaButton')}
-                        </Button>
+                        <Link href={ROUTES.ABOUT_US.CONTACT}>
+                            <Button variant="body">
+                                {t('ctaButton')}
+                            </Button>
+                        </Link>
                     </motion.div>
                 </div>
             </div>

@@ -5,8 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
-import { getLifeImages } from '@/services/lifeService';
-import { LifeImage } from '@/types/life';
+import { getLifeImages } from '@/services/life';
+import { LifeImage } from '@/services/life/types';
 
 export default function AlbumGallery() {
     const t = useTranslations('LifePage.gallery');

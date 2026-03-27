@@ -314,7 +314,7 @@ export default function AppBar() {
               </div>
 
               <Link
-                href={ROUTES.HIRE}
+                href={ROUTES.HIRE.ROOT}
                 className="outline-none rounded-full"
               >
                 <Button variant="secondary" className="px-5 py-2 text-sm">
@@ -384,9 +384,11 @@ export default function AppBar() {
                   transition={{ delay: 0.3, duration: 0.3 }}
                   className="flex flex-col gap-4"
                 >
-                  <Button variant="secondary" className="w-full py-4 text-base">
-                    {t('buttons.hire')}
-                  </Button>
+                  <Link href={ROUTES.HIRE.ROOT} className="w-full">
+                    <Button variant="secondary" className="w-full py-4 text-base" onClick={() => setIsMobileMenuOpen(false)}>
+                      {t('buttons.hire')}
+                    </Button>
+                  </Link>
                   <Button variant="primary" className="w-full py-4 text-base shadow-primary/30">
                     {t('buttons.contact')}
                   </Button>

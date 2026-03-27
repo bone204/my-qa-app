@@ -2,18 +2,20 @@
 
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { 
-    Rocket, Building2, Utensils, ShoppingBag, Dumbbell, 
-    HeartPulse, Ticket, Plane, Car, Truck, Cloud, 
-    RefreshCw, Zap, Settings, GitBranch, Infinity as InfinityIcon, 
+import {
+    Rocket, Building2, Utensils, ShoppingBag, Dumbbell,
+    HeartPulse, Ticket, Plane, Car, Truck, Cloud,
+    RefreshCw, Zap, Settings, GitBranch, Infinity as InfinityIcon,
     Package, ArrowRight, ChevronRight, Sparkles, ShieldCheck,
-    Shield, Activity
+    Shield, Activity, ArrowUpRight
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Button from '@/components/ui/Button';
 import { cn } from '@/lib/utils';
 import { LinkAction } from '@/components/ui/LinkAction';
 import MetaBalls from '@/components/ui/MetaBalls';
+import Link from 'next/link';
+import { ROUTES } from '@/constants/routes';
 
 export default function SolutionsSection() {
     const t = useTranslations('ServicesPage.solutions');
@@ -43,7 +45,9 @@ export default function SolutionsSection() {
                     >
                         <Sparkles className="w-4 h-4 text-primary" />
                         <span className="review-label">
-                            {t('subtitle')}
+                            {t.rich('subtitle', {
+                                highlight: (chunks) => <span className="text-primary">{chunks}</span>
+                            })}
                         </span>
                     </motion.div>
                     <motion.h2
@@ -65,6 +69,7 @@ export default function SolutionsSection() {
                         desc={t('startup.desc')}
                         btnText={t('seeMore')}
                         variant="primary"
+                        route={ROUTES.HIRE.ROOT}
                     />
                     <SolutionCard 
                         icon={Building2}
@@ -72,13 +77,14 @@ export default function SolutionsSection() {
                         desc={t('enterprise.desc')}
                         btnText={t('seeMore')}
                         variant="secondary"
+                        route={ROUTES.HIRE.ROOT}
                     />
                 </div>
 
                 {/* Part 2: On-Demand Solutions Carousel - Infinite Auto-scroll */}
                 <div className="mb-32">
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
-                        <motion.h3 
+                        <motion.h3
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
@@ -87,29 +93,32 @@ export default function SolutionsSection() {
                             <span className="w-12 h-[2px] bg-primary/50" />
                             {t('onDemand.title')}
                         </motion.h3>
-                        
-                        <Button variant="body" className="w-fit">
-                            {t('seeMore')}
-                        </Button>
+
+                        <Link href={ROUTES.HIRE.ROOT}>
+                            <Button variant="body" className="w-fit">
+                                {t('seeMore')}
+                            </Button>
+                        </Link>
                     </div>
 
-                    <div 
+                    <div
                         className="relative overflow-hidden group"
                         style={{
                             maskImage: 'linear-gradient(to right, transparent, black 15%, black 85%, transparent)',
                             WebkitMaskImage: 'linear-gradient(to right, transparent, black 15%, black 85%, transparent)'
                         }}
                     >
-                        <div 
+                        <div
                             className="flex gap-6 w-max pr-6 group-hover:[animation-play-state:paused]"
-                            style={{ 
+                            style={{
                                 animation: 'marquee 40s linear infinite',
                                 willChange: 'transform'
                             }}
                         >
                             {[...onDemandItems, ...onDemandItems].map((item, idx) => (
-                                <div
+                                <Link
                                     key={idx}
+                                    href={ROUTES.HIRE.ROOT}
                                     className="w-[280px] md:w-[320px] shrink-0"
                                 >
                                     <div className={cn(
@@ -125,7 +134,7 @@ export default function SolutionsSection() {
                                             <ArrowRight className="w-6 h-6 text-primary opacity-0 group-hover/item:opacity-100 group-hover/item:translate-x-2 transition-all duration-300" />
                                         </div>
                                     </div>
-                                </div>
+                                </Link>
                             ))}
                         </div>
                     </div>
@@ -133,55 +142,30 @@ export default function SolutionsSection() {
 
                 {/* Part 3: SaaS, Transformation, MVP */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
-                    {[
-                        { key: 'saas', icon: Cloud, gradient: 'from-blue-500 to-cyan-400' },
-                        { key: 'transformation', icon: RefreshCw, gradient: 'from-purple-500 to-pink-400' },
-                        { key: 'mvp', icon: Zap, gradient: 'from-emerald-500 to-teal-400' }
-                    ].map((item, idx) => (
-                        <motion.div
-                            key={item.key}
-                            initial={{ opacity: 0, y: 50, scale: 0.95 }}
-                            whileInView={{ 
-                                opacity: 1, 
-                                y: 0, 
-                                scale: 1,
-                                transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: idx * 0.1 }
-                            }}
-                            viewport={{ once: true }}
-                            whileHover={{ 
-                                scale: 1.05,
-                                transition: { type: "spring", stiffness: 400, damping: 20 }
-                            }}
-                            whileTap={{ scale: 0.95 }}
-                            className="group/solution relative cursor-pointer overflow-hidden rounded-4xl bg-white/5 backdrop-blur-md border border-white/10 p-8 shadow-xl hover:shadow-primary/10 hover:border-primary/30 flex flex-col"
-                            style={{ 
-                                borderRadius: 32,
-                                transitionProperty: 'border-color, box-shadow, background-color',
-                                transitionDuration: '300ms',
-                                transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)'
-                            }}
-                        >
-                            <div className="absolute inset-0 bg-linear-to-br opacity-0 transition-opacity duration-300 group-hover/solution:opacity-5 mix-blend-overlay" />
-                            
-                            <div className={cn(
-                                "mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl text-white shadow-lg bg-linear-to-br",
-                                item.gradient
-                            )}>
-                                <item.icon className="h-6 w-6" />
-                            </div>
-                            
-                            <h4 className="card-title mb-2 select-none">
-                                {t(`products.${item.key}.title`)}
-                            </h4>
-                            <p className="card-desc line-clamp-3 select-none grow">
-                                {t(`products.${item.key}.desc`)}
-                            </p>
-                            
-                            <div className="mt-8 flex items-center text-primary text-xs font-bold uppercase tracking-widest pt-6 border-t border-white/5 opacity-0 group-hover/solution:opacity-100 -translate-x-4 group-hover/solution:translate-x-0 transition-all duration-500">
-                                {t('explore')} <ArrowRight className="ml-2 w-4 h-4" />
-                            </div>
-                        </motion.div>
-                    ))}
+                    <SolutionCard 
+                        icon={Zap}
+                        title={t('products.saas.title')}
+                        desc={t('products.saas.desc')}
+                        btnText={t('seeMore')}
+                        variant="primary"
+                        route={ROUTES.HIRE.ROOT}
+                    />
+                    <SolutionCard 
+                        icon={RefreshCw}
+                        title={t('products.transformation.title')}
+                        desc={t('products.transformation.desc')}
+                        btnText={t('seeMore')}
+                        variant="secondary"
+                        route={ROUTES.HIRE.ROOT}
+                    />
+                    <SolutionCard 
+                        icon={Settings}
+                        title={t('products.mvp.title')}
+                        desc={t('products.mvp.desc')}
+                        btnText={t('seeMore')}
+                        variant="primary"
+                        route={ROUTES.HIRE.ROOT}
+                    />
                 </div>
 
                 {/* Part 4: DevOps */}
@@ -191,8 +175,8 @@ export default function SolutionsSection() {
                     viewport={{ once: true }}
                     className="group/card relative rounded-[3rem] p-8 md:p-12 border border-primary/20 bg-linear-to-br from-zinc-950 via-primary/5 to-black overflow-hidden shadow-2xl shadow-primary/5"
                 >
-                    
-                    
+
+
                     <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center">
                         <div>
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6">
@@ -204,8 +188,8 @@ export default function SolutionsSection() {
                             </h3>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 mb-4">
                                 {['consulting', 'cicd', 'iac', 'container'].map((item, i) => (
-                                    <motion.div 
-                                        key={item} 
+                                    <motion.div
+                                        key={item}
                                         initial={{ opacity: 0, x: -10 }}
                                         whileInView={{ opacity: 1, x: 0 }}
                                         transition={{ delay: i * 0.1 }}
@@ -223,11 +207,13 @@ export default function SolutionsSection() {
                                     </motion.div>
                                 ))}
                             </div>
-                            <Button variant="body" parentGroup="card" className="mt-8">
-                                {t('devops.button')}
-                            </Button>
+                            <Link href={ROUTES.HIRE.DEVOPS}>
+                                <Button variant="body" parentGroup="card" className="mt-8">
+                                    {t('devops.button')}
+                                </Button>
+                            </Link>
                         </div>
-                        
+
                         <div className="relative hidden lg:block h-[500px]">
                             <MetaBalls
                                 color="#ffffff"
@@ -249,7 +235,7 @@ export default function SolutionsSection() {
     );
 }
 
-function SolutionCard({ icon: Icon, title, desc, btnText, variant }: { icon: any, title: string, desc: string, btnText: string, variant: 'primary' | 'secondary' }) {
+function SolutionCard({ icon: Icon, title, desc, btnText, variant, route }: { icon: any, title: string, desc: string, btnText: string, variant: 'primary' | 'secondary', route?: string }) {
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -259,33 +245,34 @@ function SolutionCard({ icon: Icon, title, desc, btnText, variant }: { icon: any
         >
             {/* Top Light Highlight */}
             <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
-            
+
             <div className={cn(
                 "absolute inset-0 opacity-0 group-hover/card:opacity-15 transition-opacity duration-1000",
                 variant === 'primary' ? "bg-primary" : "bg-white"
             )} />
-            
+
             <div className="relative z-10 h-full flex flex-col items-start text-left">
                 <div className="w-20 h-20 rounded-3xl bg-white/5 flex items-center justify-center mb-10 group-hover/card:scale-110 group-hover/card:bg-primary/10 transition-all duration-700">
                     <Icon className="w-10 h-10 text-primary" />
                 </div>
-                
+
                 <h3 className="card-title text-4xl md:text-5xl mb-6 group-hover/card:translate-x-2 transition-transform duration-700">
                     {title}
                 </h3>
-                
+
                 <p className="card-desc text-xl font-medium mb-12 max-w-md group-hover/card:text-zinc-300 transition-colors duration-700">
                     {desc}
                 </p>
-                
+
                 <div className="mt-auto">
-                    <Button 
-                        variant="body"
-                        parentGroup="card"
-                        className="rounded-full px-10"
-                    >
-                        {btnText}
-                    </Button>
+                    <Link href={route || ROUTES.HIRE.ROOT}>
+                        <Button
+                            variant="body"
+                            parentGroup="card"
+                        >
+                            {btnText}
+                        </Button>
+                    </Link>
                 </div>
             </div>
 

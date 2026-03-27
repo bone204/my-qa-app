@@ -539,7 +539,7 @@
       }
     },
     "solutions": {
-      "subtitle": "Scale your business",
+      "subtitle": "HIGH-TECH <highlight>SOLUTIONS</highlight>",
       "title": "Solutions We Provide",
       "seeMore": "See More",
       "explore": "Explore solutions",
@@ -1243,11 +1243,11 @@
       "description": "Sharing the latest in technology, design trends, and success stories from the QKIT Software team."
     },
     "filters": {
-      "all": "All",
-      "technology": "Technology",
-      "design": "Design",
-      "business": "Business",
-      "tutorial": "Tutorial"
+      "All": "All",
+      "Technology": "Technology",
+      "Design": "Design",
+      "Business": "Business",
+      "Development": "Development"
     },
     "stats": {
       "views": "views",
@@ -1357,6 +1357,70 @@
     }
   },
   "HirePage": {
+    "CategorySection": {
+      "subtitle": "OUR EXPERTISE",
+      "title": "Hire the Best <highlight>Dedicated</highlight> Team",
+      "description": "We provide high-quality personnel ready to accompany your project every step of the way.",
+      "hireButton": "Hire now",
+      "categories": {
+        "mobile": {
+          "title": "Mobile Development",
+          "items": [
+            "Hire Mobile App Developer",
+            "Hire IOS Developer",
+            "Hire Android Developer",
+            "Hire Flutter Developer",
+            "Hire Swift Developer",
+            "Hire React-Native Engineer"
+          ]
+        },
+        "frontend": {
+          "title": "Front-end Development",
+          "items": [
+            "Hire Front-end Engineer",
+            "Hire Angular Developer",
+            "Hire Reactjs Developer",
+            "Hire Vuejs Developer",
+            "Hire Nextjs Developer",
+            "Hire Typescript Developer"
+          ]
+        },
+        "design": {
+          "title": "UI-UX Design",
+          "items": [
+            "Hire Interface Designer",
+            "Hire UI-UX Engineer",
+            "Hire Mobile UI-UX Engineer",
+            "Hire Website UI-UX Engineer",
+            "Hire Desktop UI-UX Engineer"
+          ]
+        },
+        "devops": {
+          "title": "DevOps",
+          "description": "Optimize infrastructure, automate processes and enhance stability for all your digital products.",
+          "items": [
+            "Hire DevOps Engineer",
+            "CI/CD Pipeline Setup",
+            "IaC Services (Infrastructure as Code)",
+            "Containerization Services",
+            "Monitoring & Logging Solutions",
+            "Cloud Security & Compliance"
+          ]
+        },
+        "fullstack": {
+          "title": "Fullstack Development",
+          "description": "Comprehensive solutions from user interface to server architecture and databases.",
+          "items": [
+            "Hire Fullstack Developers",
+            "End-to-end Web App Development",
+            "System Architecture Design",
+            "API & Microservices Integration",
+            "Database Management",
+            "Infra & Cloud Deployment"
+          ]
+        }
+      }
+    },
     "subtitle": "Dedicated Talent",
     "title": "Hire <highlight>Dedicated</highlight> Remote Developers",
     "description": "As a strategic partner, we provide you with dedicated designers, developers, or whole teams to scale your digital products. Our remote dedicated team will collaborate closely with clients to meet deadlines and deliver top-quality solutions tailored to their requirements.",
@@ -1454,5 +1518,223 @@
         "description": "Once you find the right talent, we'll assist with remote onboarding and provide ongoing support."
       }
     }
+  },
+  "HireCategoryPages": {
+    "hire-mobile-app-development": {
+      "subtitle": "Optimal Mobile Solutions",
+      "title": "Hire <highlight>Dedicated</highlight> Mobile App Developers",
+      "description": "QKIT Software provides a team of experts building high-quality apps on iOS, Android, and cross-platform platforms.",
+      "intro": "In the digital age, a powerful mobile app is key to connecting with customers. Our mobile development team doesn't just write code; they create seamless, efficient experiences with exceptional scalability.",
+      "skills": [
+        "Flutter",
+        "React Native",
+        "Swift (iOS)",
+        "Kotlin (Android)",
+        "Firebase Integration",
+        "App Store Deployment",
+        "Mobile UI Patterns",
+        "Performance Optimization"
+      ],
+      "flowingMenu": [
+        {
+          "text": "Programming Languages",
+          "details": "Kotlin, Java",
+          "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=600"
+        },
+        {
+          "text": "Frameworks",
+          "details": "React Native, Ionic, Flutter",
+          "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=600"
+        },
+        {
+          "text": "Plugins & Libraries",
+          "details": "Jetpack, Compose",
+          "image": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=600"
+        },
+        {
+          "text": "Databases",
+          "details": "Room, SQLite, Firebase",
+          "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=600"
+        },
+        {
+          "text": "Tools & Utilities",
+          "details": "Figma, Android Studio, Jira",
+          "image": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=600"
+        }
+      ]
+    },
+    "hire-frontend-development": {
+      "subtitle": "Modern & Fluent Interfaces",
+      "title": "Hire Talented <highlight>Front-end</highlight> Developers",
+      "description": "Create top-tier web experiences with the most modern frameworks from our leading experts.",
+      "intro": "The user interface is the first touchpoint of your brand. We focus on building high-speed, responsive websites with maximum aesthetics, ensuring absolute satisfaction across all devices.",
+      "skills": [
+        "React.js",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Redux / Zustand",
+        "Unit Testing (Jest)",
+        "Web Performance",
+        "Responsive Design"
+      ],
+      "flowingMenu": [
+        {
+          "text": "Languages",
+          "details": "TypeScript, JavaScript, HTML/CSS",
+          "image": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?q=80&w=600"
+        },
+        {
+          "text": "Frameworks",
+          "details": "React, Next.js, Vue, Angular",
+          "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=600"
+        },
+        {
+          "text": "Styling",
+          "details": "Tailwind CSS, Sass, Styled Components",
+          "image": "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?q=80&w=600"
+        },
+        {
+          "text": "State Management",
+          "details": "Redux, Recoil, Zustand",
+          "image": "https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80&w=600"
+        },
+        {
+          "text": "Tools",
+          "details": "Webpack, Vite, Chromatic, Storybook",
+          "image": "https://images.unsplash.com/photo-1522252234503-e356532cafd5?q=80&w=600"
+        }
+      ]
+    },
+    "hire-ui-ux-design": {
+      "subtitle": "Design Elevating Brand",
+      "title": "Hire Professional <highlight>UI-UX</highlight> Designers",
+      "description": "Turn ideas into reality with an in-depth design process focused on user experience.",
+      "intro": "Good design is not just beautiful; it must work effectively. Our design process combines deep user research and modern aesthetic thinking to create digital products that are easy to use and inspiring.",
+      "skills": [
+        "Figma",
+        "Adobe XD",
+        "User Research",
+        "Wireframing & Prototyping",
+        "Design Systems",
+        "Interaction Design",
+        "Mobile-First Design",
+        "Usability Testing"
+      ],
+      "flowingMenu": [
+        {
+          "text": "Design Tools",
+          "details": "Figma, Adobe XD, Sketch",
+          "image": "https://images.unsplash.com/photo-1586717791821-3f44a563dc4c?q=80&w=600"
+        },
+        {
+          "text": "Prototyping",
+          "details": "Framer, Protopie, Principle",
+          "image": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=600"
+        },
+        {
+          "text": "Research",
+          "details": "User Interviews, Surveys, Heatmaps",
+          "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=600"
+        },
+        {
+          "text": "Handover",
+          "details": "Zeplin, Storybook, Zeroheight",
+          "image": "https://images.unsplash.com/photo-1551288049-bbbda536339a?q=80&w=600"
+        },
+        {
+          "text": "Methodology",
+          "details": "Design Thinking, Atomic Design",
+          "image": "https://images.unsplash.com/photo-1512314889357-e157c22f938d?q=80&w=600"
+        }
+      ]
+    },
+    "hire-devops-engineering": {
+      "subtitle": "Stable Infrastructure & Automation",
+      "title": "Hire High-Level <highlight>DevOps</highlight> Engineers",
+      "description": "Optimize the development, deployment, and operation process with the latest solutions.",
+      "intro": "Ensure stability and record deployment speed for your project. Our DevOps engineers help automate every process from code to production, minimizing errors and optimizing cloud infrastructure costs.",
+      "skills": [
+        "AWS / Azure / GCP",
+        "Docker & Kubernetes",
+        "CI/CD Pipelines",
+        "Terraform (IaC)",
+        "Monitoring & Logging",
+        "Cloud Security",
+        "Nginx / Server Config",
+        "Automation Scripts"
+      ],
+      "flowingMenu": [
+        {
+          "text": "Cloud Platforms",
+          "details": "AWS, Azure, Google Cloud",
+          "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=600"
+        },
+        {
+          "text": "Containerization",
+          "details": "Docker, Kubernetes",
+          "image": "https://images.unsplash.com/photo-1605745341112-85968b193ef5?q=80&w=600"
+        },
+        {
+          "text": "CI/CD",
+          "details": "GitHub Actions, Jenkins, GitLab CI",
+          "image": "https://images.unsplash.com/photo-1618401471353-b98aadebc255?q=80&w=600"
+        },
+        {
+          "text": "Infrastructure",
+          "details": "Terraform, Ansible, Pulumi",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600"
+        },
+        {
+          "text": "Monitoring",
+          "details": "Prometheus, Grafana, ELK Stack",
+          "image": "https://images.unsplash.com/photo-1551288049-bbbda536339a?q=80&w=600"
+        }
+      ]
+    },
+    "hire-fullstack-development": {
+      "subtitle": "Comprehensive & Agile",
+      "title": "Hire Professional <highlight>Fullstack</highlight> Developers",
+      "description": "Our experts master both Front-end and Back-end, providing comprehensive software solutions.",
+      "intro": "Maximum versatility and efficiency. Our Fullstack developers handle everything from UI design and server-side logic to database management, reducing communication friction and accelerating project delivery.",
+      "skills": [
+        "Next.js / React / Vue",
+        "Node.js / Express",
+        "Python / Django / FastAPI",
+        "PostgreSQL / MongoDB",
+        "RESTful & GraphQL API",
+        "Docker & Infrastructure",
+        "System Architecture",
+        "Security Best Practices"
+      ],
+      "flowingMenu": [
+        {
+          "text": "System Architecture",
+          "details": "Microservices, Serverless, Monolithic",
+          "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=600"
+        },
+        {
+          "text": "Frontend Mastery",
+          "details": "React, Next.js, Tailwind CSS",
+          "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=600"
+        },
+        {
+          "text": "Backend Mastery",
+          "details": "Node.js, Go, Python, Java",
+          "image": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?q=80&w=600"
+        },
+        {
+          "text": "Infra & DevOps",
+          "details": "AWS, Docker, CI/CD",
+          "image": "https://images.unsplash.com/photo-1667372333114-3d443cdd3ca2?q=80&w=600"
+        },
+        {
+          "text": "Databases",
+          "details": "PostgreSQL, MongoDB, Redis",
+          "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=600"
+        }
+      ]
+    },
+    "coreCompetencies": "Core Competencies"
   }
 }

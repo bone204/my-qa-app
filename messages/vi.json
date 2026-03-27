@@ -539,7 +539,7 @@
       }
     },
     "solutions": {
-      "subtitle": "Nâng tầm doanh nghiệp",
+      "subtitle": "GIẢI PHÁP <highlight>CÔNG NGHỆ CAO</highlight>",
       "title": "Các giải pháp chúng tôi cung cấp",
       "seeMore": "Xem thêm",
       "explore": "Khám phá giải pháp",
@@ -1243,11 +1243,11 @@
       "description": "Nơi chia sẻ những kiến thức mới nhất về công nghệ, xu hướng thiết kế và những câu chuyện thành công từ đội ngũ QKIT Software."
     },
     "filters": {
-      "all": "Tất cả",
-      "technology": "Công nghệ",
-      "design": "Thiết kế",
-      "business": "Kinh doanh",
-      "tutorial": "Hướng dẫn"
+      "All": "Tất cả",
+      "Technology": "Công nghệ",
+      "Design": "Thiết kế",
+      "Business": "Kinh doanh",
+      "Development": "Phát triển"
     },
     "stats": {
       "views": "lượt xem",
@@ -1357,6 +1357,70 @@
     }
   },
   "HirePage": {
+    "CategorySection": {
+      "subtitle": "CHUYÊN MÔN CỦA CHÚNG TÔI",
+      "title": "Thuê Đội Ngũ <highlight>Chuyên Gia</highlight> Tốt Nhất",
+      "description": "Chúng tôi cung cấp đội ngũ nhân sự chất lượng cao, sẵn sàng đồng hành cùng dự án của bạn.",
+      "hireButton": "Thuê ngay",
+      "categories": {
+        "mobile": {
+          "title": "Phát triển Di động",
+          "items": [
+            "Thuê nhà phát triển ứng dụng di động",
+            "Thuê nhà phát triển IOS",
+            "Thuê nhà phát triển Android",
+            "Thuê nhà phát triển Flutter",
+            "Thuê nhà phát triển Swift",
+            "Thuê kỹ sư phát triển React-Native"
+          ]
+        },
+        "frontend": {
+          "title": "Phát triển Front-end",
+          "items": [
+            "Thuê kỹ sư phát triển Front-end",
+            "Thuê nhà phát triển Angular",
+            "Thuê nhà phát triển Reactjs",
+            "Thuê nhà phát triển Vuejs",
+            "Thuê nhà phát triển Nextjs",
+            "Thuê nhà phát triển Typescript"
+          ]
+        },
+        "design": {
+          "title": "Thiết kế UI-UX",
+          "items": [
+            "Thuê nhà thiết kế giao diện",
+            "Thuê kỹ sư thiết kế UI-UX",
+            "Thuê kỹ sư thiết kế UI-UX cho di động",
+            "Thuê kỹ sư thiết kế UI-UX cho website",
+            "Thuê kỹ sư thiết kế UI-UX cho ứng dụng máy tính"
+          ]
+        },
+        "devops": {
+          "title": "DevOps",
+          "description": "Tối ưu hóa hạ tầng, tự động hóa quy trình và nâng cao tính ổn định cho mọi sản phẩm kỹ thuật số của bạn.",
+          "items": [
+            "Thuê kỹ sư DevOps",
+            "Thiết lập CI/CD Pipeline",
+            "Dịch vụ IaC (Infrastructure as Code)",
+            "Đóng gói ứng dụng (Containerization)",
+            "Giám sát & Ghi nhật ký hệ thống",
+            "Bảo mật & Tuân thủ Đám mây"
+          ]
+        },
+        "fullstack": {
+          "title": "Phát triển Fullstack",
+          "description": "Giải pháp toàn diện từ giao diện người dùng đến kiến trúc máy chủ và cơ sở dữ liệu.",
+          "items": [
+            "Thuê nhà phát triển Fullstack",
+            "Phát triển ứng dụng Web toàn diện",
+            "Thiết kế kiến trúc hệ thống",
+            "Tích hợp API & Microservices",
+            "Quản trị cơ sở dữ liệu",
+            "Triển khai hạ tầng & Cloud"
+          ]
+        }
+      }
+    },
     "subtitle": "Tài năng chuyên trách",
     "title": "Thuê <highlight>nhà phát triển từ xa</highlight> chuyên dụng",
     "description": "Với tư cách là đối tác chiến lược, chúng tôi cung cấp cho bạn các nhà thiết kế, nhà phát triển tận tâm hoặc cả nhóm để mở rộng quy mô sản phẩm kỹ thuật số của bạn. Nhóm chuyên trách từ xa của chúng tôi sẽ hợp tác chặt chẽ với khách hàng để đạt trình độ và cung cấp các giải pháp chất lượng hàng đầu theo yêu cầu của họ.",
@@ -1454,5 +1518,223 @@
         "description": "Sau khi bạn tìm được tài năng phù hợp, chúng tôi sẽ giúp bạn tham gia từ xa, bắt đầu dự án và cung cấp hỗ trợ."
       }
     }
+  },
+  "HireCategoryPages": {
+    "hire-mobile-app-development": {
+      "subtitle": "Giải pháp di động tối ưu",
+      "title": "Thuê nhà phát triển <highlight>ứng dụng di động</highlight> chuyên dụng",
+      "description": "QKIT Software cung cấp đội ngũ chuyên gia xây dựng các ứng dụng chất lượng cao trên cả iOS, Android và các nền tảng đa nền tảng.",
+      "intro": "Trong kỷ nguyên số, một ứng dụng di động mạnh mẽ là chìa khóa để kết nối với khách hàng. Đội ngũ phát triển di động của chúng tôi không chỉ viết code, mà còn kiến tạo những trải nghiệm mượt mà, hiệu quả và có khả năng mở rộng vượt trội.",
+      "skills": [
+        "Flutter",
+        "React Native",
+        "Swift (iOS)",
+        "Kotlin (Android)",
+        "Firebase Integration",
+        "App Store Deployment",
+        "Mobile UI Patterns",
+        "Performance Optimization"
+      ],
+      "flowingMenu": [
+        {
+          "text": "Ngôn ngữ lập trình",
+          "details": "Kotlin, Java",
+          "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=600"
+        },
+        {
+          "text": "Framework",
+          "details": "React Native, Ionic, Flutter",
+          "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=600"
+        },
+        {
+          "text": "Plugins & Thư viện",
+          "details": "Jetpack, Compose",
+          "image": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=600"
+        },
+        {
+          "text": "Cơ sở dữ liệu",
+          "details": "Room, SQLite, Firebase",
+          "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=600"
+        },
+        {
+          "text": "Công cụ & Tiện ích",
+          "details": "Figma, Android Studio, Jira",
+          "image": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=600"
+        }
+      ]
+    },
+    "hire-frontend-development": {
+      "subtitle": "Giao diện hiện đại & mượt mà",
+      "title": "Thuê nhà phát triển <highlight>Front-end</highlight> tài năng",
+      "description": "Kiến tạo các trải nghiệm web đỉnh cao với các framework hiện đại nhất từ các chuyên gia hàng đầu của chúng tôi.",
+      "intro": "Giao diện người dùng là điểm chạm đầu tiên của khách hàng với thương hiệu. Chúng tôi tập trung vào việc xây dựng các website tốc độ cao, responsive và đạt tính thẩm mỹ tối đa, đảm bảo sự hài lòng tuyệt đối trên mọi thiết bị.",
+      "skills": [
+        "React.js",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Redux / Zustand",
+        "Unit Testing (Jest)",
+        "Web Performance",
+        "Responsive Design"
+      ],
+      "flowingMenu": [
+        {
+          "text": "Ngôn ngữ",
+          "details": "TypeScript, JavaScript, HTML/CSS",
+          "image": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?q=80&w=600"
+        },
+        {
+          "text": "Framework",
+          "details": "React, Next.js, Vue, Angular",
+          "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=600"
+        },
+        {
+          "text": "Styling",
+          "details": "Tailwind CSS, Sass, Styled Components",
+          "image": "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?q=80&w=600"
+        },
+        {
+          "text": "Quản lý trạng thái",
+          "details": "Redux, Recoil, Zustand",
+          "image": "https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80&w=600"
+        },
+        {
+          "text": "Công cụ",
+          "details": "Webpack, Vite, Chromatic, Storybook",
+          "image": "https://images.unsplash.com/photo-1522252234503-e356532cafd5?q=80&w=600"
+        }
+      ]
+    },
+    "hire-ui-ux-design": {
+      "subtitle": "Thiết kế nâng tầm thương hiệu",
+      "title": "Thuê kỹ sư thiết kế <highlight>UI-UX</highlight> chuyên nghiệp",
+      "description": "Biến ý tưởng thành sản phẩm thực tế với quy trình thiết kế chuyên sâu, tập trung vào trải nghiệm người dùng.",
+      "intro": "Thiết kế tốt không chỉ là đẹp mà phải hoạt động hiệu quả. Quy trình thiết kế của chúng tôi kết hợp giữa nghiên cứu người dùng sâu sắc và tư duy thẩm mỹ hiện đại để tạo ra những sản phẩm số dễ sử dụng và đầy cảm hứng.",
+      "skills": [
+        "Figma",
+        "Adobe XD",
+        "User Research",
+        "Wireframing & Prototyping",
+        "Design Systems",
+        "Interaction Design",
+        "Mobile-First Design",
+        "Usability Testing"
+      ],
+      "flowingMenu": [
+        {
+          "text": "Thiết kế",
+          "details": "Figma, Adobe XD, Sketch",
+          "image": "https://images.unsplash.com/photo-1586717791821-3f44a563dc4c?q=80&w=600"
+        },
+        {
+          "text": "Prototyping",
+          "details": "Framer, Protopie, Principle",
+          "image": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=600"
+        },
+        {
+          "text": "Nghiên cứu",
+          "details": "User Interviews, Surveys, Heatmaps",
+          "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=600"
+        },
+        {
+          "text": "Bàn giao",
+          "details": "Zeplin, Storybook, Zeroheight",
+          "image": "https://images.unsplash.com/photo-1551288049-bbbda536339a?q=80&w=600"
+        },
+        {
+          "text": "Phương pháp",
+          "details": "Design Thinking, Atomic Design",
+          "image": "https://images.unsplash.com/photo-1512314889357-e157c22f938d?q=80&w=600"
+        }
+      ]
+    },
+    "hire-devops-engineering": {
+      "subtitle": "Hạ tầng ổn định & Tự động hóa",
+      "title": "Thuê kỹ sư <highlight>DevOps</highlight> trình độ cao",
+      "description": "Tối ưu hóa quy trình phát triển, triển khai và vận hành hệ thống với các giải pháp hiện đại nhất.",
+      "intro": "Đảm bảo sự ổn định và tốc độ triển khai kỷ lục cho dự án của bạn. Các kỹ sư DevOps của chúng tôi giúp tự động hóa mọi quy trình từ code đến sản phẩm thực tế, giảm thiểu lỗi và tối ưu hóa chi phí vận hành hạ tầng đám mây.",
+      "skills": [
+        "AWS / Azure / GCP",
+        "Docker & Kubernetes",
+        "CI/CD Pipelines",
+        "Terraform (IaC)",
+        "Monitoring & Logging",
+        "Cloud Security",
+        "Nginx / Server Config",
+        "Automation Scripts"
+      ],
+      "flowingMenu": [
+        {
+          "text": "Nền tảng Cloud",
+          "details": "AWS, Azure, Google Cloud",
+          "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=600"
+        },
+        {
+          "text": "Containerization",
+          "details": "Docker, Kubernetes",
+          "image": "https://images.unsplash.com/photo-1605745341112-85968b193ef5?q=80&w=600"
+        },
+        {
+          "text": "CI/CD",
+          "details": "GitHub Actions, Jenkins, GitLab CI",
+          "image": "https://images.unsplash.com/photo-1618401471353-b98aadebc255?q=80&w=600"
+        },
+        {
+          "text": "Hạ tầng",
+          "details": "Terraform, Ansible, Pulumi",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600"
+        },
+        {
+          "text": "Giám sát",
+          "details": "Prometheus, Grafana, ELK Stack",
+          "image": "https://images.unsplash.com/photo-1551288049-bbbda536339a?q=80&w=600"
+        }
+      ]
+    },
+    "hire-fullstack-development": {
+      "subtitle": "Toàn diện & Linh hoạt",
+      "title": "Thuê nhà phát triển <highlight>Fullstack</highlight> chuyên nghiệp",
+      "description": "Đội ngũ chuyên gia làm chủ cả Front-end và Back-end, mang đến giải pháp phần mềm toàn diện.",
+      "intro": "Linh hoạt và hiệu quả tối đa. Các nhà phát triển Fullstack của chúng tôi có khả năng xử lý từ thiết kế giao diện, logic phía máy chủ đến quản trị cơ sở dữ liệu, giúp giảm thiểu rủi ro giao tiếp và tăng tốc độ phát triển dự án.",
+      "skills": [
+        "Next.js / React / Vue",
+        "Node.js / Express",
+        "Python / Django / FastAPI",
+        "PostgreSQL / MongoDB",
+        "RESTful & GraphQL API",
+        "Docker & Infrastructure",
+        "System Architecture",
+        "Security Best Practices"
+      ],
+      "flowingMenu": [
+        {
+          "text": "Kiến trúc hệ thống",
+          "details": "Microservices, Serverless, Monolithic",
+          "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=600"
+        },
+        {
+          "text": "Frontend Mastery",
+          "details": "React, Next.js, Tailwind CSS",
+          "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=600"
+        },
+        {
+          "text": "Backend Mastery",
+          "details": "Node.js, Go, Python, Java",
+          "image": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?q=80&w=600"
+        },
+        {
+          "text": "Hạ tầng & DevOps",
+          "details": "AWS, Docker, CI/CD",
+          "image": "https://images.unsplash.com/photo-1667372333114-3d443cdd3ca2?q=80&w=600"
+        },
+        {
+          "text": "Cơ sở dữ liệu",
+          "details": "PostgreSQL, MongoDB, Redis",
+          "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=600"
+        }
+      ]
+    },
+    "coreCompetencies": "Năng lực cốt lõi"
   }
 }

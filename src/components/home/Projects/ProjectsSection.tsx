@@ -10,6 +10,8 @@ import { projects, stats } from "./projectsData";
 import { ProjectStackCard, Counter } from "./ProjectStackCard";
 import { useTranslations } from 'next-intl';
 import { cn } from "@/lib/utils";
+import { useRouter } from "next/navigation";
+import { ROUTES } from "@/constants/routes";
 
 const titleVariants = {
     hidden: { opacity: 0, y: 60, scale: 0.8, filter: "blur(20px)" },
@@ -29,6 +31,7 @@ const titleVariants = {
 
 export default function ProjectsSection() {
     const t = useTranslations('ProjectsSection');
+    const router = useRouter();
     const [activeIndex, setActiveIndex] = useState(0);
     const [isHovered, setIsHovered] = useState(false);
     const [isCardHovered, setIsCardHovered] = useState(false);
@@ -148,6 +151,7 @@ export default function ProjectsSection() {
                                         <Button
                                             variant="body"
                                             className="w-fit"
+                                            onClick={() => router.push(ROUTES.PORTFOLIO)}
                                         >
                                             {t('exploreBtn')}
                                         </Button>

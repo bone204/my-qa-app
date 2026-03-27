@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import { Sparkles, MessageCircle } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Button from '@/components/ui/Button';
+import Link from 'next/link';
+import { ROUTES } from '@/constants/routes';
 
 export default function ContactCTASection() {
     const t = useTranslations('ServicesPage.contactCTA');
@@ -71,12 +73,14 @@ export default function ContactCTASection() {
                             transition={{ delay: 0.5, duration: 0.6 }}
                             className="pt-12"
                         >
-                            <Button variant="primary" className="px-12 py-6 text-xl font-bold rounded-full transition-all duration-500 hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(236,72,153,0.3)]">
-                                <span className="flex items-center gap-3">
-                                    <Sparkles className="w-6 h-6" />
-                                    {t('button')}
-                                </span>
-                            </Button>
+                            <Link href={ROUTES.ABOUT_US.CONTACT}>
+                                <Button variant="primary" className="px-12 py-6 text-xl font-bold rounded-full transition-all duration-500 hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(236,72,153,0.3)]">
+                                    <span className="flex items-center gap-3">
+                                        <Sparkles className="w-6 h-6" />
+                                        {t('button')}
+                                    </span>
+                                </Button>
+                            </Link>
                         </motion.div>
                     </div>
                 </motion.div>
