@@ -69,10 +69,10 @@ const GeneralLife = () => {
   ];
 
   return (
-    <section className="relative py-32 overflow-hidden select-none">
+    <section className="relative py-16 md:py-32 overflow-hidden select-none">
       {/* Container matching SolutionsSection */}
       <div className="mx-auto max-w-7xl px-4 md:px-8 relative z-10">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-32">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-12 md:mb-32">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}

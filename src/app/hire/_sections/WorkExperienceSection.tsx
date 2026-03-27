@@ -34,7 +34,7 @@ export default function WorkExperienceSection() {
         <div ref={containerRef} className="w-full flex justify-center bg-background py-12 md:py-24">
             <motion.section
                 style={{ width: sectionWidth }}
-                className="relative py-24 flex flex-col items-center"
+                className="relative py-16 md:py-24 flex flex-col items-center"
             >
                 {/* Visual Background with animated radius - Decoupled to fix position:sticky */}
                 <motion.div
@@ -46,7 +46,7 @@ export default function WorkExperienceSection() {
                 </motion.div>
 
                 <div className="container mx-auto px-6 relative z-10">
-                    <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-16">
+                    <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-10 md:mb-16">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}

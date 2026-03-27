@@ -11,10 +11,10 @@ export default function SuccessContent() {
     const projectKeys = ["1", "2", "3", "4", "5", "6", "7", "8"];
 
     return (
-        <section className="pb-32 relative select-none">
+        <section className="pb-16 md:pb-32 relative select-none">
             <div className="container mx-auto px-4">
                 {/* Header matching Services sections */}
-                <div className="flex flex-col items-center text-center mb-24">
+                <div className="flex flex-col items-center text-center mb-12 md:mb-24">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
@@ -48,7 +48,7 @@ export default function SuccessContent() {
                     </motion.p>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
                     {/* Left Column: Project List */}
                     <div className="lg:col-span-12 xl:col-span-8 space-y-12">
                         <div className="grid grid-cols-1 gap-12">

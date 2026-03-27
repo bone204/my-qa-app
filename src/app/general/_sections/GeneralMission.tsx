@@ -20,7 +20,7 @@ export default function GeneralMission() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center py-32 px-4 relative overflow-hidden select-none">
+    <section className="min-h-screen flex items-center justify-center py-16 md:py-32 px-4 relative overflow-hidden select-none">
       <div className="container max-w-7xl mx-auto">
         {/* Mission Section - Right aligned large typography */}
         <motion.div
@@ -43,7 +43,7 @@ export default function GeneralMission() {
               <span className="text-sm font-bold tracking-[0.3em] text-primary uppercase">02. {t("mission.title")}</span>
             </motion.div>
  
-            <motion.h2 custom={1} variants={fadeIn} className="text-3xl md:text-6xl font-black text-white leading-tight mb-8 tracking-tighter max-w-[100%]">
+            <motion.h2 custom={1} variants={fadeIn} className="text-3xl md:text-6xl font-black text-white leading-tight mb-8 tracking-tighter max-w-full">
               {t.rich("mission.desc", {
                 highlight: (chunks) => <span className="text-primary italic">{chunks}</span>
               })}

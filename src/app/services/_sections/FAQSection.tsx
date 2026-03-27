@@ -74,12 +74,12 @@ export default function FAQSection() {
     }));
 
     return (
-        <section className="py-32 relative overflow-visible select-none">
+        <section className="py-16 md:py-32 relative overflow-visible select-none">
             <div className="mx-auto max-w-7xl px-4 md:px-8 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
                     
                     {/* Left: Sticky Title */}
-                    <div className="lg:col-span-4 lg:sticky lg:top-32 h-fit">
+                    <div className="lg:col-span-4 lg:sticky lg:top-40 h-fit">
                         <div className="space-y-8">
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.9 }}

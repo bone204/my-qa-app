@@ -64,7 +64,7 @@ export default function GeneralJourneyDetail() {
   ];
 
   return (
-    <section ref={containerRef} className="relative min-h-screen py-40 overflow-hidden select-none">
+    <section ref={containerRef} className="relative min-h-screen py-20 md:py-40 overflow-hidden select-none">
       {/* Background Year Typography */}
       <div className="absolute top-1/4 left-[46%] -translate-x-1/2 -translate-y-1/2 w-full text-center pointer-events-none select-none overflow-hidden opacity-5">
         <motion.h1
@@ -77,7 +77,7 @@ export default function GeneralJourneyDetail() {
 
       <div className="container max-w-360 mx-auto px-4 relative z-10">
         {/* Header Section */}
-        <div className=" max-w-7xl mb-32">
+        <div className=" max-w-7xl mb-12 md:mb-32">
           <motion.div
             initial="hidden"
             whileInView="visible"

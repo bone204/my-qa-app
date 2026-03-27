@@ -91,7 +91,7 @@ export default function ServicesBlogSection() {
     const sidePosts = posts.filter(p => !p.isFeatured);
 
     return (
-        <section className="relative w-full py-24 sm:py-32">
+        <section className="relative w-full py-12 md:py-32">
             <div className="container mx-auto px-6 max-w-7xl">
                 {/* Header Section */}
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-white/10">
@@ -139,7 +139,7 @@ export default function ServicesBlogSection() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
-                    className="grid grid-cols-1 lg:grid-cols-12 gap-12"
+                    className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12"
                 >
                     {/* Main Story */}
                     <motion.div variants={itemVariants} className="lg:col-span-8 group cursor-pointer">

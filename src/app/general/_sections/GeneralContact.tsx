@@ -12,7 +12,7 @@ export default function GeneralContact() {
     const t = useTranslations('General.contactCTA');
 
     return (
-        <section className="relative py-24 overflow-hidden select-none">
+        <section className="relative py-12 md:py-24 overflow-hidden select-none">
             <div className="mx-auto max-w-7xl px-4 md:px-8">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
@@ -24,7 +24,7 @@ export default function GeneralContact() {
                     {/* Animated Gradient Border */}
                     <div className="absolute inset-0 bg-[conic-gradient(from_0deg,transparent_20%,#ec4899_40%,transparent_50%,transparent_70%,#ec4899_90%,transparent_100%)] animate-spin-slow opacity-40 group-hover:opacity-100 transition-opacity duration-1000 scale-[1.5]" />
 
-                    <div className="relative bg-zinc-950/80 backdrop-blur-3xl rounded-[4rem] px-8 py-20 md:px-20 md:py-24 flex flex-col items-center text-center border border-white/10">
+                    <div className="relative bg-zinc-950/80 backdrop-blur-3xl rounded-[4rem] px-6 py-12 md:px-20 md:py-24 flex flex-col items-center text-center border border-white/10">
                         {/* Noise Texture Overlay */}
                         <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
                             style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}

@@ -321,12 +321,17 @@ export default function AppBar() {
                   {t('buttons.hire')}
                 </Button>
               </Link>
-              <Button
-                variant="primary"
-                className="px-6 py-2 text-sm font-bold shadow-lg shadow-primary/20 transition-all rounded-full bg-primary hover:bg-primary/80"
+              <Link
+                href={ROUTES.ABOUT_US.CONTACT}
+                className="outline-none rounded-full"
               >
-                {t('buttons.contact')}
-              </Button>
+                <Button
+                  variant="primary"
+                  className="px-6 py-2 text-sm font-bold shadow-lg shadow-primary/20 transition-all rounded-full bg-primary hover:bg-primary/80"
+                >
+                  {t('buttons.contact')}
+                </Button>
+              </Link>
             </div>
 
             {/* Mobile Menu Toggle Button */}
@@ -389,9 +394,11 @@ export default function AppBar() {
                       {t('buttons.hire')}
                     </Button>
                   </Link>
-                  <Button variant="primary" className="w-full py-4 text-base shadow-primary/30">
-                    {t('buttons.contact')}
-                  </Button>
+                  <Link href={ROUTES.ABOUT_US.CONTACT} className="w-full" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Button variant="primary" className="w-full py-4 text-base shadow-primary/30">
+                      {t('buttons.contact')}
+                    </Button>
+                  </Link>
                   <div className="flex flex-col gap-3 mt-2 pt-5 border-t border-white/10">
                     <div className="flex items-center gap-2 pl-2">
                       <Globe className="w-4 h-4 text-zinc-500" />

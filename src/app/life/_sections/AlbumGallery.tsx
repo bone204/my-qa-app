@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { getLifeImages } from '@/services/life';
 import { LifeImage } from '@/services/life/types';
+import { X } from 'lucide-react';
 
 export default function AlbumGallery() {
     const t = useTranslations('LifePage.gallery');
@@ -14,6 +15,7 @@ export default function AlbumGallery() {
     const [activeFilter, setActiveFilter] = useState('all');
     const [photos, setPhotos] = useState<LifeImage[]>([]);
     const [loading, setLoading] = useState(true);
+    const [selectedPhoto, setSelectedPhoto] = useState<LifeImage | null>(null);
 
     useEffect(() => {
         const fetchPhotos = async () => {
@@ -25,7 +27,19 @@ export default function AlbumGallery() {
         fetchPhotos();
     }, []);
 
-    const filteredPhotos = photos.filter(photo => 
+    // Prevent scroll when lightbox is open
+    useEffect(() => {
+        if (selectedPhoto) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [selectedPhoto]);
+
+    const filteredPhotos = photos.filter(photo =>
         activeFilter === 'all' || photo.type === activeFilter
     );
 
@@ -96,13 +110,14 @@ export default function AlbumGallery() {
                             exit={{ opacity: 0, scale: 0.9 }}
                             transition={{ duration: 0.5 }}
                             className="break-inside-avoid"
+                            onClick={() => setSelectedPhoto(photo)}
                         >
                             <div className="group relative bg-[#fdfdfd] p-4 pb-6 shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:rotate-1 active:scale-95 cursor-pointer rounded-sm">
                                 <div className="relative aspect-square overflow-hidden mb-4 rounded-xs">
-                                    <Image 
-                                        src={photo.url} 
-                                        alt={locale === 'vi' ? photo.description.vi : photo.description.en} 
-                                        fill 
+                                    <Image
+                                        src={photo.url}
+                                        alt={locale === 'vi' ? photo.description.vi : photo.description.en}
+                                        fill
                                         className="object-cover transition-transform duration-700 group-hover:scale-110"
                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     />
@@ -110,9 +125,9 @@ export default function AlbumGallery() {
                                 </div>
                                 <div className="px-2 space-y-4">
                                     <p className="text-zinc-800 font-semibold text-sm leading-relaxed font-serif italic text-center">
-                                         {locale === 'vi' ? photo.description.vi : photo.description.en}
+                                        {locale === 'vi' ? photo.description.vi : photo.description.en}
                                     </p>
-                                    
+
                                     <div className="flex items-center justify-between pt-3 border-t border-zinc-100">
                                         <span className="text-[10px] md:text-xs font-black text-primary/60 tracking-widest uppercase">
                                             #{t(`filters.${photo.type}`)}
@@ -128,13 +143,76 @@ export default function AlbumGallery() {
                         </motion.div>
                     ))}
                 </AnimatePresence>
-                
+
                 {!loading && filteredPhotos.length === 0 && (
                     <div className="col-span-full h-64 flex items-center justify-center">
                         <p className="text-zinc-500 italic">Chưa có ảnh nào trong mục này.</p>
                     </div>
                 )}
             </div>
+
+            {/* Lightbox Modal */}
+            <AnimatePresence>
+                {selectedPhoto && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setSelectedPhoto(null)}
+                        className="fixed inset-0 z-100 bg-black/95 backdrop-blur-sm flex items-center justify-center p-4 md:p-10 cursor-zoom-out"
+                    >
+                        <motion.button
+                            initial={{ opacity: 0, scale: 0.5 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors z-110 cursor-pointer"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                setSelectedPhoto(null);
+                            }}
+                        >
+                            <X className="w-6 h-6" />
+                        </motion.button>
+
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                            className="relative w-full h-full max-w-5xl max-h-[85vh] flex flex-col items-center justify-center gap-6"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+                                <Image
+                                    src={selectedPhoto.url}
+                                    alt={locale === 'vi' ? selectedPhoto.description.vi : selectedPhoto.description.en}
+                                    fill
+                                    className="object-contain"
+                                    priority
+                                />
+                            </div>
+                            
+                            <motion.div 
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.2 }}
+                                className="text-center space-y-2 px-4"
+                            >
+                                <p className="text-white text-lg md:text-2xl font-serif italic">
+                                    {locale === 'vi' ? selectedPhoto.description.vi : selectedPhoto.description.en}
+                                </p>
+                                <div className="flex items-center justify-center gap-4 text-xs font-black tracking-widest uppercase text-primary/80">
+                                    <span>#{t(`filters.${selectedPhoto.type}`)}</span>
+                                    {selectedPhoto.date && (
+                                        <span className="text-zinc-500">
+                                            {new Date(selectedPhoto.date).toLocaleDateString(locale === 'vi' ? 'vi-VN' : 'en-US')}
+                                        </span>
+                                    )}
+                                </div>
+                            </motion.div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </section>
     );
 }
