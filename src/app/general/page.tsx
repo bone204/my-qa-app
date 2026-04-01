@@ -5,6 +5,15 @@ import GeneralJourney from "@/app/general/_sections/GeneralJourney";
 import GeneralJourneyDetail from "@/app/general/_sections/GeneralJourneyDetail";
 import GeneralLife from "@/app/general/_sections/GeneralLife";
 import GeneralContact from "@/app/general/_sections/GeneralContact";
+import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('General');
+  return {
+    title: t('metaTitle'),
+  };
+}
 
 export default function GeneralPage() {
   return (

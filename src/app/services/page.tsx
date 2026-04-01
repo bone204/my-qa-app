@@ -7,6 +7,15 @@ import ContactCTASection from "@/app/services/_sections/ContactCTASection";
 import JoinSection from "@/app/services/_sections/JoinSection";
 import FAQSection from "@/app/services/_sections/FAQSection";
 import ServicesBlogSection from "@/app/services/_sections/ServicesBlogSection";
+import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata(): Promise<Metadata> {
+    const t = await getTranslations('ServicesPage');
+    return {
+        title: t('metaTitle'),
+    };
+}
 
 export default function ServicesPage() {
     return (

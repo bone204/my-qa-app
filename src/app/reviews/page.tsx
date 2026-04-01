@@ -1,9 +1,14 @@
 import ReviewsHero from "@/app/reviews/_sections/ReviewsHero";
 
-export const metadata = {
-  title: "Phản hồi Khách hàng | QKIT Software",
-  description: "Khám phá những trải nghiệm thực tế từ các đối tác đã tin tưởng và hợp tác cùng QKIT Software.",
-};
+import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('ReviewsPage');
+  return {
+    title: t('metaTitle'),
+  };
+}
 
 export default function ReviewsPage() {
   return (

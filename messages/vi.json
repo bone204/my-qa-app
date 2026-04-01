@@ -33,8 +33,11 @@
     }
   },
   "Metadata": {
-    "title": "Chuyên Gia Phát Triển Ứng Dụng & Chuyển Đổi Số",
-    "description": "QKIT"
+    "title": "QKIT - Chuyên Gia Phát Triển Ứng Dụng & Chuyển Đổi Số",
+    "description": "QKIT cung cấp các giải pháp phần mềm cao cấp, phát triển ứng dụng di động và web hiện đại, giúp doanh nghiệp bứt phá trong kỷ nguyên số.",
+    "keywords": "phát triển phần mềm, thiết kế website, ứng dụng di động, chuyển đổi số, QKIT, tích hợp AI, giải pháp đám mây",
+    "ogTitle": "QKIT Software - Kiến tạo kiệt tác Số hóa",
+    "ogDescription": "Giải pháp công nghệ đột phá cho doanh nghiệp toàn cầu."
   },
   "AboutSection": {
     "subtitle": "Sứ mệnh của chúng tôi",
@@ -312,6 +315,7 @@
     }
   },
   "BlogSection": {
+    "metaTitle": "Tin Tức & Blog",
     "label": "Bài Viết Mới Nhất",
     "title": "Ý tưởng <highlight>mới mẻ.</highlight>",
     "categories": {
@@ -362,6 +366,7 @@
     }
   },
   "ContactSection": {
+    "metaTitle": "Liên Hệ",
     "subtitle": "Hãy kết nối với chúng tôi",
     "title": "Bắt đầu <highlight>Dự án</highlight> của bạn",
     "description": "Điền vào biểu mẫu bên dưới và đội ngũ chuyên gia của chúng tôi sẽ liên hệ with bạn trong vòng 24 giờ.",
@@ -441,6 +446,7 @@
     "designedBy": "Thiết kế bởi"
   },
   "ServicesPage": {
+    "metaTitle": "Dịch Vụ",
     "hero": {
       "subtitle": "Giải pháp toàn diện",
       "title": "Nâng tầm <highlight>Trải nghiệm</highlight> Số",
@@ -760,6 +766,7 @@
     }
   },
   "SuccessPage": {
+    "metaTitle": "Câu chuyện thành công",
     "hero": {
       "subtitle": "Giải pháp toàn diện",
       "title": "Biến Tầm Nhìn Thành <highlight>Kiệt Tác</highlight> Số",
@@ -945,6 +952,7 @@
     }
   },
   "ProjectsPage": {
+    "metaTitle": "Danh mục dự án",
     "hero": {
       "subtitle": "Danh Mục Toàn Cầu",
       "title": "Kiến Tạo Sự <highlight>Xuất Sắc</highlight> Số Hóa",
@@ -967,6 +975,7 @@
     }
   },
   "General": {
+    "metaTitle": "Về chúng tôi",
     "hero": {
       "title": "Về chúng tôi",
       "subtitle": "QKIT Software",
@@ -1007,31 +1016,31 @@
       "benefits": {
         "performance": {
           "title": "Tiền thưởng hiệu suất",
-          "desc": "Performance Bonus"
+          "desc": "Thưởng theo hiệu quả công việc"
         },
         "relocation": {
           "title": "Hỗ trợ di dời",
-          "desc": "Relocation Reimbursement"
+          "desc": "Hỗ trợ chi phí chuyển vùng"
         },
         "health": {
           "title": "Bảo hiểm sức khỏe gia đình",
-          "desc": "Family Health Insurance"
+          "desc": "Bảo hiểm sức khỏe cho cả gia đình"
         },
         "leave": {
           "title": "Chế độ thai sản & nghỉ phép",
-          "desc": "Maternity & Paternity Leave"
+          "desc": "Nghỉ hưởng lương chế độ thai sản"
         },
         "snacks": {
           "title": "Bữa ăn & Đồ ăn nhẹ",
-          "desc": "Free snacks & subsidized meals"
+          "desc": "Đồ ăn nhẹ miễn phí & hỗ trợ bữa ăn"
         },
         "retreat": {
           "title": "Thưởng tết & Du lịch",
-          "desc": "Yearly business retreat & Tet bonus"
+          "desc": "Nghỉ dưỡng hàng năm & Thưởng Tết"
         },
         "upskill": {
           "title": "Nâng cao kỹ năng",
-          "desc": "Employee upskill programs"
+          "desc": "Chương trình đào tạo nhân viên"
         },
         "flexible": {
           "title": "Làm việc linh hoạt",
@@ -1046,6 +1055,7 @@
     }
   },
   "ReviewsPage": {
+    "metaTitle": "Đánh giá của khách hàng",
     "hero": {
       "subtitle": "Lời chứng thực",
       "title": "Niềm tin từ <highlight>Đối tác</highlight>",
@@ -1180,6 +1190,7 @@
     }
   },
   "FAQPage": {
+    "metaTitle": "Hỏi đáp",
     "hero": {
       "subtitle": "Hỏi đáp",
       "title": "Bạn cần <highlight>Hỗ trợ?</highlight>",
@@ -1278,6 +1289,7 @@
     "comingSoon": "Sắp ra mắt..."
   },
   "LifePage": {
+    "metaTitle": "Cuộc sống @ QKIT",
     "hero": {
       "subtitle": "Gói Trọn Khoảnh Khắc & Hồi Ức",
       "title": "Thước Phim <highlight>Cuộc Sống</highlight>",
@@ -1368,6 +1380,7 @@
     }
   },
   "HirePage": {
+    "metaTitle": "Tuyển dụng nhân sự IT",
     "CategorySection": {
       "subtitle": "CHUYÊN MÔN CỦA CHÚNG TÔI",
       "title": "Thuê Đội Ngũ <highlight>Chuyên Gia</highlight> Tốt Nhất",
@@ -1747,5 +1760,8 @@
       ]
     },
     "coreCompetencies": "Năng lực cốt lõi"
+  },
+  "CareerPage": {
+    "metaTitle": "Sự Nghiệp"
   }
 }

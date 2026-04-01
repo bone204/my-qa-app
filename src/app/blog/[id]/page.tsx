@@ -17,11 +17,15 @@ interface Props {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const post = await getBlogPostById(id);
+  const locale = await getLocale();
   if (!post) return { title: 'Post Not Found' };
   
+  const title = locale === 'vi' ? post.title.vi : post.title.en;
+  const description = locale === 'vi' ? post.excerpt.vi : post.excerpt.en;
+
   return {
-    title: `${post.title.vi || post.title.en} | QKIT Blog`,
-    description: post.excerpt.vi || post.excerpt.en,
+    title: `${title} | QKIT Software`,
+    description: description,
   };
 }
 
