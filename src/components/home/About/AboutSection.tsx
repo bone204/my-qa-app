@@ -30,6 +30,7 @@ import { useRouter } from 'next/navigation';
 
 export default function AboutSection() {
     const t = useTranslations('AboutSection');
+    const tCommon = useTranslations('Common');
     const router = useRouter();
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isHovered, setIsHovered] = useState(false);
@@ -299,12 +300,14 @@ export default function AboutSection() {
                                         <button
                                             onClick={(e) => { e.stopPropagation(); paginate(-1); }}
                                             className="pointer-events-auto h-12 w-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-white/40 hover:scale-110 transition-all border border-white/30 shadow-lg"
+                                            aria-label={tCommon('previous')}
                                         >
                                             <ChevronLeft size={24} />
                                         </button>
                                         <button
                                             onClick={(e) => { e.stopPropagation(); paginate(1); }}
                                             className="pointer-events-auto h-12 w-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-white/40 hover:scale-110 transition-all border border-white/30 shadow-lg"
+                                            aria-label={tCommon('next')}
                                         >
                                             <ChevronRight size={24} />
                                         </button>
@@ -315,6 +318,7 @@ export default function AboutSection() {
                                         {VIDEOS_LIST.map((_, idx) => (
                                             <button
                                                 key={idx}
+                                                aria-label={`Go to slide ${idx + 1}`}
                                                 onClick={(e) => {
                                                     e.stopPropagation();
                                                     setDirection(idx > currentIndex ? 1 : -1);

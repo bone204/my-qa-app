@@ -33,11 +33,11 @@
     }
   },
   "Metadata": {
-    "title": "QKIT - App Development & Digital Transformation Experts",
-    "description": "QKIT provides premium software solutions, modern mobile and web app development, helping businesses thrive in the digital era.",
-    "keywords": "software development, mobile app development, web design, digital transformation, QKIT, AI integration, cloud solutions",
-    "ogTitle": "QKIT Software - Building Digital Masterpieces",
-    "ogDescription": "Breakthrough technology solutions for global businesses."
+    "title": "QKIT Software | Premium App Development & Digital Transformation",
+    "description": "QKIT specializes in high-performance software development, mobile apps, and modern web solutions. Transform your business with our elite tech experts.",
+    "keywords": "software development, mobile app development, web design, digital transformation, QKIT, AI integration, cloud solutions, software outsourcing",
+    "ogTitle": "QKIT Software - Building Digital Masterpieces for Businesses",
+    "ogDescription": "Breakthrough tech solutions, high-performance software for global businesses."
   },
   "AboutSection": {
     "subtitle": "Our Mission",
@@ -1063,7 +1063,11 @@
     }
   },
   "Common": {
-    "discoverMore": "Discover more"
+    "previous": "Previous",
+    "next": "Next",
+    "discoverMore": "Discover more",
+    "loading": "Loading...",
+    "close": "Close"
   },
   "Career": {
     "subtitle": "Join the QKIT Family",

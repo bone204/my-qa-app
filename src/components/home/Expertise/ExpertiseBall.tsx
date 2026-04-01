@@ -21,8 +21,17 @@ export function ExpertiseBall({ item, onClick, isExpanded, className, sizeMultip
   return (
     <motion.div
       onClick={onClick}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onClick();
+        }
+      }}
+      tabIndex={0}
+      role="button"
+      aria-label={`View expertise in ${item.id.replace('-', ' ')}`}
       className={cn(
-        "relative flex items-center justify-center",
+        "relative flex items-center justify-center outline-hidden focus-visible:ring-2 focus-visible:ring-primary/50 rounded-full",
         isExpanded ? "z-50" : "z-10",
         className
       )}

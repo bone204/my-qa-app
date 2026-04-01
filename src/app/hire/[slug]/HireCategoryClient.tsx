@@ -6,8 +6,11 @@ import { motion } from 'framer-motion';
 import { use } from 'react';
 import { useRouter } from 'next/navigation';
 import { Sparkles } from 'lucide-react';
-import MagicRings from '@/components/ui/MagicRings';
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import Button from '@/components/ui/Button';
+
+const DynamicMagicRings = dynamic(() => import('@/components/ui/MagicRings'), { ssr: false });
 
 export default function HireCategoryClient({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = use(params);
@@ -36,7 +39,7 @@ export default function HireCategoryClient({ params }: { params: Promise<{ slug:
       <section className="relative min-h-[90vh] w-full flex flex-col items-center justify-center px-6 overflow-hidden">
           {/* Background Effect */}
           <div className="absolute inset-0 -z-10 opacity-60">
-             <MagicRings
+             <DynamicMagicRings
                 color="#fc42ff"
                 colorTwo="#42fcff"
                 ringCount={6}
@@ -142,9 +145,11 @@ export default function HireCategoryClient({ params }: { params: Promise<{ slug:
                         
                         <div className="relative z-10 flex flex-col items-center h-full">
                             <div className="w-24 h-24 mb-8 rounded-4xl overflow-hidden border border-white/10 group-hover:border-primary/40 transition-all duration-500 shadow-2xl bg-white/5 flex items-center justify-center p-1">
-                                <img 
+                                <Image 
                                   src={skill.image} 
                                   alt={skill.text} 
+                                  width={96}
+                                  height={96}
                                   className="w-full h-full object-cover rounded-[1.8rem] transition-transform duration-1000 group-hover:scale-110" 
                                 />
                             </div>

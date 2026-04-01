@@ -1,11 +1,13 @@
 import AboutSection from "@/components/home/About/AboutSection";
-import LanguageCarousel from "@/components/home/LanguageCarousel";
-import ServiceSection from "@/components/home/Service/ServiceSection";
-import ProjectSection from "@/components/home/Projects/ProjectsSection";
-import TechSection from "@/components/home/Solution/SolutionSection";
-import VisionSection from "@/components/home/Expertise/ExpertiseSection";
-import ReviewsSection from "@/components/home/Reviews/ReviewsSection";
-import BlogSection from "@/components/home/Blog/BlogSection";
+import dynamic from 'next/dynamic';
+
+const LanguageCarousel = dynamic(() => import("@/components/home/LanguageCarousel"));
+const ServiceSection = dynamic(() => import("@/components/home/Service/ServiceSection"));
+const ProjectSection = dynamic(() => import("@/components/home/Projects/ProjectsSection"));
+const TechSection = dynamic(() => import("@/components/home/Solution/SolutionSection"));
+const VisionSection = dynamic(() => import("@/components/home/Expertise/ExpertiseSection"));
+const ReviewsSection = dynamic(() => import("@/components/home/Reviews/ReviewsSection"));
+const BlogSection = dynamic(() => import("@/components/home/Blog/BlogSection"));
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
