@@ -23,13 +23,22 @@ export function ServiceCard({ service, isSelected, onClick, variants }: ServiceC
     <motion.div
       variants={variants}
       onClick={onClick}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onClick();
+        }
+      }}
+      tabIndex={0}
+      role="button"
+      aria-label={`${t(`${service.id}.title`)} - ${tCommon('discoverMore')}`}
       whileHover={{ 
         scale: 1.05,
         transition: { type: "spring", stiffness: 400, damping: 20 }
       }}
       whileTap={{ scale: 0.95 }}
       className={cn(
-        "group relative cursor-pointer overflow-hidden rounded-4xl bg-white/5 backdrop-blur-md border border-white/10 p-8 shadow-xl hover:shadow-primary/10 hover:border-primary/30",
+        "group relative cursor-pointer overflow-hidden rounded-4xl bg-white/5 backdrop-blur-md border border-white/10 p-8 shadow-xl hover:shadow-primary/10 hover:border-primary/30 outline-hidden focus-visible:ring-2 focus-visible:ring-primary/50",
         isSelected ? "opacity-0 pointer-events-none" : "opacity-100"
       )}
       style={{ 

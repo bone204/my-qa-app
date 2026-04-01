@@ -83,6 +83,9 @@ export async function generateMetadata(): Promise<Metadata> {
       shortcut: "/icon_web.png",
       apple: "/icon_web.png",
     },
+    verification: {
+      google: "H-nMBvYU68TRdLLgQ-FYR_2D8T3Iel03UajqRrGwZm0",
+    },
   };
 }
 

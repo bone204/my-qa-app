@@ -164,6 +164,7 @@ export default function ProjectsSection() {
                                 {projects.map((_, index) => (
                                     <button
                                         key={index}
+                                        aria-label={`Go to project ${index + 1}`}
                                         onClick={() => {
                                             setActiveIndex(index);
                                             setProgress(0);
@@ -204,6 +205,7 @@ export default function ProjectsSection() {
                                         whileHover={{ scale: 1.1, x: -5 }}
                                         whileTap={{ scale: 0.9 }}
                                         onClick={prevProject}
+                                        aria-label="Previous project"
                                         className="w-14 h-14 rounded-2xl bg-zinc-950/40 backdrop-blur-xl border border-white/10 flex items-center justify-center text-white cursor-pointer pointer-events-auto shadow-2xl hover:bg-zinc-900/60 hover:border-primary/50 transition-all duration-300"
                                     >
                                         <ChevronLeft className="w-6 h-6" />
@@ -215,6 +217,7 @@ export default function ProjectsSection() {
                                         whileHover={{ scale: 1.1, x: 5 }}
                                         whileTap={{ scale: 0.9 }}
                                         onClick={nextProject}
+                                        aria-label="Next project"
                                         className="w-14 h-14 rounded-2xl bg-zinc-950/40 backdrop-blur-xl border border-white/10 flex items-center justify-center text-white cursor-pointer pointer-events-auto shadow-2xl hover:bg-zinc-900/60 hover:border-primary/50 transition-all duration-300"
                                     >
                                         <ChevronRight className="w-6 h-6" />
