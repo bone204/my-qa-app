@@ -39,7 +39,6 @@ export async function generateMetadata(): Promise<Metadata> {
     creator: 'QKIT Software',
     publisher: 'QKIT Software',
     alternates: {
-      canonical: '/',
       languages: {
         'vi-VN': '/vi',
         'en-US': '/en',
@@ -100,6 +99,38 @@ export default async function RootLayout({
     <html lang={locale} className={cn("font-sans", beVietnamPro.variable, playfair.variable)} suppressHydrationWarning>
       <body className="relative">
         <NextIntlClientProvider messages={messages}>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "QKIT Software",
+                "url": "https://qkit.vn",
+                "logo": "https://qkit.vn/logo-transparent.png",
+                "sameAs": [
+                  "https://www.facebook.com/qkit.software",
+                  "https://www.linkedin.com/company/qkit-software"
+                ]
+              })
+            }}
+          />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "QKIT Software",
+                "url": "https://qkit.vn",
+                "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": "https://qkit.vn/en/blog?q={search_term_string}",
+                  "query-input": "required name=search_term_string"
+                }
+              })
+            }}
+          />
           <div className="fixed inset-0 -z-10">
           <LightRays
             raysOrigin="top-center"
