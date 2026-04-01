@@ -1063,7 +1063,11 @@
     }
   },
   "Common": {
-    "discoverMore": "Discover more"
+    "previous": "Previous",
+    "next": "Next",
+    "discoverMore": "Discover more",
+    "loading": "Loading...",
+    "close": "Close"
   },
   "Career": {
     "subtitle": "Join the QKIT Family",

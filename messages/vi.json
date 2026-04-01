@@ -1,4 +1,11 @@
 {
+  "Common": {
+    "previous": "Lùi",
+    "next": "Tiến",
+    "discoverMore": "Khám phá thêm",
+    "loading": "Đang tải...",
+    "close": "Đóng"
+  },
   "AppBar": {
     "nav": {
       "services": "Dịch Vụ",
@@ -1061,9 +1068,6 @@
       "title": "Niềm tin từ <highlight>Đối tác</highlight>",
       "description": "Chúng tôi tự hào là người bạn đồng hành cùng các doanh nghiệp trên con đường chuyển đổi số. Dưới đây là những chia sẻ thực tế từ các đối tác đã tin tưởng và hợp tác cùng QKIT Software."
     }
-  },
-  "Common": {
-    "discoverMore": "Khám phá thêm"
   },
   "Career": {
     "subtitle": "Gia nhập đại gia đình QKIT",
