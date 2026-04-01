@@ -33,8 +33,11 @@
     }
   },
   "Metadata": {
-    "title": "App Development & Digital Transformation Experts",
-    "description": "QKIT"
+    "title": "QKIT - App Development & Digital Transformation Experts",
+    "description": "QKIT provides premium software solutions, modern mobile and web app development, helping businesses thrive in the digital era.",
+    "keywords": "software development, mobile app development, web design, digital transformation, QKIT, AI integration, cloud solutions",
+    "ogTitle": "QKIT Software - Building Digital Masterpieces",
+    "ogDescription": "Breakthrough technology solutions for global businesses."
   },
   "AboutSection": {
     "subtitle": "Our Mission",
@@ -312,6 +315,7 @@
     }
   },
   "BlogSection": {
+    "metaTitle": "News & Blog",
     "label": "Latest Articles",
     "title": "Fresh <highlight>ideas.</highlight>",
     "categories": {
@@ -362,6 +366,7 @@
     }
   },
   "ContactSection": {
+    "metaTitle": "Contact Us",
     "subtitle": "Get in Touch",
     "title": "Start your <highlight>Project</highlight>",
     "description": "Fill out the form below and our expert team will contact you within 24 hours.",
@@ -441,6 +446,7 @@
     "designedBy": "Designed by"
   },
   "ServicesPage": {
+    "metaTitle": "Services",
     "hero": {
       "subtitle": "Comprehensive Solutions",
       "title": "Elevate Your <highlight>Digital</highlight> Experience",
@@ -760,6 +766,7 @@
     }
   },
   "SuccessPage": {
+    "metaTitle": "Success Stories",
     "hero": {
       "subtitle": "Comprehensive solutions",
       "title": "Turning Vision Into Digital <highlight>Masterpieces</highlight>",
@@ -945,6 +952,7 @@
     }
   },
   "ProjectsPage": {
+    "metaTitle": "Project Portfolio",
     "hero": {
       "subtitle": "Global Portfolio",
       "title": "Crafting <highlight>Digital</highlight> Excellence",
@@ -967,6 +975,7 @@
     }
   },
   "General": {
+    "metaTitle": "About Us",
     "hero": {
       "title": "About Us",
       "subtitle": "QKIT Software",
@@ -1046,6 +1055,7 @@
     }
   },
   "ReviewsPage": {
+    "metaTitle": "Client Reviews",
     "hero": {
       "subtitle": "Testimonials",
       "title": "Trusted by <highlight>Partners</highlight>",
@@ -1180,6 +1190,7 @@
     }
   },
   "FAQPage": {
+    "metaTitle": "FAQ",
     "hero": {
       "subtitle": "FAQ",
       "title": "Need <highlight>Support?</highlight>",
@@ -1278,6 +1289,7 @@
     "comingSoon": "Coming soon..."
   },
   "LifePage": {
+    "metaTitle": "Life @ QKIT",
     "hero": {
       "subtitle": "Memories & Fragements",
       "title": "Life <highlight>Album</highlight>",
@@ -1368,6 +1380,7 @@
     }
   },
   "HirePage": {
+    "metaTitle": "Hire IT Talent",
     "CategorySection": {
       "subtitle": "OUR EXPERTISE",
       "title": "Hire the Best <highlight>Dedicated</highlight> Team",
@@ -1747,5 +1760,8 @@
       ]
     },
     "coreCompetencies": "Core Competencies"
+  },
+  "CareerPage": {
+    "metaTitle": "Careers"
   }
 }

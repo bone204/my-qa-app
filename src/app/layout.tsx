@@ -25,9 +25,60 @@ const playfair = Playfair_Display({
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('Metadata');
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://qkit.vn';
+
   return {
-    title: t('title'),
+    metadataBase: new URL(baseUrl),
+    title: {
+      default: t('title'),
+      template: `%s | ${t('title')}`,
+    },
     description: t('description'),
+    keywords: t('keywords'),
+    authors: [{ name: 'QKIT Software', url: baseUrl }],
+    creator: 'QKIT Software',
+    publisher: 'QKIT Software',
+    alternates: {
+      canonical: '/',
+      languages: {
+        'vi-VN': '/vi',
+        'en-US': '/en',
+      },
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+    openGraph: {
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      url: baseUrl,
+      siteName: 'QKIT Software',
+      images: [
+        {
+          url: '/logo-transparent.png',
+          width: 800,
+          height: 600,
+          alt: 'QKIT Software',
+        },
+      ],
+      locale: 'vi_VN',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      images: ['/logo-transparent.png'],
+      creator: '@qkit_software',
+    },
     icons: {
       icon: "/icon_web.png",
       shortcut: "/icon_web.png",
